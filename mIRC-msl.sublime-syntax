@@ -9,6 +9,7 @@ scope: source.msl
 contexts:
   prototype:
     - include: comments
+    - include: comments2
 
   main:
     - include: keywords
@@ -103,4 +104,12 @@ contexts:
       push:
         - meta_scope: comment.line.double-slash.msl
         - match: $\n?
+          pop: true
+
+  comments2:
+    - match: '\/\*'
+      scope: punctuation.definition.comment.msl
+      push:
+        - meta_scope: comment.line.double-slash.msl
+        - match: '\*\/'
           pop: true
