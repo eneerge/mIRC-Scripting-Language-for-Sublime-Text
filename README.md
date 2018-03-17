@@ -8,4 +8,4 @@ To install:
 
 You may need to create the Packages\User folder.
 
-![alt text](install-screenshot.png)
+[https://raw.githubusercontent.com/eneerge/mIRC-Scripting-Language-for-Sublime-Text/master/Install-screenshot.png]
