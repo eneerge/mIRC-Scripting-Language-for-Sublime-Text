@@ -7,14 +7,10 @@ file_extensions:
 scope: source.msl
 
 contexts:
-  # The prototype context is prepended to all contexts but those setting
-  # meta_include_prototype: false.
   prototype:
     - include: comments
 
   main:
-    # The main context is the initial starting point of our syntax.
-    # Include other contexts from here (or specify them directly).
     - include: keywords
     - include: keywords2
     - include: numbers
@@ -41,20 +37,10 @@ contexts:
       scope: variable.parameter.msl
 
   keywords:
-    # Keywords are if, else for and while.
-    # Note that blackslashes don't need to be escaped within single quoted
-    # strings in YAML. When using single quoted strings, only single quotes
-    # need to be escaped: this is done by using two single quotes next to each
-    # other.
     - match: '(?i)\b(isincs|isin|iswm|iswmcs|isnum|isletter|isalnum|isalpha|islower|isupper|ison|isop|ishop|isvoice|isreg|ischan|isban|isinvite|isexcept|isaop|isavoice|isignore|isprotec|isnotify|while|elseif|else|if|alias -l|alias|menu)'
       scope: keyword.control.msl
 
   keywords2:
-    # Keywords are if, else for and while.
-    # Note that blackslashes don't need to be escaped within single quoted
-    # strings in YAML. When using single quoted strings, only single quotes
-    # need to be escaped: this is done by using two single quotes next to each
-    # other.
     - match: '(?i)(\||==|===|!=|<|>|>=|<=|&|\$\+)'
       scope: keyword.operator
 
@@ -89,21 +75,17 @@ contexts:
 
 
   popup-string:
-    # Comments begin with a '//' and finish at the end of the line.
     - match: '"'
       scope: string
       push:
-        # This is an anonymous context push for brevity.
         - meta_scope: string
         - match: '\"'
           pop: true
 
   comments:
-    # Comments begin with a '//' and finish at the end of the line.
     - match: ';'
       scope: punctuation.definition.comment.msl
       push:
-        # This is an anonymous context push for brevity.
         - meta_scope: comment.line.double-slash.msl
         - match: $\n?
           pop: true
