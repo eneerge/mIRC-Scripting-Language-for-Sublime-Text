@@ -5,7 +5,7 @@ This is my attempt at creating a Sublime Text 3 syntax highlighter for mIRC scri
 
 - User $variables and mIRC $variables are styled separately.
 - User /commands and mIRC /commands are styled separately.
-- User .commaands and mIRC .commands are styled separately.
+- User .commands and mIRC .commands are styled separately.
 - on* and raw events are styled.
 - Both ; and /* comments are parsed.
 
