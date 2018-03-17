@@ -17,6 +17,6 @@ To install:
 
 You may need to create the Packages\User folder.
 
-![Alt text](Install-screenshot.png)
-![Alt text](screen1.png)
-![Alt text](screen2.png)
+![Alt text](screenshots/Install-screenshot.png)
+![Alt text](screenshots/screen1.png)
+![Alt text](screenshots/screen2.png)
