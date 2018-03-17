@@ -7,3 +7,5 @@ To install:
 1. Copy mIRC-msl.sublime-syntax to Sublime\Data\Packages\User folder.
 
 You may need to create the Packages\User folder.
+
+![alt text](install-screenshot.png)
