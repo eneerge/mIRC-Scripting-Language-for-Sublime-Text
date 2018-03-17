@@ -1,0 +1,109 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+name: mIRC mSl
+file_extensions:
+  - mrc
+scope: source.msl
+
+contexts:
+  # The prototype context is prepended to all contexts but those setting
+  # meta_include_prototype: false.
+  prototype:
+    - include: comments
+
+  main:
+    # The main context is the initial starting point of our syntax.
+    # Include other contexts from here (or specify them directly).
+    - include: keywords
+    - include: keywords2
+    - include: numbers
+    - include: percent-sign-vars
+    - include: slash-sign-mirc-vars
+    - include: slash-sign-user-vars
+    - include: slash-sign-user-vars2
+    - include: money-sign-mirc-vars
+    - include: money-sign-user-vars
+    - include: money-sign-constants
+    - include: popup-string
+
+  slash-sign-mirc-vars:
+    - match: '(?i)\b[.]*[/]*(abook|ajinvite|alias -l|alias|aline|ame|amsg|anick|aop|auser|autojoin|avoice|away|background|ban|bcopy|beep|bindip|bread|break|breplace|bset|btrunc|bunset|bwrite|channel|clear|clearall|cline|clipboard|close|cnick|color|comclose|comlist|comopen|comreg|continue|copy|creq|ctcpreply|ctcps|dcc chat|dcc get|dcc ignore|dcc nick|dcc passive|dcc reject|dcc send|dcc trust|dccserver|dde|ddeserver|debug|dec|describe|dialog|did|didtok|disable|disconnect|dlevel|dline|dll|dns|dqwindow|drawcopy|drawdot|drawfill|drawline|drawpic|drawrect|drawreplace|drawrot|drawsave|drawscroll|drawsize|drawtext|ebeeps|echo|editbox|emailaddr|enable|events|exit|fclose|filter|findtext|firewall|flash|flist|flood|flush|flushini|font|fopen|fseek|fserve|fullname|fwrite|ghide|gload|gmove|gopts|goto|gplay|gpoint|gqreg|groups|gshow|gsize|gstop|gtalk|gunload|guser|hadd|halt|haltdef|hdec|hdel|help|hfree|hinc|hload|hmake|hop|hsave|ial|ialclear|ialmark|identd|ignore|iline|inc|invite|iuser|join|kick|linesep|links|list|load|loadbuf|localinfo|log|logview|mdi|me|menubar|mkdir|mnick|mode|msg|nick|nickserv|noop|notice|notify|omsg|onotice|parseline|part|partall|pdcc|perform|play|playctrl|pop|protect|proxy|pvoice|qme|qmsg|query|queryrn|quit|quote|raw|reload|remini|remote|remove|rename|renwin|reseterror|resetidle|return|rlevel|rline|rmdir|run|ruser|save|savebuf|saveini|say|scid|scon|server|set|setlayer|showmirc|signal|sline|sockaccept|sockclose|socklist|socklisten|sockmark|sockopen|sockpause|sockread|sockrename|sockudp|sockwrite|sound|speak|splay|sreq|strip|switchbar|timer|timestamp|tip|tips|titlebar|tnick|tockenize|toolbar|topic|tray|treebar|ulist|unload|unset|unsetall|updatenl|url|uwho|var|vcadd|vcmd|vcrem|vol|while|whois|window|winhelp|write|writeini)\s'
+      scope: entity.name.tag.msl
+      #scope: entity.other.attribute-name
+
+  slash-sign-user-vars:
+    - match: '(?i)([/.]+)(?!(abook|ajinvite|alias -l|alias|aline|ame|amsg|anick|aop|auser|autojoin|avoice|away|background|ban|bcopy|beep|bindip|bread|break|breplace|bset|btrunc|bunset|bwrite|channel|clear|clearall|cline|clipboard|close|cnick|color|comclose|comlist|comopen|comreg|continue|copy|creq|ctcpreply|ctcps|dcc chat|dcc get|dcc ignore|dcc nick|dcc passive|dcc reject|dcc send|dcc trust|dccserver|dde|ddeserver|debug|dec|describe|dialog|did|didtok|disable|disconnect|dlevel|dline|dll|dns|dqwindow|drawcopy|drawdot|drawfill|drawline|drawpic|drawrect|drawreplace|drawrot|drawsave|drawscroll|drawsize|drawtext|ebeeps|echo|editbox|emailaddr|enable|events|exit|fclose|filter|findtext|firewall|flash|flist|flood|flush|flushini|font|fopen|fseek|fserve|fullname|fwrite|ghide|gload|gmove|gopts|goto|gplay|gpoint|gqreg|groups|gshow|gsize|gstop|gtalk|gunload|guser|hadd|halt|haltdef|hdec|hdel|help|hfree|hinc|hload|hmake|hop|hsave|ial|ialclear|ialmark|identd|ignore|iline|inc|invite|iuser|join|kick|linesep|links|list|load|loadbuf|localinfo|log|logview|mdi|me|menubar|mkdir|mnick|mode|msg|nick|nickserv|noop|notice|notify|omsg|onotice|parseline|part|partall|pdcc|perform|play|playctrl|pop|protect|proxy|pvoice|qme|qmsg|query|queryrn|quit|quote|raw|reload|remini|remote|remove|rename|renwin|reseterror|resetidle|return|rlevel|rline|rmdir|run|ruser|save|savebuf|saveini|say|scid|scon|server|set|setlayer|showmirc|signal|sline|sockaccept|sockclose|socklist|socklisten|sockmark|sockopen|sockpause|sockread|sockrename|sockudp|sockwrite|sound|speak|splay|sreq|strip|switchbar|timer|timestamp|tip|tips|titlebar|tnick|tockenize|toolbar|topic|tray|treebar|ulist|unload|unset|unsetall|updatenl|url|uwho|var|vcadd|vcmd|vcrem|vol|while|whois|window|winhelp|write|writeini))\w+'
+      scope: variable.parameter.msl
+
+  slash-sign-user-vars2:
+    - match: '(?i)^\s+(?!(isincs|isin|iswm|iswmcs|isnum|isletter|isalnum|isalpha|islower|isupper|ison|isop|ishop|isvoice|isreg|ischan|isban|isinvite|isexcept|isaop|isavoice|isignore|isprotec|isnotify|while|elseif|else|if|alias -l|alias|menu|abook|ajinvite|alias -l|alias|aline|ame|amsg|anick|aop|auser|autojoin|avoice|away|background|ban|bcopy|beep|bindip|bread|break|breplace|bset|btrunc|bunset|bwrite|channel|clear|clearall|cline|clipboard|close|cnick|color|comclose|comlist|comopen|comreg|continue|copy|creq|ctcpreply|ctcps|dcc chat|dcc get|dcc ignore|dcc nick|dcc passive|dcc reject|dcc send|dcc trust|dccserver|dde|ddeserver|debug|dec|describe|dialog|did|didtok|disable|disconnect|dlevel|dline|dll|dns|dqwindow|drawcopy|drawdot|drawfill|drawline|drawpic|drawrect|drawreplace|drawrot|drawsave|drawscroll|drawsize|drawtext|ebeeps|echo|editbox|emailaddr|enable|events|exit|fclose|filter|findtext|firewall|flash|flist|flood|flush|flushini|font|fopen|fseek|fserve|fullname|fwrite|ghide|gload|gmove|gopts|goto|gplay|gpoint|gqreg|groups|gshow|gsize|gstop|gtalk|gunload|guser|hadd|halt|haltdef|hdec|hdel|help|hfree|hinc|hload|hmake|hop|hsave|ial|ialclear|ialmark|identd|ignore|iline|inc|invite|iuser|join|kick|linesep|links|list|load|loadbuf|localinfo|log|logview|mdi|me|menubar|mkdir|mnick|mode|msg|nick|nickserv|noop|notice|notify|omsg|onotice|parseline|part|partall|pdcc|perform|play|playctrl|pop|protect|proxy|pvoice|qme|qmsg|query|queryrn|quit|quote|raw|reload|remini|remote|remove|rename|renwin|reseterror|resetidle|return|rlevel|rline|rmdir|run|ruser|save|savebuf|saveini|say|scid|scon|server|set|setlayer|showmirc|signal|sline|sockaccept|sockclose|socklist|socklisten|sockmark|sockopen|sockpause|sockread|sockrename|sockudp|sockwrite|sound|speak|splay|sreq|strip|switchbar|timer|timestamp|tip|tips|titlebar|tnick|tockenize|toolbar|topic|tray|treebar|ulist|unload|unset|unsetall|updatenl|url|uwho|var|vcadd|vcmd|vcrem|vol|while|whois|window|winhelp|write|writeini))[\w\.]+'
+      scope: variable.parameter.msl
+
+  keywords:
+    # Keywords are if, else for and while.
+    # Note that blackslashes don't need to be escaped within single quoted
+    # strings in YAML. When using single quoted strings, only single quotes
+    # need to be escaped: this is done by using two single quotes next to each
+    # other.
+    - match: '(?i)\b(isincs|isin|iswm|iswmcs|isnum|isletter|isalnum|isalpha|islower|isupper|ison|isop|ishop|isvoice|isreg|ischan|isban|isinvite|isexcept|isaop|isavoice|isignore|isprotec|isnotify|while|elseif|else|if|alias -l|alias|menu)'
+      scope: keyword.control.msl
+
+  keywords2:
+    # Keywords are if, else for and while.
+    # Note that blackslashes don't need to be escaped within single quoted
+    # strings in YAML. When using single quoted strings, only single quotes
+    # need to be escaped: this is done by using two single quotes next to each
+    # other.
+    - match: '(?i)(\||==|===|!=|<|>|>=|<=|&|\$\+)'
+      scope: keyword.operator
+
+  numbers:
+    - match: '\b(-)?[0-9.]+\b'
+      scope: constant.numeric.msl
+
+  money-sign-constants:
+    - match: '\$[0-9]+[-]{0,1}'
+      scope: constant.numeric.msl
+
+
+  money-sign-mirc-vars:
+    - match: '(?i)\$(abook|abs|acos|active|activecid|activewid|address|addtok|agent|agentname|agentstat|agentver|alias|and|anick|ansi2mirc|aop|appactive|appstate|asc|asctime|asin|atan|atan2|avoice|away|awaymsg|awaytime|banmask|base|bfind|bindip|bitoff|biton|bnick|bvar|bytes|calc|cb|cd|ceil|chan|chanmodes|chantypes|chat|chr|cid|clevel|click|cmdbox|cmdline|cnick|color|com|comcall|comchan|comchar|comerr|compact|compress|comval|cos|cosh|count|cr|crc|creq|crlf|ctime|ctrlenter|date|day|daylight|dbuh|dbuw|dccignore|dccport|dde|ddename|debug|dec|decode|decompress|deltok|devent|dialog|did|didreg|didtok|didwm|disk|dlevel|dll|dllcall|dname|dns|dqwindow|duraction|ebeeps|editbox|emailaddr|encode|envvar|error|eval|event|eventid|exists|exiting|feof|ferr|fgetc|file|filename|filtered|finddir|finddirn|findfile|findfilen|findtok|fline|floor|font|fopen|fread|fromeditbox|fserve|fulladdress|fulldate|fullname|fullscren|getdir|getdot|gettok|gmt|group|halted|hash|height|hfind|hget|highlight|hmac|hnick|host|hotline|hotlinepos|hotp|hypot|ial|ialchan|ialmark|ibl|idle|iel|ifmatch|ignore|iif|iil|inc|inellipse|ini|inmidi|inpaste|inpoly|input|inrect|inroundrect|insong|instok|int|intersect|inwave|ip|iptype|isalias|isbit|isdde|isdir|isfile|isid|islower|istok|isupper|keychar|keyrpt|keyval|knick|lactive|lactivecid|lactivewid|lctimer|left|leftwin|leftwincid|leftwinwid|len|level|lf|line|lines|link|lock|locked|log|log10|logdir|logstamp|logstampfmt|longfn|longip|lower|ltimer|maddress|mask|matchkey|matchtok|md5|me|menu|menubar|menucontext|menutype|mid|mididir|mircdir|mircexe|mircini|mkfn|mklogfn|mknickfn|mnick|mode|modefirst|modelasst|modespl|mouse|msfile|msgstamp|msgtags|network|newnick|nick|nickmode|nofile|nopath|noqt|not|notags|notify|null|numeric|numtok|online|onlineserver|onlinetotal|onpoly|or|ord|os|parms|parseline|parsetype|parseutf|passivedcc|pi|pic|play|pnick|port|portable|portfree|pos|prefix|prop|protect|puttok|qt|query|rand|rawbytes|rawmsg|read|readini|readn|regerrstr|regex|regml|regmlex|regsub|regsubex|remove|remtok|replace|replacex|reptok|result|rgb|right|round|samepath|scid|scon|script|scriptdir|scriptline|sdir|send|server|serverip|servertarget|sfile|sfstate|sha1|sha256|sha384|sha512|shortfn|show|signal|sin|site|sline|snick|snicks|snotify|sock|sockbr|sockerr|sockname|sorttok|sound|speak|sqrt|sreq|ssl|sslcertsha1|sslcertsha256|ssldll|ssllibdll|sslready|sslversion|starting|status|stripped|strip|str|style|submenu|switchbar|sysdir|tan|tanh|target|tempfn|ticks|time|timer|timestamp|timestampfmt|timezone|tip|tips|titlebar|toolbar|totp|treebar|trust|ulevel|ulist|unsafe|upper|uptime|url|usermode|utfdecode|utfencode|v1|v2|var|vcmd|vcmdstat|vcmdver|version|vnick|vol|wid|width|wildsite|wildtok|window|wrap|xor)[\s]*'
+      scope: entity.name.function
+      #scope: entity.name.class
+      #scope: storage.type
+      #scope: storage
+      #scope: constant.character, constant.other
+      #scope: constant.language
+      #scope: entity.name.tag.msl
+      #scope: entity.other.attribute-name
+
+
+  money-sign-user-vars:
+    - match: '(?i)[\$][\.a-z\_\-]+'
+      scope: variable.parameter.msl
+
+  percent-sign-vars:
+    - match: '%[\w._-]+'
+      scope: variable.parameter.msl
+
+
+  popup-string:
+    # Comments begin with a '//' and finish at the end of the line.
+    - match: '"'
+      scope: string
+      push:
+        # This is an anonymous context push for brevity.
+        - meta_scope: string
+        - match: '\"'
+          pop: true
+
+  comments:
+    # Comments begin with a '//' and finish at the end of the line.
+    - match: ';'
+      scope: punctuation.definition.comment.msl
+      push:
+        # This is an anonymous context push for brevity.
+        - meta_scope: comment.line.double-slash.msl
+        - match: $\n?
+          pop: true
