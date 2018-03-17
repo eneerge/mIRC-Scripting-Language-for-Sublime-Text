@@ -40,7 +40,7 @@ contexts:
       scope: keyword.operator
 
   numbers:
-    - match: '\b(-)?[0-9.]+\b'
+    - match: '[\-]{0,1}\b[0-9]+\b'
       scope: constant.numeric.msl
 
   money-sign-constants:
