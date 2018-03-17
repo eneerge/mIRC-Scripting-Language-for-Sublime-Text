@@ -44,7 +44,7 @@ contexts:
       scope: constant.numeric.msl
 
   money-sign-constants:
-    - match: '\$[0-9]+[-]{0,1}'
+    - match: '(\$[0-9]+\b[-]{0,1})'
       scope: constant.numeric.msl
 
 
