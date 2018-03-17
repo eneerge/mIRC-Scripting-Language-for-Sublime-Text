@@ -1,8 +1,15 @@
 # mIRC-Scripting-Language-for-Sublime-Text
-
-This is my attempt at creating a Sublime Text 3 syntax highlighter for mIRC scripting language.
-
 Updated for mIRC 7.52 (March 2018)
+
+This is my attempt at creating a Sublime Text 3 syntax highlighter for mIRC scripting language.  All $vars and /commands listed in the mIRC help file index should be parsed.  Some undocumented $vars and /commands may be parsed, but I'm sure there's a few that I missed.
+
+User $variables and mIRC $variables are styled separately.
+User /commands and mIRC /commands are styled separately.
+User .commaands and mIRC .commands are styled separately.
+on* and raw events are styled.
+Both ; and /* comments are parsed.
+
+Regex is a little rudimentary, but should work in most cases.  Create a new issue if you encounter any errors and I will try to correct.
 
 To install:
 
