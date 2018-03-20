@@ -105,7 +105,7 @@ contexts:
           pop: true
 
   comments:
-    - match: ';'
+    - match: '^\s*;'
       scope: punctuation.definition.comment.msl
       push:
         - meta_scope: comment.line.double-slash.msl
@@ -113,9 +113,9 @@ contexts:
           pop: true
 
   comments2:
-    - match: '\/\*'
+    - match: '(^\s*\/\*)'
       scope: punctuation.definition.comment.msl
       push:
         - meta_scope: comment.line.double-slash.msl
-        - match: '\*\/'
+        - match: '(^\s*\*\/)(.)*'
           pop: true
