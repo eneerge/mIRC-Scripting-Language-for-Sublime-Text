@@ -97,7 +97,7 @@ contexts:
       #scope: keyword.other.special-method
 
   popup-string:
-    - match: '\$\?(\!){0,1}\=\"'
+    - match: '\$\?[\!\*]{0,1}\=\"'
       scope: string
       push:
         - meta_scope: string
