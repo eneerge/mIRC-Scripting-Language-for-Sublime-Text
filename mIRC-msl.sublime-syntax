@@ -12,6 +12,7 @@ contexts:
     - include: comments2
 
   main:
+    - include: popup-string
     - include: dot-sign-user-vars
     - include: dot-sign-user-vars2
     - include: events
@@ -22,7 +23,6 @@ contexts:
     - include: money-sign-user-vars
     - include: numbers
     - include: percent-sign-vars
-    - include: popup-string
     - include: slash-sign-mirc-vars
     - include: slash-sign-user-vars
     - include: slash-sign-user-vars2
@@ -97,7 +97,7 @@ contexts:
       #scope: keyword.other.special-method
 
   popup-string:
-    - match: '"'
+    - match: '\$\?\!\=\"'
       scope: string
       push:
         - meta_scope: string
