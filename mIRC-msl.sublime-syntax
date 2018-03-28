@@ -12,7 +12,7 @@ contexts:
     - include: comments2
 
   main:
-    #- include: dot-sign-user-vars
+    - include: dot-sign-user-vars
     #- include: dot-sign-user-vars2
     - include: events
     - include: keywords
