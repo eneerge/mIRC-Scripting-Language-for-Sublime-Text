@@ -110,11 +110,15 @@ contexts:
       scope: variable.parameter.msl
 
   events:
-    - match: '(?i)(on|raw) [\^]*[\w\d]+[\:]{1}'
+    - match: '(?i)((on|raw) [\@\^\*\&]*[\d]*:)'
       #scope: keyword
       scope: constant.numeric.line-number.find-in-files
       #scope: keyword.other
       #scope: keyword.other.special-method
+      push:
+        - meta_scope: entity.name.function.msl
+        - match: '\:'
+          pop: true
 
   popup-operator:
     - match: '(\$\?[\*]{0,1}[\!]{0,1}\=)(?=\".+\")'
