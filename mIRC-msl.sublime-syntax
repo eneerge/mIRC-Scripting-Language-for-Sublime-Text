@@ -42,7 +42,7 @@ contexts:
       scope: entity.name.class.msl
 
   keywords:
-    - match: '(?i)\b(isincs|isin|iswm|iswmcs|isnum|isletter|isalnum|isalpha|islower|isupper|ison|isop|ishop|isvoice|isreg|ischan|isban|isinvite|isexcept|isaop|isavoice|isignore|isprotec|isnotify|while|elseif|else|if|alias -l|alias|menu)'
+    - match: '(?i)\b(isincs|isin|iswm|iswmcs|isnum|isletter|isalnum|isalpha|islower|isupper|ison|isop|ishop|isvoice|isreg|ischan|isban|isinvite|isexcept|isaop|isavoice|isignore|isprotec|isnotify|while|elseif|else|if|alias -l|alias|menubar|menu)'
       scope: keyword.control.msl
 
   keywords2:
