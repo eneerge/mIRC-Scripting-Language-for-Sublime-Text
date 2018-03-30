@@ -33,7 +33,6 @@ contexts:
     - include: money-sign-user-vars
     - include: numbers
     - include: percent-sign-vars
-    - include: popup-string
     - include: popup-operator
     - include: slash-sign-user-assumed
     - include: slash-sign-user-assumed1
@@ -216,14 +215,6 @@ contexts:
   popup-operator:
     - match: '(\$\?[\*]{0,1}[\!]{0,1}\=)(?=\".+\")'
       scope: keyword.operator
-
-  popup-string:
-    - match: '(?<=[\s+]\$\?=)"|(?<=[\s+]\$\?!=)"|(?<=[\s+]\$\?\*=)"|(?<=[\s+]\$\?\*!=)"'
-      scope: string
-      push:
-        - meta_scope: string
-        - match: '\"'
-          pop: true
 
   windows:
     - match: '\@[\.\w\d_\-]+'
