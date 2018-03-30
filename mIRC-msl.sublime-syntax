@@ -20,6 +20,7 @@ contexts:
     - include: gotoloop_label_inline
     - include: gotoloop_newline
     - include: gotoloop_inline
+    - include: groups
     - include: keywords
     - include: keywords2
     - include: money-sign-constants
@@ -81,6 +82,10 @@ contexts:
         - meta_scope: constant.numeric.line-number.find-in-files
         - match: '\s+[\w\d\-]+'
           pop: true
+
+  groups:
+    - match: '(?i)^#[\w\d\.\_\-]+\s+(on|off|end)'
+      scope: variable.parameter.msl
 
   numbers:
     - match: '[\-]{0,1}\b[0-9]+\b'
