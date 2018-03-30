@@ -17,6 +17,7 @@ contexts:
     - include: dot-sign-user-vars-newline
     - include: dot-sign-user-vars-inline
     - include: events
+    - include: events-onclose
     - include: events-ondialog
     - include: gotoloop_label
     - include: gotoloop_label_inline
@@ -63,6 +64,19 @@ contexts:
       push:
         - meta_scope: entity.name.function.msl
         - match: '\:'
+          pop: true
+
+  events-onclose:
+    - match: '(?i)(?<=\:CLOSE\:)'
+      scope: entity.name.tag.msl
+      #scope: keyword.other
+      #scope: keyword.other.special-method
+      push:
+        - meta_scope: string
+        - match: '(\?|\@|\=|\!|\*)([\w\d\D]*)\:'
+          captures:
+            1: variable.parameter.msl
+            2: variable.parameter.msl
           pop: true
 
   events-ondialog:
