@@ -27,6 +27,7 @@ contexts:
     - include: groups
     - include: keywords
     - include: keywords2
+    - include: mirc-var-dns
     - include: money-sign-constants
     - include: money-sign-mirc-vars
     - include: money-sign-user-vars
@@ -151,6 +152,14 @@ contexts:
   numbers:
     - match: '[\-]{0,1}\b[0-9]+\b'
       scope: constant.numeric.msl
+
+  mirc-var-dns:
+    - match: '(\$dns\()([\d\w\\%\$]+)(\))(\.)(addr|ip|nick)\b'
+      captures:
+        1: entity.name.function
+        2: variable.parameter.msl
+        3: entity.name.function
+        5: constant.numeric.line-number.find-in-files
 
   money-sign-constants:
     - match: '(\$[0-9]+\b[-]{0,1})'
