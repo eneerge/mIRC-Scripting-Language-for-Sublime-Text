@@ -140,7 +140,7 @@ contexts:
       scope: variable.parameter.msl
 
   events:
-    - match: '(?i)((on|raw) [\@\^\*\&]*[\d]*:)'
+    - match: '(?i)((on|raw) [\@\^\*\&]*[\w\d]*:)'
       #scope: keyword
       scope: constant.numeric.line-number.find-in-files
       #scope: keyword.other
