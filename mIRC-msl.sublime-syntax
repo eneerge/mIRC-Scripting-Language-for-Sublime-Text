@@ -16,7 +16,7 @@ contexts:
     - include: dialog-events
     - include: dot-sign-user-vars-newline
     - include: dot-sign-user-vars-inline
-    - include: events
+    - include: events-v2
     - include: events-onclose
     - include: events-ondialog
     - include: gotoloop_label
@@ -55,43 +55,48 @@ contexts:
       #scope: variable.parameter.msl
       scope: entity.name.class.msl
 
-  events:
-    - match: '(?i)((on|raw) [\@\^\*\&]*[\w\d]*:)'
-      #scope: keyword
-      scope: constant.numeric.line-number.find-in-files
-      #scope: keyword.other
-      #scope: keyword.other.special-method
-      push:
-        - meta_scope: entity.name.function.msl
-        - match: '\:'
-          pop: true
+  events-v2:
+    - match: '(?i)(^(on|raw)) ([\+\*\!\@\&\$\d])*(me\:\*)*(\:)(waveend|wallops|voice|vcmd|usermode|unotify|unload|unban|udpwrite|udpread|topic|text|tabcomp|start|sockwrite|sockread|sockopen|socklisten|sockclose|snotice|signal|servopen|serverop|servermode|servclose|serv|sendfail|rawmode|quit|queryopen|queryclose|pong|playend|ping|part|parseline|owner|op|notify|notice|nosound|nick|mp3end|mode|midiend|logon|load|kick|keyup|keydown|join|invite|input|hotlink|help|getfail|filesent|filercvd|exit|error|dns|disconnect|devoice|deowner|deop|dehelp|dccserver|ctcpreply|connectfail|connect|chatopen|chatclose|chat|ban|appactive|agent|active|action)(\:)'
+      scope: entity.name.tag.msl
+      captures:
+        1: constant.numeric.line-number.find-in-files
+        2: constant.numeric.line-number.find-in-files
+        3: constant.numeric.line-number.find-in-files
+        4: constant.numeric.line-number.find-in-files
+        5: entity.name.function.msl
+        6: entity.name.function.msl
+        7: entity.name.function.msl
 
   events-onclose:
-    - match: '(?i)(?<=\:CLOSE\:)'
+    - match: '(?i)(^(on|raw)) ([\+\*\!\@\&\$])?(me)?(\:)(Open|Close)(\:)(\?|\@|\=|\!|\*)([\w\d\D]*)(\:)'
       scope: entity.name.tag.msl
-      #scope: keyword.other
-      #scope: keyword.other.special-method
-      push:
-        - meta_scope: string
-        - match: '(\?|\@|\=|\!|\*)([\w\d\D]*)\:'
-          captures:
-            1: variable.parameter.msl
-            2: variable.parameter.msl
-          pop: true
+      captures:
+        1: constant.numeric.line-number.find-in-files
+        2: constant.numeric.line-number.find-in-files
+        3: constant.numeric.line-number.find-in-files
+        4: constant.numeric.line-number.find-in-files
+        5: entity.name.function.msl
+        6: entity.name.function.msl
+        7: entity.name.function.msl
+        8: variable.parameter.msl
+        9: variable.parameter.msl
+        10: entity.name.function.msl
 
   events-ondialog:
-    - match: '(?i)(?<=\:DIALOG\:)(?=[\w\d\_\-\D]+\:)'
+    - match: '(?i)(^(on)) ([\+\*\!\@\&\$])?(me)?(\:)(Dialog)(\:)([\w\d\D]*)(\:)(uclick|scroll|sclick|rclick|mouse|menu|init|edit|drop|dclick|close|active):(\d+)'
       scope: entity.name.tag.msl
-      #scope: keyword.other
-      #scope: keyword.other.special-method
-      push:
-        - meta_scope: string
-        - match: '(\:)(init|close|edit|sclick|dclick|menu|scroll)(\:)'
-          captures:
-            1: entity.name.function.msl
-            2: keyword.declaration.msl
-            3: entity.name.function.msl
-          pop: true
+      captures:
+        1: constant.numeric.line-number.find-in-files
+        2: constant.numeric.line-number.find-in-files
+        3: constant.numeric.line-number.find-in-files
+        4: constant.numeric.line-number.find-in-files
+        5: entity.name.function.msl
+        6: entity.name.function.msl
+        7: entity.name.function.msl
+        8: variable.parameter.msl
+        9: variable.parameter.msl
+        10: entity.name.tag.msl
+        11: variable.parameter.msl
 
   keywords:
     - match: '(?i)\b(while|menubar|menu|iswmcs|iswm|isvoice|isupper|isreg|isprotec|isop|ison|isnum|isnotify|islower|isletter|isinvite|isincs|isin|isignore|ishop|isexcept|ischan|isban|isavoice|isaop|isalpha|isalnum|if|elseif|else|alias -l|alias)'
