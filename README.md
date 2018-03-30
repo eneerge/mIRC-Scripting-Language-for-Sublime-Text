@@ -18,5 +18,20 @@ To install:
 You may need to create the Packages\User folder.
 
 ![Alt text](screenshots/Install-screenshot.png)
+
+
+A slightly modified theme has been provided in the Extras folder that supports all features of the highlighter. Themes should support the following scopes to support all styles of this highlighter:
+1. comment.line.double-slash
+2. constant.numeric
+3. constant.numeric.line-number.find-in-files
+4.entity.name.class
+5. entity.name.function
+6. entity.name.tag
+7. Keyword.control
+8. keyword.operator
+9. punctuation.definition.comment
+10. string
+11. variable.parameter
+
 ![Alt text](screenshots/screen1.png)
 ![Alt text](screenshots/screen2.png)
