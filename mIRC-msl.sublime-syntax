@@ -33,6 +33,7 @@ contexts:
     - include: slash-sign-mirc-vars
     - include: slash-sign-user-vars
     - include: slash-sign-user-vars2
+    - include: windows
 
   control-codes:
     - match: '|||||'
@@ -151,6 +152,9 @@ contexts:
         - match: '\"'
           pop: true
 
+  windows:
+    - match: '\@[\.\w\d_\-]+'
+      scope: variable.parameter.msl
 
   comments:
     - match: '^\s*;'
