@@ -17,6 +17,7 @@ contexts:
     - include: dot-sign-user-vars-newline
     - include: dot-sign-user-vars-inline
     - include: events-v2
+    - include: events-ctcp
     - include: events-onclose
     - include: events-ondialog
     - include: gotoloop_label
@@ -57,8 +58,8 @@ contexts:
       scope: entity.name.class.msl
 
   events-v2:
-    - match: '(?i)(^(on|raw)) ([\+\*\!\@\&\$\d])*(me\:\*)*(\:)(waveend|wallops|voice|vcmd|usermode|unotify|unload|unban|udpwrite|udpread|topic|text|tabcomp|start|sockwrite|sockread|sockopen|socklisten|sockclose|snotice|signal|servopen|serverop|servermode|servclose|serv|sendfail|rawmode|quit|queryopen|queryclose|pong|playend|ping|part|parseline|owner|op|notify|notice|nosound|nick|mp3end|mode|midiend|logon|load|kick|keyup|keydown|join|invite|input|hotlink|help|getfail|filesent|filercvd|exit|error|dns|disconnect|devoice|deowner|deop|dehelp|dccserver|ctcpreply|connectfail|connect|chatopen|chatclose|chat|ban|appactive|agent|active|action)(\:)'
-      scope: entity.name.tag.msl
+    - match: '(?i)(^(on|raw)) ([\^\+\*\!\@\&\$\d]*)(me\:\*)*(\:)(waveend|wallops|voice|vcmd|usermode|unotify|unload|unban|udpwrite|udpread|topic|text|tabcomp|start|sockwrite|sockread|sockopen|socklisten|sockclose|snotice|signal|servopen|serverop|servermode|servclose|serv|sendfail|rawmode|quit|queryopen|queryclose|pong|playend|ping|part|parseline|owner|op|notify|notice|nosound|nick|mp3end|mode|midiend|logon|load|kick|keyup|keydown|join|invite|input|hotlink|help|getfail|filesent|filercvd|exit|error|dns|disconnect|devoice|deowner|deop|dehelp|dccserver|ctcpreply|connectfail|connect|chatopen|chatclose|chat|ban|appactive|agent|active|action)(\:)'
+      scope: constant.numeric.line-number.find-in-files
       captures:
         1: constant.numeric.line-number.find-in-files
         2: constant.numeric.line-number.find-in-files
@@ -66,6 +67,18 @@ contexts:
         4: constant.numeric.line-number.find-in-files
         5: entity.name.function.msl
         6: entity.name.function.msl
+        7: entity.name.function.msl
+
+  events-ctcp:
+    - match: '(?i)(^(ctcp)) ([\^\+\*\!\@\&\$\d]*)(\:)([\d\D\w]+)\:([\*\?\#]+)(\:)'
+      scope: constant.numeric.line-number.find-in-files
+      captures:
+        1: constant.numeric.line-number.find-in-files
+        2: constant.numeric.line-number.find-in-files
+        3: constant.numeric.line-number.find-in-files
+        4: constant.numeric.line-number.find-in-files
+        5: entity.name.function.msl
+        6: variable.parameter.msl
         7: entity.name.function.msl
 
   events-onclose:
