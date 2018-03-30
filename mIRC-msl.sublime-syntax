@@ -69,7 +69,7 @@ contexts:
           pop: true
 
   gotoloop_inline:
-    - match: '(?i)[\|\{]\s+(\.*\/*goto\b)'
+    - match: '(?i)(?<=[\|\{])\s+(\.*\/*goto\b)'
       scope: entity.name.tag.msl
       push:
         - meta_scope: constant.numeric.line-number.find-in-files
