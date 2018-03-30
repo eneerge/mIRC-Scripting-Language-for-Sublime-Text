@@ -56,7 +56,7 @@ contexts:
       scope: keyword.control.msl
 
   keywords2:
-    - match: '(?i)(\||==|===|!=|>=|<=|<|>|\&|\$\+)'
+    - match: '(?i)(\||===|==|!=|>=|<=|<|>|\&|\$\+)'
       scope: keyword.operator
 
   gotoloop_label:
