@@ -5,6 +5,10 @@ Updated for mIRC 7.52 (March 2018)
 
 This is my attempt at creating a Sublime Text 3 syntax highlighter for mIRC scripting language.  All $vars and /commands listed in the mIRC help file index should be parsed.  Some undocumented $vars and /commands may be parsed, but I'm sure there's a few that I missed.  Create an issue if any keywords/commands are missing.
 
+Highlighting
+---------------
+Highlighting currently supports all commands and identifiers in mIRC.  In addition "on/ctcp/raw events" will also highlight.  I try to cover all cases including: commands on new line, commands inline, commands after a |, commands after a {, etc.  I welcome any suggestions for improvement.
+
 Auto Completion
 ---------------
 Autocomplete will work for /commands and $identifiers.  All commands are available.  Identifiers will be added shortly.
@@ -19,6 +23,10 @@ Syntax "HelpAssist" is currently limited to "abook through bcopy" (alphabetical)
 Command "Building" is currently limited to "aline".
 
 Images/Video will follow soon displaying the syntax- functionality.
+
+Bugs
+---------------
+Let me know if you find any bugs by submitting an Issue.
 
 
 Installation
