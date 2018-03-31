@@ -1,0 +1,814 @@
+{
+   "scope": "source.msl",
+
+   "completions":
+   [
+      // ###########################################################################################################################
+      // mIRC Commands
+      // ###########################################################################################################################
+      { "trigger": "abook - Display Address Book                                           \tcommand /", "contents": "abook" }
+      ,{ "trigger": "  SYNTAX-command-abook                                                \thelp /", "contents": "abook ${1:[-chnw]}${2:\n[- Control Tab]\n[-h Highlight Tab]\n[-n Notify Tab]\n[-w Whois Tab]}" }
+
+      ,{ "trigger": "action <message> - Perform action in channel                          \tcommand /", "contents": "action" }
+      ,{ "trigger": "  SYNTAX-command-action <message>                                     \thelp /", "contents": "action <message>" }
+
+      ,{ "trigger": "ajinvite <on|off> - Turn on/off auto-join on invite features          \tcommand /", "contents": "ajinvite" }
+      ,{ "trigger": "  SYNTAX-command-ajinvite <on|off>                                    \thelp /", "contents": "ajinvite <on|off>" }
+
+      ,{ "trigger": "alias [filename] <aliasname> [command] - Add/Replace/Remove aliases.  \tcommand /", "contents": "alias" }
+      ,{ "trigger": "  SYNTAX-command-alias                                                \thelp /", "contents": "alias [filename] <aliasname> [command]" }
+
+      ,{ "trigger": "aline -sahpinl [c] <@name> <text> - Add line of text to @window       \tcommand /", "contents": "aline" }
+      ,{ "trigger": "  SYNTAX-command-aline                                                \thelp /", "contents": "aline ${1:[-sahpinl]} ${3:[color]} @${4:<name>} ${5:<text>}${6:\n[-s Clears old selection]\n[-a Selects new item]\n[-h Highlights the node]\n[-p Force Line Wrapping]\n[-i Indent line]\n[-n Unique add line]\n[-l Specify action]\n[-t Force rewrap]}" }
+
+      ,{ "trigger": "ame <message> - Send action to all channels                           \tcommand /", "contents": "ame" }
+      ,{ "trigger": "  SYNTAX-command-ame                                                  \thelp /", "contents": "ame <message>" }
+
+      ,{ "trigger": "amsg <message> - Send message to all channels                         \tcommand /", "contents": "amsg" }
+      ,{ "trigger": "  SYNTAX-command-amsg                                                 \thelp /", "contents": "amsg <message>" }
+
+      ,{ "trigger": "anick <nickname> - Set alternate nickname                             \tcommand /", "contents": "anick" }
+      ,{ "trigger": "  SYNTAX-command-anick                                                \thelp /", "contents": "anick <nickname>" }
+
+      ,{ "trigger": "aop [-rw] <nick/address> [#channel1,#channel2...] [type] [network] - Autoop\tcommand /", "contents": "aop" }
+      ,{ "trigger": "aop <on|off> - Autoop                                                 \tcommand /", "contents": "aop" }
+      ,{ "trigger": "  SYNTAX-command-aop                                                  \thelp /", "contents": "aop <on|off> or [-rw] <nick/address> [#channel1,#channel2...] [type] [network]\n[-r Remove]\n[-w Autoop any network]" }
+
+      ,{ "trigger": "auser -a <levels> <nick|address> [info] - Add or edit user            \tcommand /", "contents": "auser" }
+      ,{ "trigger": "  SYNTAX-command-auser                                                \thelp /", "contents": "auser [-a] <levels> <nick|address> [info]\n[-a If address/nick matches existing entry, <level> is added]" }
+
+      ,{ "trigger": "auto [-rw] <nick/address> [#channel1,#channel2...] [type] [network] - Autoop\tcommand /", "contents": "auto" }
+      ,{ "trigger": "auto <on|off> - Autoop                                                \tcommand /", "contents": "auto" }
+      ,{ "trigger": "  SYNTAX-command-auto                                                 \thelp /", "contents": "auto <on|off> or [-rw] <nick/address> [#channel1,#channel2...] [type] [network]\n[-r Remove]\n[-w Autoop any network]" }
+
+      ,{ "trigger": "autojoin [-nsdN] - Autojoin used in conjunction with \"on connect\" event\tcommand /", "contents": "autojoin" }
+      ,{ "trigger": "  SYNTAX-command-autojoin                                             \thelp /", "contents": "autojoin -nsdN\n[-n Join now]\n[-s Skip autojoin]\n[-dN Delay autojoin for N seconds]" }
+
+      ,{ "trigger": "avoice [-rw] <nick/address> [#channel1,#channel2...] [type] [network] - Auto-voice       	                                                                                     \tcommand /", "contents": "avoice" }
+      ,{ "trigger": "avoice <on|off> - Auto-voice                                          \tcommand /", "contents": "avoice" }
+      ,{ "trigger": "  SYNTAX-command-avoice                                               \thelp /", "contents": "avoice <on|off> or [-rw] <nick/address> [#channel1,#channel2...] [type] [network]\n[-r Remove]\n[-w Auto-voice any network]" }
+
+      ,{ "trigger": "away [message] - Unset/Set Away                                       \tcommand /", "contents": "away" }
+      ,{ "trigger": "  SYNTAX-command-away                                                 \thelp /", "contents": "away [<message>]" }
+
+      ,{ "trigger": "background - Set background                      	                   \tcommand /", "contents": "background" }
+      ,{ "trigger": "  SYNTAX-command-background                                           \thelp /", "contents": "background -abemsgdluhcfnrtpx [window] [filename]\n------------------------------------------\nSwitches:\n[-e Set default]\n[-x No picture]\n\nWindow Switches\n[-a Active Window]\n[n-m Main Window]\n[-s Status Window]\n[-g Finger Window]\n[-d Single Message Window]\n\nPicture Switches\n[-c Center]\n[-f Fill]\n[-n Normal]\n[-r Stretch]\n[-t Tile]\n[-p Photo]\n\nBars Switches\n[-l Toolbar]\n[-u Toolbar Buttons]\n[-h Switchbar]\n[-b Treebar]\n" }
+
+      ,{ "trigger": "ban [-kruN] [#channel] <nickname|address> [type] [kick message] - Ban a user\tcommand /", "contents": "ban" }
+      ,{ "trigger": "  SYNTAX-command-ban                                                  \thelp /", "contents": "ban [-kruN] [#channel] <nickname|address> [type] [kick message]\n------------------------------------------\n[-k Kick after banning]\n[-r Remove ban]\n[-uN Unsets ban after N seconds]" }
+
+      ,{ "trigger": "bcopy [-zc] <&dest_binvar> <dest_pos> <&src_binvar> <src_pos> <numBytes>                 	                                                                                     \tcommand /", "contents": "bcopy" }
+      ,{ "trigger": "  SYNTAX-command-bcopy                                                \thelp /", "contents": "bcopy [-zc] <&dest_binvar> <dest_pos> <&src_binvar> <src_pos> <numBytes>\n------------------------------------------\nhttps://en.wikichip.org/wiki/mirc/commands/bcopy\n[-z Bytes in the source which are copied are zero-filled with chr(0) after the copy]\n[-c Truncates the destination variable to remove bytes following the bytes copied. Where both N and M are positive, the new destination length is <des_pos> + <numBytes> -1]\n<dest_&binvar> - The destination binary variable. Source and destination can be the same variable.\n<dest_pos> - The position to which to copy the byte to (or -1 to append to destination).\n<&src_binvar> - The source binary variable.\n<src_pos> - The position from which to start copying bytes.\n<numBytes> - Number of bytes to copy beginning at <src pos> (or -1 for everything beginning at <src_pos>)." }
+
+      ,{ "trigger": "beep - Generate speaker beep                                          \tcommand /", "contents": "beep" }
+      ,{ "trigger": "  SYNTAX-command-beep                                                 \thelp /", "contents": "beep" }
+
+      ,{ "trigger": "bindip                 	                                             \tcommand /", "contents": "bindip" }
+      ,{ "trigger": "  SYNTAX-command-bindip                                               \thelp /", "contents": "" }
+
+      ,{ "trigger": "bread                 	                                               \tcommand /", "contents": "bread" }
+      ,{ "trigger": "  SYNTAX-command-bread                                                \thelp /", "contents": "" }
+
+      ,{ "trigger": "break                 	                                               \tcommand /", "contents": "break" }
+      ,{ "trigger": "  SYNTAX-command-break                                                \thelp /", "contents": "" }
+
+      ,{ "trigger": "breplace	                                                             \tcommand /", "contents": "breplace" }
+      ,{ "trigger": "  SYNTAX-command-breplace                                             \thelp /", "contents": "breplace" }
+
+      ,{ "trigger": "bset	                                                                 \tcommand /", "contents": "bset" }
+      ,{ "trigger": "  SYNTAX-command-bse                                                  \thelp /", "contents": "bset" }
+
+      ,{ "trigger": "btrunc	                                                               \tcommand /", "contents": "btrunc" }
+      ,{ "trigger": "  SYNTAX-command-btrunc                                               \thelp /", "contents": "btrunc" }
+
+      ,{ "trigger": "bunset	                                                               \tcommand /", "contents": "bunset" }
+      ,{ "trigger": "  SYNTAX-command-bunse                                                \thelp /", "contents": "bunset" }
+
+      ,{ "trigger": "bwrite	                                                               \tcommand /", "contents": "bwrite" }
+      ,{ "trigger": "  SYNTAX-command-bwrite                                               \thelp /", "contents": "bwrite" }
+
+      ,{ "trigger": "channel	                                                             \tcommand /", "contents": "channel" }
+      ,{ "trigger": "  SYNTAX-command-channel                                              \thelp /", "contents": "channel" }
+
+      ,{ "trigger": "clear	                                                               \tcommand /", "contents": "clear" }
+      ,{ "trigger": "  SYNTAX-command-clear                                                \thelp /", "contents": "clear" }
+
+      ,{ "trigger": "clearall	                                                             \tcommand /", "contents": "clearall" }
+      ,{ "trigger": "  SYNTAX-command-clearall                                             \thelp /", "contents": "clearall" }
+
+      ,{ "trigger": "clearial	                                                             \tcommand /", "contents": "clearial" }
+      ,{ "trigger": "  SYNTAX-command-clearial                                             \thelp /", "contents": "clearial" }
+
+      ,{ "trigger": "cline	                                                                \tcommand /", "contents": "cline" }
+      ,{ "trigger": "  SYNTAX-command-cline                                                \thelp /", "contents": "cline" }
+
+      ,{ "trigger": "clipboard	                                                            \tcommand /", "contents": "clipboard" }
+      ,{ "trigger": "  SYNTAX-command-clipboard                                            \thelp /", "contents": "clipboard" }
+
+      ,{ "trigger": "close	                                                                \tcommand /", "contents": "close" }
+      ,{ "trigger": "  SYNTAX-command-close                                                \thelp /", "contents": "close" }
+
+      ,{ "trigger": "closechats	                                                           \tcommand /", "contents": "closechats" }
+      ,{ "trigger": "  SYNTAX-command-closechats                                           \thelp /", "contents": "closechats" }
+
+      ,{ "trigger": "closedccs	                                                            \tcommand /", "contents": "closedccs" }
+      ,{ "trigger": "  SYNTAX-command-closedccs                                            \thelp /", "contents": "closedccs" }
+
+      ,{ "trigger": "closefserves	                                                         \tcommand /", "contents": "closefserves" }
+      ,{ "trigger": "  SYNTAX-command-closefserves                                         \thelp /", "contents": "closefserves" }
+
+      ,{ "trigger": "closemsg	                                                             \tcommand /", "contents": "closemsg" }
+      ,{ "trigger": "  SYNTAX-command-closemsg                                             \thelp /", "contents": "closemsg" }
+
+      ,{ "trigger": "cnick	                                                                \tcommand /", "contents": "cnick" }
+      ,{ "trigger": "  SYNTAX-command-cnick                                                \thelp /", "contents": "cnick" }
+
+      ,{ "trigger": "color	                                                                \tcommand /", "contents": "color" }
+      ,{ "trigger": "  SYNTAX-command-color                                                \thelp /", "contents": "color" }
+
+      ,{ "trigger": "colour	                                                               \tcommand /", "contents": "colour" }
+      ,{ "trigger": "  SYNTAX-command-colour                                               \thelp /", "contents": "colour" }
+
+      ,{ "trigger": "comclose	                                                             \tcommand /", "contents": "comclose" }
+      ,{ "trigger": "  SYNTAX-command-comclose                                             \thelp /", "contents": "comclose" }
+
+      ,{ "trigger": "comlist	                                                              \tcommand /", "contents": "comlist" }
+      ,{ "trigger": "  SYNTAX-command-comlis                                               \thelp /", "contents": "comlist" }
+
+      ,{ "trigger": "commands	                                                             \tcommand /", "contents": "commands" }
+      ,{ "trigger": "  SYNTAX-command-commands                                             \thelp /", "contents": "commands" }
+
+      ,{ "trigger": "comopen	                                                              \tcommand /", "contents": "comopen" }
+      ,{ "trigger": "  SYNTAX-command-comopen                                              \thelp /", "contents": "comopen" }
+
+      ,{ "trigger": "comreg	                                                               \tcommand /", "contents": "comreg" }
+      ,{ "trigger": "  SYNTAX-command-comreg                                               \thelp /", "contents": "comreg" }
+
+      ,{ "trigger": "continue	                                                             \tcommand /", "contents": "continue" }
+      ,{ "trigger": "  SYNTAX-command-continue                                             \thelp /", "contents": "continue" }
+
+      ,{ "trigger": "copy	                                                                 \tcommand /", "contents": "copy" }
+      ,{ "trigger": "  SYNTAX-command-copy                                                 \thelp /", "contents": "copy" }
+
+      ,{ "trigger": "creq	                                                                 \tcommand /", "contents": "creq" }
+      ,{ "trigger": "  SYNTAX-command-creq                                                 \thelp /", "contents": "creq" }
+
+      ,{ "trigger": "ctcp	                                                                 \tcommand /", "contents": "ctcp" }
+      ,{ "trigger": "  SYNTAX-command-ctcp                                                 \thelp /", "contents": "ctcp" }
+
+      ,{ "trigger": "ctcpreply	                                                            \tcommand /", "contents": "ctcpreply" }
+      ,{ "trigger": "  SYNTAX-command-ctcpreply                                            \thelp /", "contents": "ctcpreply" }
+
+      ,{ "trigger": "ctcps	                                                                \tcommand /", "contents": "ctcps" }
+      ,{ "trigger": "  SYNTAX-command-ctcps                                                \thelp /", "contents": "ctcps" }
+
+      ,{ "trigger": "dcc	                                                                  \tcommand /", "contents": "dcc" }
+      ,{ "trigger": "  SYNTAX-command-dcc                                                  \thelp /", "contents": "dcc" }
+
+      ,{ "trigger": "dccserver	                                                            \tcommand /", "contents": "dccserver" }
+      ,{ "trigger": "  SYNTAX-command-dccserver                                            \thelp /", "contents": "dccserver" }
+
+      ,{ "trigger": "dde	                                                                  \tcommand /", "contents": "dde" }
+      ,{ "trigger": "  SYNTAX-command-dde                                                  \thelp /", "contents": "dde" }
+
+      ,{ "trigger": "ddeserver	                                                            \tcommand /", "contents": "ddeserver" }
+      ,{ "trigger": "  SYNTAX-command-ddeserver                                            \thelp /", "contents": "ddeserver" }
+
+      ,{ "trigger": "debug	                                                                \tcommand /", "contents": "debug" }
+      ,{ "trigger": "  SYNTAX-command-debug                                                \thelp /", "contents": "debug" }
+
+      ,{ "trigger": "dec	                                                                  \tcommand /", "contents": "dec" }
+      ,{ "trigger": "  SYNTAX-command-dec                                                  \thelp /", "contents": "dec" }
+
+      ,{ "trigger": "describe	                                                             \tcommand /", "contents": "describe" }
+      ,{ "trigger": "  SYNTAX-command-describe                                             \thelp /", "contents": "describe" }
+
+      ,{ "trigger": "dialog	                                                               \tcommand /", "contents": "dialog" }
+      ,{ "trigger": "  SYNTAX-command-dialog                                               \thelp /", "contents": "dialog" }
+
+      ,{ "trigger": "did	                                                                  \tcommand /", "contents": "did" }
+      ,{ "trigger": "  SYNTAX-command-did                                                  \thelp /", "contents": "did" }
+
+      ,{ "trigger": "didtok	                                                               \tcommand /", "contents": "didtok" }
+      ,{ "trigger": "  SYNTAX-command-didtok                                               \thelp /", "contents": "didtok" }
+
+      ,{ "trigger": "disable	                                                              \tcommand /", "contents": "disable" }
+      ,{ "trigger": "  SYNTAX-command-disable                                              \thelp /", "contents": "disable" }
+
+      ,{ "trigger": "disconnect	                                                           \tcommand /", "contents": "disconnect" }
+      ,{ "trigger": "  SYNTAX-command-disconnec                                            \thelp /", "contents": "disconnect" }
+
+      ,{ "trigger": "dlevel	                                                               \tcommand /", "contents": "dlevel" }
+      ,{ "trigger": "  SYNTAX-command-dlevel                                               \thelp /", "contents": "dlevel" }
+
+      ,{ "trigger": "dline	                                                                \tcommand /", "contents": "dline" }
+      ,{ "trigger": "  SYNTAX-command-dline                                                \thelp /", "contents": "dline" }
+
+      ,{ "trigger": "dll	                                                                  \tcommand /", "contents": "dll" }
+      ,{ "trigger": "  SYNTAX-command-dll                                                  \thelp /", "contents": "dll" }
+
+      ,{ "trigger": "dns	                                                                  \tcommand /", "contents": "dns" }
+      ,{ "trigger": "  SYNTAX-command-dns                                                  \thelp /", "contents": "dns" }
+
+      ,{ "trigger": "dqwindow	                                                             \tcommand /", "contents": "dqwindow" }
+      ,{ "trigger": "  SYNTAX-command-dqwindow                                             \thelp /", "contents": "dqwindow" }
+
+      ,{ "trigger": "drawcopy	                                                             \tcommand /", "contents": "drawcopy" }
+      ,{ "trigger": "  SYNTAX-command-drawcopy                                             \thelp /", "contents": "drawcopy" }
+
+      ,{ "trigger": "drawdot	                                                              \tcommand /", "contents": "drawdot" }
+      ,{ "trigger": "  SYNTAX-command-drawdo                                               \thelp /", "contents": "drawdot" }
+
+      ,{ "trigger": "drawfill	                                                             \tcommand /", "contents": "drawfill" }
+      ,{ "trigger": "  SYNTAX-command-drawfill                                             \thelp /", "contents": "drawfill" }
+
+      ,{ "trigger": "drawline	                                                             \tcommand /", "contents": "drawline" }
+      ,{ "trigger": "  SYNTAX-command-drawline                                             \thelp /", "contents": "drawline" }
+
+      ,{ "trigger": "drawpic	                                                              \tcommand /", "contents": "drawpic" }
+      ,{ "trigger": "  SYNTAX-command-drawpic                                              \thelp /", "contents": "drawpic" }
+
+      ,{ "trigger": "drawrect	                                                             \tcommand /", "contents": "drawrect" }
+      ,{ "trigger": "  SYNTAX-command-drawrec                                              \thelp /", "contents": "drawrect" }
+
+      ,{ "trigger": "drawreplace	                                                          \tcommand /", "contents": "drawreplace" }
+      ,{ "trigger": "  SYNTAX-command-drawreplace                                          \thelp /", "contents": "drawreplace" }
+
+      ,{ "trigger": "drawrot	                                                              \tcommand /", "contents": "drawrot" }
+      ,{ "trigger": "  SYNTAX-command-drawro                                               \thelp /", "contents": "drawrot" }
+
+      ,{ "trigger": "drawsave	                                                             \tcommand /", "contents": "drawsave" }
+      ,{ "trigger": "  SYNTAX-command-drawsave                                             \thelp /", "contents": "drawsave" }
+
+      ,{ "trigger": "drawscroll	                                                           \tcommand /", "contents": "drawscroll" }
+      ,{ "trigger": "  SYNTAX-command-drawscroll                                           \thelp /", "contents": "drawscroll" }
+
+      ,{ "trigger": "drawsize	                                                             \tcommand /", "contents": "drawsize" }
+      ,{ "trigger": "  SYNTAX-command-drawsize                                             \thelp /", "contents": "drawsize" }
+
+      ,{ "trigger": "drawtext	                                                             \tcommand /", "contents": "drawtext" }
+      ,{ "trigger": "  SYNTAX-command-drawtex                                              \thelp /", "contents": "drawtext" }
+
+      ,{ "trigger": "ebeeps	                                                               \tcommand /", "contents": "ebeeps" }
+      ,{ "trigger": "  SYNTAX-command-ebeeps                                               \thelp /", "contents": "ebeeps" }
+
+      ,{ "trigger": "echo	                                                                 \tcommand /", "contents": "echo" }
+      ,{ "trigger": "  SYNTAX-command-echo                                                 \thelp /", "contents": "echo" }
+
+      ,{ "trigger": "editbox	                                                              \tcommand /", "contents": "editbox" }
+      ,{ "trigger": "  SYNTAX-command-editbox                                              \thelp /", "contents": "editbox" }
+
+      ,{ "trigger": "else	                                                                 \tcommand /", "contents": "else" }
+      ,{ "trigger": "  SYNTAX-command-else                                                 \thelp /", "contents": "else" }
+
+      ,{ "trigger": "elseif	                                                               \tcommand /", "contents": "elseif" }
+      ,{ "trigger": "  SYNTAX-command-elseif                                               \thelp /", "contents": "elseif" }
+
+      ,{ "trigger": "emailaddr	                                                            \tcommand /", "contents": "emailaddr" }
+      ,{ "trigger": "  SYNTAX-command-emailaddr                                            \thelp /", "contents": "emailaddr" }
+
+      ,{ "trigger": "enable	                                                               \tcommand /", "contents": "enable" }
+      ,{ "trigger": "  SYNTAX-command-enable                                               \thelp /", "contents": "enable" }
+
+      ,{ "trigger": "events	                                                               \tcommand /", "contents": "events" }
+      ,{ "trigger": "  SYNTAX-command-events                                               \thelp /", "contents": "events" }
+
+      ,{ "trigger": "exit	                                                                 \tcommand /", "contents": "exit" }
+      ,{ "trigger": "  SYNTAX-command-exi                                                  \thelp /", "contents": "exit" }
+
+      ,{ "trigger": "fclose	                                                               \tcommand /", "contents": "fclose" }
+      ,{ "trigger": "  SYNTAX-command-fclose                                               \thelp /", "contents": "fclose" }
+
+      ,{ "trigger": "filter	                                                               \tcommand /", "contents": "filter" }
+      ,{ "trigger": "  SYNTAX-command-filter                                               \thelp /", "contents": "filter" }
+
+      ,{ "trigger": "findtext	                                                             \tcommand /", "contents": "findtext" }
+      ,{ "trigger": "  SYNTAX-command-findtex                                              \thelp /", "contents": "findtext" }
+
+      ,{ "trigger": "finger	                                                               \tcommand /", "contents": "finger" }
+      ,{ "trigger": "  SYNTAX-command-finger                                               \thelp /", "contents": "finger" }
+
+      ,{ "trigger": "firewall	                                                             \tcommand /", "contents": "firewall" }
+      ,{ "trigger": "  SYNTAX-command-firewall                                             \thelp /", "contents": "firewall" }
+
+      ,{ "trigger": "flash	                                                                \tcommand /", "contents": "flash" }
+      ,{ "trigger": "  SYNTAX-command-flash                                                \thelp /", "contents": "flash" }
+
+      ,{ "trigger": "flist	                                                                \tcommand /", "contents": "flist" }
+      ,{ "trigger": "  SYNTAX-command-flis                                                 \thelp /", "contents": "flist" }
+
+      ,{ "trigger": "flood	                                                                \tcommand /", "contents": "flood" }
+      ,{ "trigger": "  SYNTAX-command-flood                                                \thelp /", "contents": "flood" }
+
+      ,{ "trigger": "flush	                                                                \tcommand /", "contents": "flush" }
+      ,{ "trigger": "  SYNTAX-command-flush                                                \thelp /", "contents": "flush" }
+
+      ,{ "trigger": "flushini	                                                             \tcommand /", "contents": "flushini" }
+      ,{ "trigger": "  SYNTAX-command-flushini                                             \thelp /", "contents": "flushini" }
+
+      ,{ "trigger": "fnord	                                                                \tcommand /", "contents": "fnord" }
+      ,{ "trigger": "  SYNTAX-command-fnord                                                \thelp /", "contents": "fnord" }
+
+      ,{ "trigger": "font	                                                                 \tcommand /", "contents": "font" }
+      ,{ "trigger": "  SYNTAX-command-fon                                                  \thelp /", "contents": "font" }
+
+      ,{ "trigger": "fopen	                                                                \tcommand /", "contents": "fopen" }
+      ,{ "trigger": "  SYNTAX-command-fopen                                                \thelp /", "contents": "fopen" }
+
+      ,{ "trigger": "fseek	                                                                \tcommand /", "contents": "fseek" }
+      ,{ "trigger": "  SYNTAX-command-fseek                                                \thelp /", "contents": "fseek" }
+
+      ,{ "trigger": "fsend	                                                                \tcommand /", "contents": "fsend" }
+      ,{ "trigger": "  SYNTAX-command-fsend                                                \thelp /", "contents": "fsend" }
+
+      ,{ "trigger": "fserve	                                                               \tcommand /", "contents": "fserve" }
+      ,{ "trigger": "  SYNTAX-command-fserve                                               \thelp /", "contents": "fserve" }
+
+      ,{ "trigger": "fullname	                                                             \tcommand /", "contents": "fullname" }
+      ,{ "trigger": "  SYNTAX-command-fullname                                             \thelp /", "contents": "fullname" }
+
+      ,{ "trigger": "fupdate	                                                              \tcommand /", "contents": "fupdate" }
+      ,{ "trigger": "  SYNTAX-command-fupdate                                              \thelp /", "contents": "fupdate" }
+
+      ,{ "trigger": "fwrite	                                                               \tcommand /", "contents": "fwrite" }
+      ,{ "trigger": "  SYNTAX-command-fwrite                                               \thelp /", "contents": "fwrite" }
+
+      ,{ "trigger": "ghide	                                                                \tcommand /", "contents": "ghide" }
+      ,{ "trigger": "  SYNTAX-command-ghide                                                \thelp /", "contents": "ghide" }
+
+      ,{ "trigger": "gload	                                                                \tcommand /", "contents": "gload" }
+      ,{ "trigger": "  SYNTAX-command-gload                                                \thelp /", "contents": "gload" }
+
+      ,{ "trigger": "gmove	                                                                \tcommand /", "contents": "gmove" }
+      ,{ "trigger": "  SYNTAX-command-gmove                                                \thelp /", "contents": "gmove" }
+
+      ,{ "trigger": "gopts	                                                                \tcommand /", "contents": "gopts" }
+      ,{ "trigger": "  SYNTAX-command-gopts                                                \thelp /", "contents": "gopts" }
+
+      ,{ "trigger": "goto	                                                                 \tcommand /", "contents": "goto" }
+      ,{ "trigger": "  SYNTAX-command-goto                                                 \thelp /", "contents": "goto" }
+
+      ,{ "trigger": "gplay	                                                                \tcommand /", "contents": "gplay" }
+      ,{ "trigger": "  SYNTAX-command-gplay                                                \thelp /", "contents": "gplay" }
+
+      ,{ "trigger": "gpoint	                                                               \tcommand /", "contents": "gpoint" }
+      ,{ "trigger": "  SYNTAX-command-gpoin                                                \thelp /", "contents": "gpoint" }
+
+      ,{ "trigger": "gqreq	                                                                \tcommand /", "contents": "gqreq" }
+      ,{ "trigger": "  SYNTAX-command-gqreq                                                \thelp /", "contents": "gqreq" }
+
+      ,{ "trigger": "groups	                                                               \tcommand /", "contents": "groups" }
+      ,{ "trigger": "  SYNTAX-command-groups                                               \thelp /", "contents": "groups" }
+
+      ,{ "trigger": "gshow	                                                                \tcommand /", "contents": "gshow" }
+      ,{ "trigger": "  SYNTAX-command-gshow                                                \thelp /", "contents": "gshow" }
+
+      ,{ "trigger": "gsize	                                                                \tcommand /", "contents": "gsize" }
+      ,{ "trigger": "  SYNTAX-command-gsize                                                \thelp /", "contents": "gsize" }
+
+      ,{ "trigger": "gstop	                                                                \tcommand /", "contents": "gstop" }
+      ,{ "trigger": "  SYNTAX-command-gstop                                                \thelp /", "contents": "gstop" }
+
+      ,{ "trigger": "gtalk	                                                                \tcommand /", "contents": "gtalk" }
+      ,{ "trigger": "  SYNTAX-command-gtalk                                                \thelp /", "contents": "gtalk" }
+
+      ,{ "trigger": "gunload	                                                              \tcommand /", "contents": "gunload" }
+      ,{ "trigger": "  SYNTAX-command-gunload                                              \thelp /", "contents": "gunload" }
+
+      ,{ "trigger": "guser	                                                                \tcommand /", "contents": "guser" }
+      ,{ "trigger": "  SYNTAX-command-guser                                                \thelp /", "contents": "guser" }
+
+      ,{ "trigger": "hadd	                                                                 \tcommand /", "contents": "hadd" }
+      ,{ "trigger": "  SYNTAX-command-hadd                                                 \thelp /", "contents": "hadd" }
+
+      ,{ "trigger": "halt	                                                                 \tcommand /", "contents": "halt" }
+      ,{ "trigger": "  SYNTAX-command-hal                                                  \thelp /", "contents": "halt" }
+
+      ,{ "trigger": "haltdef	                                                              \tcommand /", "contents": "haltdef" }
+      ,{ "trigger": "  SYNTAX-command-haltdef                                              \thelp /", "contents": "haltdef" }
+
+      ,{ "trigger": "hdec	                                                                 \tcommand /", "contents": "hdec" }
+      ,{ "trigger": "  SYNTAX-command-hdec                                                 \thelp /", "contents": "hdec" }
+
+      ,{ "trigger": "hdel	                                                                 \tcommand /", "contents": "hdel" }
+      ,{ "trigger": "  SYNTAX-command-hdel                                                 \thelp /", "contents": "hdel" }
+
+      ,{ "trigger": "help	                                                                 \tcommand /", "contents": "help" }
+      ,{ "trigger": "  SYNTAX-command-help                                                 \thelp /", "contents": "help" }
+
+      ,{ "trigger": "hfree	                                                                \tcommand /", "contents": "hfree" }
+      ,{ "trigger": "  SYNTAX-command-hfree                                                \thelp /", "contents": "hfree" }
+
+      ,{ "trigger": "hinc	                                                                 \tcommand /", "contents": "hinc" }
+      ,{ "trigger": "  SYNTAX-command-hinc                                                 \thelp /", "contents": "hinc" }
+
+      ,{ "trigger": "hload	                                                                \tcommand /", "contents": "hload" }
+      ,{ "trigger": "  SYNTAX-command-hload                                                \thelp /", "contents": "hload" }
+
+      ,{ "trigger": "hmake	                                                                \tcommand /", "contents": "hmake" }
+      ,{ "trigger": "  SYNTAX-command-hmake                                                \thelp /", "contents": "hmake" }
+
+      ,{ "trigger": "hop	                                                                  \tcommand /", "contents": "hop" }
+      ,{ "trigger": "  SYNTAX-command-hop                                                  \thelp /", "contents": "hop" }
+
+      ,{ "trigger": "hotlink	                                                              \tcommand /", "contents": "hotlink" }
+      ,{ "trigger": "  SYNTAX-command-hotlink                                              \thelp /", "contents": "hotlink" }
+
+      ,{ "trigger": "hsave	                                                                \tcommand /", "contents": "hsave" }
+      ,{ "trigger": "  SYNTAX-command-hsave                                                \thelp /", "contents": "hsave" }
+
+      ,{ "trigger": "ial	                                                                  \tcommand /", "contents": "ial" }
+      ,{ "trigger": "  SYNTAX-command-ial                                                  \thelp /", "contents": "ial" }
+
+      ,{ "trigger": "ialclear	                                                             \tcommand /", "contents": "ialclear" }
+      ,{ "trigger": "  SYNTAX-command-ialclear                                             \thelp /", "contents": "ialclear" }
+
+      ,{ "trigger": "ialmark	                                                              \tcommand /", "contents": "ialmark" }
+      ,{ "trigger": "  SYNTAX-command-ialmark                                              \thelp /", "contents": "ialmark" }
+
+      ,{ "trigger": "identd	                                                               \tcommand /", "contents": "identd" }
+      ,{ "trigger": "  SYNTAX-command-identd                                               \thelp /", "contents": "identd" }
+
+      ,{ "trigger": "if	                                                                   \tcommand /", "contents": "if" }
+      ,{ "trigger": "  SYNTAX-command-if                                                   \thelp /", "contents": "if" }
+
+      ,{ "trigger": "ignore	                                                               \tcommand /", "contents": "ignore" }
+      ,{ "trigger": "  SYNTAX-command-ignore                                               \thelp /", "contents": "ignore" }
+
+      ,{ "trigger": "iline	                                                                \tcommand /", "contents": "iline" }
+      ,{ "trigger": "  SYNTAX-command-iline                                                \thelp /", "contents": "iline" }
+
+      ,{ "trigger": "inc	                                                                  \tcommand /", "contents": "inc" }
+      ,{ "trigger": "  SYNTAX-command-inc                                                  \thelp /", "contents": "inc" }
+
+      ,{ "trigger": "iuser	                                                                \tcommand /", "contents": "iuser" }
+      ,{ "trigger": "  SYNTAX-command-iuser                                                \thelp /", "contents": "iuser" }
+
+      ,{ "trigger": "leave	                                                                \tcommand /", "contents": "leave" }
+      ,{ "trigger": "  SYNTAX-command-leave                                                \thelp /", "contents": "leave" }
+
+      ,{ "trigger": "linesep	                                                              \tcommand /", "contents": "linesep" }
+      ,{ "trigger": "  SYNTAX-command-linesep                                              \thelp /", "contents": "linesep" }
+
+      ,{ "trigger": "links	                                                                \tcommand /", "contents": "links" }
+      ,{ "trigger": "  SYNTAX-command-links                                                \thelp /", "contents": "links" }
+
+      ,{ "trigger": "list	                                                                 \tcommand /", "contents": "list" }
+      ,{ "trigger": "  SYNTAX-command-lis                                                  \thelp /", "contents": "list" }
+
+      ,{ "trigger": "load	                                                                 \tcommand /", "contents": "load" }
+      ,{ "trigger": "  SYNTAX-command-load                                                 \thelp /", "contents": "load" }
+
+      ,{ "trigger": "loadbuf	                                                              \tcommand /", "contents": "loadbuf" }
+      ,{ "trigger": "  SYNTAX-command-loadbuf                                              \thelp /", "contents": "loadbuf" }
+
+      ,{ "trigger": "localinfo	                                                            \tcommand /", "contents": "localinfo" }
+      ,{ "trigger": "  SYNTAX-command-localinfo                                            \thelp /", "contents": "localinfo" }
+
+      ,{ "trigger": "log	                                                                  \tcommand /", "contents": "log" }
+      ,{ "trigger": "  SYNTAX-command-log                                                  \thelp /", "contents": "log" }
+
+      ,{ "trigger": "logview	                                                              \tcommand /", "contents": "logview" }
+      ,{ "trigger": "  SYNTAX-command-logview                                              \thelp /", "contents": "logview" }
+
+      ,{ "trigger": "maxdepth	                                                             \tcommand /", "contents": "maxdepth" }
+      ,{ "trigger": "  SYNTAX-command-maxdepth                                             \thelp /", "contents": "maxdepth" }
+
+      ,{ "trigger": "mdi	                                                                  \tcommand /", "contents": "mdi" }
+      ,{ "trigger": "  SYNTAX-command-mdi                                                  \thelp /", "contents": "mdi" }
+
+      ,{ "trigger": "me	                                                                   \tcommand /", "contents": "me" }
+      ,{ "trigger": "  SYNTAX-command-me                                                   \thelp /", "contents": "me" }
+
+      ,{ "trigger": "menubar	                                                              \tcommand /", "contents": "menubar" }
+      ,{ "trigger": "  SYNTAX-command-menubar                                              \thelp /", "contents": "menubar" }
+
+      ,{ "trigger": "mkdir	                                                                \tcommand /", "contents": "mkdir" }
+      ,{ "trigger": "  SYNTAX-command-mkdir                                                \thelp /", "contents": "mkdir" }
+
+      ,{ "trigger": "mnick	                                                                \tcommand /", "contents": "mnick" }
+      ,{ "trigger": "  SYNTAX-command-mnick                                                \thelp /", "contents": "mnick" }
+
+      ,{ "trigger": "mode	                                                                 \tcommand /", "contents": "mode" }
+      ,{ "trigger": "  SYNTAX-command-mode                                                 \thelp /", "contents": "mode" }
+
+      ,{ "trigger": "msg	                                                                  \tcommand /", "contents": "msg" }
+      ,{ "trigger": "  SYNTAX-command-msg                                                  \thelp /", "contents": "msg" }
+
+      ,{ "trigger": "noop	                                                                 \tcommand /", "contents": "noop" }
+      ,{ "trigger": "  SYNTAX-command-noop                                                 \thelp /", "contents": "noop" }
+
+      ,{ "trigger": "notify	                                                               \tcommand /", "contents": "notify" }
+      ,{ "trigger": "  SYNTAX-command-notify                                               \thelp /", "contents": "notify" }
+
+      ,{ "trigger": "omsg	                                                                 \tcommand /", "contents": "omsg" }
+      ,{ "trigger": "  SYNTAX-command-omsg                                                 \thelp /", "contents": "omsg" }
+
+      ,{ "trigger": "onotice	                                                              \tcommand /", "contents": "onotice" }
+      ,{ "trigger": "  SYNTAX-command-onotice                                              \thelp /", "contents": "onotice" }
+
+      ,{ "trigger": "parseline	                                                            \tcommand /", "contents": "parseline" }
+      ,{ "trigger": "  SYNTAX-command-parseline                                            \thelp /", "contents": "parseline" }
+
+      ,{ "trigger": "part	                                                                 \tcommand /", "contents": "part" }
+      ,{ "trigger": "  SYNTAX-command-par                                                  \thelp /", "contents": "part" }
+
+      ,{ "trigger": "partall	                                                              \tcommand /", "contents": "partall" }
+      ,{ "trigger": "  SYNTAX-command-partall                                              \thelp /", "contents": "partall" }
+
+      ,{ "trigger": "pdcc	                                                                 \tcommand /", "contents": "pdcc" }
+      ,{ "trigger": "  SYNTAX-command-pdcc                                                 \thelp /", "contents": "pdcc" }
+
+      ,{ "trigger": "perform	                                                              \tcommand /", "contents": "perform" }
+      ,{ "trigger": "  SYNTAX-command-perform                                              \thelp /", "contents": "perform" }
+
+      ,{ "trigger": "play	                                                                 \tcommand /", "contents": "play" }
+      ,{ "trigger": "  SYNTAX-command-play                                                 \thelp /", "contents": "play" }
+
+      ,{ "trigger": "playctrl	                                                             \tcommand /", "contents": "playctrl" }
+      ,{ "trigger": "  SYNTAX-command-playctrl                                             \thelp /", "contents": "playctrl" }
+
+      ,{ "trigger": "pop	                                                                  \tcommand /", "contents": "pop" }
+      ,{ "trigger": "  SYNTAX-command-pop                                                  \thelp /", "contents": "pop" }
+
+      ,{ "trigger": "protect	                                                              \tcommand /", "contents": "protect" }
+      ,{ "trigger": "  SYNTAX-command-protec                                               \thelp /", "contents": "protect" }
+
+      ,{ "trigger": "proxy	                                                                \tcommand /", "contents": "proxy" }
+      ,{ "trigger": "  SYNTAX-command-proxy                                                \thelp /", "contents": "proxy" }
+
+      ,{ "trigger": "pvoice	                                                               \tcommand /", "contents": "pvoice" }
+      ,{ "trigger": "  SYNTAX-command-pvoice                                               \thelp /", "contents": "pvoice" }
+
+      ,{ "trigger": "qme	                                                                  \tcommand /", "contents": "qme" }
+      ,{ "trigger": "  SYNTAX-command-qme                                                  \thelp /", "contents": "qme" }
+
+      ,{ "trigger": "qmsg	                                                                 \tcommand /", "contents": "qmsg" }
+      ,{ "trigger": "  SYNTAX-command-qmsg                                                 \thelp /", "contents": "qmsg" }
+
+      ,{ "trigger": "query	                                                                \tcommand /", "contents": "query" }
+      ,{ "trigger": "  SYNTAX-command-query                                                \thelp /", "contents": "query" }
+
+      ,{ "trigger": "queryrn	                                                              \tcommand /", "contents": "queryrn" }
+      ,{ "trigger": "  SYNTAX-command-queryrn                                              \thelp /", "contents": "queryrn" }
+
+      ,{ "trigger": "quit	                                                                 \tcommand /", "contents": "quit" }
+      ,{ "trigger": "  SYNTAX-command-qui                                                  \thelp /", "contents": "quit" }
+
+      ,{ "trigger": "quote	                                                                \tcommand /", "contents": "quote" }
+      ,{ "trigger": "  SYNTAX-command-quote                                                \thelp /", "contents": "quote" }
+
+      ,{ "trigger": "raw	                                                                  \tcommand /", "contents": "raw" }
+      ,{ "trigger": "  SYNTAX-command-raw                                                  \thelp /", "contents": "raw" }
+
+      ,{ "trigger": "registration	                                                         \tcommand /", "contents": "registration" }
+      ,{ "trigger": "  SYNTAX-command-registration                                         \thelp /", "contents": "registration" }
+
+      ,{ "trigger": "reload	                                                               \tcommand /", "contents": "reload" }
+      ,{ "trigger": "  SYNTAX-command-reload                                               \thelp /", "contents": "reload" }
+
+      ,{ "trigger": "remini	                                                               \tcommand /", "contents": "remini" }
+      ,{ "trigger": "  SYNTAX-command-remini                                               \thelp /", "contents": "remini" }
+
+      ,{ "trigger": "remote	                                                               \tcommand /", "contents": "remote" }
+      ,{ "trigger": "  SYNTAX-command-remote                                               \thelp /", "contents": "remote" }
+
+      ,{ "trigger": "remove	                                                               \tcommand /", "contents": "remove" }
+      ,{ "trigger": "  SYNTAX-command-remove                                               \thelp /", "contents": "remove" }
+
+      ,{ "trigger": "rename	                                                               \tcommand /", "contents": "rename" }
+      ,{ "trigger": "  SYNTAX-command-rename                                               \thelp /", "contents": "rename" }
+
+      ,{ "trigger": "renwin	                                                               \tcommand /", "contents": "renwin" }
+      ,{ "trigger": "  SYNTAX-command-renwin                                               \thelp /", "contents": "renwin" }
+
+      ,{ "trigger": "reseterror	                                                           \tcommand /", "contents": "reseterror" }
+      ,{ "trigger": "  SYNTAX-command-reseterror                                           \thelp /", "contents": "reseterror" }
+
+      ,{ "trigger": "resetidle	                                                            \tcommand /", "contents": "resetidle" }
+      ,{ "trigger": "  SYNTAX-command-resetidle                                            \thelp /", "contents": "resetidle" }
+
+      ,{ "trigger": "return	                                                               \tcommand /", "contents": "return" }
+      ,{ "trigger": "  SYNTAX-command-return                                               \thelp /", "contents": "return" }
+
+      ,{ "trigger": "returnex	                                                             \tcommand /", "contents": "returnex" }
+      ,{ "trigger": "  SYNTAX-command-returnex                                             \thelp /", "contents": "returnex" }
+
+      ,{ "trigger": "rlevel	                                                               \tcommand /", "contents": "rlevel" }
+      ,{ "trigger": "  SYNTAX-command-rlevel                                               \thelp /", "contents": "rlevel" }
+
+      ,{ "trigger": "rline	                                                                \tcommand /", "contents": "rline" }
+      ,{ "trigger": "  SYNTAX-command-rline                                                \thelp /", "contents": "rline" }
+
+      ,{ "trigger": "rmdir	                                                                \tcommand /", "contents": "rmdir" }
+      ,{ "trigger": "  SYNTAX-command-rmdir                                                \thelp /", "contents": "rmdir" }
+
+      ,{ "trigger": "run	                                                                  \tcommand /", "contents": "run" }
+      ,{ "trigger": "  SYNTAX-command-run                                                  \thelp /", "contents": "run" }
+
+      ,{ "trigger": "ruser	                                                                \tcommand /", "contents": "ruser" }
+      ,{ "trigger": "  SYNTAX-command-ruser                                                \thelp /", "contents": "ruser" }
+
+      ,{ "trigger": "save	                                                                 \tcommand /", "contents": "save" }
+      ,{ "trigger": "  SYNTAX-command-save                                                 \thelp /", "contents": "save" }
+
+      ,{ "trigger": "savebuf	                                                              \tcommand /", "contents": "savebuf" }
+      ,{ "trigger": "  SYNTAX-command-savebuf                                              \thelp /", "contents": "savebuf" }
+
+      ,{ "trigger": "saveini	                                                              \tcommand /", "contents": "saveini" }
+      ,{ "trigger": "  SYNTAX-command-saveini                                              \thelp /", "contents": "saveini" }
+
+      ,{ "trigger": "say	                                                                  \tcommand /", "contents": "say" }
+      ,{ "trigger": "  SYNTAX-command-say                                                  \thelp /", "contents": "say" }
+
+      ,{ "trigger": "scid	                                                                 \tcommand /", "contents": "scid" }
+      ,{ "trigger": "  SYNTAX-command-scid                                                 \thelp /", "contents": "scid" }
+
+      ,{ "trigger": "scon	                                                                 \tcommand /", "contents": "scon" }
+      ,{ "trigger": "  SYNTAX-command-scon                                                 \thelp /", "contents": "scon" }
+
+      ,{ "trigger": "server	                                                               \tcommand /", "contents": "server" }
+      ,{ "trigger": "  SYNTAX-command-server                                               \thelp /", "contents": "server" }
+
+      ,{ "trigger": "set	                                                                  \tcommand /", "contents": "set" }
+      ,{ "trigger": "  SYNTAX-command-se                                                   \thelp /", "contents": "set" }
+
+      ,{ "trigger": "setlayer	                                                             \tcommand /", "contents": "setlayer" }
+      ,{ "trigger": "  SYNTAX-command-setlayer                                             \thelp /", "contents": "setlayer" }
+
+      ,{ "trigger": "showmirc	                                                             \tcommand /", "contents": "showmirc" }
+      ,{ "trigger": "  SYNTAX-command-showmirc                                             \thelp /", "contents": "showmirc" }
+
+      ,{ "trigger": "signal	                                                               \tcommand /", "contents": "signal" }
+      ,{ "trigger": "  SYNTAX-command-signal                                               \thelp /", "contents": "signal" }
+
+      ,{ "trigger": "sline	                                                                \tcommand /", "contents": "sline" }
+      ,{ "trigger": "  SYNTAX-command-sline                                                \thelp /", "contents": "sline" }
+
+      ,{ "trigger": "sockaccept	                                                           \tcommand /", "contents": "sockaccept" }
+      ,{ "trigger": "  SYNTAX-command-sockaccep                                            \thelp /", "contents": "sockaccept" }
+
+      ,{ "trigger": "sockclose	                                                            \tcommand /", "contents": "sockclose" }
+      ,{ "trigger": "  SYNTAX-command-sockclose                                            \thelp /", "contents": "sockclose" }
+
+      ,{ "trigger": "socklist	                                                             \tcommand /", "contents": "socklist" }
+      ,{ "trigger": "  SYNTAX-command-socklis                                              \thelp /", "contents": "socklist" }
+
+      ,{ "trigger": "socklisten	                                                           \tcommand /", "contents": "socklisten" }
+      ,{ "trigger": "  SYNTAX-command-socklisten                                           \thelp /", "contents": "socklisten" }
+
+      ,{ "trigger": "sockmark	                                                             \tcommand /", "contents": "sockmark" }
+      ,{ "trigger": "  SYNTAX-command-sockmark                                             \thelp /", "contents": "sockmark" }
+
+      ,{ "trigger": "sockopen	                                                             \tcommand /", "contents": "sockopen" }
+      ,{ "trigger": "  SYNTAX-command-sockopen                                             \thelp /", "contents": "sockopen" }
+
+      ,{ "trigger": "sockpause	                                                            \tcommand /", "contents": "sockpause" }
+      ,{ "trigger": "  SYNTAX-command-sockpause                                            \thelp /", "contents": "sockpause" }
+
+      ,{ "trigger": "sockread	                                                             \tcommand /", "contents": "sockread" }
+      ,{ "trigger": "  SYNTAX-command-sockread                                             \thelp /", "contents": "sockread" }
+
+      ,{ "trigger": "sockrename	                                                           \tcommand /", "contents": "sockrename" }
+      ,{ "trigger": "  SYNTAX-command-sockrename                                           \thelp /", "contents": "sockrename" }
+
+      ,{ "trigger": "sockudp	                                                              \tcommand /", "contents": "sockudp" }
+      ,{ "trigger": "  SYNTAX-command-sockudp                                              \thelp /", "contents": "sockudp" }
+
+      ,{ "trigger": "sockwrite	                                                            \tcommand /", "contents": "sockwrite" }
+      ,{ "trigger": "  SYNTAX-command-sockwrite                                            \thelp /", "contents": "sockwrite" }
+
+      ,{ "trigger": "sound	                                                                \tcommand /", "contents": "sound" }
+      ,{ "trigger": "  SYNTAX-command-sound                                                \thelp /", "contents": "sound" }
+
+      ,{ "trigger": "speak	                                                                \tcommand /", "contents": "speak" }
+      ,{ "trigger": "  SYNTAX-command-speak                                                \thelp /", "contents": "speak" }
+
+      ,{ "trigger": "splay	                                                                \tcommand /", "contents": "splay" }
+      ,{ "trigger": "  SYNTAX-command-splay                                                \thelp /", "contents": "splay" }
+
+      ,{ "trigger": "sreq	                                                                 \tcommand /", "contents": "sreq" }
+      ,{ "trigger": "  SYNTAX-command-sreq                                                 \thelp /", "contents": "sreq" }
+
+      ,{ "trigger": "strip	                                                                \tcommand /", "contents": "strip" }
+      ,{ "trigger": "  SYNTAX-command-strip                                                \thelp /", "contents": "strip" }
+
+      ,{ "trigger": "switchbar	                                                            \tcommand /", "contents": "switchbar" }
+      ,{ "trigger": "  SYNTAX-command-switchbar                                            \thelp /", "contents": "switchbar" }
+
+      ,{ "trigger": "timer	                                                                \tcommand /", "contents": "timer" }
+      ,{ "trigger": "  SYNTAX-command-timer                                                \thelp /", "contents": "timer" }
+
+      ,{ "trigger": "timestamp	                                                            \tcommand /", "contents": "timestamp" }
+      ,{ "trigger": "  SYNTAX-command-timestamp                                            \thelp /", "contents": "timestamp" }
+
+      ,{ "trigger": "tip	                                                                  \tcommand /", "contents": "tip" }
+      ,{ "trigger": "  SYNTAX-command-tip                                                  \thelp /", "contents": "tip" }
+
+      ,{ "trigger": "tips	                                                                 \tcommand /", "contents": "tips" }
+      ,{ "trigger": "  SYNTAX-command-tips                                                 \thelp /", "contents": "tips" }
+
+      ,{ "trigger": "titlebar	                                                             \tcommand /", "contents": "titlebar" }
+      ,{ "trigger": "  SYNTAX-command-titlebar                                             \thelp /", "contents": "titlebar" }
+
+      ,{ "trigger": "tnick	                                                                \tcommand /", "contents": "tnick" }
+      ,{ "trigger": "  SYNTAX-command-tnick                                                \thelp /", "contents": "tnick" }
+
+      ,{ "trigger": "tokenize	                                                             \tcommand /", "contents": "tokenize" }
+      ,{ "trigger": "  SYNTAX-command-tokenize                                             \thelp /", "contents": "tokenize" }
+
+      ,{ "trigger": "toolbar	                                                              \tcommand /", "contents": "toolbar" }
+      ,{ "trigger": "  SYNTAX-command-toolbar                                              \thelp /", "contents": "toolbar" }
+
+      ,{ "trigger": "tray	                                                                 \tcommand /", "contents": "tray" }
+      ,{ "trigger": "  SYNTAX-command-tray                                                 \thelp /", "contents": "tray" }
+
+      ,{ "trigger": "treebar	                                                              \tcommand /", "contents": "treebar" }
+      ,{ "trigger": "  SYNTAX-command-treebar                                              \thelp /", "contents": "treebar" }
+
+      ,{ "trigger": "ulist	                                                                \tcommand /", "contents": "ulist" }
+      ,{ "trigger": "  SYNTAX-command-ulis                                                 \thelp /", "contents": "ulist" }
+
+      ,{ "trigger": "unload	                                                               \tcommand /", "contents": "unload" }
+      ,{ "trigger": "  SYNTAX-command-unload                                               \thelp /", "contents": "unload" }
+
+      ,{ "trigger": "unset	                                                                \tcommand /", "contents": "unset" }
+      ,{ "trigger": "  SYNTAX-command-unse                                                 \thelp /", "contents": "unset" }
+
+      ,{ "trigger": "unsetall	                                                             \tcommand /", "contents": "unsetall" }
+      ,{ "trigger": "  SYNTAX-command-unsetall                                             \thelp /", "contents": "unsetall" }
+
+      ,{ "trigger": "updatenl	                                                             \tcommand /", "contents": "updatenl" }
+      ,{ "trigger": "  SYNTAX-command-updatenl                                             \thelp /", "contents": "updatenl" }
+
+      ,{ "trigger": "url	                                                                  \tcommand /", "contents": "url" }
+      ,{ "trigger": "  SYNTAX-command-url                                                  \thelp /", "contents": "url" }
+
+      ,{ "trigger": "username	                                                             \tcommand /", "contents": "username" }
+      ,{ "trigger": "  SYNTAX-command-username                                             \thelp /", "contents": "username" }
+
+      ,{ "trigger": "uwho	                                                                 \tcommand /", "contents": "uwho" }
+      ,{ "trigger": "  SYNTAX-command-uwho                                                 \thelp /", "contents": "uwho" }
+
+      ,{ "trigger": "var	                                                                  \tcommand /", "contents": "var" }
+      ,{ "trigger": "  SYNTAX-command-var                                                  \thelp /", "contents": "var" }
+
+      ,{ "trigger": "vcadd	                                                               \tcommand /", "contents": "vcadd" }
+      ,{ "trigger": "  SYNTAX-command-vcadd                                                \thelp /", "contents": "vcadd" }
+
+      ,{ "trigger": "vcmd	                                                                 \tcommand /", "contents": "vcmd" }
+      ,{ "trigger": "  SYNTAX-command-vcmd                                                 \thelp /", "contents": "vcmd" }
+
+      ,{ "trigger": "vcrem	                                                               \tcommand /", "contents": "vcrem" }
+      ,{ "trigger": "  SYNTAX-command-vcrem                                                \thelp /", "contents": "vcrem" }
+
+      ,{ "trigger": "vol	                                                                 \tcommand /", "contents": "vol" }
+      ,{ "trigger": "  SYNTAX-command-vol                                                  \thelp /", "contents": "vol" }
+
+      ,{ "trigger": "wallchops	                                                           \tcommand /", "contents": "wallchops" }
+      ,{ "trigger": "  SYNTAX-command-wallchops                                            \thelp /", "contents": "wallchops" }
+
+      ,{ "trigger": "wavplay	                                                             \tcommand /", "contents": "wavplay" }
+      ,{ "trigger": "  SYNTAX-command-wavplay                                              \thelp /", "contents": "wavplay" }
+
+      ,{ "trigger": "while	                                                               \tcommand /", "contents": "while" }
+      ,{ "trigger": "  SYNTAX-command-while                                                \thelp /", "contents": "while" }
+
+      ,{ "trigger": "window	                                                               \tcommand /", "contents": "window" }
+      ,{ "trigger": "  SYNTAX-command-window                                               \thelp /", "contents": "window" }
+
+      ,{ "trigger": "winhelp	                                                             \tcommand /", "contents": "winhelp" }
+      ,{ "trigger": "  SYNTAX-command-winhelp                                              \thelp /", "contents": "winhelp" }
+
+      ,{ "trigger": "write	                                                               \tcommand /", "contents": "write" }
+      ,{ "trigger": "  SYNTAX-command-write                                                \thelp /", "contents": "write" }
+
+      ,{ "trigger": "writeini	                                                             \tcommand /", "contents": "writeini" }
+      ,{ "trigger": "    SYNTAX-command-writeini                                           \thelp /", "contents": "writeini" }
+
+      ,{ "trigger": "xyzzy - Easter Egg                                                    \tcommand /", "contents": "xyzzy" }
+      ,{ "trigger": "  SYNTAX-command-xyzzy                                                \thelp /", "contents": "xyzzy" }
+
+
+
+
+
+
+
+
+      // ###########################################################################################################################
+      // mIRC Identifiers
+      // ###########################################################################################################################
+
+      ,{ "trigger": "abook $                                                               \tidentifier $", "contents": "abook" }
+      ,{ "trigger": "  SYNTAX-identifier-abook $abook                                      \thelp $", "contents": "abook" }
+
+      ,{ "trigger": "aop\t$                                                                \tidentifier $", "contents": "aop" }
+      ,{ "trigger": "  SYNTAX-identifier-aop                                               \thelp $", "contents": "aop" }
+
+
+
+
+
+   ]
+}
