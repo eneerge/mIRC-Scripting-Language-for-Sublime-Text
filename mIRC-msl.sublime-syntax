@@ -13,25 +13,23 @@ contexts:
 
   main:
     - include: control-codes
-    - include: dialog-events
-    - include: dot-sign-user-vars-newline
-    - include: dot-sign-user-vars-inline
-    - include: events-v2
+    - include: events
     - include: events-ctcp
     - include: events-onclose
     - include: events-ondialog
-    - include: gotoloop_label
-    - include: gotoloop_label_inline
-    - include: gotoloop_newline
-    - include: gotoloop_inline
+    - include: gotoloop-label
+    - include: gotoloop-label-inline
+    - include: gotoloop-newline
+    - include: gotoloop-inline
     - include: groups
     - include: keywords
     - include: keywords2
-    - include: mirc-var-dns
-    - include: money-sign-constants
+    - include: mirc-identifiers
+    - include: mirc-identifier-dns
+    - include: mirc-identifier-params
     - include: money-sign-mirc-vars
     - include: money-sign-user-vars
-    - include: numbers
+    - include: numeric
     - include: percent-sign-vars
     - include: popup-operator
     - include: slash-sign-user-assumed
@@ -42,59 +40,64 @@ contexts:
     - include: slash-sign-user-vars2
     - include: windows
 
+  comments:
+    - match: '^\s*;'
+      scope: punctuation.definition.comment.msl
+      push:
+        - meta_scope: comment.line.double-slash.msl
+        - match: $\n?
+          pop: true
+
+  comments2:
+    - match: '(^\s*\/\*)'
+      scope: punctuation.definition.comment.msl
+      push:
+        - meta_scope: comment.line.double-slash.msl
+        - match: '(^\s*\*\/)(.)*'
+          pop: true
+
   control-codes:
     - match: '|||||'
       scope: keyword.control.msl
 
-
-  dot-sign-user-vars-newline:
-    - match: '^(?i)\s+[\.]+(?!xor\b|writeini\b|write\b|wrap\b|winhelp\b|window\b|wildtok\b|wildsite\b|width\b|wid\b|whois\b|while\b|vol\b|vnick\b|version\b|vcrem\b|vcmdver\b|vcmdstat\b|vcmd\b|vcadd\b|var\b|v2\b|v1\b|uwho\b|utfencode\b|utfdecode\b|usermode\b|url\b|uptime\b|upper\b|updatenl\b|unsetall\b|unset\b|unsafe\b|unload\b|ulist\b|ulevel\b|trust\b|TRUE\b|treebar\b|tray\b|totp\b|topic\b|toolbar\b|tokenize\b|tnick\b|titlebar\b|tips\b|tip\b|timezone\b|timestampfmt\b|timestamp\b|timer[\w\d\.]+\b|timers\b|timer\b|time\b|ticks\b|tempfn\b|target\b|tanh\b|tan\b|sysdir\b|switchbar\b|submenu\b|style\b|stripped\b|strip\b|str\b|status\b|starting\b|sslversion\b|sslready\b|ssllibdll\b|ssldll\b|sslcertsha256\b|sslcertsha1\b|ssl\b|sreq\b|sqrt\b|splay\b|speak\b|sound\b|sorttok\b|sockwrite\b|sockudp\b|sockrename\b|sockread\b|sockpause\b|sockopen\b|sockname\b|sockmark\b|socklisten\b|socklist\b|sockerr\b|sockclose\b|sockbr\b|sockaccept\b|sock\b|snotify\b|snicks\b|snick\b|sline\b|site\b|sin\b|signal\b|showmirc\b|show\b|shortfn\b|sha512\b|sha384\b|sha256\b|sha1\b|sfstate\b|sfile\b|setlayer\b|set\b|servertarget\b|serverip\b|server\b|send\b|sdir\b|scriptline\b|scriptdir\b|script\b|scon\b|scid\b|say\b|saveini\b|savebuf\b|save\b|samepath\b|ruser\b|run\b|round\b|rmdir\b|rline\b|rlevel\b|right\b|rgb\b|return\b|result\b|resetidle\b|reseterror\b|reptok\b|replacex\b|replace\b|renwin\b|rename\b|remtok\b|remove\b|remote\b|remini\b|reload\b|regsubex\b|regsub\b|regmlex\b|regml\b|regex\b|regerrstr\b|readn\b|readini\b|read\b|rawmsg\b|rawbytes\b|raw\b|rand\b|quote\b|quit\b|queryrn\b|query\b|qt\b|qmsg\b|qme\b|pvoice\b|puttok\b|proxy\b|protect\b|prop\b|prefix\b|pos\b|portfree\b|portable\b|port\b|pop\b|pnick\b|playctrl\b|play\b|pic\b|pi\b|perform\b|pdcc\b|passivedcc\b|partall\b|part\b|parseutf\b|parsetype\b|parseline\b|parms\b|os\b|ord\b|or\b|onpoly\b|onotice\b|onlinetotal\b|onlineserver\b|online\b|omsg\b|numtok\b|numeric\b|null\b|notify\b|notice\b|notags\b|not\b|noqt\b|nopath\b|noop\b|nofile\b|nickserv\b|nickmode\b|nick\b|newnick\b|network\b|msgtags\b|msgstamp\b|msg\b|msfile\b|mouse\b|modespl\b|modelasst\b|modefirst\b|mode\b|mnick\b|mknickfn\b|mklogfn\b|mkfn\b|mkdir\b|mircini\b|mircexe\b|mircdir\b|mididir\b|mid\b|menutype\b|menucontext\b|menubar\b|menu\b|me\b|mdi\b|md5\b|matchtok\b|matchkey\b|mask\b|maddress\b|ltimer\b|lower\b|longip\b|longfn\b|logview\b|logstampfmt\b|logstamp\b|logdir\b|log10\b|log\b|locked\b|lock\b|localinfo\b|loadbuf\b|load\b|list\b|links\b|link\b|linesep\b|lines\b|line\b|lf\b|level\b|len\b|leftwinwid\b|leftwincid\b|leftwin\b|left\b|lctimer\b|lactivewid\b|lactivecid\b|lactive\b|knick\b|kick\b|keyval\b|keyrpt\b|keychar\b|join\b|iuser\b|iswmcs\b|iswm\b|isvoice\b|isupper\b|istok\b|isreg\b|isprotec\b|isop\b|ison\b|isnum\b|isnotify\b|islower\b|isletter\b|isinvite\b|isincs\b|isin\b|isignore\b|isid\b|ishop\b|isfile\b|isexcept\b|isdir\b|isdde\b|ischan\b|isbit\b|isban\b|isavoice\b|isaop\b|isalpha\b|isalnum\b|isalias\b|iptype\b|ip\b|inwave\b|invite\b|intersect\b|int\b|instok\b|insong\b|inroundrect\b|inrect\b|input\b|inpoly\b|inpaste\b|inmidi\b|ini\b|inellipse\b|inc\b|iline\b|iil\b|iif\b|ignore\b|ifmatch\b|if\b|iel\b|idle\b|identd\b|ibl\b|ialmark\b|ialclear\b|ialchan\b|ial\b|hypot\b|hsave\b|hotp\b|hotlinepos\b|hotline\b|host\b|hop\b|hnick\b|hmake\b|hmac\b|hload\b|hinc\b|highlight\b|hget\b|hfree\b|hfind\b|help\b|height\b|hdel\b|hdec\b|hash\b|halted\b|haltdef\b|halt\b|hadd\b|guser\b|gunload\b|gtalk\b|gstop\b|gsize\b|gshow\b|groups\b|group\b|gqreg\b|gpoint\b|gplay\b|goto\b|gopts\b|gmt\b|gmove\b|gload\b|ghide\b|gettok\b|getdot\b|getdir\b|fwrite\b|fullscren\b|fullname\b|fulldate\b|fulladdress\b|fserve\b|fseek\b|fromeditbox\b|fread\b|fopen\b|font\b|flushini\b|flush\b|floor\b|flood\b|flist\b|fline\b|flash\b|firewall\b|findtok\b|findtext\b|findfilen\b|findfile\b|finddirn\b|finddir\b|filtered\b|filter\b|filename\b|file\b|fgetc\b|ferr\b|feof\b|fclose\b|FALSE\b|exiting\b|exit\b|exists\b|events\b|eventid\b|event\b|eval\b|error\b|envvar\b|encode\b|enable\b|emailaddr\b|elseif\b|else\b|editbox\b|echo\b|ebeeps\b|duraction\b|drawtext\b|drawsize\b|drawscroll\b|drawsave\b|drawrot\b|drawreplace\b|drawrect\b|drawpic\b|drawline\b|drawfill\b|drawdot\b|drawcopy\b|dqwindow\b|dns\b|dname\b|dllcall\b|dll\b|dline\b|dlevel\b|disk\b|disconnect\b|disable\b|didwm\b|didtok\b|didreg\b|did\b|dialog\b|devent\b|describe\b|deltok\b|decompress\b|decode\b|dec\b|debug\b|ddeserver\b|ddename\b|dde\b|dccserver\b|dccport\b|dccignore\b|dcc trust\b|dcc send\b|dcc reject\b|dcc passive\b|dcc nick\b|dcc ignore\b|dcc get\b|dcc chat\b|dbuw\b|dbuh\b|daylight\b|day\b|date\b|ctrlenter\b|ctime\b|ctcps\b|ctcpreply\b|crlf\b|creq\b|crc\b|cr\b|count\b|cosh\b|cos\b|copy\b|continue\b|comval\b|comreg\b|compress\b|compact\b|comopen\b|comlist\b|comerr\b|comclose\b|comchar\b|comchan\b|comcall\b|com\b|color\b|cnick\b|cmdline\b|cmdbox\b|close\b|clipboard\b|cline\b|click\b|clevel\b|clearall\b|clear\b|cid\b|chr\b|chat\b|chantypes\b|channel\b|chanmodes\b|chan\b|ceil\b|cd\b|cb\b|calc\b|bytes\b|bwrite\b|bvar\b|bunset\b|btrunc\b|bset\b|breplace\b|break\b|bread\b|bnick\b|biton\b|bitoff\b|bindip\b|bfind\b|beep\b|bcopy\b|base\b|banmask\b|ban\b|background\b|awaytime\b|awaymsg\b|away\b|avoice\b|autojoin\b|auser\b|atan2\b|atan\b|asin\b|asctime\b|asc\b|appstate\b|appactive\b|aop\b|ansi2mirc\b|anick\b|and\b|amsg\b|ame\b|aline\b|alias -l\b|alias\b|ajinvite\b|agentver\b|agentstat\b|agentname\b|agent\b|addtok\b|address\b|activewid\b|activecid\b|active\b|acos\b|abs\b|abook)[\:\w\d\.\_\-]*'
-      #scope: variable.parameter.msl
-      scope: entity.name.class.msl
-
-  dot-sign-user-vars-inline:
-    - match: '(?i)(?<=\||\{)\s+[\.]+(?!xor\b|writeini\b|write\b|wrap\b|winhelp\b|window\b|wildtok\b|wildsite\b|width\b|wid\b|whois\b|while\b|vol\b|vnick\b|version\b|vcrem\b|vcmdver\b|vcmdstat\b|vcmd\b|vcadd\b|var\b|v2\b|v1\b|uwho\b|utfencode\b|utfdecode\b|usermode\b|url\b|uptime\b|upper\b|updatenl\b|unsetall\b|unset\b|unsafe\b|unload\b|ulist\b|ulevel\b|trust\b|TRUE\b|treebar\b|tray\b|totp\b|topic\b|toolbar\b|tokenize\b|tnick\b|titlebar\b|tips\b|tip\b|timezone\b|timestampfmt\b|timestamp\b|timer[\w\d\.]+\b|timers\b|timer\b|time\b|ticks\b|tempfn\b|target\b|tanh\b|tan\b|sysdir\b|switchbar\b|submenu\b|style\b|stripped\b|strip\b|str\b|status\b|starting\b|sslversion\b|sslready\b|ssllibdll\b|ssldll\b|sslcertsha256\b|sslcertsha1\b|ssl\b|sreq\b|sqrt\b|splay\b|speak\b|sound\b|sorttok\b|sockwrite\b|sockudp\b|sockrename\b|sockread\b|sockpause\b|sockopen\b|sockname\b|sockmark\b|socklisten\b|socklist\b|sockerr\b|sockclose\b|sockbr\b|sockaccept\b|sock\b|snotify\b|snicks\b|snick\b|sline\b|site\b|sin\b|signal\b|showmirc\b|show\b|shortfn\b|sha512\b|sha384\b|sha256\b|sha1\b|sfstate\b|sfile\b|setlayer\b|set\b|servertarget\b|serverip\b|server\b|send\b|sdir\b|scriptline\b|scriptdir\b|script\b|scon\b|scid\b|say\b|saveini\b|savebuf\b|save\b|samepath\b|ruser\b|run\b|round\b|rmdir\b|rline\b|rlevel\b|right\b|rgb\b|return\b|result\b|resetidle\b|reseterror\b|reptok\b|replacex\b|replace\b|renwin\b|rename\b|remtok\b|remove\b|remote\b|remini\b|reload\b|regsubex\b|regsub\b|regmlex\b|regml\b|regex\b|regerrstr\b|readn\b|readini\b|read\b|rawmsg\b|rawbytes\b|raw\b|rand\b|quote\b|quit\b|queryrn\b|query\b|qt\b|qmsg\b|qme\b|pvoice\b|puttok\b|proxy\b|protect\b|prop\b|prefix\b|pos\b|portfree\b|portable\b|port\b|pop\b|pnick\b|playctrl\b|play\b|pic\b|pi\b|perform\b|pdcc\b|passivedcc\b|partall\b|part\b|parseutf\b|parsetype\b|parseline\b|parms\b|os\b|ord\b|or\b|onpoly\b|onotice\b|onlinetotal\b|onlineserver\b|online\b|omsg\b|numtok\b|numeric\b|null\b|notify\b|notice\b|notags\b|not\b|noqt\b|nopath\b|noop\b|nofile\b|nickserv\b|nickmode\b|nick\b|newnick\b|network\b|msgtags\b|msgstamp\b|msg\b|msfile\b|mouse\b|modespl\b|modelasst\b|modefirst\b|mode\b|mnick\b|mknickfn\b|mklogfn\b|mkfn\b|mkdir\b|mircini\b|mircexe\b|mircdir\b|mididir\b|mid\b|menutype\b|menucontext\b|menubar\b|menu\b|me\b|mdi\b|md5\b|matchtok\b|matchkey\b|mask\b|maddress\b|ltimer\b|lower\b|longip\b|longfn\b|logview\b|logstampfmt\b|logstamp\b|logdir\b|log10\b|log\b|locked\b|lock\b|localinfo\b|loadbuf\b|load\b|list\b|links\b|link\b|linesep\b|lines\b|line\b|lf\b|level\b|len\b|leftwinwid\b|leftwincid\b|leftwin\b|left\b|lctimer\b|lactivewid\b|lactivecid\b|lactive\b|knick\b|kick\b|keyval\b|keyrpt\b|keychar\b|join\b|iuser\b|iswmcs\b|iswm\b|isvoice\b|isupper\b|istok\b|isreg\b|isprotec\b|isop\b|ison\b|isnum\b|isnotify\b|islower\b|isletter\b|isinvite\b|isincs\b|isin\b|isignore\b|isid\b|ishop\b|isfile\b|isexcept\b|isdir\b|isdde\b|ischan\b|isbit\b|isban\b|isavoice\b|isaop\b|isalpha\b|isalnum\b|isalias\b|iptype\b|ip\b|inwave\b|invite\b|intersect\b|int\b|instok\b|insong\b|inroundrect\b|inrect\b|input\b|inpoly\b|inpaste\b|inmidi\b|ini\b|inellipse\b|inc\b|iline\b|iil\b|iif\b|ignore\b|ifmatch\b|if\b|iel\b|idle\b|identd\b|ibl\b|ialmark\b|ialclear\b|ialchan\b|ial\b|hypot\b|hsave\b|hotp\b|hotlinepos\b|hotline\b|host\b|hop\b|hnick\b|hmake\b|hmac\b|hload\b|hinc\b|highlight\b|hget\b|hfree\b|hfind\b|help\b|height\b|hdel\b|hdec\b|hash\b|halted\b|haltdef\b|halt\b|hadd\b|guser\b|gunload\b|gtalk\b|gstop\b|gsize\b|gshow\b|groups\b|group\b|gqreg\b|gpoint\b|gplay\b|goto\b|gopts\b|gmt\b|gmove\b|gload\b|ghide\b|gettok\b|getdot\b|getdir\b|fwrite\b|fullscren\b|fullname\b|fulldate\b|fulladdress\b|fserve\b|fseek\b|fromeditbox\b|fread\b|fopen\b|font\b|flushini\b|flush\b|floor\b|flood\b|flist\b|fline\b|flash\b|firewall\b|findtok\b|findtext\b|findfilen\b|findfile\b|finddirn\b|finddir\b|filtered\b|filter\b|filename\b|file\b|fgetc\b|ferr\b|feof\b|fclose\b|FALSE\b|exiting\b|exit\b|exists\b|events\b|eventid\b|event\b|eval\b|error\b|envvar\b|encode\b|enable\b|emailaddr\b|elseif\b|else\b|editbox\b|echo\b|ebeeps\b|duraction\b|drawtext\b|drawsize\b|drawscroll\b|drawsave\b|drawrot\b|drawreplace\b|drawrect\b|drawpic\b|drawline\b|drawfill\b|drawdot\b|drawcopy\b|dqwindow\b|dns\b|dname\b|dllcall\b|dll\b|dline\b|dlevel\b|disk\b|disconnect\b|disable\b|didwm\b|didtok\b|didreg\b|did\b|dialog\b|devent\b|describe\b|deltok\b|decompress\b|decode\b|dec\b|debug\b|ddeserver\b|ddename\b|dde\b|dccserver\b|dccport\b|dccignore\b|dcc trust\b|dcc send\b|dcc reject\b|dcc passive\b|dcc nick\b|dcc ignore\b|dcc get\b|dcc chat\b|dbuw\b|dbuh\b|daylight\b|day\b|date\b|ctrlenter\b|ctime\b|ctcps\b|ctcpreply\b|crlf\b|creq\b|crc\b|cr\b|count\b|cosh\b|cos\b|copy\b|continue\b|comval\b|comreg\b|compress\b|compact\b|comopen\b|comlist\b|comerr\b|comclose\b|comchar\b|comchan\b|comcall\b|com\b|color\b|cnick\b|cmdline\b|cmdbox\b|close\b|clipboard\b|cline\b|click\b|clevel\b|clearall\b|clear\b|cid\b|chr\b|chat\b|chantypes\b|channel\b|chanmodes\b|chan\b|ceil\b|cd\b|cb\b|calc\b|bytes\b|bwrite\b|bvar\b|bunset\b|btrunc\b|bset\b|breplace\b|break\b|bread\b|bnick\b|biton\b|bitoff\b|bindip\b|bfind\b|beep\b|bcopy\b|base\b|banmask\b|ban\b|background\b|awaytime\b|awaymsg\b|away\b|avoice\b|autojoin\b|auser\b|atan2\b|atan\b|asin\b|asctime\b|asc\b|appstate\b|appactive\b|aop\b|ansi2mirc\b|anick\b|and\b|amsg\b|ame\b|aline\b|alias -l\b|alias\b|ajinvite\b|agentver\b|agentstat\b|agentname\b|agent\b|addtok\b|address\b|activewid\b|activecid\b|active\b|acos\b|abs\b|abook)[\:\w\d\.\_\-]*'
-      #scope: variable.parameter.msl
-      scope: entity.name.class.msl
-
-  events-v2:
-    - match: '(?i)(^(on|raw)) ([\^\+\*\!\@\&\$\d]*)(me\:\*)*(\:)(waveend|wallops|voice|vcmd|usermode|unotify|unload|unban|udpwrite|udpread|topic|text|tabcomp|start|sockwrite|sockread|sockopen|socklisten|sockclose|snotice|signal|servopen|serverop|servermode|servclose|serv|sendfail|rawmode|quit|queryopen|queryclose|pong|playend|ping|part|parseline|owner|op|notify|notice|nosound|nick|mp3end|mode|midiend|logon|load|kick|keyup|keydown|join|invite|input|hotlink|help|getfail|filesent|filercvd|exit|error|dns|disconnect|devoice|deowner|deop|dehelp|dccserver|ctcpreply|connectfail|connect|chatopen|chatclose|chat|ban|appactive|agent|active|action)(\:)'
+  events:
+    # based on https://en.wikichip.org/wiki/mirc/on_events
+    - match: '(?i)(^(on|raw)) ([\^\+\*\!\@\&\$\d\w]*)(me\:\*)*(\:)(waveend|wallops|voice|vcmd|usermode|unotify|unload|unban|udpwrite|udpread|topic|text|tabcomp|start|sockwrite|sockread|sockopen|socklisten|sockclose|snotice|signal|servopen|serverop|servermode|servclose|serv|sendfail|rawmode|quit|queryopen|queryclose|pong|playend|ping|part|parseline|owner|op|notify|notice|nosound|nick|mp3end|mode|midiend|logon|load|kick|keyup|keydown|join|invite|input|hotlink|help|getfail|filesent|filercvd|exit|error|dns|disconnect|devoice|deowner|deop|dehelp|dccserver|ctcpreply|connectfail|connect|chatopen|chatclose|chat|ban|appactive|agent|active|action)(\:)'
       scope: constant.numeric.line-number.find-in-files
       captures:
-        1: constant.numeric.line-number.find-in-files
-        2: constant.numeric.line-number.find-in-files
-        3: constant.numeric.line-number.find-in-files
-        4: constant.numeric.line-number.find-in-files
-        5: entity.name.function.msl
-        6: entity.name.function.msl
-        7: entity.name.function.msl
+        1: constant.numeric.line-number.find-in-files # on/raw
+        2: constant.numeric.line-number.find-in-files # on/raw
+        3: constant.numeric.line-number.find-in-files # ^+*!@$
+        4: constant.numeric.line-number.find-in-files # level
+        5: entity.name.function.msl # :
+        6: entity.name.function.msl # Event
+        7: entity.name.function.msl # :
 
   events-ctcp:
-    - match: '(?i)(^(ctcp)) ([\^\+\*\!\@\&\$\d]*)(\:)([\d\D\w]+)\:([\*\?\#]+)(\:)'
+    # based on https://en.wikichip.org/wiki/mirc/ctcp_events
+    - match: '(?i)(^ctcp) ([\^\+\*\!\@\&\$]*)(\:)([\d\D\w]+)\:([\*\?\#]+)(\:)'
       scope: constant.numeric.line-number.find-in-files
       captures:
         1: constant.numeric.line-number.find-in-files
         2: constant.numeric.line-number.find-in-files
         3: constant.numeric.line-number.find-in-files
-        4: constant.numeric.line-number.find-in-files
-        5: entity.name.function.msl
-        6: variable.parameter.msl
-        7: entity.name.function.msl
+        4: entity.name.function.msl
+        5: variable.parameter.msl
+        6: entity.name.function.msl
 
   events-onclose:
-    - match: '(?i)(^(on|raw)) ([\+\*\!\@\&\$])?(me)?(\:)(Open|Close)(\:)(\?|\@|\=|\!|\*)([\w\d\D]*)(\:)'
+    # based on https://en.wikichip.org/wiki/mirc/on_events/on_close
+    - match: '(?i)(^on) ([\*\?\@\=\!\d]|me){1}(\:)(Open|Close)(\:)(\?|\@|\=|\!|\*)([\w\d\D]*)(\:)'
       scope: entity.name.tag.msl
       captures:
         1: constant.numeric.line-number.find-in-files
         2: constant.numeric.line-number.find-in-files
-        3: constant.numeric.line-number.find-in-files
-        4: constant.numeric.line-number.find-in-files
+        3: entity.name.function.msl
+        4: entity.name.function.msl
         5: entity.name.function.msl
-        6: entity.name.function.msl
-        7: entity.name.function.msl
-        8: variable.parameter.msl
-        9: variable.parameter.msl
-        10: entity.name.function.msl
+        6: variable.parameter.msl
+        7: variable.parameter.msl
+        8: entity.name.function.msl
 
   events-ondialog:
     - match: '(?i)(^(on)) ([\+\*\!\@\&\$])?(me)?(\:)(Dialog)(\:)([\w\d\D]*)(\:)(uclick|scroll|sclick|rclick|mouse|menu|init|edit|drop|dclick|close|active):([\*\d]+)'
@@ -112,23 +115,15 @@ contexts:
         10: entity.name.tag.msl
         11: variable.parameter.msl
 
-  keywords:
-    - match: '(?i)\b(while|menubar|menu|iswmcs|iswm|isvoice|isupper|isreg|isprotec|isop|ison|isnum|isnotify|islower|isletter|isinvite|isincs|isin|isignore|ishop|isexcept|ischan|isban|isavoice|isaop|isalpha|isalnum|if|elseif|else|alias -l|alias)'
-      scope: keyword.control.msl
-
-  keywords2:
-    - match: '(?i)(\||===|==|!=|>=|<=|<|>|\&|\$\+)'
-      scope: keyword.operator
-
-  gotoloop_label:
+  gotoloop-label:
     - match: '(?i)^\s*:[\w\d\-\_0-9]+'
       scope: constant.numeric.line-number.find-in-files
 
-  gotoloop_label_inline:
+  gotoloop-label-inline:
     - match: '(?i)(?<=\|)\s+:[\w\d\-\_0-9]+'
       scope: constant.numeric.line-number.find-in-files
 
-  gotoloop_newline:
+  gotoloop-newline:
     - match: '(?i)^\s*(\.*\/*goto\b)'
       scope: entity.name.tag.msl
       push:
@@ -136,7 +131,7 @@ contexts:
         - match: '\s+[\w\d\-]+'
           pop: true
 
-  gotoloop_inline:
+  gotoloop-inline:
     - match: '(?i)(?<=[\|\{])\s+(\.*\/*goto\b)'
       scope: entity.name.tag.msl
       push:
@@ -148,11 +143,15 @@ contexts:
     - match: '(?i)^#[\w\d\.\_\-]+\s+(on|off|end)'
       scope: variable.parameter.msl
 
-  numbers:
-    - match: '[\-]{0,1}\b[0-9]+\b'
-      scope: constant.numeric.msl
+  keywords:
+    - match: '(?i)\b(while|menubar|menu|iswmcs|iswm|isvoice|isupper|isreg|isprotec|isop|ison|isnum|isnotify|islower|isletter|isinvite|isincs|isin|isignore|ishop|isexcept|ischan|isban|isavoice|isaop|isalpha|isalnum|if|elseif|else|alias -l|alias)'
+      scope: keyword.control.msl
 
-  mirc-var-dns:
+  keywords2:
+    - match: '(?i)(\||===|==|!=|>=|<=|<|>|\&|\$\+)'
+      scope: keyword.operator
+
+  mirc-identifier-dns:
     - match: '(\$dns\()([\d\w\\%\$]+)(\))(\.)(addr|ip|nick)\b'
       captures:
         1: entity.name.function
@@ -160,40 +159,40 @@ contexts:
         3: entity.name.function
         5: constant.numeric.line-number.find-in-files
 
-  money-sign-constants:
+  mirc-identifier-params:
     - match: '(\$[0-9]+\b[-]{0,1})'
       scope: constant.numeric.msl
-
 
   money-sign-mirc-vars:
     - match: '(?i)\$+(xor|writeini|write|wrap|winhelp|window|wildtok|wildsite|width|wid|whois|while|vol|vnick|version|vcrem|vcmdver|vcmdstat|vcmd|vcadd|var|v2|v1|uwho|utfencode|utfdecode|usermode|url|uptime|upper|updatenl|unsetall|unset|unsafe|unload|ulist|ulevel|trust|TRUE|true|treebar|tray|totp|topic|toolbar|tokenize|tnick|titlebar|tips|tip|timezone|timestampfmt|timestamp|timer[\w\d\.]+|timer|time|ticks|tempfn|target|tanh|tan|sysdir|switchbar|submenu|style|stripped|strip|str|status|starting|sslversion|sslready|ssllibdll|ssldll|sslcertsha256|sslcertsha1|ssl|sreq|sqrt|splay|speak|sound|sorttok|sockwrite|sockudp|sockrename|sockread|sockpause|sockopen|sockname|sockmark|socklisten|socklist|sockerr|sockclose|sockbr|sockaccept|sock|snotify|snicks|snick|sline|site|sin|signal|showmirc|show|shortfn|sha512|sha384|sha256|sha1|sfstate|sfile|setlayer|set|servertarget|serverip|server|send|sdir|scriptline|scriptdir|script|scon|scid|say|saveini|savebuf|save|samepath|ruser|run|round|rmdir|rline|rlevel|right|rgb|return|result|resetidle|reseterror|reptok|replacex|replace|renwin|rename|remtok|remove|remote|remini|reload|regsubex|regsub|regmlex|regml|regex|regerrstr|readn|readini|read|rawmsg|rawbytes|raw|rand|quote|quit|queryrn|query|qt|qmsg|qme|pvoice|puttok|proxy|protect|prop|prefix|pos|portfree|portable|port|pop|pnick|playctrl|play|pic|pi|perform|pdcc|passivedcc|partall|part|parseutf|parsetype|parseline|parms|os|ord|or|onpoly|onotice|onlinetotal|onlineserver|online|omsg|numtok|numeric|null|notify|notice|notags|not|noqt|nopath|noop|nofile|nickserv|nickmode|nick|newnick|network|msgtags|msgstamp|msg|msfile|mouse|modespl|modelasst|modefirst|mode|mnick|mknickfn|mklogfn|mkfn|mkdir|mircini|mircexe|mircdir|mididir|mid|menutype|menucontext|menubar|menu|me|mdi|md5|matchtok|matchkey|mask|maddress|ltimer|lower|longip|longfn|logview|logstampfmt|logstamp|logdir|log10|log|locked|lock|localinfo|loadbuf|load|list|links|link|linesep|lines|line|lf|level|len|leftwinwid|leftwincid|leftwin|left|lctimer|lactivewid|lactivecid|lactive|knick|kick|keyval|keyrpt|keychar|join|iuser|isupper|istok|islower|isid|isfile|isdir|isdde|isbit|isalias|iptype|ip|inwave|invite|intersect|int|instok|insong|inroundrect|inrect|input|inpoly|inpaste|inmidi|ini|inellipse|inc|iline|iil|iif|ignore|ifmatch|iel|idle|identd|ibl|ialmark|ialclear|ialchan|ial|hypot|hsave|hotp|hotlinepos|hotline|host|hop|hnick|hmake|hmac|hload|hinc|highlight|hget|hfree|hfind|help|height|hdel|hdec|hash|halted|haltdef|halt|hadd|guser|gunload|gtalk|gstop|gsize|gshow|groups|group|gqreg|gpoint|gplay|goto|gopts|gmt|gmove|gload|ghide|gettok|getdot|getdir|fwrite|fullscren|fullname|fulldate|fulladdress|fserve|fseek|fromeditbox|fread|fopen|font|flushini|flush|floor|flood|flist|fline|flash|firewall|findtok|findtext|findfilen|findfile|finddirn|finddir|filtered|filter|filename|file|fgetc|ferr|feof|fclose|FALSE|false|exiting|exit|exists|events|eventid|event|eval|error|envvar|encode|enable|emailaddr|editbox|echo|ebeeps|duraction|drawtext|drawsize|drawscroll|drawsave|drawrot|drawreplace|drawrect|drawpic|drawline|drawfill|drawdot|drawcopy|dqwindow|dns|dname|dllcall|dll|dline|dlevel|disk|disconnect|disable|didwm|didtok|didreg|did|dialog|devent|describe|deltok|decompress|decode|dec|debug|ddeserver|ddename|dde|dccserver|dccport|dccignore|dcc trust|dcc send|dcc reject|dcc passive|dcc nick|dcc ignore|dcc get|dcc chat|dbuw|dbuh|daylight|day|date|ctrlenter|ctime|ctcps|ctcpreply|crlf|creq|crc|cr|count|cosh|cos|copy|continue|comval|comreg|compress|compact|comopen|comlist|comerr|comclose|comchar|comchan|comcall|com|color|cnick|cmdline|cmdbox|close|clipboard|cline|click|clevel|clearall|clear|cid|chr|chat|chantypes|channel|chanmodes|chan|ceil|cd|cb|calc|bytes|bwrite|bvar|bunset|btrunc|bset|breplace|break|bread|bnick|biton|bitoff|bindip|bfind|beep|bcopy|base|banmask|ban|background|awaytime|awaymsg|away|avoice|autojoin|auser|atan2|atan|asin|asctime|asc|appstate|appactive|aop|ansi2mirc|anick|and|amsg|ame|aline|alias -l|alias|ajinvite|agentver|agentstat|agentname|agent|addtok|address|activewid|activecid|active|acos|abs|abook)[\s]*'
       scope: entity.name.function
-      #scope: entity.name.class
-      #scope: storage.type
-      #scope: storage
-      #scope: constant.character, constant.other
-      #scope: constant.language
-      #scope: entity.name.tag.msl
-      #scope: entity.other.attribute-name
 
   money-sign-user-vars:
     - match: '(?i)[\$]+(?!xor\b|writeini\b|write\b|wrap\b|winhelp\b|window\b|wildtok\b|wildsite\b|width\b|wid\b|whois\b|while\b|vol\b|vnick\b|version\b|vcrem\b|vcmdver\b|vcmdstat\b|vcmd\b|vcadd\b|var\b|v2\b|v1\b|uwho\b|utfencode\b|utfdecode\b|usermode\b|url\b|uptime\b|upper\b|updatenl\b|unsetall\b|unset\b|unsafe\b|unload\b|ulist\b|ulevel\b|trust\b|TRUE\b|treebar\b|tray\b|totp\b|topic\b|toolbar\b|tokenize\b|tnick\b|titlebar\b|tips\b|tip\b|timezone\b|timestampfmt\b|timestamp\b|timer[\w\d\.]+\b|timer\b|time\b|ticks\b|tempfn\b|target\b|tanh\b|tan\b|sysdir\b|switchbar\b|submenu\b|style\b|stripped\b|strip\b|str\b|status\b|starting\b|sslversion\b|sslready\b|ssllibdll\b|ssldll\b|sslcertsha256\b|sslcertsha1\b|ssl\b|sreq\b|sqrt\b|splay\b|speak\b|sound\b|sorttok\b|sockwrite\b|sockudp\b|sockrename\b|sockread\b|sockpause\b|sockopen\b|sockname\b|sockmark\b|socklisten\b|socklist\b|sockerr\b|sockclose\b|sockbr\b|sockaccept\b|sock\b|snotify\b|snicks\b|snick\b|sline\b|site\b|sin\b|signal\b|showmirc\b|show\b|shortfn\b|sha512\b|sha384\b|sha256\b|sha1\b|sfstate\b|sfile\b|setlayer\b|set\b|servertarget\b|serverip\b|server\b|send\b|sdir\b|scriptline\b|scriptdir\b|script\b|scon\b|scid\b|say\b|saveini\b|savebuf\b|save\b|samepath\b|ruser\b|run\b|round\b|rmdir\b|rline\b|rlevel\b|right\b|rgb\b|return\b|result\b|resetidle\b|reseterror\b|reptok\b|replacex\b|replace\b|renwin\b|rename\b|remtok\b|remove\b|remote\b|remini\b|reload\b|regsubex\b|regsub\b|regmlex\b|regml\b|regex\b|regerrstr\b|readn\b|readini\b|read\b|rawmsg\b|rawbytes\b|raw\b|rand\b|quote\b|quit\b|queryrn\b|query\b|qt\b|qmsg\b|qme\b|pvoice\b|puttok\b|proxy\b|protect\b|prop\b|prefix\b|pos\b|portfree\b|portable\b|port\b|pop\b|pnick\b|playctrl\b|play\b|pic\b|pi\b|perform\b|pdcc\b|passivedcc\b|partall\b|part\b|parseutf\b|parsetype\b|parseline\b|parms\b|os\b|ord\b|or\b|onpoly\b|onotice\b|onlinetotal\b|onlineserver\b|online\b|omsg\b|numtok\b|numeric\b|null\b|notify\b|notice\b|notags\b|not\b|noqt\b|nopath\b|noop\b|nofile\b|nickserv\b|nickmode\b|nick\b|newnick\b|network\b|msgtags\b|msgstamp\b|msg\b|msfile\b|mouse\b|modespl\b|modelasst\b|modefirst\b|mode\b|mnick\b|mknickfn\b|mklogfn\b|mkfn\b|mkdir\b|mircini\b|mircexe\b|mircdir\b|mididir\b|mid\b|menutype\b|menucontext\b|menubar\b|menu\b|me\b|mdi\b|md5\b|matchtok\b|matchkey\b|mask\b|maddress\b|ltimer\b|lower\b|longip\b|longfn\b|logview\b|logstampfmt\b|logstamp\b|logdir\b|log10\b|log\b|locked\b|lock\b|localinfo\b|loadbuf\b|load\b|list\b|links\b|link\b|linesep\b|lines\b|line\b|lf\b|level\b|len\b|leftwinwid\b|leftwincid\b|leftwin\b|left\b|lctimer\b|lactivewid\b|lactivecid\b|lactive\b|knick\b|kick\b|keyval\b|keyrpt\b|keychar\b|join\b|iuser\b|isupper\b|istok\b|islower\b|isid\b|isfile\b|isdir\b|isdde\b|isbit\b|isalias\b|iptype\b|ip\b|inwave\b|invite\b|intersect\b|int\b|instok\b|insong\b|inroundrect\b|inrect\b|input\b|inpoly\b|inpaste\b|inmidi\b|ini\b|inellipse\b|inc\b|iline\b|iil\b|iif\b|ignore\b|ifmatch\b|iel\b|idle\b|identd\b|ibl\b|ialmark\b|ialclear\b|ialchan\b|ial\b|hypot\b|hsave\b|hotp\b|hotlinepos\b|hotline\b|host\b|hop\b|hnick\b|hmake\b|hmac\b|hload\b|hinc\b|highlight\b|hget\b|hfree\b|hfind\b|help\b|height\b|hdel\b|hdec\b|hash\b|halted\b|haltdef\b|halt\b|hadd\b|guser\b|gunload\b|gtalk\b|gstop\b|gsize\b|gshow\b|groups\b|group\b|gqreg\b|gpoint\b|gplay\b|goto\b|gopts\b|gmt\b|gmove\b|gload\b|ghide\b|gettok\b|getdot\b|getdir\b|fwrite\b|fullscren\b|fullname\b|fulldate\b|fulladdress\b|fserve\b|fseek\b|fromeditbox\b|fread\b|fopen\b|font\b|flushini\b|flush\b|floor\b|flood\b|flist\b|fline\b|flash\b|firewall\b|findtok\b|findtext\b|findfilen\b|findfile\b|finddirn\b|finddir\b|filtered\b|filter\b|filename\b|file\b|fgetc\b|ferr\b|feof\b|fclose\b|FALSE\b|exiting\b|exit\b|exists\b|events\b|eventid\b|event\b|eval\b|error\b|envvar\b|encode\b|enable\b|emailaddr\b|editbox\b|echo\b|ebeeps\b|duraction\b|drawtext\b|drawsize\b|drawscroll\b|drawsave\b|drawrot\b|drawreplace\b|drawrect\b|drawpic\b|drawline\b|drawfill\b|drawdot\b|drawcopy\b|dqwindow\b|dns\b|dname\b|dllcall\b|dll\b|dline\b|dlevel\b|disk\b|disconnect\b|disable\b|didwm\b|didtok\b|didreg\b|did\b|dialog\b|devent\b|describe\b|deltok\b|decompress\b|decode\b|dec\b|debug\b|ddeserver\b|ddename\b|dde\b|dccserver\b|dccport\b|dccignore\b|dcc trust\b|dcc send\b|dcc reject\b|dcc passive\b|dcc nick\b|dcc ignore\b|dcc get\b|dcc chat\b|dbuw\b|dbuh\b|daylight\b|day\b|date\b|ctrlenter\b|ctime\b|ctcps\b|ctcpreply\b|crlf\b|creq\b|crc\b|cr\b|count\b|cosh\b|cos\b|copy\b|continue\b|comval\b|comreg\b|compress\b|compact\b|comopen\b|comlist\b|comerr\b|comclose\b|comchar\b|comchan\b|comcall\b|com\b|color\b|cnick\b|cmdline\b|cmdbox\b|close\b|clipboard\b|cline\b|click\b|clevel\b|clearall\b|clear\b|cid\b|chr\b|chat\b|chantypes\b|channel\b|chanmodes\b|chan\b|ceil\b|cd\b|cb\b|calc\b|bytes\b|bwrite\b|bvar\b|bunset\b|btrunc\b|bset\b|breplace\b|break\b|bread\b|bnick\b|biton\b|bitoff\b|bindip\b|bfind\b|beep\b|bcopy\b|base\b|banmask\b|ban\b|background\b|awaytime\b|awaymsg\b|away\b|avoice\b|autojoin\b|auser\b|atan2\b|atan\b|asin\b|asctime\b|asc\b|appstate\b|appactive\b|aop\b|ansi2mirc\b|anick\b|and\b|amsg\b|ame\b|aline\b|alias -l\b|alias\b|ajinvite\b|agentver\b|agentstat\b|agentname\b|agent\b|addtok\b|address\b|activewid\b|activecid\b|active\b|acos\b|abs\b|abook\b)[\.\:a-z\_\-0-9]+'
-      #scope: variable.parameter.msl
       scope: entity.other.attribute-name.msl
+
+  numeric:
+    - match: '[\-]{0,1}\b[0-9]+\b'
+      scope: constant.numeric.msl
+
+  percent-sign-vars:
+    - match: '%[\w._-]+'
+      scope: variable.parameter.msl
+
+  popup-operator:
+    - match: '(\$\?[\*]{0,1}[\!]{0,1}\=)(?=\".+\")'
+      scope: keyword.operator
 
   slash-sign-mirc-vars:
     - match: '(?i)\b[\/]*(xor\b|writeini\b|write\b|wrap\b|winhelp\b|window\b|wildtok\b|wildsite\b|width\b|wid\b|whois\b|while\b|vol\b|vnick\b|version\b|vcrem\b|vcmdver\b|vcmdstat\b|vcmd\b|vcadd\b|var\b|v2\b|v1\b|uwho\b|utfencode\b|utfdecode\b|usermode\b|url\b|uptime\b|upper\b|updatenl\b|unsetall\b|unset\b|unsafe\b|unload\b|ulist\b|ulevel\b|trust\b|TRUE\b|treebar\b|tray\b|totp\b|topic\b|toolbar\b|tokenize\b|tnick\b|titlebar\b|tips\b|tip\b|timezone\b|timestampfmt\b|timestamp\b|timer[\w\d\.]+\b|timers\b|timer\b|time\b|ticks\b|tempfn\b|target\b|tanh\b|tan\b|sysdir\b|switchbar\b|submenu\b|style\b|stripped\b|strip\b|str\b|status\b|starting\b|sslversion\b|sslready\b|ssllibdll\b|ssldll\b|sslcertsha256\b|sslcertsha1\b|ssl\b|sreq\b|sqrt\b|splay\b|speak\b|sound\b|sorttok\b|sockwrite\b|sockudp\b|sockrename\b|sockread\b|sockpause\b|sockopen\b|sockname\b|sockmark\b|socklisten\b|socklist\b|sockerr\b|sockclose\b|sockbr\b|sockaccept\b|sock\b|snotify\b|snicks\b|snick\b|sline\b|site\b|sin\b|signal\b|showmirc\b|show\b|shortfn\b|sha512\b|sha384\b|sha256\b|sha1\b|sfstate\b|sfile\b|setlayer\b|set\b|servertarget\b|serverip\b|server\b|send\b|sdir\b|scriptline\b|scriptdir\b|script\b|scon\b|scid\b|say\b|saveini\b|savebuf\b|save\b|samepath\b|ruser\b|run\b|round\b|rmdir\b|rline\b|rlevel\b|right\b|rgb\b|return\b|result\b|resetidle\b|reseterror\b|reptok\b|replacex\b|replace\b|renwin\b|rename\b|remtok\b|remove\b|remote\b|remini\b|reload\b|regsubex\b|regsub\b|regmlex\b|regml\b|regex\b|regerrstr\b|readn\b|readini\b|read\b|rawmsg\b|rawbytes\b|raw\b|rand\b|quote\b|quit\b|queryrn\b|query\b|qt\b|qmsg\b|qme\b|pvoice\b|puttok\b|proxy\b|protect\b|prop\b|prefix\b|pos\b|portfree\b|portable\b|port\b|pop\b|pnick\b|playctrl\b|play\b|pic\b|pi\b|perform\b|pdcc\b|passivedcc\b|partall\b|part\b|parseutf\b|parsetype\b|parseline\b|parms\b|os\b|ord\b|or\b|onpoly\b|onotice\b|onlinetotal\b|onlineserver\b|online\b|omsg\b|numtok\b|numeric\b|null\b|notify\b|notice\b|notags\b|not\b|noqt\b|nopath\b|noop\b|nofile\b|nickserv\b|nickmode\b|nick\b|newnick\b|network\b|msgtags\b|msgstamp\b|msg\b|msfile\b|mouse\b|modespl\b|modelasst\b|modefirst\b|mode\b|mnick\b|mknickfn\b|mklogfn\b|mkfn\b|mkdir\b|mircini\b|mircexe\b|mircdir\b|mididir\b|mid\b|menutype\b|menucontext\b|menubar\b|menu\b|me\b|mdi\b|md5\b|matchtok\b|matchkey\b|mask\b|maddress\b|ltimer\b|lower\b|longip\b|longfn\b|logview\b|logstampfmt\b|logstamp\b|logdir\b|log10\b|log\b|locked\b|lock\b|localinfo\b|loadbuf\b|load\b|list\b|links\b|link\b|linesep\b|lines\b|line\b|lf\b|level\b|len\b|leftwinwid\b|leftwincid\b|leftwin\b|left\b|lctimer\b|lactivewid\b|lactivecid\b|lactive\b|knick\b|kick\b|keyval\b|keyrpt\b|keychar\b|join\b|iuser\b|iswmcs\b|iswm\b|isvoice\b|isupper\b|istok\b|isreg\b|isprotec\b|isop\b|ison\b|isnum\b|isnotify\b|islower\b|isletter\b|isinvite\b|isincs\b|isin\b|isignore\b|isid\b|ishop\b|isfile\b|isexcept\b|isdir\b|isdde\b|ischan\b|isbit\b|isban\b|isavoice\b|isaop\b|isalpha\b|isalnum\b|isalias\b|iptype\b|ip\b|inwave\b|invite\b|intersect\b|int\b|instok\b|insong\b|inroundrect\b|inrect\b|input\b|inpoly\b|inpaste\b|inmidi\b|ini\b|inellipse\b|inc\b|iline\b|iil\b|iif\b|ignore\b|ifmatch\b|if\b|iel\b|idle\b|identd\b|ibl\b|ialmark\b|ialclear\b|ialchan\b|ial\b|hypot\b|hsave\b|hotp\b|hotlinepos\b|hotline\b|host\b|hop\b|hnick\b|hmake\b|hmac\b|hload\b|hinc\b|highlight\b|hget\b|hfree\b|hfind\b|help\b|height\b|hdel\b|hdec\b|hash\b|halted\b|haltdef\b|halt\b|hadd\b|guser\b|gunload\b|gtalk\b|gstop\b|gsize\b|gshow\b|groups\b|group\b|gqreg\b|gpoint\b|gplay\b|gopts\b|gmt\b|gmove\b|gload\b|ghide\b|gettok\b|getdot\b|getdir\b|fwrite\b|fullscren\b|fullname\b|fulldate\b|fulladdress\b|fserve\b|fseek\b|fromeditbox\b|fread\b|fopen\b|font\b|flushini\b|flush\b|floor\b|flood\b|flist\b|fline\b|flash\b|firewall\b|findtok\b|findtext\b|findfilen\b|findfile\b|finddirn\b|finddir\b|filtered\b|filter\b|filename\b|file\b|fgetc\b|ferr\b|feof\b|fclose\b|FALSE\b|exiting\b|exit\b|exists\b|events\b|eventid\b|event\b|eval\b|error\b|envvar\b|encode\b|enable\b|emailaddr\b|elseif\b|else\b|editbox\b|echo\b|ebeeps\b|duraction\b|drawtext\b|drawsize\b|drawscroll\b|drawsave\b|drawrot\b|drawreplace\b|drawrect\b|drawpic\b|drawline\b|drawfill\b|drawdot\b|drawcopy\b|dqwindow\b|dns\b|dname\b|dllcall\b|dll\b|dline\b|dlevel\b|disk\b|disconnect\b|disable\b|didwm\b|didtok\b|didreg\b|did\b|dialog\b|devent\b|describe\b|deltok\b|decompress\b|decode\b|dec\b|debug\b|ddeserver\b|ddename\b|dde\b|dccserver\b|dccport\b|dccignore\b|dcc trust\b|dcc send\b|dcc reject\b|dcc passive\b|dcc nick\b|dcc ignore\b|dcc get\b|dcc chat\b|dbuw\b|dbuh\b|daylight\b|day\b|date\b|ctrlenter\b|ctime\b|ctcps\b|ctcpreply\b|crlf\b|creq\b|crc\b|cr\b|count\b|cosh\b|cos\b|copy\b|continue\b|comval\b|comreg\b|compress\b|compact\b|comopen\b|comlist\b|comerr\b|comclose\b|comchar\b|comchan\b|comcall\b|com\b|color\b|cnick\b|cmdline\b|cmdbox\b|close\b|clipboard\b|cline\b|click\b|clevel\b|clearall\b|clear\b|cid\b|chr\b|chat\b|chantypes\b|channel\b|chanmodes\b|chan\b|ceil\b|cd\b|cb\b|calc\b|bytes\b|bwrite\b|bvar\b|bunset\b|btrunc\b|bset\b|breplace\b|break\b|bread\b|bnick\b|biton\b|bitoff\b|bindip\b|bfind\b|beep\b|bcopy\b|base\b|banmask\b|ban\b|background\b|awaytime\b|awaymsg\b|away\b|avoice\b|autojoin\b|auser\b|atan2\b|atan\b|asin\b|asctime\b|asc\b|appstate\b|appactive\b|aop\b|ansi2mirc\b|anick\b|and\b|amsg\b|ame\b|aline\b|alias -l\b|alias\b|ajinvite\b|agentver\b|agentstat\b|agentname\b|agent\b|addtok\b|address\b|activewid\b|activecid\b|active\b|acos\b|abs\b|abook)\s+(?!(\d+\:\*))'
       scope: entity.name.tag.msl
-      #scope: entity.other.attribute-name
 
   slash-sign-user-vars:
     - match: '(?i)^\s+[/]+(?!xor\b|writeini\b|write\b|wrap\b|winhelp\b|window\b|wildtok\b|wildsite\b|width\b|wid\b|whois\b|while\b|vol\b|vnick\b|version\b|vcrem\b|vcmdver\b|vcmdstat\b|vcmd\b|vcadd\b|var\b|v2\b|v1\b|uwho\b|utfencode\b|utfdecode\b|usermode\b|url\b|uptime\b|upper\b|updatenl\b|unsetall\b|unset\b|unsafe\b|unload\b|ulist\b|ulevel\b|trust\b|TRUE\b|treebar\b|tray\b|totp\b|topic\b|toolbar\b|tokenize\b|tnick\b|titlebar\b|tips\b|tip\b|timezone\b|timestampfmt\b|timestamp\b|timer[\w\d\.]+\b|timers\b|timer\b|time\b|ticks\b|tempfn\b|target\b|tanh\b|tan\b|sysdir\b|switchbar\b|submenu\b|style\b|stripped\b|strip\b|str\b|status\b|starting\b|sslversion\b|sslready\b|ssllibdll\b|ssldll\b|sslcertsha256\b|sslcertsha1\b|ssl\b|sreq\b|sqrt\b|splay\b|speak\b|sound\b|sorttok\b|sockwrite\b|sockudp\b|sockrename\b|sockread\b|sockpause\b|sockopen\b|sockname\b|sockmark\b|socklisten\b|socklist\b|sockerr\b|sockclose\b|sockbr\b|sockaccept\b|sock\b|snotify\b|snicks\b|snick\b|sline\b|site\b|sin\b|signal\b|showmirc\b|show\b|shortfn\b|sha512\b|sha384\b|sha256\b|sha1\b|sfstate\b|sfile\b|setlayer\b|set\b|servertarget\b|serverip\b|server\b|send\b|sdir\b|scriptline\b|scriptdir\b|script\b|scon\b|scid\b|say\b|saveini\b|savebuf\b|save\b|samepath\b|ruser\b|run\b|round\b|rmdir\b|rline\b|rlevel\b|right\b|rgb\b|return\b|result\b|resetidle\b|reseterror\b|reptok\b|replacex\b|replace\b|renwin\b|rename\b|remtok\b|remove\b|remote\b|remini\b|reload\b|regsubex\b|regsub\b|regmlex\b|regml\b|regex\b|regerrstr\b|readn\b|readini\b|read\b|rawmsg\b|rawbytes\b|raw\b|rand\b|quote\b|quit\b|queryrn\b|query\b|qt\b|qmsg\b|qme\b|pvoice\b|puttok\b|proxy\b|protect\b|prop\b|prefix\b|pos\b|portfree\b|portable\b|port\b|pop\b|pnick\b|playctrl\b|play\b|pic\b|pi\b|perform\b|pdcc\b|passivedcc\b|partall\b|part\b|parseutf\b|parsetype\b|parseline\b|parms\b|os\b|ord\b|or\b|onpoly\b|onotice\b|onlinetotal\b|onlineserver\b|online\b|omsg\b|numtok\b|numeric\b|null\b|notify\b|notice\b|notags\b|not\b|noqt\b|nopath\b|noop\b|nofile\b|nickserv\b|nickmode\b|nick\b|newnick\b|network\b|msgtags\b|msgstamp\b|msg\b|msfile\b|mouse\b|modespl\b|modelasst\b|modefirst\b|mode\b|mnick\b|mknickfn\b|mklogfn\b|mkfn\b|mkdir\b|mircini\b|mircexe\b|mircdir\b|mididir\b|mid\b|menutype\b|menucontext\b|menubar\b|menu\b|me\b|mdi\b|md5\b|matchtok\b|matchkey\b|mask\b|maddress\b|ltimer\b|lower\b|longip\b|longfn\b|logview\b|logstampfmt\b|logstamp\b|logdir\b|log10\b|log\b|locked\b|lock\b|localinfo\b|loadbuf\b|load\b|list\b|links\b|link\b|linesep\b|lines\b|line\b|lf\b|level\b|len\b|leftwinwid\b|leftwincid\b|leftwin\b|left\b|lctimer\b|lactivewid\b|lactivecid\b|lactive\b|knick\b|kick\b|keyval\b|keyrpt\b|keychar\b|join\b|iuser\b|iswmcs\b|iswm\b|isvoice\b|isupper\b|istok\b|isreg\b|isprotec\b|isop\b|ison\b|isnum\b|isnotify\b|islower\b|isletter\b|isinvite\b|isincs\b|isin\b|isignore\b|isid\b|ishop\b|isfile\b|isexcept\b|isdir\b|isdde\b|ischan\b|isbit\b|isban\b|isavoice\b|isaop\b|isalpha\b|isalnum\b|isalias\b|iptype\b|ip\b|inwave\b|invite\b|intersect\b|int\b|instok\b|insong\b|inroundrect\b|inrect\b|input\b|inpoly\b|inpaste\b|inmidi\b|ini\b|inellipse\b|inc\b|iline\b|iil\b|iif\b|ignore\b|ifmatch\b|if\b|iel\b|idle\b|identd\b|ibl\b|ialmark\b|ialclear\b|ialchan\b|ial\b|hypot\b|hsave\b|hotp\b|hotlinepos\b|hotline\b|host\b|hop\b|hnick\b|hmake\b|hmac\b|hload\b|hinc\b|highlight\b|hget\b|hfree\b|hfind\b|help\b|height\b|hdel\b|hdec\b|hash\b|halted\b|haltdef\b|halt\b|hadd\b|guser\b|gunload\b|gtalk\b|gstop\b|gsize\b|gshow\b|groups\b|group\b|gqreg\b|gpoint\b|gplay\b|goto\b|gopts\b|gmt\b|gmove\b|gload\b|ghide\b|gettok\b|getdot\b|getdir\b|fwrite\b|fullscren\b|fullname\b|fulldate\b|fulladdress\b|fserve\b|fseek\b|fromeditbox\b|fread\b|fopen\b|font\b|flushini\b|flush\b|floor\b|flood\b|flist\b|fline\b|flash\b|firewall\b|findtok\b|findtext\b|findfilen\b|findfile\b|finddirn\b|finddir\b|filtered\b|filter\b|filename\b|file\b|fgetc\b|ferr\b|feof\b|fclose\b|FALSE\b|exiting\b|exit\b|exists\b|events\b|eventid\b|event\b|eval\b|error\b|envvar\b|encode\b|enable\b|emailaddr\b|elseif\b|else\b|editbox\b|echo\b|ebeeps\b|duraction\b|drawtext\b|drawsize\b|drawscroll\b|drawsave\b|drawrot\b|drawreplace\b|drawrect\b|drawpic\b|drawline\b|drawfill\b|drawdot\b|drawcopy\b|dqwindow\b|dns\b|dname\b|dllcall\b|dll\b|dline\b|dlevel\b|disk\b|disconnect\b|disable\b|didwm\b|didtok\b|didreg\b|did\b|dialog\b|devent\b|describe\b|deltok\b|decompress\b|decode\b|dec\b|debug\b|ddeserver\b|ddename\b|dde\b|dccserver\b|dccport\b|dccignore\b|dcc trust\b|dcc send\b|dcc reject\b|dcc passive\b|dcc nick\b|dcc ignore\b|dcc get\b|dcc chat\b|dbuw\b|dbuh\b|daylight\b|day\b|date\b|ctrlenter\b|ctime\b|ctcps\b|ctcpreply\b|crlf\b|creq\b|crc\b|cr\b|count\b|cosh\b|cos\b|copy\b|continue\b|comval\b|comreg\b|compress\b|compact\b|comopen\b|comlist\b|comerr\b|comclose\b|comchar\b|comchan\b|comcall\b|com\b|color\b|cnick\b|cmdline\b|cmdbox\b|close\b|clipboard\b|cline\b|click\b|clevel\b|clearall\b|clear\b|cid\b|chr\b|chat\b|chantypes\b|channel\b|chanmodes\b|chan\b|ceil\b|cd\b|cb\b|calc\b|bytes\b|bwrite\b|bvar\b|bunset\b|btrunc\b|bset\b|breplace\b|break\b|bread\b|bnick\b|biton\b|bitoff\b|bindip\b|bfind\b|beep\b|bcopy\b|base\b|banmask\b|ban\b|background\b|awaytime\b|awaymsg\b|away\b|avoice\b|autojoin\b|auser\b|atan2\b|atan\b|asin\b|asctime\b|asc\b|appstate\b|appactive\b|aop\b|ansi2mirc\b|anick\b|and\b|amsg\b|ame\b|aline\b|alias -l\b|alias\b|ajinvite\b|agentver\b|agentstat\b|agentname\b|agent\b|addtok\b|address\b|activewid\b|activecid\b|active\b|acos\b|abs\b|abook)[\:\w\.\_\-0-9]+'
-      #scope: variable.parameter.msl
       scope: entity.name.class.msl
 
   slash-sign-user-vars2:
     - match: '(?i)(?<=\|)\s+[/]+(?!xor\b|writeini\b|write\b|wrap\b|winhelp\b|window\b|wildtok\b|wildsite\b|width\b|wid\b|whois\b|while\b|vol\b|vnick\b|version\b|vcrem\b|vcmdver\b|vcmdstat\b|vcmd\b|vcadd\b|var\b|v2\b|v1\b|uwho\b|utfencode\b|utfdecode\b|usermode\b|url\b|uptime\b|upper\b|updatenl\b|unsetall\b|unset\b|unsafe\b|unload\b|ulist\b|ulevel\b|trust\b|TRUE\b|treebar\b|tray\b|totp\b|topic\b|toolbar\b|tokenize\b|tnick\b|titlebar\b|tips\b|tip\b|timezone\b|timestampfmt\b|timestamp\b|timer[\w\d\.]+\b|timers\b|timer\b|time\b|ticks\b|tempfn\b|target\b|tanh\b|tan\b|sysdir\b|switchbar\b|submenu\b|style\b|stripped\b|strip\b|str\b|status\b|starting\b|sslversion\b|sslready\b|ssllibdll\b|ssldll\b|sslcertsha256\b|sslcertsha1\b|ssl\b|sreq\b|sqrt\b|splay\b|speak\b|sound\b|sorttok\b|sockwrite\b|sockudp\b|sockrename\b|sockread\b|sockpause\b|sockopen\b|sockname\b|sockmark\b|socklisten\b|socklist\b|sockerr\b|sockclose\b|sockbr\b|sockaccept\b|sock\b|snotify\b|snicks\b|snick\b|sline\b|site\b|sin\b|signal\b|showmirc\b|show\b|shortfn\b|sha512\b|sha384\b|sha256\b|sha1\b|sfstate\b|sfile\b|setlayer\b|set\b|servertarget\b|serverip\b|server\b|send\b|sdir\b|scriptline\b|scriptdir\b|script\b|scon\b|scid\b|say\b|saveini\b|savebuf\b|save\b|samepath\b|ruser\b|run\b|round\b|rmdir\b|rline\b|rlevel\b|right\b|rgb\b|return\b|result\b|resetidle\b|reseterror\b|reptok\b|replacex\b|replace\b|renwin\b|rename\b|remtok\b|remove\b|remote\b|remini\b|reload\b|regsubex\b|regsub\b|regmlex\b|regml\b|regex\b|regerrstr\b|readn\b|readini\b|read\b|rawmsg\b|rawbytes\b|raw\b|rand\b|quote\b|quit\b|queryrn\b|query\b|qt\b|qmsg\b|qme\b|pvoice\b|puttok\b|proxy\b|protect\b|prop\b|prefix\b|pos\b|portfree\b|portable\b|port\b|pop\b|pnick\b|playctrl\b|play\b|pic\b|pi\b|perform\b|pdcc\b|passivedcc\b|partall\b|part\b|parseutf\b|parsetype\b|parseline\b|parms\b|os\b|ord\b|or\b|onpoly\b|onotice\b|onlinetotal\b|onlineserver\b|online\b|omsg\b|numtok\b|numeric\b|null\b|notify\b|notice\b|notags\b|not\b|noqt\b|nopath\b|noop\b|nofile\b|nickserv\b|nickmode\b|nick\b|newnick\b|network\b|msgtags\b|msgstamp\b|msg\b|msfile\b|mouse\b|modespl\b|modelasst\b|modefirst\b|mode\b|mnick\b|mknickfn\b|mklogfn\b|mkfn\b|mkdir\b|mircini\b|mircexe\b|mircdir\b|mididir\b|mid\b|menutype\b|menucontext\b|menubar\b|menu\b|me\b|mdi\b|md5\b|matchtok\b|matchkey\b|mask\b|maddress\b|ltimer\b|lower\b|longip\b|longfn\b|logview\b|logstampfmt\b|logstamp\b|logdir\b|log10\b|log\b|locked\b|lock\b|localinfo\b|loadbuf\b|load\b|list\b|links\b|link\b|linesep\b|lines\b|line\b|lf\b|level\b|len\b|leftwinwid\b|leftwincid\b|leftwin\b|left\b|lctimer\b|lactivewid\b|lactivecid\b|lactive\b|knick\b|kick\b|keyval\b|keyrpt\b|keychar\b|join\b|iuser\b|iswmcs\b|iswm\b|isvoice\b|isupper\b|istok\b|isreg\b|isprotec\b|isop\b|ison\b|isnum\b|isnotify\b|islower\b|isletter\b|isinvite\b|isincs\b|isin\b|isignore\b|isid\b|ishop\b|isfile\b|isexcept\b|isdir\b|isdde\b|ischan\b|isbit\b|isban\b|isavoice\b|isaop\b|isalpha\b|isalnum\b|isalias\b|iptype\b|ip\b|inwave\b|invite\b|intersect\b|int\b|instok\b|insong\b|inroundrect\b|inrect\b|input\b|inpoly\b|inpaste\b|inmidi\b|ini\b|inellipse\b|inc\b|iline\b|iil\b|iif\b|ignore\b|ifmatch\b|if\b|iel\b|idle\b|identd\b|ibl\b|ialmark\b|ialclear\b|ialchan\b|ial\b|hypot\b|hsave\b|hotp\b|hotlinepos\b|hotline\b|host\b|hop\b|hnick\b|hmake\b|hmac\b|hload\b|hinc\b|highlight\b|hget\b|hfree\b|hfind\b|help\b|height\b|hdel\b|hdec\b|hash\b|halted\b|haltdef\b|halt\b|hadd\b|guser\b|gunload\b|gtalk\b|gstop\b|gsize\b|gshow\b|groups\b|group\b|gqreg\b|gpoint\b|gplay\b|goto\b|gopts\b|gmt\b|gmove\b|gload\b|ghide\b|gettok\b|getdot\b|getdir\b|fwrite\b|fullscren\b|fullname\b|fulldate\b|fulladdress\b|fserve\b|fseek\b|fromeditbox\b|fread\b|fopen\b|font\b|flushini\b|flush\b|floor\b|flood\b|flist\b|fline\b|flash\b|firewall\b|findtok\b|findtext\b|findfilen\b|findfile\b|finddirn\b|finddir\b|filtered\b|filter\b|filename\b|file\b|fgetc\b|ferr\b|feof\b|fclose\b|FALSE\b|exiting\b|exit\b|exists\b|events\b|eventid\b|event\b|eval\b|error\b|envvar\b|encode\b|enable\b|emailaddr\b|elseif\b|else\b|editbox\b|echo\b|ebeeps\b|duraction\b|drawtext\b|drawsize\b|drawscroll\b|drawsave\b|drawrot\b|drawreplace\b|drawrect\b|drawpic\b|drawline\b|drawfill\b|drawdot\b|drawcopy\b|dqwindow\b|dns\b|dname\b|dllcall\b|dll\b|dline\b|dlevel\b|disk\b|disconnect\b|disable\b|didwm\b|didtok\b|didreg\b|did\b|dialog\b|devent\b|describe\b|deltok\b|decompress\b|decode\b|dec\b|debug\b|ddeserver\b|ddename\b|dde\b|dccserver\b|dccport\b|dccignore\b|dcc trust\b|dcc send\b|dcc reject\b|dcc passive\b|dcc nick\b|dcc ignore\b|dcc get\b|dcc chat\b|dbuw\b|dbuh\b|daylight\b|day\b|date\b|ctrlenter\b|ctime\b|ctcps\b|ctcpreply\b|crlf\b|creq\b|crc\b|cr\b|count\b|cosh\b|cos\b|copy\b|continue\b|comval\b|comreg\b|compress\b|compact\b|comopen\b|comlist\b|comerr\b|comclose\b|comchar\b|comchan\b|comcall\b|com\b|color\b|cnick\b|cmdline\b|cmdbox\b|close\b|clipboard\b|cline\b|click\b|clevel\b|clearall\b|clear\b|cid\b|chr\b|chat\b|chantypes\b|channel\b|chanmodes\b|chan\b|ceil\b|cd\b|cb\b|calc\b|bytes\b|bwrite\b|bvar\b|bunset\b|btrunc\b|bset\b|breplace\b|break\b|bread\b|bnick\b|biton\b|bitoff\b|bindip\b|bfind\b|beep\b|bcopy\b|base\b|banmask\b|ban\b|background\b|awaytime\b|awaymsg\b|away\b|avoice\b|autojoin\b|auser\b|atan2\b|atan\b|asin\b|asctime\b|asc\b|appstate\b|appactive\b|aop\b|ansi2mirc\b|anick\b|and\b|amsg\b|ame\b|aline\b|alias -l\b|alias\b|ajinvite\b|agentver\b|agentstat\b|agentname\b|agent\b|addtok\b|address\b|activewid\b|activecid\b|active\b|acos\b|abs\b|abook)[\:\w\.\_\-0-9]+'
-      #scope: variable.parameter.msl
       scope: entity.name.class.msl
 
   slash-sign-user-assumed:
@@ -208,30 +207,6 @@ contexts:
     - match: '^(?i)\s+(?!\.+\b|\:+|xor\b|writeini\b|write\b|wrap\b|winhelp\b|window\b|wildtok\b|wildsite\b|width\b|wid\b|whois\b|while\b|vol\b|vnick\b|version\b|vcrem\b|vcmdver\b|vcmdstat\b|vcmd\b|vcadd\b|var\b|v2\b|v1\b|uwho\b|utfencode\b|utfdecode\b|usermode\b|url\b|uptime\b|upper\b|updatenl\b|unsetall\b|unset\b|unsafe\b|unload\b|ulist\b|ulevel\b|trust\b|TRUE\b|treebar\b|tray\b|totp\b|topic\b|toolbar\b|tokenize\b|tnick\b|titlebar\b|tips\b|tip\b|timezone\b|timestampfmt\b|timestamp\b|timer[\w\d\.]+\b|timers\b|timer\b|time\b|ticks\b|tempfn\b|target\b|tanh\b|tan\b|sysdir\b|switchbar\b|submenu\b|style\b|stripped\b|strip\b|str\b|status\b|starting\b|sslversion\b|sslready\b|ssllibdll\b|ssldll\b|sslcertsha256\b|sslcertsha1\b|ssl\b|sreq\b|sqrt\b|splay\b|speak\b|sound\b|sorttok\b|sockwrite\b|sockudp\b|sockrename\b|sockread\b|sockpause\b|sockopen\b|sockname\b|sockmark\b|socklisten\b|socklist\b|sockerr\b|sockclose\b|sockbr\b|sockaccept\b|sock\b|snotify\b|snicks\b|snick\b|sline\b|site\b|sin\b|signal\b|showmirc\b|show\b|shortfn\b|sha512\b|sha384\b|sha256\b|sha1\b|sfstate\b|sfile\b|setlayer\b|set\b|servertarget\b|serverip\b|server\b|send\b|sdir\b|scriptline\b|scriptdir\b|script\b|scon\b|scid\b|say\b|saveini\b|savebuf\b|save\b|samepath\b|ruser\b|run\b|round\b|rmdir\b|rline\b|rlevel\b|right\b|rgb\b|return\b|result\b|resetidle\b|reseterror\b|reptok\b|replacex\b|replace\b|renwin\b|rename\b|remtok\b|remove\b|remote\b|remini\b|reload\b|regsubex\b|regsub\b|regmlex\b|regml\b|regex\b|regerrstr\b|readn\b|readini\b|read\b|rawmsg\b|rawbytes\b|raw\b|rand\b|quote\b|quit\b|queryrn\b|query\b|qt\b|qmsg\b|qme\b|pvoice\b|puttok\b|proxy\b|protect\b|prop\b|prefix\b|pos\b|portfree\b|portable\b|port\b|pop\b|pnick\b|playctrl\b|play\b|pic\b|pi\b|perform\b|pdcc\b|passivedcc\b|partall\b|part\b|parseutf\b|parsetype\b|parseline\b|parms\b|os\b|ord\b|or\b|onpoly\b|onotice\b|onlinetotal\b|onlineserver\b|online\b|omsg\b|numtok\b|numeric\b|null\b|notify\b|notice\b|notags\b|not\b|noqt\b|nopath\b|noop\b|nofile\b|nickserv\b|nickmode\b|nick\b|newnick\b|network\b|msgtags\b|msgstamp\b|msg\b|msfile\b|mouse\b|modespl\b|modelasst\b|modefirst\b|mode\b|mnick\b|mknickfn\b|mklogfn\b|mkfn\b|mkdir\b|mircini\b|mircexe\b|mircdir\b|mididir\b|mid\b|menutype\b|menucontext\b|menubar\b|menu\b|me\b|mdi\b|md5\b|matchtok\b|matchkey\b|mask\b|maddress\b|ltimer\b|lower\b|longip\b|longfn\b|logview\b|logstampfmt\b|logstamp\b|logdir\b|log10\b|log\b|locked\b|lock\b|localinfo\b|loadbuf\b|load\b|list\b|links\b|link\b|linesep\b|lines\b|line\b|lf\b|level\b|len\b|leftwinwid\b|leftwincid\b|leftwin\b|left\b|lctimer\b|lactivewid\b|lactivecid\b|lactive\b|knick\b|kick\b|keyval\b|keyrpt\b|keychar\b|join\b|iuser\b|iswmcs\b|iswm\b|isvoice\b|isupper\b|istok\b|isreg\b|isprotec\b|isop\b|ison\b|isnum\b|isnotify\b|islower\b|isletter\b|isinvite\b|isincs\b|isin\b|isignore\b|isid\b|ishop\b|isfile\b|isexcept\b|isdir\b|isdde\b|ischan\b|isbit\b|isban\b|isavoice\b|isaop\b|isalpha\b|isalnum\b|isalias\b|iptype\b|ip\b|inwave\b|invite\b|intersect\b|int\b|instok\b|insong\b|inroundrect\b|inrect\b|input\b|inpoly\b|inpaste\b|inmidi\b|ini\b|inellipse\b|inc\b|iline\b|iil\b|iif\b|ignore\b|ifmatch\b|if\b|iel\b|idle\b|identd\b|ibl\b|ialmark\b|ialclear\b|ialchan\b|ial\b|hypot\b|hsave\b|hotp\b|hotlinepos\b|hotline\b|host\b|hop\b|hnick\b|hmake\b|hmac\b|hload\b|hinc\b|highlight\b|hget\b|hfree\b|hfind\b|help\b|height\b|hdel\b|hdec\b|hash\b|halted\b|haltdef\b|halt\b|hadd\b|guser\b|gunload\b|gtalk\b|gstop\b|gsize\b|gshow\b|groups\b|group\b|gqreg\b|gpoint\b|gplay\b|goto\b|gopts\b|gmt\b|gmove\b|gload\b|ghide\b|gettok\b|getdot\b|getdir\b|fwrite\b|fullscren\b|fullname\b|fulldate\b|fulladdress\b|fserve\b|fseek\b|fromeditbox\b|fread\b|fopen\b|font\b|flushini\b|flush\b|floor\b|flood\b|flist\b|fline\b|flash\b|firewall\b|findtok\b|findtext\b|findfilen\b|findfile\b|finddirn\b|finddir\b|filtered\b|filter\b|filename\b|file\b|fgetc\b|ferr\b|feof\b|fclose\b|FALSE\b|exiting\b|exit\b|exists\b|events\b|eventid\b|event\b|eval\b|error\b|envvar\b|encode\b|enable\b|emailaddr\b|elseif\b|else\b|editbox\b|echo\b|ebeeps\b|duraction\b|drawtext\b|drawsize\b|drawscroll\b|drawsave\b|drawrot\b|drawreplace\b|drawrect\b|drawpic\b|drawline\b|drawfill\b|drawdot\b|drawcopy\b|dqwindow\b|dns\b|dname\b|dllcall\b|dll\b|dline\b|dlevel\b|disk\b|disconnect\b|disable\b|didwm\b|didtok\b|didreg\b|did\b|dialog\b|devent\b|describe\b|deltok\b|decompress\b|decode\b|dec\b|debug\b|ddeserver\b|ddename\b|dde\b|dccserver\b|dccport\b|dccignore\b|dcc trust\b|dcc send\b|dcc reject\b|dcc passive\b|dcc nick\b|dcc ignore\b|dcc get\b|dcc chat\b|dbuw\b|dbuh\b|daylight\b|day\b|date\b|ctrlenter\b|ctime\b|ctcps\b|ctcpreply\b|crlf\b|creq\b|crc\b|cr\b|count\b|cosh\b|cos\b|copy\b|continue\b|comval\b|comreg\b|compress\b|compact\b|comopen\b|comlist\b|comerr\b|comclose\b|comchar\b|comchan\b|comcall\b|com\b|color\b|cnick\b|cmdline\b|cmdbox\b|close\b|clipboard\b|cline\b|click\b|clevel\b|clearall\b|clear\b|cid\b|chr\b|chat\b|chantypes\b|channel\b|chanmodes\b|chan\b|ceil\b|cd\b|cb\b|calc\b|bytes\b|bwrite\b|bvar\b|bunset\b|btrunc\b|bset\b|breplace\b|break\b|bread\b|bnick\b|biton\b|bitoff\b|bindip\b|bfind\b|beep\b|bcopy\b|base\b|banmask\b|ban\b|background\b|awaytime\b|awaymsg\b|away\b|avoice\b|autojoin\b|auser\b|atan2\b|atan\b|asin\b|asctime\b|asc\b|appstate\b|appactive\b|aop\b|ansi2mirc\b|anick\b|and\b|amsg\b|ame\b|aline\b|alias -l\b|alias\b|ajinvite\b|agentver\b|agentstat\b|agentname\b|agent\b|addtok\b|address\b|activewid\b|activecid\b|active\b|acos\b|abs\b|abook)[\:\w\.\_\-0-9]+'
       scope: entity.name.class.msl
 
-  percent-sign-vars:
-    - match: '%[\w._-]+'
-      scope: variable.parameter.msl
-
-  popup-operator:
-    - match: '(\$\?[\*]{0,1}[\!]{0,1}\=)(?=\".+\")'
-      scope: keyword.operator
-
   windows:
     - match: '\@[\.\w\d_\-]+'
       scope: variable.parameter.msl
-
-  comments:
-    - match: '^\s*;'
-      scope: punctuation.definition.comment.msl
-      push:
-        - meta_scope: comment.line.double-slash.msl
-        - match: $\n?
-          pop: true
-
-  comments2:
-    - match: '(^\s*\/\*)'
-      scope: punctuation.definition.comment.msl
-      push:
-        - meta_scope: comment.line.double-slash.msl
-        - match: '(^\s*\*\/)(.)*'
-          pop: true
