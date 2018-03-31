@@ -33,8 +33,8 @@ contexts:
     - include: keywords
     - include: keywords2
     - include: numeric
-    - include: variables
     - include: popup-operator
+    - include: variables
     - include: windows
 
   commands:
