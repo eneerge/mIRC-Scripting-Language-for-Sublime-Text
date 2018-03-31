@@ -1,19 +1,31 @@
 # mIRC-Scripting-Language-for-Sublime-Text
 Updated for mIRC 7.52 (March 2018)
 
+- NEW: Autocompletions - Currently auto completes /commands.  I am working on $identifiers
+
 This is my attempt at creating a Sublime Text 3 syntax highlighter for mIRC scripting language.  All $vars and /commands listed in the mIRC help file index should be parsed.  Some undocumented $vars and /commands may be parsed, but I'm sure there's a few that I missed.  Create an issue if any keywords/commands are missing.
 
-- User $variables and mIRC $variables are styled separately.
-- User /commands and mIRC /commands are styled separately.
-- User .commands and mIRC .commands are styled separately.
-- on* and raw events are styled.
-- Both ; and /* comments are parsed.
+Auto Completion
+---------------
+Autocomplete will work for /commands and $identifiers.  All commands are available.  Identifiers will be added shortly.
 
-Regex is a little rudimentary, but should work in most cases.  Create a new issue if you encounter any errors and I will try to correct.
+Auto Completion - Syntax Assistance
+-----------------------------------
+In addition to autocompleting commands and identifiers, there will also be a "syntax-" option that can aid you in the development process by doing one or both of the following:
+1. HelpAssist - Print the syntax/help of the command or identifier
+2. Building - Enable Tabbing through fields of the command/identifier enabling you to "build" the command
 
-To install:
+Syntax "HelpAssist" is currently limited to "abook through bcopy" (alphabetical) commands.  I am working on adding more.
+Command "Building" is currently limited to "aline".
+
+Images/Video will follow soon displaying the syntax- functionality.
+
+
+Installation
+------------
 
 1. Copy mIRC-msl.sublime-syntax to Sublime\Data\Packages\User folder.
+2. Copy mIRC-msl.sublime-completions to Sublime\Data\Packages\User folder.
 
 You may need to create the Packages\User folder.
 
