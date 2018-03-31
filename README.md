@@ -22,7 +22,7 @@ In addition to autocompleting commands and identifiers, there will also be a "sy
 Syntax "HelpAssist" is currently limited to "abook through bcopy" (alphabetical) commands.  I am working on adding more.
 Command "Building" is currently limited to "aline".
 
-Images/Video will follow soon displaying the syntax- functionality.
+![Alt text](screenshots/build.mp4)
 
 Bugs
 ---------------
