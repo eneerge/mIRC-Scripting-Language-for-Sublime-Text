@@ -22,7 +22,7 @@ In addition to autocompleting commands and identifiers, there will also be a "sy
 Syntax "HelpAssist" is currently limited to "abook through bcopy" (alphabetical) commands.  I am working on adding more.
 Command "Building" is currently limited to "aline".
 
-![Alt text](https://s.imgur.com/images/imgur-logo.svg)
+![Alt text](https://imgur.com/download/Npx91sw)
 
 Bugs
 ---------------
