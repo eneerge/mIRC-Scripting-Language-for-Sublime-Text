@@ -22,7 +22,7 @@ In addition to autocompleting commands and identifiers, there will also be a "sy
 Syntax "HelpAssist" is currently limited to "abook through bcopy" (alphabetical) commands.  I am working on adding more.
 Command "Building" is currently limited to "aline".
 
-Building will print out the syntax, and highlight the first parameter.  You can then use "tab" to set each parameter. The final tab stop will highlight the syntax helper so you can delete it afterwards.
+Building will print out the syntax, and highlight the first parameter.  You can then use "tab" to set each parameter. The final tab stop will highlight the help text so you can easily delete it.
 
 ![Alt text](screenshots/build1.gif)
 
