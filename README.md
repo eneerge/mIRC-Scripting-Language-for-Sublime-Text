@@ -41,7 +41,8 @@ You may need to create the Packages\User folder.
 
 ![Alt text](screenshots/Install-screenshot.png)
 
-
+Theme Support
+--------
 A slightly modified theme has been provided in the Extras folder that supports all features of the highlighter. Themes should support the following scopes to support all styles of this highlighter:
 1. comment.line.double-slash
 2. constant.numeric
