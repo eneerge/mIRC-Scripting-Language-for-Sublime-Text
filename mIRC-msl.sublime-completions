@@ -30,7 +30,7 @@
       ,{ "trigger": "anick <nickname> - Set alternate nickname                             \tcommand /", "contents": "anick" }
       ,{ "trigger": "  SYNTAX-command-anick                                                \thelp /", "contents": "anick <nickname>" }
 
-      ,{ "trigger": "aop [-rw] <nick/address> [#channel1,#channel2...] [type] [network] - Autoop\tcommand /", "contents": "aop" }
+      ,{ "trigger": "aop [-rw] <nick/address> [#chan1,#chan2] [type] [network] - Autoop    \tcommand /", "contents": "aop" }
       ,{ "trigger": "aop <on|off> - Autoop                                                 \tcommand /", "contents": "aop" }
       ,{ "trigger": "  SYNTAX-command-aop                                                  \thelp /", "contents": "aop <on|off> or [-rw] <nick/address> [#channel1,#channel2...] [type] [network]\n[-r Remove]\n[-w Autoop any network]" }
 
@@ -784,7 +784,7 @@
       ,{ "trigger": "  SYNTAX-command-write                                                \thelp /", "contents": "write" }
 
       ,{ "trigger": "writeini	                                                             \tcommand /", "contents": "writeini" }
-      ,{ "trigger": "    SYNTAX-command-writeini                                           \thelp /", "contents": "writeini" }
+      ,{ "trigger": "  SYNTAX-command-writeini                                           \thelp /", "contents": "writeini" }
 
       ,{ "trigger": "xyzzy - Easter Egg                                                    \tcommand /", "contents": "xyzzy" }
       ,{ "trigger": "  SYNTAX-command-xyzzy                                                \thelp /", "contents": "xyzzy" }
@@ -800,13 +800,1352 @@
       // mIRC Identifiers
       // ###########################################################################################################################
 
-      ,{ "trigger": "abook $                                                               \tidentifier $", "contents": "abook" }
-      ,{ "trigger": "  SYNTAX-identifier-abook $abook                                      \thelp $", "contents": "abook" }
+      ,{ "trigger": "abook $                                           \tidentifier $", "contents": "abook" }
+      ,{ "trigger": "  SYNTAX-identifier-abook $abook                  \thelp $", "contents": "abook" }
 
-      ,{ "trigger": "aop\t$                                                                \tidentifier $", "contents": "aop" }
-      ,{ "trigger": "  SYNTAX-identifier-aop                                               \thelp $", "contents": "aop" }
+      ,{ "trigger": "abs $                                             \tidentifier $", "contents": "abs" }
+      ,{ "trigger": "  SYNTAX-identifier-abs                           \thelp /", "contents": "abs" }
 
+      ,{ "trigger": "acos $                                            \tidentifier $", "contents": "acos" }
+      ,{ "trigger": "  SYNTAX-identifier-acos                          \thelp /", "contents": "acos" }
 
+      ,{ "trigger": "active $                                          \tidentifier $", "contents": "active" }
+      ,{ "trigger": "  SYNTAX-identifier-active                        \thelp /", "contents": "active" }
+
+      ,{ "trigger": "activecid $                                       \tidentifier $", "contents": "activecid" }
+      ,{ "trigger": "  SYNTAX-identifier-activecid                     \thelp /", "contents": "activecid" }
+
+      ,{ "trigger": "activewid $                                       \tidentifier $", "contents": "activewid" }
+      ,{ "trigger": "  SYNTAX-identifier-activewid                     \thelp /", "contents": "activewid" }
+
+      ,{ "trigger": "adate $                                           \tidentifier $", "contents": "adate" }
+      ,{ "trigger": "  SYNTAX-identifier-adate                         \thelp /", "contents": "adate" }
+
+      ,{ "trigger": "address $                                         \tidentifier $", "contents": "address" }
+      ,{ "trigger": "  SYNTAX-identifier-address                       \thelp /", "contents": "address" }
+
+      ,{ "trigger": "addtok $                                          \tidentifier $", "contents": "addtok" }
+      ,{ "trigger": "  SYNTAX-identifier-addtok                        \thelp /", "contents": "addtok" }
+
+      ,{ "trigger": "addtokcs $                                        \tidentifier $", "contents": "addtokcs" }
+      ,{ "trigger": "  SYNTAX-identifier-addtokcs                      \thelp /", "contents": "addtokcs" }
+
+      ,{ "trigger": "agent $                                           \tidentifier $", "contents": "agent" }
+      ,{ "trigger": "  SYNTAX-identifier-agent                         \thelp /", "contents": "agent" }
+
+      ,{ "trigger": "agentname $                                       \tidentifier $", "contents": "agentname" }
+      ,{ "trigger": "  SYNTAX-identifier-agentname                     \thelp /", "contents": "agentname" }
+
+      ,{ "trigger": "agentstat $                                       \tidentifier $", "contents": "agentstat" }
+      ,{ "trigger": "  SYNTAX-identifier-agentstat                     \thelp /", "contents": "agentstat" }
+
+      ,{ "trigger": "agentver $                                        \tidentifier $", "contents": "agentver" }
+      ,{ "trigger": "  SYNTAX-identifier-agentver                      \thelp /", "contents": "agentver" }
+
+      ,{ "trigger": "alias $                                           \tidentifier $", "contents": "alias" }
+      ,{ "trigger": "  SYNTAX-identifier-alias                         \thelp /", "contents": "alias" }
+
+      ,{ "trigger": "and $                                             \tidentifier $", "contents": "and" }
+      ,{ "trigger": "  SYNTAX-identifier-and                           \thelp /", "contents": "and" }
+
+      ,{ "trigger": "anick $                                           \tidentifier $", "contents": "anick" }
+      ,{ "trigger": "  SYNTAX-identifier-anick                         \thelp /", "contents": "anick" }
+
+      ,{ "trigger": "ansi2mirc $                                       \tidentifier $", "contents": "ansi2mirc" }
+      ,{ "trigger": "  SYNTAX-identifier-ansi2mirc                     \thelp /", "contents": "ansi2mirc" }
+
+      ,{ "trigger": "aop $                                             \tidentifier $", "contents": "aop" }
+      ,{ "trigger": "  SYNTAX-identifier-aop                           \thelp /", "contents": "aop" }
+
+      ,{ "trigger": "appactive $                                       \tidentifier $", "contents": "appactive" }
+      ,{ "trigger": "  SYNTAX-identifier-appactive                     \thelp /", "contents": "appactive" }
+
+      ,{ "trigger": "appstate $                                        \tidentifier $", "contents": "appstate" }
+      ,{ "trigger": "  SYNTAX-identifier-appstate                      \thelp /", "contents": "appstate" }
+
+      ,{ "trigger": "asc $                                             \tidentifier $", "contents": "asc" }
+      ,{ "trigger": "  SYNTAX-identifier-asc                           \thelp /", "contents": "asc" }
+
+      ,{ "trigger": "asctime $                                         \tidentifier $", "contents": "asctime" }
+      ,{ "trigger": "  SYNTAX-identifier-asctime                       \thelp /", "contents": "asctime" }
+
+      ,{ "trigger": "asin $                                            \tidentifier $", "contents": "asin" }
+      ,{ "trigger": "  SYNTAX-identifier-asin                          \thelp /", "contents": "asin" }
+
+      ,{ "trigger": "atan $                                            \tidentifier $", "contents": "atan" }
+      ,{ "trigger": "  SYNTAX-identifier-atan                          \thelp /", "contents": "atan" }
+
+      ,{ "trigger": "atan2 $                                           \tidentifier $", "contents": "atan2" }
+      ,{ "trigger": "  SYNTAX-identifier-atan2                         \thelp /", "contents": "atan2" }
+
+      ,{ "trigger": "auto $                                            \tidentifier $", "contents": "auto" }
+      ,{ "trigger": "  SYNTAX-identifier-auto                          \thelp /", "contents": "auto" }
+
+      ,{ "trigger": "avoice $                                          \tidentifier $", "contents": "avoice" }
+      ,{ "trigger": "  SYNTAX-identifier-avoice                        \thelp /", "contents": "avoice" }
+
+      ,{ "trigger": "away $                                            \tidentifier $", "contents": "away" }
+      ,{ "trigger": "  SYNTAX-identifier-away                          \thelp /", "contents": "away" }
+
+      ,{ "trigger": "awaymsg $                                         \tidentifier $", "contents": "awaymsg" }
+      ,{ "trigger": "  SYNTAX-identifier-awaymsg                       \thelp /", "contents": "awaymsg" }
+
+      ,{ "trigger": "awaytime $                                        \tidentifier $", "contents": "awaytime" }
+      ,{ "trigger": "  SYNTAX-identifier-awaytime                      \thelp /", "contents": "awaytime" }
+
+      ,{ "trigger": "banlist $                                         \tidentifier $", "contents": "banlist" }
+      ,{ "trigger": "  SYNTAX-identifier-banlist                       \thelp /", "contents": "banlist" }
+
+      ,{ "trigger": "banmask $                                         \tidentifier $", "contents": "banmask" }
+      ,{ "trigger": "  SYNTAX-identifier-banmask                       \thelp /", "contents": "banmask" }
+
+      ,{ "trigger": "base $                                            \tidentifier $", "contents": "base" }
+      ,{ "trigger": "  SYNTAX-identifier-base                          \thelp /", "contents": "base" }
+
+      ,{ "trigger": "beta $                                            \tidentifier $", "contents": "beta" }
+      ,{ "trigger": "  SYNTAX-identifier-beta                          \thelp /", "contents": "beta" }
+
+      ,{ "trigger": "bfind $                                           \tidentifier $", "contents": "bfind" }
+      ,{ "trigger": "  SYNTAX-identifier-bfind                         \thelp /", "contents": "bfind" }
+
+      ,{ "trigger": "bindip $                                          \tidentifier $", "contents": "bindip" }
+      ,{ "trigger": "  SYNTAX-identifier-bindip                        \thelp /", "contents": "bindip" }
+
+      ,{ "trigger": "bitoff $                                          \tidentifier $", "contents": "bitoff" }
+      ,{ "trigger": "  SYNTAX-identifier-bitoff                        \thelp /", "contents": "bitoff" }
+
+      ,{ "trigger": "biton $                                           \tidentifier $", "contents": "biton" }
+      ,{ "trigger": "  SYNTAX-identifier-biton                         \thelp /", "contents": "biton" }
+
+      ,{ "trigger": "bits $                                            \tidentifier $", "contents": "bits" }
+      ,{ "trigger": "  SYNTAX-identifier-bits                          \thelp /", "contents": "bits" }
+
+      ,{ "trigger": "bnick $                                           \tidentifier $", "contents": "bnick" }
+      ,{ "trigger": "  SYNTAX-identifier-bnick                         \thelp /", "contents": "bnick" }
+
+      ,{ "trigger": "bvar $                                            \tidentifier $", "contents": "bvar" }
+      ,{ "trigger": "  SYNTAX-identifier-bvar                          \thelp /", "contents": "bvar" }
+
+      ,{ "trigger": "bytes $                                           \tidentifier $", "contents": "bytes" }
+      ,{ "trigger": "  SYNTAX-identifier-bytes                         \thelp /", "contents": "bytes" }
+
+      ,{ "trigger": "calc $                                            \tidentifier $", "contents": "calc" }
+      ,{ "trigger": "  SYNTAX-identifier-calc                          \thelp /", "contents": "calc" }
+
+      ,{ "trigger": "caller $                                          \tidentifier $", "contents": "caller" }
+      ,{ "trigger": "  SYNTAX-identifier-caller                        \thelp /", "contents": "caller" }
+
+      ,{ "trigger": "cancel $                                          \tidentifier $", "contents": "cancel" }
+      ,{ "trigger": "  SYNTAX-identifier-cancel                        \thelp /", "contents": "cancel" }
+
+      ,{ "trigger": "cb $                                              \tidentifier $", "contents": "cb" }
+      ,{ "trigger": "  SYNTAX-identifier-cb                            \thelp /", "contents": "cb" }
+
+      ,{ "trigger": "cd $                                              \tidentifier $", "contents": "cd" }
+      ,{ "trigger": "  SYNTAX-identifier-cd                            \thelp /", "contents": "cd" }
+
+      ,{ "trigger": "ceil $                                            \tidentifier $", "contents": "ceil" }
+      ,{ "trigger": "  SYNTAX-identifier-ceil                          \thelp /", "contents": "ceil" }
+
+      ,{ "trigger": "chan $                                            \tidentifier $", "contents": "chan" }
+      ,{ "trigger": "  SYNTAX-identifier-chan                          \thelp /", "contents": "chan" }
+
+      ,{ "trigger": "chanmodes $                                       \tidentifier $", "contents": "chanmodes" }
+      ,{ "trigger": "  SYNTAX-identifier-chanmodes                     \thelp /", "contents": "chanmodes" }
+
+      ,{ "trigger": "channel $                                         \tidentifier $", "contents": "channel" }
+      ,{ "trigger": "  SYNTAX-identifier-channel                       \thelp /", "contents": "channel" }
+
+      ,{ "trigger": "chantypes $                                       \tidentifier $", "contents": "chantypes" }
+      ,{ "trigger": "  SYNTAX-identifier-chantypes                     \thelp /", "contents": "chantypes" }
+
+      ,{ "trigger": "chat $                                            \tidentifier $", "contents": "chat" }
+      ,{ "trigger": "  SYNTAX-identifier-chat                          \thelp /", "contents": "chat" }
+
+      ,{ "trigger": "chr $                                             \tidentifier $", "contents": "chr" }
+      ,{ "trigger": "  SYNTAX-identifier-chr                           \thelp /", "contents": "chr" }
+
+      ,{ "trigger": "cid $                                             \tidentifier $", "contents": "cid" }
+      ,{ "trigger": "  SYNTAX-identifier-cid                           \thelp /", "contents": "cid" }
+
+      ,{ "trigger": "clevel $                                          \tidentifier $", "contents": "clevel" }
+      ,{ "trigger": "  SYNTAX-identifier-clevel                        \thelp /", "contents": "clevel" }
+
+      ,{ "trigger": "click $                                           \tidentifier $", "contents": "click" }
+      ,{ "trigger": "  SYNTAX-identifier-click                         \thelp /", "contents": "click" }
+
+      ,{ "trigger": "cmdbox $                                          \tidentifier $", "contents": "cmdbox" }
+      ,{ "trigger": "  SYNTAX-identifier-cmdbox                        \thelp /", "contents": "cmdbox" }
+
+      ,{ "trigger": "cmdline $                                         \tidentifier $", "contents": "cmdline" }
+      ,{ "trigger": "  SYNTAX-identifier-cmdline                       \thelp /", "contents": "cmdline" }
+
+      ,{ "trigger": "cnick $                                           \tidentifier $", "contents": "cnick" }
+      ,{ "trigger": "  SYNTAX-identifier-cnick                         \thelp /", "contents": "cnick" }
+
+      ,{ "trigger": "color $                                           \tidentifier $", "contents": "color" }
+      ,{ "trigger": "  SYNTAX-identifier-color                         \thelp /", "contents": "color" }
+
+      ,{ "trigger": "colour $                                          \tidentifier $", "contents": "colour" }
+      ,{ "trigger": "  SYNTAX-identifier-colour                        \thelp /", "contents": "colour" }
+
+      ,{ "trigger": "com $                                             \tidentifier $", "contents": "com" }
+      ,{ "trigger": "  SYNTAX-identifier-com                           \thelp /", "contents": "com" }
+
+      ,{ "trigger": "comcall $                                         \tidentifier $", "contents": "comcall" }
+      ,{ "trigger": "  SYNTAX-identifier-comcall                       \thelp /", "contents": "comcall" }
+
+      ,{ "trigger": "comchan $                                         \tidentifier $", "contents": "comchan" }
+      ,{ "trigger": "  SYNTAX-identifier-comchan                       \thelp /", "contents": "comchan" }
+
+      ,{ "trigger": "comchar $                                         \tidentifier $", "contents": "comchar" }
+      ,{ "trigger": "  SYNTAX-identifier-comchar                       \thelp /", "contents": "comchar" }
+
+      ,{ "trigger": "comerr $                                          \tidentifier $", "contents": "comerr" }
+      ,{ "trigger": "  SYNTAX-identifier-comerr                        \thelp /", "contents": "comerr" }
+
+      ,{ "trigger": "compact $                                         \tidentifier $", "contents": "compact" }
+      ,{ "trigger": "  SYNTAX-identifier-compact                       \thelp /", "contents": "compact" }
+
+      ,{ "trigger": "compress $                                        \tidentifier $", "contents": "compress" }
+      ,{ "trigger": "  SYNTAX-identifier-compress                      \thelp /", "contents": "compress" }
+
+      ,{ "trigger": "comval $                                          \tidentifier $", "contents": "comval" }
+      ,{ "trigger": "  SYNTAX-identifier-comval                        \thelp /", "contents": "comval" }
+
+      ,{ "trigger": "cos $                                             \tidentifier $", "contents": "cos" }
+      ,{ "trigger": "  SYNTAX-identifier-cos                           \thelp /", "contents": "cos" }
+
+      ,{ "trigger": "cosh $                                            \tidentifier $", "contents": "cosh" }
+      ,{ "trigger": "  SYNTAX-identifier-cosh                          \thelp /", "contents": "cosh" }
+
+      ,{ "trigger": "count $                                           \tidentifier $", "contents": "count" }
+      ,{ "trigger": "  SYNTAX-identifier-count                         \thelp /", "contents": "count" }
+
+      ,{ "trigger": "cr $                                              \tidentifier $", "contents": "cr" }
+      ,{ "trigger": "  SYNTAX-identifier-cr                            \thelp /", "contents": "cr" }
+
+      ,{ "trigger": "crc $                                             \tidentifier $", "contents": "crc" }
+      ,{ "trigger": "  SYNTAX-identifier-crc                           \thelp /", "contents": "crc" }
+
+      ,{ "trigger": "creq $                                            \tidentifier $", "contents": "creq" }
+      ,{ "trigger": "  SYNTAX-identifier-creq                          \thelp /", "contents": "creq" }
+
+      ,{ "trigger": "crlf $                                            \tidentifier $", "contents": "crlf" }
+      ,{ "trigger": "  SYNTAX-identifier-crlf                          \thelp /", "contents": "crlf" }
+
+      ,{ "trigger": "ctime $                                           \tidentifier $", "contents": "ctime" }
+      ,{ "trigger": "  SYNTAX-identifier-ctime                         \thelp /", "contents": "ctime" }
+
+      ,{ "trigger": "ctimer $                                          \tidentifier $", "contents": "ctimer" }
+      ,{ "trigger": "  SYNTAX-identifier-ctimer                        \thelp /", "contents": "ctimer" }
+
+      ,{ "trigger": "ctrlenter $                                       \tidentifier $", "contents": "ctrlenter" }
+      ,{ "trigger": "  SYNTAX-identifier-ctrlenter                     \thelp /", "contents": "ctrlenter" }
+
+      ,{ "trigger": "date $                                            \tidentifier $", "contents": "date" }
+      ,{ "trigger": "  SYNTAX-identifier-date                          \thelp /", "contents": "date" }
+
+      ,{ "trigger": "day $                                             \tidentifier $", "contents": "day" }
+      ,{ "trigger": "  SYNTAX-identifier-day                           \thelp /", "contents": "day" }
+
+      ,{ "trigger": "daylight $                                        \tidentifier $", "contents": "daylight" }
+      ,{ "trigger": "  SYNTAX-identifier-daylight                      \thelp /", "contents": "daylight" }
+
+      ,{ "trigger": "dbuh $                                            \tidentifier $", "contents": "dbuh" }
+      ,{ "trigger": "  SYNTAX-identifier-dbuh                          \thelp /", "contents": "dbuh" }
+
+      ,{ "trigger": "dbuw $                                            \tidentifier $", "contents": "dbuw" }
+      ,{ "trigger": "  SYNTAX-identifier-dbuw                          \thelp /", "contents": "dbuw" }
+
+      ,{ "trigger": "dccignore $                                       \tidentifier $", "contents": "dccignore" }
+      ,{ "trigger": "  SYNTAX-identifier-dccignore                     \thelp /", "contents": "dccignore" }
+
+      ,{ "trigger": "dccport $                                         \tidentifier $", "contents": "dccport" }
+      ,{ "trigger": "  SYNTAX-identifier-dccport                       \thelp /", "contents": "dccport" }
+
+      ,{ "trigger": "dde $                                             \tidentifier $", "contents": "dde" }
+      ,{ "trigger": "  SYNTAX-identifier-dde                           \thelp /", "contents": "dde" }
+
+      ,{ "trigger": "ddename $                                         \tidentifier $", "contents": "ddename" }
+      ,{ "trigger": "  SYNTAX-identifier-ddename                       \thelp /", "contents": "ddename" }
+
+      ,{ "trigger": "debug $                                           \tidentifier $", "contents": "debug" }
+      ,{ "trigger": "  SYNTAX-identifier-debug                         \thelp /", "contents": "debug" }
+
+      ,{ "trigger": "decode $                                          \tidentifier $", "contents": "decode" }
+      ,{ "trigger": "  SYNTAX-identifier-decode                        \thelp /", "contents": "decode" }
+
+      ,{ "trigger": "decompress $                                      \tidentifier $", "contents": "decompress" }
+      ,{ "trigger": "  SYNTAX-identifier-decompress                    \thelp /", "contents": "decompress" }
+
+      ,{ "trigger": "deltok $                                          \tidentifier $", "contents": "deltok" }
+      ,{ "trigger": "  SYNTAX-identifier-deltok                        \thelp /", "contents": "deltok" }
+
+      ,{ "trigger": "devent $                                          \tidentifier $", "contents": "devent" }
+      ,{ "trigger": "  SYNTAX-identifier-devent                        \thelp /", "contents": "devent" }
+
+      ,{ "trigger": "dialog $                                          \tidentifier $", "contents": "dialog" }
+      ,{ "trigger": "  SYNTAX-identifier-dialog                        \thelp /", "contents": "dialog" }
+
+      ,{ "trigger": "did $                                             \tidentifier $", "contents": "did" }
+      ,{ "trigger": "  SYNTAX-identifier-did                           \thelp /", "contents": "did" }
+
+      ,{ "trigger": "didreg $                                          \tidentifier $", "contents": "didreg" }
+      ,{ "trigger": "  SYNTAX-identifier-didreg                        \thelp /", "contents": "didreg" }
+
+      ,{ "trigger": "didtok $                                          \tidentifier $", "contents": "didtok" }
+      ,{ "trigger": "  SYNTAX-identifier-didtok                        \thelp /", "contents": "didtok" }
+
+      ,{ "trigger": "didwm $                                           \tidentifier $", "contents": "didwm" }
+      ,{ "trigger": "  SYNTAX-identifier-didwm                         \thelp /", "contents": "didwm" }
+
+      ,{ "trigger": "dir $                                             \tidentifier $", "contents": "dir" }
+      ,{ "trigger": "  SYNTAX-identifier-dir                           \thelp /", "contents": "dir" }
+
+      ,{ "trigger": "disk $                                            \tidentifier $", "contents": "disk" }
+      ,{ "trigger": "  SYNTAX-identifier-disk                          \thelp /", "contents": "disk" }
+
+      ,{ "trigger": "dlevel $                                          \tidentifier $", "contents": "dlevel" }
+      ,{ "trigger": "  SYNTAX-identifier-dlevel                        \thelp /", "contents": "dlevel" }
+
+      ,{ "trigger": "dll $                                             \tidentifier $", "contents": "dll" }
+      ,{ "trigger": "  SYNTAX-identifier-dll                           \thelp /", "contents": "dll" }
+
+      ,{ "trigger": "dllcall $                                         \tidentifier $", "contents": "dllcall" }
+      ,{ "trigger": "  SYNTAX-identifier-dllcall                       \thelp /", "contents": "dllcall" }
+
+      ,{ "trigger": "dname $                                           \tidentifier $", "contents": "dname" }
+      ,{ "trigger": "  SYNTAX-identifier-dname                         \thelp /", "contents": "dname" }
+
+      ,{ "trigger": "dns $                                             \tidentifier $", "contents": "dns" }
+      ,{ "trigger": "  SYNTAX-identifier-dns                           \thelp /", "contents": "dns" }
+
+      ,{ "trigger": "dqwindow $                                        \tidentifier $", "contents": "dqwindow" }
+      ,{ "trigger": "  SYNTAX-identifier-dqwindow                      \thelp /", "contents": "dqwindow" }
+
+      ,{ "trigger": "duration $                                        \tidentifier $", "contents": "duration" }
+      ,{ "trigger": "  SYNTAX-identifier-duration                      \thelp /", "contents": "duration" }
+
+      ,{ "trigger": "ebeeps $                                          \tidentifier $", "contents": "ebeeps" }
+      ,{ "trigger": "  SYNTAX-identifier-ebeeps                        \thelp /", "contents": "ebeeps" }
+
+      ,{ "trigger": "editbox $                                         \tidentifier $", "contents": "editbox" }
+      ,{ "trigger": "  SYNTAX-identifier-editbox                       \thelp /", "contents": "editbox" }
+
+      ,{ "trigger": "email $                                           \tidentifier $", "contents": "email" }
+      ,{ "trigger": "  SYNTAX-identifier-email                         \thelp /", "contents": "email" }
+
+      ,{ "trigger": "emailaddr $                                       \tidentifier $", "contents": "emailaddr" }
+      ,{ "trigger": "  SYNTAX-identifier-emailaddr                     \thelp /", "contents": "emailaddr" }
+
+      ,{ "trigger": "encode $                                          \tidentifier $", "contents": "encode" }
+      ,{ "trigger": "  SYNTAX-identifier-encode                        \thelp /", "contents": "encode" }
+
+      ,{ "trigger": "envvar $                                          \tidentifier $", "contents": "envvar" }
+      ,{ "trigger": "  SYNTAX-identifier-envvar                        \thelp /", "contents": "envvar" }
+
+      ,{ "trigger": "error $                                           \tidentifier $", "contents": "error" }
+      ,{ "trigger": "  SYNTAX-identifier-error                         \thelp /", "contents": "error" }
+
+      ,{ "trigger": "eval $                                            \tidentifier $", "contents": "eval" }
+      ,{ "trigger": "  SYNTAX-identifier-eval                          \thelp /", "contents": "eval" }
+
+      ,{ "trigger": "evalnext $                                        \tidentifier $", "contents": "evalnext" }
+      ,{ "trigger": "  SYNTAX-identifier-evalnext                      \thelp /", "contents": "evalnext" }
+
+      ,{ "trigger": "event $                                           \tidentifier $", "contents": "event" }
+      ,{ "trigger": "  SYNTAX-identifier-event                         \thelp /", "contents": "event" }
+
+      ,{ "trigger": "eventid $                                         \tidentifier $", "contents": "eventid" }
+      ,{ "trigger": "  SYNTAX-identifier-eventid                       \thelp /", "contents": "eventid" }
+
+      ,{ "trigger": "exists $                                          \tidentifier $", "contents": "exists" }
+      ,{ "trigger": "  SYNTAX-identifier-exists                        \thelp /", "contents": "exists" }
+
+      ,{ "trigger": "exiting $                                         \tidentifier $", "contents": "exiting" }
+      ,{ "trigger": "  SYNTAX-identifier-exiting                       \thelp /", "contents": "exiting" }
+
+      ,{ "trigger": "false $                                           \tidentifier $", "contents": "false" }
+      ,{ "trigger": "  SYNTAX-identifier-false                         \thelp /", "contents": "false" }
+
+      ,{ "trigger": "feof $                                            \tidentifier $", "contents": "feof" }
+      ,{ "trigger": "  SYNTAX-identifier-feof                          \thelp /", "contents": "feof" }
+
+      ,{ "trigger": "ferr $                                            \tidentifier $", "contents": "ferr" }
+      ,{ "trigger": "  SYNTAX-identifier-ferr                          \thelp /", "contents": "ferr" }
+
+      ,{ "trigger": "fgetc $                                           \tidentifier $", "contents": "fgetc" }
+      ,{ "trigger": "  SYNTAX-identifier-fgetc                         \thelp /", "contents": "fgetc" }
+
+      ,{ "trigger": "file $                                            \tidentifier $", "contents": "file" }
+      ,{ "trigger": "  SYNTAX-identifier-file                          \thelp /", "contents": "file" }
+
+      ,{ "trigger": "filename $                                        \tidentifier $", "contents": "filename" }
+      ,{ "trigger": "  SYNTAX-identifier-filename                      \thelp /", "contents": "filename" }
+
+      ,{ "trigger": "filtered $                                        \tidentifier $", "contents": "filtered" }
+      ,{ "trigger": "  SYNTAX-identifier-filtered                      \thelp /", "contents": "filtered" }
+
+      ,{ "trigger": "finddir $                                         \tidentifier $", "contents": "finddir" }
+      ,{ "trigger": "  SYNTAX-identifier-finddir                       \thelp /", "contents": "finddir" }
+
+      ,{ "trigger": "finddirn $                                        \tidentifier $", "contents": "finddirn" }
+      ,{ "trigger": "  SYNTAX-identifier-finddirn                      \thelp /", "contents": "finddirn" }
+
+      ,{ "trigger": "findfile $                                        \tidentifier $", "contents": "findfile" }
+      ,{ "trigger": "  SYNTAX-identifier-findfile                      \thelp /", "contents": "findfile" }
+
+      ,{ "trigger": "findfilen $                                       \tidentifier $", "contents": "findfilen" }
+      ,{ "trigger": "  SYNTAX-identifier-findfilen                     \thelp /", "contents": "findfilen" }
+
+      ,{ "trigger": "findtok $                                         \tidentifier $", "contents": "findtok" }
+      ,{ "trigger": "  SYNTAX-identifier-findtok                       \thelp /", "contents": "findtok" }
+
+      ,{ "trigger": "findtokcs $                                       \tidentifier $", "contents": "findtokcs" }
+      ,{ "trigger": "  SYNTAX-identifier-findtokcs                     \thelp /", "contents": "findtokcs" }
+
+      ,{ "trigger": "fline $                                           \tidentifier $", "contents": "fline" }
+      ,{ "trigger": "  SYNTAX-identifier-fline                         \thelp /", "contents": "fline" }
+
+      ,{ "trigger": "floor $                                           \tidentifier $", "contents": "floor" }
+      ,{ "trigger": "  SYNTAX-identifier-floor                         \thelp /", "contents": "floor" }
+
+      ,{ "trigger": "font $                                            \tidentifier $", "contents": "font" }
+      ,{ "trigger": "  SYNTAX-identifier-font                          \thelp /", "contents": "font" }
+
+      ,{ "trigger": "fopen $                                           \tidentifier $", "contents": "fopen" }
+      ,{ "trigger": "  SYNTAX-identifier-fopen                         \thelp /", "contents": "fopen" }
+
+      ,{ "trigger": "fread $                                           \tidentifier $", "contents": "fread" }
+      ,{ "trigger": "  SYNTAX-identifier-fread                         \thelp /", "contents": "fread" }
+
+      ,{ "trigger": "fromeditbox $                                     \tidentifier $", "contents": "fromeditbox" }
+      ,{ "trigger": "  SYNTAX-identifier-fromeditbox                   \thelp /", "contents": "fromeditbox" }
+
+      ,{ "trigger": "fserv $                                           \tidentifier $", "contents": "fserv" }
+      ,{ "trigger": "  SYNTAX-identifier-fserv                         \thelp /", "contents": "fserv" }
+
+      ,{ "trigger": "fserve $                                          \tidentifier $", "contents": "fserve" }
+      ,{ "trigger": "  SYNTAX-identifier-fserve                        \thelp /", "contents": "fserve" }
+
+      ,{ "trigger": "fulladdress $                                     \tidentifier $", "contents": "fulladdress" }
+      ,{ "trigger": "  SYNTAX-identifier-fulladdress                   \thelp /", "contents": "fulladdress" }
+
+      ,{ "trigger": "fulldate $                                        \tidentifier $", "contents": "fulldate" }
+      ,{ "trigger": "  SYNTAX-identifier-fulldate                      \thelp /", "contents": "fulldate" }
+
+      ,{ "trigger": "fullname $                                        \tidentifier $", "contents": "fullname" }
+      ,{ "trigger": "  SYNTAX-identifier-fullname                      \thelp /", "contents": "fullname" }
+
+      ,{ "trigger": "fullscreen $                                      \tidentifier $", "contents": "fullscreen" }
+      ,{ "trigger": "  SYNTAX-identifier-fullscreen                    \thelp /", "contents": "fullscreen" }
+
+      ,{ "trigger": "get $                                             \tidentifier $", "contents": "get" }
+      ,{ "trigger": "  SYNTAX-identifier-get                           \thelp /", "contents": "get" }
+
+      ,{ "trigger": "getdir $                                          \tidentifier $", "contents": "getdir" }
+      ,{ "trigger": "  SYNTAX-identifier-getdir                        \thelp /", "contents": "getdir" }
+
+      ,{ "trigger": "getdot $                                          \tidentifier $", "contents": "getdot" }
+      ,{ "trigger": "  SYNTAX-identifier-getdot                        \thelp /", "contents": "getdot" }
+
+      ,{ "trigger": "gettok $                                          \tidentifier $", "contents": "gettok" }
+      ,{ "trigger": "  SYNTAX-identifier-gettok                        \thelp /", "contents": "gettok" }
+
+      ,{ "trigger": "gmt $                                             \tidentifier $", "contents": "gmt" }
+      ,{ "trigger": "  SYNTAX-identifier-gmt                           \thelp /", "contents": "gmt" }
+
+      ,{ "trigger": "group $                                           \tidentifier $", "contents": "group" }
+      ,{ "trigger": "  SYNTAX-identifier-group                         \thelp /", "contents": "group" }
+
+      ,{ "trigger": "halted $                                          \tidentifier $", "contents": "halted" }
+      ,{ "trigger": "  SYNTAX-identifier-halted                        \thelp /", "contents": "halted" }
+
+      ,{ "trigger": "hash $                                            \tidentifier $", "contents": "hash" }
+      ,{ "trigger": "  SYNTAX-identifier-hash                          \thelp /", "contents": "hash" }
+
+      ,{ "trigger": "height $                                          \tidentifier $", "contents": "height" }
+      ,{ "trigger": "  SYNTAX-identifier-height                        \thelp /", "contents": "height" }
+
+      ,{ "trigger": "hfile $                                           \tidentifier $", "contents": "hfile" }
+      ,{ "trigger": "  SYNTAX-identifier-hfile                         \thelp /", "contents": "hfile" }
+
+      ,{ "trigger": "hfind $                                           \tidentifier $", "contents": "hfind" }
+      ,{ "trigger": "  SYNTAX-identifier-hfind                         \thelp /", "contents": "hfind" }
+
+      ,{ "trigger": "hget $                                            \tidentifier $", "contents": "hget" }
+      ,{ "trigger": "  SYNTAX-identifier-hget                          \thelp /", "contents": "hget" }
+
+      ,{ "trigger": "highlight $                                       \tidentifier $", "contents": "highlight" }
+      ,{ "trigger": "  SYNTAX-identifier-highlight                     \thelp /", "contents": "highlight" }
+
+      ,{ "trigger": "hmac $                                            \tidentifier $", "contents": "hmac" }
+      ,{ "trigger": "  SYNTAX-identifier-hmac                          \thelp /", "contents": "hmac" }
+
+      ,{ "trigger": "hmatch $                                          \tidentifier $", "contents": "hmatch" }
+      ,{ "trigger": "  SYNTAX-identifier-hmatch                        \thelp /", "contents": "hmatch" }
+
+      ,{ "trigger": "hnick $                                           \tidentifier $", "contents": "hnick" }
+      ,{ "trigger": "  SYNTAX-identifier-hnick                         \thelp /", "contents": "hnick" }
+
+      ,{ "trigger": "host $                                            \tidentifier $", "contents": "host" }
+      ,{ "trigger": "  SYNTAX-identifier-host                          \thelp /", "contents": "host" }
+
+      ,{ "trigger": "hotline $                                         \tidentifier $", "contents": "hotline" }
+      ,{ "trigger": "  SYNTAX-identifier-hotline                       \thelp /", "contents": "hotline" }
+
+      ,{ "trigger": "hotlinepos $                                      \tidentifier $", "contents": "hotlinepos" }
+      ,{ "trigger": "  SYNTAX-identifier-hotlinepos                    \thelp /", "contents": "hotlinepos" }
+
+      ,{ "trigger": "hotlink $                                         \tidentifier $", "contents": "hotlink" }
+      ,{ "trigger": "  SYNTAX-identifier-hotlink                       \thelp /", "contents": "hotlink" }
+
+      ,{ "trigger": "hotp $                                            \tidentifier $", "contents": "hotp" }
+      ,{ "trigger": "  SYNTAX-identifier-hotp                          \thelp /", "contents": "hotp" }
+
+      ,{ "trigger": "hregex $                                          \tidentifier $", "contents": "hregex" }
+      ,{ "trigger": "  SYNTAX-identifier-hregex                        \thelp /", "contents": "hregex" }
+
+      ,{ "trigger": "hypot $                                           \tidentifier $", "contents": "hypot" }
+      ,{ "trigger": "  SYNTAX-identifier-hypot                         \thelp /", "contents": "hypot" }
+
+      ,{ "trigger": "iaddress $                                        \tidentifier $", "contents": "iaddress" }
+      ,{ "trigger": "  SYNTAX-identifier-iaddress                      \thelp /", "contents": "iaddress" }
+
+      ,{ "trigger": "ial $                                             \tidentifier $", "contents": "ial" }
+      ,{ "trigger": "  SYNTAX-identifier-ial                           \thelp /", "contents": "ial" }
+
+      ,{ "trigger": "ialchan $                                         \tidentifier $", "contents": "ialchan" }
+      ,{ "trigger": "  SYNTAX-identifier-ialchan                       \thelp /", "contents": "ialchan" }
+
+      ,{ "trigger": "ibl $                                             \tidentifier $", "contents": "ibl" }
+      ,{ "trigger": "  SYNTAX-identifier-ibl                           \thelp /", "contents": "ibl" }
+
+      ,{ "trigger": "idle $                                            \tidentifier $", "contents": "idle" }
+      ,{ "trigger": "  SYNTAX-identifier-idle                          \thelp /", "contents": "idle" }
+
+      ,{ "trigger": "iel $                                             \tidentifier $", "contents": "iel" }
+      ,{ "trigger": "  SYNTAX-identifier-iel                           \thelp /", "contents": "iel" }
+
+      ,{ "trigger": "ifmatch $                                         \tidentifier $", "contents": "ifmatch" }
+      ,{ "trigger": "  SYNTAX-identifier-ifmatch                       \thelp /", "contents": "ifmatch" }
+
+      ,{ "trigger": "ifmatch2 $                                        \tidentifier $", "contents": "ifmatch2" }
+      ,{ "trigger": "  SYNTAX-identifier-ifmatch2                      \thelp /", "contents": "ifmatch2" }
+
+      ,{ "trigger": "ignore $                                          \tidentifier $", "contents": "ignore" }
+      ,{ "trigger": "  SYNTAX-identifier-ignore                        \thelp /", "contents": "ignore" }
+
+      ,{ "trigger": "iif $                                             \tidentifier $", "contents": "iif" }
+      ,{ "trigger": "  SYNTAX-identifier-iif                           \thelp /", "contents": "iif" }
+
+      ,{ "trigger": "iil $                                             \tidentifier $", "contents": "iil" }
+      ,{ "trigger": "  SYNTAX-identifier-iil                           \thelp /", "contents": "iil" }
+
+      ,{ "trigger": "inellipse $                                       \tidentifier $", "contents": "inellipse" }
+      ,{ "trigger": "  SYNTAX-identifier-inellipse                     \thelp /", "contents": "inellipse" }
+
+      ,{ "trigger": "ini $                                             \tidentifier $", "contents": "ini" }
+      ,{ "trigger": "  SYNTAX-identifier-ini                           \thelp /", "contents": "ini" }
+
+      ,{ "trigger": "initopic $                                        \tidentifier $", "contents": "initopic" }
+      ,{ "trigger": "  SYNTAX-identifier-initopic                      \thelp /", "contents": "initopic" }
+
+      ,{ "trigger": "inmidi $                                          \tidentifier $", "contents": "inmidi" }
+      ,{ "trigger": "  SYNTAX-identifier-inmidi                        \thelp /", "contents": "inmidi" }
+
+      ,{ "trigger": "inmode $                                          \tidentifier $", "contents": "inmode" }
+      ,{ "trigger": "  SYNTAX-identifier-inmode                        \thelp /", "contents": "inmode" }
+
+      ,{ "trigger": "inmp3 $                                           \tidentifier $", "contents": "inmp3" }
+      ,{ "trigger": "  SYNTAX-identifier-inmp3                         \thelp /", "contents": "inmp3" }
+
+      ,{ "trigger": "inpaste $                                         \tidentifier $", "contents": "inpaste" }
+      ,{ "trigger": "  SYNTAX-identifier-inpaste                       \thelp /", "contents": "inpaste" }
+
+      ,{ "trigger": "inpoly $                                          \tidentifier $", "contents": "inpoly" }
+      ,{ "trigger": "  SYNTAX-identifier-inpoly                        \thelp /", "contents": "inpoly" }
+
+      ,{ "trigger": "input $                                           \tidentifier $", "contents": "input" }
+      ,{ "trigger": "  SYNTAX-identifier-input                         \thelp /", "contents": "input" }
+
+      ,{ "trigger": "inrect $                                          \tidentifier $", "contents": "inrect" }
+      ,{ "trigger": "  SYNTAX-identifier-inrect                        \thelp /", "contents": "inrect" }
+
+      ,{ "trigger": "inroundrect $                                     \tidentifier $", "contents": "inroundrect" }
+      ,{ "trigger": "  SYNTAX-identifier-inroundrect                   \thelp /", "contents": "inroundrect" }
+
+      ,{ "trigger": "insong $                                          \tidentifier $", "contents": "insong" }
+      ,{ "trigger": "  SYNTAX-identifier-insong                        \thelp /", "contents": "insong" }
+
+      ,{ "trigger": "instok $                                          \tidentifier $", "contents": "instok" }
+      ,{ "trigger": "  SYNTAX-identifier-instok                        \thelp /", "contents": "instok" }
+
+      ,{ "trigger": "int $                                             \tidentifier $", "contents": "int" }
+      ,{ "trigger": "  SYNTAX-identifier-int                           \thelp /", "contents": "int" }
+
+      ,{ "trigger": "intersect $                                       \tidentifier $", "contents": "intersect" }
+      ,{ "trigger": "  SYNTAX-identifier-intersect                     \thelp /", "contents": "intersect" }
+
+      ,{ "trigger": "inwave $                                          \tidentifier $", "contents": "inwave" }
+      ,{ "trigger": "  SYNTAX-identifier-inwave                        \thelp /", "contents": "inwave" }
+
+      ,{ "trigger": "inwho $                                           \tidentifier $", "contents": "inwho" }
+      ,{ "trigger": "  SYNTAX-identifier-inwho                         \thelp /", "contents": "inwho" }
+
+      ,{ "trigger": "ip $                                              \tidentifier $", "contents": "ip" }
+      ,{ "trigger": "  SYNTAX-identifier-ip                            \thelp /", "contents": "ip" }
+
+      ,{ "trigger": "iptype $                                          \tidentifier $", "contents": "iptype" }
+      ,{ "trigger": "  SYNTAX-identifier-iptype                        \thelp /", "contents": "iptype" }
+
+      ,{ "trigger": "iql $                                             \tidentifier $", "contents": "iql" }
+      ,{ "trigger": "  SYNTAX-identifier-iql                           \thelp /", "contents": "iql" }
+
+      ,{ "trigger": "isalias $                                         \tidentifier $", "contents": "isalias" }
+      ,{ "trigger": "  SYNTAX-identifier-isalias                       \thelp /", "contents": "isalias" }
+
+      ,{ "trigger": "isbit $                                           \tidentifier $", "contents": "isbit" }
+      ,{ "trigger": "  SYNTAX-identifier-isbit                         \thelp /", "contents": "isbit" }
+
+      ,{ "trigger": "isdde $                                           \tidentifier $", "contents": "isdde" }
+      ,{ "trigger": "  SYNTAX-identifier-isdde                         \thelp /", "contents": "isdde" }
+
+      ,{ "trigger": "isdir $                                           \tidentifier $", "contents": "isdir" }
+      ,{ "trigger": "  SYNTAX-identifier-isdir                         \thelp /", "contents": "isdir" }
+
+      ,{ "trigger": "isfile $                                          \tidentifier $", "contents": "isfile" }
+      ,{ "trigger": "  SYNTAX-identifier-isfile                        \thelp /", "contents": "isfile" }
+
+      ,{ "trigger": "isid $                                            \tidentifier $", "contents": "isid" }
+      ,{ "trigger": "  SYNTAX-identifier-isid                          \thelp /", "contents": "isid" }
+
+      ,{ "trigger": "islower $                                         \tidentifier $", "contents": "islower" }
+      ,{ "trigger": "  SYNTAX-identifier-islower                       \thelp /", "contents": "islower" }
+
+      ,{ "trigger": "istok $                                           \tidentifier $", "contents": "istok" }
+      ,{ "trigger": "  SYNTAX-identifier-istok                         \thelp /", "contents": "istok" }
+
+      ,{ "trigger": "isupper $                                         \tidentifier $", "contents": "isupper" }
+      ,{ "trigger": "  SYNTAX-identifier-isupper                       \thelp /", "contents": "isupper" }
+
+      ,{ "trigger": "isutf $                                           \tidentifier $", "contents": "isutf" }
+      ,{ "trigger": "  SYNTAX-identifier-isutf                         \thelp /", "contents": "isutf" }
+
+      ,{ "trigger": "keychar $                                         \tidentifier $", "contents": "keychar" }
+      ,{ "trigger": "  SYNTAX-identifier-keychar                       \thelp /", "contents": "keychar" }
+
+      ,{ "trigger": "keyrpt $                                          \tidentifier $", "contents": "keyrpt" }
+      ,{ "trigger": "  SYNTAX-identifier-keyrpt                        \thelp /", "contents": "keyrpt" }
+
+      ,{ "trigger": "keyval $                                          \tidentifier $", "contents": "keyval" }
+      ,{ "trigger": "  SYNTAX-identifier-keyval                        \thelp /", "contents": "keyval" }
+
+      ,{ "trigger": "knick $                                           \tidentifier $", "contents": "knick" }
+      ,{ "trigger": "  SYNTAX-identifier-knick                         \thelp /", "contents": "knick" }
+
+      ,{ "trigger": "lactive $                                         \tidentifier $", "contents": "lactive" }
+      ,{ "trigger": "  SYNTAX-identifier-lactive                       \thelp /", "contents": "lactive" }
+
+      ,{ "trigger": "lactivecid $                                      \tidentifier $", "contents": "lactivecid" }
+      ,{ "trigger": "  SYNTAX-identifier-lactivecid                    \thelp /", "contents": "lactivecid" }
+
+      ,{ "trigger": "lactivewid $                                      \tidentifier $", "contents": "lactivewid" }
+      ,{ "trigger": "  SYNTAX-identifier-lactivewid                    \thelp /", "contents": "lactivewid" }
+
+      ,{ "trigger": "left $                                            \tidentifier $", "contents": "left" }
+      ,{ "trigger": "  SYNTAX-identifier-left                          \thelp /", "contents": "left" }
+
+      ,{ "trigger": "leftwin $                                         \tidentifier $", "contents": "leftwin" }
+      ,{ "trigger": "  SYNTAX-identifier-leftwin                       \thelp /", "contents": "leftwin" }
+
+      ,{ "trigger": "leftwincid $                                      \tidentifier $", "contents": "leftwincid" }
+      ,{ "trigger": "  SYNTAX-identifier-leftwincid                    \thelp /", "contents": "leftwincid" }
+
+      ,{ "trigger": "leftwinwid $                                      \tidentifier $", "contents": "leftwinwid" }
+      ,{ "trigger": "  SYNTAX-identifier-leftwinwid                    \thelp /", "contents": "leftwinwid" }
+
+      ,{ "trigger": "len $                                             \tidentifier $", "contents": "len" }
+      ,{ "trigger": "  SYNTAX-identifier-len                           \thelp /", "contents": "len" }
+
+      ,{ "trigger": "level $                                           \tidentifier $", "contents": "level" }
+      ,{ "trigger": "  SYNTAX-identifier-level                         \thelp /", "contents": "level" }
+
+      ,{ "trigger": "lf $                                              \tidentifier $", "contents": "lf" }
+      ,{ "trigger": "  SYNTAX-identifier-lf                            \thelp /", "contents": "lf" }
+
+      ,{ "trigger": "line $                                            \tidentifier $", "contents": "line" }
+      ,{ "trigger": "  SYNTAX-identifier-line                          \thelp /", "contents": "line" }
+
+      ,{ "trigger": "lines $                                           \tidentifier $", "contents": "lines" }
+      ,{ "trigger": "  SYNTAX-identifier-lines                         \thelp /", "contents": "lines" }
+
+      ,{ "trigger": "link $                                            \tidentifier $", "contents": "link" }
+      ,{ "trigger": "  SYNTAX-identifier-link                          \thelp /", "contents": "link" }
+
+      ,{ "trigger": "lock $                                            \tidentifier $", "contents": "lock" }
+      ,{ "trigger": "  SYNTAX-identifier-lock                          \thelp /", "contents": "lock" }
+
+      ,{ "trigger": "locked $                                          \tidentifier $", "contents": "locked" }
+      ,{ "trigger": "  SYNTAX-identifier-locked                        \thelp /", "contents": "locked" }
+
+      ,{ "trigger": "lof $                                             \tidentifier $", "contents": "lof" }
+      ,{ "trigger": "  SYNTAX-identifier-lof                           \thelp /", "contents": "lof" }
+
+      ,{ "trigger": "log $                                             \tidentifier $", "contents": "log" }
+      ,{ "trigger": "  SYNTAX-identifier-log                           \thelp /", "contents": "log" }
+
+      ,{ "trigger": "log10 $                                           \tidentifier $", "contents": "log10" }
+      ,{ "trigger": "  SYNTAX-identifier-log10                         \thelp /", "contents": "log10" }
+
+      ,{ "trigger": "logdir $                                          \tidentifier $", "contents": "logdir" }
+      ,{ "trigger": "  SYNTAX-identifier-logdir                        \thelp /", "contents": "logdir" }
+
+      ,{ "trigger": "logstamp $                                        \tidentifier $", "contents": "logstamp" }
+      ,{ "trigger": "  SYNTAX-identifier-logstamp                      \thelp /", "contents": "logstamp" }
+
+      ,{ "trigger": "logstampfmt $                                     \tidentifier $", "contents": "logstampfmt" }
+      ,{ "trigger": "  SYNTAX-identifier-logstampfmt                   \thelp /", "contents": "logstampfmt" }
+
+      ,{ "trigger": "longfn $                                          \tidentifier $", "contents": "longfn" }
+      ,{ "trigger": "  SYNTAX-identifier-longfn                        \thelp /", "contents": "longfn" }
+
+      ,{ "trigger": "longip $                                          \tidentifier $", "contents": "longip" }
+      ,{ "trigger": "  SYNTAX-identifier-longip                        \thelp /", "contents": "longip" }
+
+      ,{ "trigger": "lower $                                           \tidentifier $", "contents": "lower" }
+      ,{ "trigger": "  SYNTAX-identifier-lower                         \thelp /", "contents": "lower" }
+
+      ,{ "trigger": "ltimer $                                          \tidentifier $", "contents": "ltimer" }
+      ,{ "trigger": "  SYNTAX-identifier-ltimer                        \thelp /", "contents": "ltimer" }
+
+      ,{ "trigger": "maddress $                                        \tidentifier $", "contents": "maddress" }
+      ,{ "trigger": "  SYNTAX-identifier-maddress                      \thelp /", "contents": "maddress" }
+
+      ,{ "trigger": "mask $                                            \tidentifier $", "contents": "mask" }
+      ,{ "trigger": "  SYNTAX-identifier-mask                          \thelp /", "contents": "mask" }
+
+      ,{ "trigger": "matchkey $                                        \tidentifier $", "contents": "matchkey" }
+      ,{ "trigger": "  SYNTAX-identifier-matchkey                      \thelp /", "contents": "matchkey" }
+
+      ,{ "trigger": "matchtok $                                        \tidentifier $", "contents": "matchtok" }
+      ,{ "trigger": "  SYNTAX-identifier-matchtok                      \thelp /", "contents": "matchtok" }
+
+      ,{ "trigger": "matchtokcs $                                      \tidentifier $", "contents": "matchtokcs" }
+      ,{ "trigger": "  SYNTAX-identifier-matchtokcs                    \thelp /", "contents": "matchtokcs" }
+
+      ,{ "trigger": "md5 $                                             \tidentifier $", "contents": "md5" }
+      ,{ "trigger": "  SYNTAX-identifier-md5                           \thelp /", "contents": "md5" }
+
+      ,{ "trigger": "me $                                              \tidentifier $", "contents": "me" }
+      ,{ "trigger": "  SYNTAX-identifier-me                            \thelp /", "contents": "me" }
+
+      ,{ "trigger": "menu $                                            \tidentifier $", "contents": "menu" }
+      ,{ "trigger": "  SYNTAX-identifier-menu                          \thelp /", "contents": "menu" }
+
+      ,{ "trigger": "menubar $                                         \tidentifier $", "contents": "menubar" }
+      ,{ "trigger": "  SYNTAX-identifier-menubar                       \thelp /", "contents": "menubar" }
+
+      ,{ "trigger": "menucontext $                                     \tidentifier $", "contents": "menucontext" }
+      ,{ "trigger": "  SYNTAX-identifier-menucontext                   \thelp /", "contents": "menucontext" }
+
+      ,{ "trigger": "menutype $                                        \tidentifier $", "contents": "menutype" }
+      ,{ "trigger": "  SYNTAX-identifier-menutype                      \thelp /", "contents": "menutype" }
+
+      ,{ "trigger": "mid $                                             \tidentifier $", "contents": "mid" }
+      ,{ "trigger": "  SYNTAX-identifier-mid                           \thelp /", "contents": "mid" }
+
+      ,{ "trigger": "mididir $                                         \tidentifier $", "contents": "mididir" }
+      ,{ "trigger": "  SYNTAX-identifier-mididir                       \thelp /", "contents": "mididir" }
+
+      ,{ "trigger": "mircdir $                                         \tidentifier $", "contents": "mircdir" }
+      ,{ "trigger": "  SYNTAX-identifier-mircdir                       \thelp /", "contents": "mircdir" }
+
+      ,{ "trigger": "mircexe $                                         \tidentifier $", "contents": "mircexe" }
+      ,{ "trigger": "  SYNTAX-identifier-mircexe                       \thelp /", "contents": "mircexe" }
+
+      ,{ "trigger": "mircini $                                         \tidentifier $", "contents": "mircini" }
+      ,{ "trigger": "  SYNTAX-identifier-mircini                       \thelp /", "contents": "mircini" }
+
+      ,{ "trigger": "mkfn $                                            \tidentifier $", "contents": "mkfn" }
+      ,{ "trigger": "  SYNTAX-identifier-mkfn                          \thelp /", "contents": "mkfn" }
+
+      ,{ "trigger": "mklogfn $                                         \tidentifier $", "contents": "mklogfn" }
+      ,{ "trigger": "  SYNTAX-identifier-mklogfn                       \thelp /", "contents": "mklogfn" }
+
+      ,{ "trigger": "mknickfn $                                        \tidentifier $", "contents": "mknickfn" }
+      ,{ "trigger": "  SYNTAX-identifier-mknickfn                      \thelp /", "contents": "mknickfn" }
+
+      ,{ "trigger": "mnick $                                           \tidentifier $", "contents": "mnick" }
+      ,{ "trigger": "  SYNTAX-identifier-mnick                         \thelp /", "contents": "mnick" }
+
+      ,{ "trigger": "mode $                                            \tidentifier $", "contents": "mode" }
+      ,{ "trigger": "  SYNTAX-identifier-mode                          \thelp /", "contents": "mode" }
+
+      ,{ "trigger": "modefirst $                                       \tidentifier $", "contents": "modefirst" }
+      ,{ "trigger": "  SYNTAX-identifier-modefirst                     \thelp /", "contents": "modefirst" }
+
+      ,{ "trigger": "modelast $                                        \tidentifier $", "contents": "modelast" }
+      ,{ "trigger": "  SYNTAX-identifier-modelast                      \thelp /", "contents": "modelast" }
+
+      ,{ "trigger": "modespl $                                         \tidentifier $", "contents": "modespl" }
+      ,{ "trigger": "  SYNTAX-identifier-modespl                       \thelp /", "contents": "modespl" }
+
+      ,{ "trigger": "mouse $                                           \tidentifier $", "contents": "mouse" }
+      ,{ "trigger": "  SYNTAX-identifier-mouse                         \thelp /", "contents": "mouse" }
+
+      ,{ "trigger": "mp3 $                                             \tidentifier $", "contents": "mp3" }
+      ,{ "trigger": "  SYNTAX-identifier-mp3                           \thelp /", "contents": "mp3" }
+
+      ,{ "trigger": "mp3dir $                                          \tidentifier $", "contents": "mp3dir" }
+      ,{ "trigger": "  SYNTAX-identifier-mp3dir                        \thelp /", "contents": "mp3dir" }
+
+      ,{ "trigger": "msfile $                                          \tidentifier $", "contents": "msfile" }
+      ,{ "trigger": "  SYNTAX-identifier-msfile                        \thelp /", "contents": "msfile" }
+
+      ,{ "trigger": "msgstamp $                                        \tidentifier $", "contents": "msgstamp" }
+      ,{ "trigger": "  SYNTAX-identifier-msgstamp                      \thelp /", "contents": "msgstamp" }
+
+      ,{ "trigger": "msgtags $                                         \tidentifier $", "contents": "msgtags" }
+      ,{ "trigger": "  SYNTAX-identifier-msgtags                       \thelp /", "contents": "msgtags" }
+
+      ,{ "trigger": "naddress $                                        \tidentifier $", "contents": "naddress" }
+      ,{ "trigger": "  SYNTAX-identifier-naddress                      \thelp /", "contents": "naddress" }
+
+      ,{ "trigger": "network $                                         \tidentifier $", "contents": "network" }
+      ,{ "trigger": "  SYNTAX-identifier-network                       \thelp /", "contents": "network" }
+
+      ,{ "trigger": "newnick $                                         \tidentifier $", "contents": "newnick" }
+      ,{ "trigger": "  SYNTAX-identifier-newnick                       \thelp /", "contents": "newnick" }
+
+      ,{ "trigger": "nhnick $                                          \tidentifier $", "contents": "nhnick" }
+      ,{ "trigger": "  SYNTAX-identifier-nhnick                        \thelp /", "contents": "nhnick" }
+
+      ,{ "trigger": "nick $                                            \tidentifier $", "contents": "nick" }
+      ,{ "trigger": "  SYNTAX-identifier-nick                          \thelp /", "contents": "nick" }
+
+      ,{ "trigger": "nickmode $                                        \tidentifier $", "contents": "nickmode" }
+      ,{ "trigger": "  SYNTAX-identifier-nickmode                      \thelp /", "contents": "nickmode" }
+
+      ,{ "trigger": "no $                                              \tidentifier $", "contents": "no" }
+      ,{ "trigger": "  SYNTAX-identifier-no                            \thelp /", "contents": "no" }
+
+      ,{ "trigger": "nofile $                                          \tidentifier $", "contents": "nofile" }
+      ,{ "trigger": "  SYNTAX-identifier-nofile                        \thelp /", "contents": "nofile" }
+
+      ,{ "trigger": "nopath $                                          \tidentifier $", "contents": "nopath" }
+      ,{ "trigger": "  SYNTAX-identifier-nopath                        \thelp /", "contents": "nopath" }
+
+      ,{ "trigger": "nopnick $                                         \tidentifier $", "contents": "nopnick" }
+      ,{ "trigger": "  SYNTAX-identifier-nopnick                       \thelp /", "contents": "nopnick" }
+
+      ,{ "trigger": "noqt $                                            \tidentifier $", "contents": "noqt" }
+      ,{ "trigger": "  SYNTAX-identifier-noqt                          \thelp /", "contents": "noqt" }
+
+      ,{ "trigger": "not $                                             \tidentifier $", "contents": "not" }
+      ,{ "trigger": "  SYNTAX-identifier-not                           \thelp /", "contents": "not" }
+
+      ,{ "trigger": "notags $                                          \tidentifier $", "contents": "notags" }
+      ,{ "trigger": "  SYNTAX-identifier-notags                        \thelp /", "contents": "notags" }
+
+      ,{ "trigger": "notify $                                          \tidentifier $", "contents": "notify" }
+      ,{ "trigger": "  SYNTAX-identifier-notify                        \thelp /", "contents": "notify" }
+
+      ,{ "trigger": "null $                                            \tidentifier $", "contents": "null" }
+      ,{ "trigger": "  SYNTAX-identifier-null                          \thelp /", "contents": "null" }
+
+      ,{ "trigger": "numeric $                                         \tidentifier $", "contents": "numeric" }
+      ,{ "trigger": "  SYNTAX-identifier-numeric                       \thelp /", "contents": "numeric" }
+
+      ,{ "trigger": "numtok $                                          \tidentifier $", "contents": "numtok" }
+      ,{ "trigger": "  SYNTAX-identifier-numtok                        \thelp /", "contents": "numtok" }
+
+      ,{ "trigger": "nvnick $                                          \tidentifier $", "contents": "nvnick" }
+      ,{ "trigger": "  SYNTAX-identifier-nvnick                        \thelp /", "contents": "nvnick" }
+
+      ,{ "trigger": "ok $                                              \tidentifier $", "contents": "ok" }
+      ,{ "trigger": "  SYNTAX-identifier-ok                            \thelp /", "contents": "ok" }
+
+      ,{ "trigger": "online $                                          \tidentifier $", "contents": "online" }
+      ,{ "trigger": "  SYNTAX-identifier-online                        \thelp /", "contents": "online" }
+
+      ,{ "trigger": "onlineserver $                                    \tidentifier $", "contents": "onlineserver" }
+      ,{ "trigger": "  SYNTAX-identifier-onlineserver                  \thelp /", "contents": "onlineserver" }
+
+      ,{ "trigger": "onlinetotal $                                     \tidentifier $", "contents": "onlinetotal" }
+      ,{ "trigger": "  SYNTAX-identifier-onlinetotal                   \thelp /", "contents": "onlinetotal" }
+
+      ,{ "trigger": "onpoly $                                          \tidentifier $", "contents": "onpoly" }
+      ,{ "trigger": "  SYNTAX-identifier-onpoly                        \thelp /", "contents": "onpoly" }
+
+      ,{ "trigger": "opnick $                                          \tidentifier $", "contents": "opnick" }
+      ,{ "trigger": "  SYNTAX-identifier-opnick                        \thelp /", "contents": "opnick" }
+
+      ,{ "trigger": "or $                                              \tidentifier $", "contents": "or" }
+      ,{ "trigger": "  SYNTAX-identifier-or                            \thelp /", "contents": "or" }
+
+      ,{ "trigger": "ord $                                             \tidentifier $", "contents": "ord" }
+      ,{ "trigger": "  SYNTAX-identifier-ord                           \thelp /", "contents": "ord" }
+
+      ,{ "trigger": "os $                                              \tidentifier $", "contents": "os" }
+      ,{ "trigger": "  SYNTAX-identifier-os                            \thelp /", "contents": "os" }
+
+      ,{ "trigger": "parms $                                           \tidentifier $", "contents": "parms" }
+      ,{ "trigger": "  SYNTAX-identifier-parms                         \thelp /", "contents": "parms" }
+
+      ,{ "trigger": "parseline $                                       \tidentifier $", "contents": "parseline" }
+      ,{ "trigger": "  SYNTAX-identifier-parseline                     \thelp /", "contents": "parseline" }
+
+      ,{ "trigger": "parsetype $                                       \tidentifier $", "contents": "parsetype" }
+      ,{ "trigger": "  SYNTAX-identifier-parsetype                     \thelp /", "contents": "parsetype" }
+
+      ,{ "trigger": "parseutf $                                        \tidentifier $", "contents": "parseutf" }
+      ,{ "trigger": "  SYNTAX-identifier-parseutf                      \thelp /", "contents": "parseutf" }
+
+      ,{ "trigger": "passivedcc $                                      \tidentifier $", "contents": "passivedcc" }
+      ,{ "trigger": "  SYNTAX-identifier-passivedcc                    \thelp /", "contents": "passivedcc" }
+
+      ,{ "trigger": "pi $                                              \tidentifier $", "contents": "pi" }
+      ,{ "trigger": "  SYNTAX-identifier-pi                            \thelp /", "contents": "pi" }
+
+      ,{ "trigger": "pic $                                             \tidentifier $", "contents": "pic" }
+      ,{ "trigger": "  SYNTAX-identifier-pic                           \thelp /", "contents": "pic" }
+
+      ,{ "trigger": "play $                                            \tidentifier $", "contents": "play" }
+      ,{ "trigger": "  SYNTAX-identifier-play                          \thelp /", "contents": "play" }
+
+      ,{ "trigger": "pnick $                                           \tidentifier $", "contents": "pnick" }
+      ,{ "trigger": "  SYNTAX-identifier-pnick                         \thelp /", "contents": "pnick" }
+
+      ,{ "trigger": "portable $                                        \tidentifier $", "contents": "portable" }
+      ,{ "trigger": "  SYNTAX-identifier-portable                      \thelp /", "contents": "portable" }
+
+      ,{ "trigger": "portfree $                                        \tidentifier $", "contents": "portfree" }
+      ,{ "trigger": "  SYNTAX-identifier-portfree                      \thelp /", "contents": "portfree" }
+
+      ,{ "trigger": "pos $                                             \tidentifier $", "contents": "pos" }
+      ,{ "trigger": "  SYNTAX-identifier-pos                           \thelp /", "contents": "pos" }
+
+      ,{ "trigger": "poscs $                                           \tidentifier $", "contents": "poscs" }
+      ,{ "trigger": "  SYNTAX-identifier-poscs                         \thelp /", "contents": "poscs" }
+
+      ,{ "trigger": "prefix $                                          \tidentifier $", "contents": "prefix" }
+      ,{ "trigger": "  SYNTAX-identifier-prefix                        \thelp /", "contents": "prefix" }
+
+      ,{ "trigger": "prop $                                            \tidentifier $", "contents": "prop" }
+      ,{ "trigger": "  SYNTAX-identifier-prop                          \thelp /", "contents": "prop" }
+
+      ,{ "trigger": "protect $                                         \tidentifier $", "contents": "protect" }
+      ,{ "trigger": "  SYNTAX-identifier-protect                       \thelp /", "contents": "protect" }
+
+      ,{ "trigger": "puttok $                                          \tidentifier $", "contents": "puttok" }
+      ,{ "trigger": "  SYNTAX-identifier-puttok                        \thelp /", "contents": "puttok" }
+
+      ,{ "trigger": "qt $                                              \tidentifier $", "contents": "qt" }
+      ,{ "trigger": "  SYNTAX-identifier-qt                            \thelp /", "contents": "qt" }
+
+      ,{ "trigger": "query $                                           \tidentifier $", "contents": "query" }
+      ,{ "trigger": "  SYNTAX-identifier-query                         \thelp /", "contents": "query" }
+
+      ,{ "trigger": "r $                                               \tidentifier $", "contents": "r" }
+      ,{ "trigger": "  SYNTAX-identifier-r                             \thelp /", "contents": "r" }
+
+      ,{ "trigger": "raddress $                                        \tidentifier $", "contents": "raddress" }
+      ,{ "trigger": "  SYNTAX-identifier-raddress                      \thelp /", "contents": "raddress" }
+
+      ,{ "trigger": "rand $                                            \tidentifier $", "contents": "rand" }
+      ,{ "trigger": "  SYNTAX-identifier-rand                          \thelp /", "contents": "rand" }
+
+      ,{ "trigger": "rawbytes $                                        \tidentifier $", "contents": "rawbytes" }
+      ,{ "trigger": "  SYNTAX-identifier-rawbytes                      \thelp /", "contents": "rawbytes" }
+
+      ,{ "trigger": "rawmsg $                                          \tidentifier $", "contents": "rawmsg" }
+      ,{ "trigger": "  SYNTAX-identifier-rawmsg                        \thelp /", "contents": "rawmsg" }
+
+      ,{ "trigger": "read $                                            \tidentifier $", "contents": "read" }
+      ,{ "trigger": "  SYNTAX-identifier-read                          \thelp /", "contents": "read" }
+
+      ,{ "trigger": "readini $                                         \tidentifier $", "contents": "readini" }
+      ,{ "trigger": "  SYNTAX-identifier-readini                       \thelp /", "contents": "readini" }
+
+      ,{ "trigger": "readn $                                           \tidentifier $", "contents": "readn" }
+      ,{ "trigger": "  SYNTAX-identifier-readn                         \thelp /", "contents": "readn" }
+
+      ,{ "trigger": "regbr $                                           \tidentifier $", "contents": "regbr" }
+      ,{ "trigger": "  SYNTAX-identifier-regbr                         \thelp /", "contents": "regbr" }
+
+      ,{ "trigger": "regerrstr $                                       \tidentifier $", "contents": "regerrstr" }
+      ,{ "trigger": "  SYNTAX-identifier-regerrstr                     \thelp /", "contents": "regerrstr" }
+
+      ,{ "trigger": "regex $                                           \tidentifier $", "contents": "regex" }
+      ,{ "trigger": "  SYNTAX-identifier-regex                         \thelp /", "contents": "regex" }
+
+      ,{ "trigger": "regml $                                           \tidentifier $", "contents": "regml" }
+      ,{ "trigger": "  SYNTAX-identifier-regml                         \thelp /", "contents": "regml" }
+
+      ,{ "trigger": "regmlex $                                         \tidentifier $", "contents": "regmlex" }
+      ,{ "trigger": "  SYNTAX-identifier-regmlex                       \thelp /", "contents": "regmlex" }
+
+      ,{ "trigger": "regsub $                                          \tidentifier $", "contents": "regsub" }
+      ,{ "trigger": "  SYNTAX-identifier-regsub                        \thelp /", "contents": "regsub" }
+
+      ,{ "trigger": "regsubex $                                        \tidentifier $", "contents": "regsubex" }
+      ,{ "trigger": "  SYNTAX-identifier-regsubex                      \thelp /", "contents": "regsubex" }
+
+      ,{ "trigger": "remote $                                          \tidentifier $", "contents": "remote" }
+      ,{ "trigger": "  SYNTAX-identifier-remote                        \thelp /", "contents": "remote" }
+
+      ,{ "trigger": "remove $                                          \tidentifier $", "contents": "remove" }
+      ,{ "trigger": "  SYNTAX-identifier-remove                        \thelp /", "contents": "remove" }
+
+      ,{ "trigger": "removecs $                                        \tidentifier $", "contents": "removecs" }
+      ,{ "trigger": "  SYNTAX-identifier-removecs                      \thelp /", "contents": "removecs" }
+
+      ,{ "trigger": "remtok $                                          \tidentifier $", "contents": "remtok" }
+      ,{ "trigger": "  SYNTAX-identifier-remtok                        \thelp /", "contents": "remtok" }
+
+      ,{ "trigger": "remtokcs $                                        \tidentifier $", "contents": "remtokcs" }
+      ,{ "trigger": "  SYNTAX-identifier-remtokcs                      \thelp /", "contents": "remtokcs" }
+
+      ,{ "trigger": "replace $                                         \tidentifier $", "contents": "replace" }
+      ,{ "trigger": "  SYNTAX-identifier-replace                       \thelp /", "contents": "replace" }
+
+      ,{ "trigger": "replacecs $                                       \tidentifier $", "contents": "replacecs" }
+      ,{ "trigger": "  SYNTAX-identifier-replacecs                     \thelp /", "contents": "replacecs" }
+
+      ,{ "trigger": "replacex $                                        \tidentifier $", "contents": "replacex" }
+      ,{ "trigger": "  SYNTAX-identifier-replacex                      \thelp /", "contents": "replacex" }
+
+      ,{ "trigger": "replacexcs $                                      \tidentifier $", "contents": "replacexcs" }
+      ,{ "trigger": "  SYNTAX-identifier-replacexcs                    \thelp /", "contents": "replacexcs" }
+
+      ,{ "trigger": "reptok $                                          \tidentifier $", "contents": "reptok" }
+      ,{ "trigger": "  SYNTAX-identifier-reptok                        \thelp /", "contents": "reptok" }
+
+      ,{ "trigger": "reptokcs $                                        \tidentifier $", "contents": "reptokcs" }
+      ,{ "trigger": "  SYNTAX-identifier-reptokcs                      \thelp /", "contents": "reptokcs" }
+
+      ,{ "trigger": "result $                                          \tidentifier $", "contents": "result" }
+      ,{ "trigger": "  SYNTAX-identifier-result                        \thelp /", "contents": "result" }
+
+      ,{ "trigger": "rgb $                                             \tidentifier $", "contents": "rgb" }
+      ,{ "trigger": "  SYNTAX-identifier-rgb                           \thelp /", "contents": "rgb" }
+
+      ,{ "trigger": "right $                                           \tidentifier $", "contents": "right" }
+      ,{ "trigger": "  SYNTAX-identifier-right                         \thelp /", "contents": "right" }
+
+      ,{ "trigger": "rnick $                                           \tidentifier $", "contents": "rnick" }
+      ,{ "trigger": "  SYNTAX-identifier-rnick                         \thelp /", "contents": "rnick" }
+
+      ,{ "trigger": "round $                                           \tidentifier $", "contents": "round" }
+      ,{ "trigger": "  SYNTAX-identifier-round                         \thelp /", "contents": "round" }
+
+      ,{ "trigger": "samepath $                                        \tidentifier $", "contents": "samepath" }
+      ,{ "trigger": "  SYNTAX-identifier-samepath                      \thelp /", "contents": "samepath" }
+
+      ,{ "trigger": "scid $                                            \tidentifier $", "contents": "scid" }
+      ,{ "trigger": "  SYNTAX-identifier-scid                          \thelp /", "contents": "scid" }
+
+      ,{ "trigger": "scon $                                            \tidentifier $", "contents": "scon" }
+      ,{ "trigger": "  SYNTAX-identifier-scon                          \thelp /", "contents": "scon" }
+
+      ,{ "trigger": "script $                                          \tidentifier $", "contents": "script" }
+      ,{ "trigger": "  SYNTAX-identifier-script                        \thelp /", "contents": "script" }
+
+      ,{ "trigger": "scriptdir $                                       \tidentifier $", "contents": "scriptdir" }
+      ,{ "trigger": "  SYNTAX-identifier-scriptdir                     \thelp /", "contents": "scriptdir" }
+
+      ,{ "trigger": "scriptline $                                      \tidentifier $", "contents": "scriptline" }
+      ,{ "trigger": "  SYNTAX-identifier-scriptline                    \thelp /", "contents": "scriptline" }
+
+      ,{ "trigger": "sdir $                                            \tidentifier $", "contents": "sdir" }
+      ,{ "trigger": "  SYNTAX-identifier-sdir                          \thelp /", "contents": "sdir" }
+
+      ,{ "trigger": "send $                                            \tidentifier $", "contents": "send" }
+      ,{ "trigger": "  SYNTAX-identifier-send                          \thelp /", "contents": "send" }
+
+      ,{ "trigger": "server $                                          \tidentifier $", "contents": "server" }
+      ,{ "trigger": "  SYNTAX-identifier-server                        \thelp /", "contents": "server" }
+
+      ,{ "trigger": "serverip $                                        \tidentifier $", "contents": "serverip" }
+      ,{ "trigger": "  SYNTAX-identifier-serverip                      \thelp /", "contents": "serverip" }
+
+      ,{ "trigger": "servertarget $                                    \tidentifier $", "contents": "servertarget" }
+      ,{ "trigger": "  SYNTAX-identifier-servertarget                  \thelp /", "contents": "servertarget" }
+
+      ,{ "trigger": "sfile $                                           \tidentifier $", "contents": "sfile" }
+      ,{ "trigger": "  SYNTAX-identifier-sfile                         \thelp /", "contents": "sfile" }
+
+      ,{ "trigger": "sha1 $                                            \tidentifier $", "contents": "sha1" }
+      ,{ "trigger": "  SYNTAX-identifier-sha1                          \thelp /", "contents": "sha1" }
+
+      ,{ "trigger": "sha256 $                                          \tidentifier $", "contents": "sha256" }
+      ,{ "trigger": "  SYNTAX-identifier-sha256                        \thelp /", "contents": "sha256" }
+
+      ,{ "trigger": "sha384 $                                          \tidentifier $", "contents": "sha384" }
+      ,{ "trigger": "  SYNTAX-identifier-sha384                        \thelp /", "contents": "sha384" }
+
+      ,{ "trigger": "sha512 $                                          \tidentifier $", "contents": "sha512" }
+      ,{ "trigger": "  SYNTAX-identifier-sha512                        \thelp /", "contents": "sha512" }
+
+      ,{ "trigger": "shortfn $                                         \tidentifier $", "contents": "shortfn" }
+      ,{ "trigger": "  SYNTAX-identifier-shortfn                       \thelp /", "contents": "shortfn" }
+
+      ,{ "trigger": "show $                                            \tidentifier $", "contents": "show" }
+      ,{ "trigger": "  SYNTAX-identifier-show                          \thelp /", "contents": "show" }
+
+      ,{ "trigger": "signal $                                          \tidentifier $", "contents": "signal" }
+      ,{ "trigger": "  SYNTAX-identifier-signal                        \thelp /", "contents": "signal" }
+
+      ,{ "trigger": "sin $                                             \tidentifier $", "contents": "sin" }
+      ,{ "trigger": "  SYNTAX-identifier-sin                           \thelp /", "contents": "sin" }
+
+      ,{ "trigger": "sinh $                                            \tidentifier $", "contents": "sinh" }
+      ,{ "trigger": "  SYNTAX-identifier-sinh                          \thelp /", "contents": "sinh" }
+
+      ,{ "trigger": "site $                                            \tidentifier $", "contents": "site" }
+      ,{ "trigger": "  SYNTAX-identifier-site                          \thelp /", "contents": "site" }
+
+      ,{ "trigger": "sline $                                           \tidentifier $", "contents": "sline" }
+      ,{ "trigger": "  SYNTAX-identifier-sline                         \thelp /", "contents": "sline" }
+
+      ,{ "trigger": "snick $                                           \tidentifier $", "contents": "snick" }
+      ,{ "trigger": "  SYNTAX-identifier-snick                         \thelp /", "contents": "snick" }
+
+      ,{ "trigger": "snicks $                                          \tidentifier $", "contents": "snicks" }
+      ,{ "trigger": "  SYNTAX-identifier-snicks                        \thelp /", "contents": "snicks" }
+
+      ,{ "trigger": "snotify $                                         \tidentifier $", "contents": "snotify" }
+      ,{ "trigger": "  SYNTAX-identifier-snotify                       \thelp /", "contents": "snotify" }
+
+      ,{ "trigger": "sock $                                            \tidentifier $", "contents": "sock" }
+      ,{ "trigger": "  SYNTAX-identifier-sock                          \thelp /", "contents": "sock" }
+
+      ,{ "trigger": "sockbr $                                          \tidentifier $", "contents": "sockbr" }
+      ,{ "trigger": "  SYNTAX-identifier-sockbr                        \thelp /", "contents": "sockbr" }
+
+      ,{ "trigger": "sockerr $                                         \tidentifier $", "contents": "sockerr" }
+      ,{ "trigger": "  SYNTAX-identifier-sockerr                       \thelp /", "contents": "sockerr" }
+
+      ,{ "trigger": "sockname $                                        \tidentifier $", "contents": "sockname" }
+      ,{ "trigger": "  SYNTAX-identifier-sockname                      \thelp /", "contents": "sockname" }
+
+      ,{ "trigger": "sorttok $                                         \tidentifier $", "contents": "sorttok" }
+      ,{ "trigger": "  SYNTAX-identifier-sorttok                       \thelp /", "contents": "sorttok" }
+
+      ,{ "trigger": "sorttokcs $                                       \tidentifier $", "contents": "sorttokcs" }
+      ,{ "trigger": "  SYNTAX-identifier-sorttokcs                     \thelp /", "contents": "sorttokcs" }
+
+      ,{ "trigger": "sound $                                           \tidentifier $", "contents": "sound" }
+      ,{ "trigger": "  SYNTAX-identifier-sound                         \thelp /", "contents": "sound" }
+
+      ,{ "trigger": "speak $                                           \tidentifier $", "contents": "speak" }
+      ,{ "trigger": "  SYNTAX-identifier-speak                         \thelp /", "contents": "speak" }
+
+      ,{ "trigger": "sqrt $                                            \tidentifier $", "contents": "sqrt" }
+      ,{ "trigger": "  SYNTAX-identifier-sqrt                          \thelp /", "contents": "sqrt" }
+
+      ,{ "trigger": "sreq $                                            \tidentifier $", "contents": "sreq" }
+      ,{ "trigger": "  SYNTAX-identifier-sreq                          \thelp /", "contents": "sreq" }
+
+      ,{ "trigger": "ssl $                                             \tidentifier $", "contents": "ssl" }
+      ,{ "trigger": "  SYNTAX-identifier-ssl                           \thelp /", "contents": "ssl" }
+
+      ,{ "trigger": "sslcertsha1 $                                     \tidentifier $", "contents": "sslcertsha1" }
+      ,{ "trigger": "  SYNTAX-identifier-sslcertsha1                   \thelp /", "contents": "sslcertsha1" }
+
+      ,{ "trigger": "sslcertsha256 $                                   \tidentifier $", "contents": "sslcertsha256" }
+      ,{ "trigger": "  SYNTAX-identifier-sslcertsha256                 \thelp /", "contents": "sslcertsha256" }
+
+      ,{ "trigger": "ssldll $                                          \tidentifier $", "contents": "ssldll" }
+      ,{ "trigger": "  SYNTAX-identifier-ssldll                        \thelp /", "contents": "ssldll" }
+
+      ,{ "trigger": "ssllibdll $                                       \tidentifier $", "contents": "ssllibdll" }
+      ,{ "trigger": "  SYNTAX-identifier-ssllibdll                     \thelp /", "contents": "ssllibdll" }
+
+      ,{ "trigger": "sslready $                                        \tidentifier $", "contents": "sslready" }
+      ,{ "trigger": "  SYNTAX-identifier-sslready                      \thelp /", "contents": "sslready" }
+
+      ,{ "trigger": "sslversion $                                      \tidentifier $", "contents": "sslversion" }
+      ,{ "trigger": "  SYNTAX-identifier-sslversion                    \thelp /", "contents": "sslversion" }
+
+      ,{ "trigger": "starting $                                        \tidentifier $", "contents": "starting" }
+      ,{ "trigger": "  SYNTAX-identifier-starting                      \thelp /", "contents": "starting" }
+
+      ,{ "trigger": "status $                                          \tidentifier $", "contents": "status" }
+      ,{ "trigger": "  SYNTAX-identifier-status                        \thelp /", "contents": "status" }
+
+      ,{ "trigger": "str $                                             \tidentifier $", "contents": "str" }
+      ,{ "trigger": "  SYNTAX-identifier-str                           \thelp /", "contents": "str" }
+
+      ,{ "trigger": "strip $                                           \tidentifier $", "contents": "strip" }
+      ,{ "trigger": "  SYNTAX-identifier-strip                         \thelp /", "contents": "strip" }
+
+      ,{ "trigger": "stripped $                                        \tidentifier $", "contents": "stripped" }
+      ,{ "trigger": "  SYNTAX-identifier-stripped                      \thelp /", "contents": "stripped" }
+
+      ,{ "trigger": "style $                                           \tidentifier $", "contents": "style" }
+      ,{ "trigger": "  SYNTAX-identifier-style                         \thelp /", "contents": "style" }
+
+      ,{ "trigger": "submenu $                                         \tidentifier $", "contents": "submenu" }
+      ,{ "trigger": "  SYNTAX-identifier-submenu                       \thelp /", "contents": "submenu" }
+
+      ,{ "trigger": "switchbar $                                       \tidentifier $", "contents": "switchbar" }
+      ,{ "trigger": "  SYNTAX-identifier-switchbar                     \thelp /", "contents": "switchbar" }
+
+      ,{ "trigger": "sysdir $                                          \tidentifier $", "contents": "sysdir" }
+      ,{ "trigger": "  SYNTAX-identifier-sysdir                        \thelp /", "contents": "sysdir" }
+
+      ,{ "trigger": "tan $                                             \tidentifier $", "contents": "tan" }
+      ,{ "trigger": "  SYNTAX-identifier-tan                           \thelp /", "contents": "tan" }
+
+      ,{ "trigger": "tanh $                                            \tidentifier $", "contents": "tanh" }
+      ,{ "trigger": "  SYNTAX-identifier-tanh                          \thelp /", "contents": "tanh" }
+
+      ,{ "trigger": "target $                                          \tidentifier $", "contents": "target" }
+      ,{ "trigger": "  SYNTAX-identifier-target                        \thelp /", "contents": "target" }
+
+      ,{ "trigger": "tempfn $                                          \tidentifier $", "contents": "tempfn" }
+      ,{ "trigger": "  SYNTAX-identifier-tempfn                        \thelp /", "contents": "tempfn" }
+
+      ,{ "trigger": "ticks $                                           \tidentifier $", "contents": "ticks" }
+      ,{ "trigger": "  SYNTAX-identifier-ticks                         \thelp /", "contents": "ticks" }
+
+      ,{ "trigger": "time $                                            \tidentifier $", "contents": "time" }
+      ,{ "trigger": "  SYNTAX-identifier-time                          \thelp /", "contents": "time" }
+
+      ,{ "trigger": "timeout $                                         \tidentifier $", "contents": "timeout" }
+      ,{ "trigger": "  SYNTAX-identifier-timeout                       \thelp /", "contents": "timeout" }
+
+      ,{ "trigger": "timer $                                           \tidentifier $", "contents": "timer" }
+      ,{ "trigger": "  SYNTAX-identifier-timer                         \thelp /", "contents": "timer" }
+
+      ,{ "trigger": "timestamp $                                       \tidentifier $", "contents": "timestamp" }
+      ,{ "trigger": "  SYNTAX-identifier-timestamp                     \thelp /", "contents": "timestamp" }
+
+      ,{ "trigger": "timestampfmt $                                    \tidentifier $", "contents": "timestampfmt" }
+      ,{ "trigger": "  SYNTAX-identifier-timestampfmt                  \thelp /", "contents": "timestampfmt" }
+
+      ,{ "trigger": "timezone $                                        \tidentifier $", "contents": "timezone" }
+      ,{ "trigger": "  SYNTAX-identifier-timezone                      \thelp /", "contents": "timezone" }
+
+      ,{ "trigger": "tip $                                             \tidentifier $", "contents": "tip" }
+      ,{ "trigger": "  SYNTAX-identifier-tip                           \thelp /", "contents": "tip" }
+
+      ,{ "trigger": "tips $                                            \tidentifier $", "contents": "tips" }
+      ,{ "trigger": "  SYNTAX-identifier-tips                          \thelp /", "contents": "tips" }
+
+      ,{ "trigger": "titlebar $                                        \tidentifier $", "contents": "titlebar" }
+      ,{ "trigger": "  SYNTAX-identifier-titlebar                      \thelp /", "contents": "titlebar" }
+
+      ,{ "trigger": "token $                                           \tidentifier $", "contents": "token" }
+      ,{ "trigger": "  SYNTAX-identifier-token                         \thelp /", "contents": "token" }
+
+      ,{ "trigger": "toolbar $                                         \tidentifier $", "contents": "toolbar" }
+      ,{ "trigger": "  SYNTAX-identifier-toolbar                       \thelp /", "contents": "toolbar" }
+
+      ,{ "trigger": "topic $                                           \tidentifier $", "contents": "topic" }
+      ,{ "trigger": "  SYNTAX-identifier-topic                         \thelp /", "contents": "topic" }
+
+      ,{ "trigger": "totp $                                            \tidentifier $", "contents": "totp" }
+      ,{ "trigger": "  SYNTAX-identifier-totp                          \thelp /", "contents": "totp" }
+
+      ,{ "trigger": "treebar $                                         \tidentifier $", "contents": "treebar" }
+      ,{ "trigger": "  SYNTAX-identifier-treebar                       \thelp /", "contents": "treebar" }
+
+      ,{ "trigger": "true $                                            \tidentifier $", "contents": "true" }
+      ,{ "trigger": "  SYNTAX-identifier-true                          \thelp /", "contents": "true" }
+
+      ,{ "trigger": "trust $                                           \tidentifier $", "contents": "trust" }
+      ,{ "trigger": "  SYNTAX-identifier-trust                         \thelp /", "contents": "trust" }
+
+      ,{ "trigger": "ulevel $                                          \tidentifier $", "contents": "ulevel" }
+      ,{ "trigger": "  SYNTAX-identifier-ulevel                        \thelp /", "contents": "ulevel" }
+
+      ,{ "trigger": "ulist $                                           \tidentifier $", "contents": "ulist" }
+      ,{ "trigger": "  SYNTAX-identifier-ulist                         \thelp /", "contents": "ulist" }
+
+      ,{ "trigger": "unsafe $                                          \tidentifier $", "contents": "unsafe" }
+      ,{ "trigger": "  SYNTAX-identifier-unsafe                        \thelp /", "contents": "unsafe" }
+
+      ,{ "trigger": "upper $                                           \tidentifier $", "contents": "upper" }
+      ,{ "trigger": "  SYNTAX-identifier-upper                         \thelp /", "contents": "upper" }
+
+      ,{ "trigger": "uptime $                                          \tidentifier $", "contents": "uptime" }
+      ,{ "trigger": "  SYNTAX-identifier-uptime                        \thelp /", "contents": "uptime" }
+
+      ,{ "trigger": "url $                                             \tidentifier $", "contents": "url" }
+      ,{ "trigger": "  SYNTAX-identifier-url                           \thelp /", "contents": "url" }
+
+      ,{ "trigger": "usermode $                                        \tidentifier $", "contents": "usermode" }
+      ,{ "trigger": "  SYNTAX-identifier-usermode                      \thelp /", "contents": "usermode" }
+
+      ,{ "trigger": "utfdecode $                                       \tidentifier $", "contents": "utfdecode" }
+      ,{ "trigger": "  SYNTAX-identifier-utfdecode                     \thelp /", "contents": "utfdecode" }
+
+      ,{ "trigger": "utfencode $                                       \tidentifier $", "contents": "utfencode" }
+      ,{ "trigger": "  SYNTAX-identifier-utfencode                     \thelp /", "contents": "utfencode" }
+
+      ,{ "trigger": "v1 $                                              \tidentifier $", "contents": "v1" }
+      ,{ "trigger": "  SYNTAX-identifier-v1                            \thelp /", "contents": "v1" }
+
+      ,{ "trigger": "v2 $                                              \tidentifier $", "contents": "v2" }
+      ,{ "trigger": "  SYNTAX-identifier-v2                            \thelp /", "contents": "v2" }
+
+      ,{ "trigger": "var $                                             \tidentifier $", "contents": "var" }
+      ,{ "trigger": "  SYNTAX-identifier-var                           \thelp /", "contents": "var" }
+
+      ,{ "trigger": "vc $                                              \tidentifier $", "contents": "vc" }
+      ,{ "trigger": "  SYNTAX-identifier-vc                            \thelp /", "contents": "vc" }
+
+      ,{ "trigger": "vcmd $                                            \tidentifier $", "contents": "vcmd" }
+      ,{ "trigger": "  SYNTAX-identifier-vcmd                          \thelp /", "contents": "vcmd" }
+
+      ,{ "trigger": "vcmdstat $                                        \tidentifier $", "contents": "vcmdstat" }
+      ,{ "trigger": "  SYNTAX-identifier-vcmdstat                      \thelp /", "contents": "vcmdstat" }
+
+      ,{ "trigger": "vcmdver $                                         \tidentifier $", "contents": "vcmdver" }
+      ,{ "trigger": "  SYNTAX-identifier-vcmdver                       \thelp /", "contents": "vcmdver" }
+
+      ,{ "trigger": "version $                                         \tidentifier $", "contents": "version" }
+      ,{ "trigger": "  SYNTAX-identifier-version                       \thelp /", "contents": "version" }
+
+      ,{ "trigger": "vnick $                                           \tidentifier $", "contents": "vnick" }
+      ,{ "trigger": "  SYNTAX-identifier-vnick                         \thelp /", "contents": "vnick" }
+
+      ,{ "trigger": "vol $                                             \tidentifier $", "contents": "vol" }
+      ,{ "trigger": "  SYNTAX-identifier-vol                           \thelp /", "contents": "vol" }
+
+      ,{ "trigger": "wavedir $                                         \tidentifier $", "contents": "wavedir" }
+      ,{ "trigger": "  SYNTAX-identifier-wavedir                       \thelp /", "contents": "wavedir" }
+
+      ,{ "trigger": "wid $                                             \tidentifier $", "contents": "wid" }
+      ,{ "trigger": "  SYNTAX-identifier-wid                           \thelp /", "contents": "wid" }
+
+      ,{ "trigger": "width $                                           \tidentifier $", "contents": "width" }
+      ,{ "trigger": "  SYNTAX-identifier-width                         \thelp /", "contents": "width" }
+
+      ,{ "trigger": "wildsite $                                        \tidentifier $", "contents": "wildsite" }
+      ,{ "trigger": "  SYNTAX-identifier-wildsite                      \thelp /", "contents": "wildsite" }
+
+      ,{ "trigger": "wildtok $                                         \tidentifier $", "contents": "wildtok" }
+      ,{ "trigger": "  SYNTAX-identifier-wildtok                       \thelp /", "contents": "wildtok" }
+
+      ,{ "trigger": "wildtokcs $                                       \tidentifier $", "contents": "wildtokcs" }
+      ,{ "trigger": "  SYNTAX-identifier-wildtokcs                     \thelp /", "contents": "wildtokcs" }
+
+      ,{ "trigger": "window $                                          \tidentifier $", "contents": "window" }
+      ,{ "trigger": "  SYNTAX-identifier-window                        \thelp /", "contents": "window" }
+
+      ,{ "trigger": "wrap $                                            \tidentifier $", "contents": "wrap" }
+      ,{ "trigger": "  SYNTAX-identifier-wrap                          \thelp /", "contents": "wrap" }
+
+      ,{ "trigger": "xor $                                             \tidentifier $", "contents": "xor" }
+      ,{ "trigger": "  SYNTAX-identifier-xor                           \thelp /", "contents": "xor" }
+
+      ,{ "trigger": "yes $                                             \tidentifier $", "contents": "yes" }
+      ,{ "trigger": "  SYNTAX-identifier-yes                           \thelp /", "contents": "yes" }
 
 
 
