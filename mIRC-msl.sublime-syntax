@@ -227,8 +227,12 @@ contexts:
       pop: true
 
   popup-start:
-    - match: '(menu) (channel|menubar|nicklist|query|status|\@[\w\d\,\-\_\:]+)\s*\{'
-      scope: string.msl
+    - match: '(menu) (channel|menubar|nicklist|query|status|(\@[\w\d\,\-\_\:]+))\s*(\{)'
+      captures:
+        1: keyword.control.msl
+        2: entity.name.function.msl
+        3: variable.parameter.msl
+        4: none
       push: popup-context
 
   popup-operator:
