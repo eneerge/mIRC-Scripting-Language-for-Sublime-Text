@@ -1,9 +1,21 @@
 # mIRC-Scripting-Language-for-Sublime-Text
-Updated for mIRC 7.52 (March 2018)
+Updated for mIRC 7.52 (April 2018)
 
-- NEW: Autocompletions - Currently auto completes /commands.  I am working on $identifiers
+This project implements syntax highlighting and autocompletion for mIRC msl.  It currently supports:
+1: All /Commands
+2: All $Identifiers
+3: All on EVENTs
+4: Goto Loop highlighting
+5: Popups
+6: #Groups
+7: Comments (; and /*)
+8: @Windows
+9: Numerics
+10: User Variables
+11: Params ($1, $2, etc)
+12: Operators (ison, iswm, $+, >=, <=, etc)
 
-This is my attempt at creating a Sublime Text 3 syntax highlighter for mIRC scripting language.  All $vars and /commands listed in the mIRC help file index should be parsed.  Some undocumented $vars and /commands may be parsed, but I'm sure there's a few that I missed.  Create an issue if any keywords/commands are missing.
+This project aims to make Sublime Text the premier choice for developing mIRC msl.  If you encounter any problems, please create an issue.
 
 Highlighting
 ---------------
@@ -11,7 +23,7 @@ Highlighting currently supports all commands and identifiers in mIRC.  In additi
 
 Auto Completion
 ---------------
-Autocomplete will work for /commands and $identifiers.  All commands are available.  Identifiers will be added shortly.
+Autocomplete will work for /commands and $identifiers.  All commands and identifiers can be autocompleted.
 
 Auto Completion - Syntax Assistance
 -----------------------------------
@@ -26,10 +38,6 @@ Building will print out the syntax, and highlight the first parameter.  You can 
 
 ![Alt text](screenshots/build1.gif)
 
-Bugs
----------------
-Let me know if you find any bugs by submitting an Issue.
-
 
 Installation
 ------------
@@ -41,13 +49,14 @@ You may need to create the Packages\User folder.
 
 ![Alt text](screenshots/Install-screenshot.png)
 
+
 Theme Support
 --------
 A slightly modified theme has been provided in the Extras folder that supports all features of the highlighter. Themes should support the following scopes to support all styles of this highlighter:
 1. comment.line.double-slash
 2. constant.numeric
 3. constant.numeric.line-number.find-in-files
-4.entity.name.class
+4. entity.name.class
 5. entity.name.function
 6. entity.name.tag
 7. Keyword.control
@@ -58,3 +67,12 @@ A slightly modified theme has been provided in the Extras folder that supports a
 
 ![Alt text](screenshots/screen1.png)
 ![Alt text](screenshots/screen2.png)
+
+Bugs
+---------------
+Let me know if you find any bugs by submitting an Issue.
+
+IRC Support
+--------------
+#Computers @ EFNet
+#mIRC @ EFNet
