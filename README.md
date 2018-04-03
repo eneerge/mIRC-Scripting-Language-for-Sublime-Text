@@ -74,5 +74,5 @@ Let me know if you find any bugs by submitting an Issue.
 
 IRC Support
 --------------
-#Computers @ EFNet
-#mIRC @ EFNet
+- #Computers @ EFNet
+- #mIRC @ EFNet
