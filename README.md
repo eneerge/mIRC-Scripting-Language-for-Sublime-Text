@@ -2,18 +2,19 @@
 Updated for mIRC 7.52 (April 2018)
 
 This project implements syntax highlighting and autocompletion for mIRC msl.  It currently supports:
-1: All /Commands
-2: All $Identifiers
-3: All on EVENTs
-4: Goto Loop highlighting
-5: Popups
-6: #Groups
-7: Comments (; and /*)
-8: @Windows
-9: Numerics
-10: User Variables
-11: Params ($1, $2, etc)
-12: Operators (ison, iswm, $+, >=, <=, etc)
+- All /Commands
+- All $Identifiers
+- All on EVENTs
+- Goto Loop highlighting
+- Popups
+- #Groups
+- Comments (; and /*)
+- @Windows
+- Numerics
+- User Variables
+- Params ($1, $2, etc)
+- Operators (ison, iswm, $+, >=, <=, etc)
+- Logic (if, else, while, etc)
 
 This project aims to make Sublime Text the premier choice for developing mIRC msl.  If you encounter any problems, please create an issue.
 
@@ -23,7 +24,7 @@ Highlighting currently supports all commands and identifiers in mIRC.  In additi
 
 Auto Completion
 ---------------
-Autocomplete will work for /commands and $identifiers.  All commands and identifiers can be autocompleted.
+Autocomplete will work for all /commands and $identifiers.  All commands and identifiers can be autocompleted.  Want to see a list of all mIRC commands or identifiers? Just type "syntax-command-" or "syntax-identifier-" and you will see all available mIRC commands and identifiers.
 
 Auto Completion - Syntax Assistance
 -----------------------------------
