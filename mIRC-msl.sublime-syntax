@@ -234,7 +234,7 @@ contexts:
       push: popup-context
 
     - match: '\}'
-      scope: string
+      scope: entity.name.function
       pop: true
 
   popup-start:
