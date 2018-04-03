@@ -150,7 +150,7 @@ contexts:
       scope: entity.name.tag.msl
       push:
         - meta_scope: constant.numeric.line-number.find-in-files
-        - match: '\s+[\w\d\-]+'
+        - match: '\s+[\w\d\-\|\:]+'
           pop: true
 
   gotoloop-inline:
@@ -216,18 +216,7 @@ contexts:
       captures:
         1: variable.parameter.msl
         2: entity.name.function.msl
-    - include: commands
-    - include: commands-beginline
-    - include: commands-user-inline
-    - include: commands-user-newline
-    - include: control-codes
-    - include: identifiers
-    - include: identifiers-dns
-    - include: identifiers-params
-    - include: identifiers-user
-    - include: keywords
-    - include: keywords2
-    - include: numeric
+    - include: main
 
     - match: '\{'
       scope: entity.name.function
