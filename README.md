@@ -66,6 +66,8 @@ A slightly modified theme has been provided in the Extras folder that supports a
 10. string
 11. variable.parameter
 
+Please see the provided theme to see all implemented features. If you prefer to use another theme, file an issue and I'll see if I can modify the theme to work.  Additionally, you can use the following to modify it yourself or create a new one: https://tmtheme-editor.herokuapp.com/#!/editor/theme/Monokai
+
 ![Alt text](screenshots/screen1.png)
 ![Alt text](screenshots/screen2.png)
 
