@@ -77,3 +77,7 @@ IRC Support
 --------------
 - #Computers @ EFNet
 - #mIRC @ EFNet
+
+Special Thanks
+--------------
+[Peace and Protection Script](https://github.com/solbu/Peace-and-Protection/) - Lots of complex code from this project that I use to test the highlighter.
