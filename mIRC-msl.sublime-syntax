@@ -67,6 +67,7 @@ contexts:
     - include: numeric
 
     - include: prompt-operator
+    - include: syntax-parameters
     - include: variables
     - include: windows
 
@@ -288,6 +289,17 @@ contexts:
   prompt-operator:
     - match: '(\$\?[\*]{0,1}[\!]{0,1}\=)(?=\".+\")'
       scope: keyword.operator
+
+  # matches parameters for the syntax-* entries while building commands
+  syntax-parameters:
+    - match: 'ˇ(Optional|Required){1}:([^\]>]+)'
+      captures:
+        1: entity.name.function.msl
+        2: variable.parameter.msl
+
+    - match: 'ˇORˇ'
+      scope: entity.name.tag.msl
+
 
   variables:
     - match: '%[\w._-]+'
