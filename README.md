@@ -24,21 +24,7 @@ Highlighting currently supports all commands and identifiers in mIRC.  In additi
 
 Auto Completion
 ---------------
-Autocomplete will work for all /commands and $identifiers.  All commands and identifiers can be autocompleted.  Want to see a list of all mIRC commands or identifiers? Just type "syntax-command-" or "syntax-identifier-" and you will see all available mIRC commands and identifiers.
-
-Auto Completion - Syntax Assistance
------------------------------------
-In addition to autocompleting commands and identifiers, there will also be a "syntax-" option that can aid you in the development process by doing one or both of the following:
-1. HelpAssist - Print the syntax/help of the command or identifier
-2. Building - Enable Tabbing through fields of the command/identifier enabling you to "build" the command
-
-Syntax "HelpAssist" is currently limited to "abook through bcopy" (alphabetical) commands.  I am working on adding more.
-Command "Building" is currently limited to "aline".
-
-Building will print out the syntax, and highlight the first parameter.  You can then use "tab" to set each parameter. The final tab stop will highlight the help text so you can easily delete it.
-
-![Alt text](screenshots/build1.gif)
-
+Autocomplete will work for all /commands and $identifiers.  When completing, the full syntax will be printed so that you can tab through each portion of the command/identifier.
 
 Installation
 ------------
