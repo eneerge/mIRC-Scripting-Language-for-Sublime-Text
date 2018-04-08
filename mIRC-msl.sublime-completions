@@ -32,7 +32,7 @@ SOFTWARE.
     { "trigger": " /abook           Display Address Book                           \t/", "contents": "abook ${1:[ˇOptional: -chnw]}" }
     ,{ "trigger": " /action         Perform action in channel                      \t/", "contents": "action ${1:<ˇRequired: message>}" }
     ,{ "trigger": " /ajinvite       Toggle auto-join on invite features            \t/", "contents": "ajinvite ${1:<ˇRequired: on|off>}" }
-    ,{ "trigger": " /alias          Add/Replace/Remove aliases.                    \t/", "contents": "alias ${1:[ˇOptional: filename_of_loaded_alias]} ${2:<ˇRequired: alias_name>} ${3:[ˇOptional: command_or_blank_to_remove_alias)]}" }
+    ,{ "trigger": " /alias          Add/Replace/Remove aliases.                    \t/", "contents": "alias ${1:[ˇOptional: filename_of_loaded_alias]} ${2:<ˇRequired: alias_name>} ${3:[ˇOptional: code_or_blank_to_remove_alias)]}" }
     ,{ "trigger": " /aline          Add line of text to @window                    \t/", "contents": "aline ${1:[ˇOptional: -sahpinl]} ${3:[ˇOptional: color_code]} @${4:<ˇRequired: name_of_window>} ${5:<ˇRequired: text>}" }
     ,{ "trigger": " /ame            Send action to all channels                    \t/", "contents": "ame ${1:<ˇRequired: message>}" }
     ,{ "trigger": " /amsg           Send message to all channels                   \t/", "contents": "amsg ${1:<ˇRequired: message>}" }
@@ -144,11 +144,11 @@ SOFTWARE.
     ,{ "trigger": " /goto           Jump to a section in code or loop              \t/", "contents": "goto" }
     ,{ "trigger": " /gplay          Make agent play an animation                   \t/", "contents": "gplay" }
     ,{ "trigger": " /gpoint         Make agent point to position                   \t/", "contents": "gpoint" }
-    ,{ "trigger": " /gqreq          Enable/Disable agent command queueing          \t/", "contents": "gqreq" }
+    ,{ "trigger": " /gqreq          Enable/Disable agent script queueing           \t/", "contents": "gqreq" }
     ,{ "trigger": " /groups         Display a list of #groups                      \t/", "contents": "groups" }
     ,{ "trigger": " /gshow          Display an agent                               \t/", "contents": "gshow" }
     ,{ "trigger": " /gsize          Resize an agent                                \t/", "contents": "gsize" }
-    ,{ "trigger": " /gstop          Stop and remove all command queue from agent   \t/", "contents": "gstop" }
+    ,{ "trigger": " /gstop          Stop and remove all script queue from agent    \t/", "contents": "gstop" }
     ,{ "trigger": " /gtalk          Make agent speak text                          \t/", "contents": "gtalk" }
     ,{ "trigger": " /gunload        Unload an agent                                \t/", "contents": "gunload" }
     ,{ "trigger": " /guser          Look up address of nick and add to userlist    \t/", "contents": "guser" }
@@ -162,7 +162,7 @@ SOFTWARE.
     ,{ "trigger": " /hinc           Increment value in a hash table                \t/", "contents": "hinc" }
     ,{ "trigger": " /hload          Load text file into already created hash table \t/", "contents": "hload" }
     ,{ "trigger": " /hmake          Create a hash table                            \t/", "contents": "hmake" }
-    ,{ "trigger": " /hop            Part and join channel in single command        \t/", "contents": "hop" }
+    ,{ "trigger": " /hop            Part and join channel                          \t/", "contents": "hop" }
     ,{ "trigger": " /hotlink        Override popups menu on right clicking word    \t/", "contents": "hotlink" }
     ,{ "trigger": " /hsave          Save a hash table to a file                    \t/", "contents": "hsave" }
     ,{ "trigger": " /ial            Set Internal-Address-List on/off               \t/", "contents": "ial" }
@@ -233,8 +233,8 @@ SOFTWARE.
     ,{ "trigger": " /savebuf        Save buffer to a file                          \t/", "contents": "savebuf" }
     ,{ "trigger": " /saveini        Save or overwrite ini file to disk             \t/", "contents": "saveini" }
     ,{ "trigger": " /say            Send message to current channel/window         \t/", "contents": "say" }
-    ,{ "trigger": " /scid           Set associated context of script/command to cid\t/", "contents": "scid" }
-    ,{ "trigger": " /scon           Set associated context of script/command to Nth window\t/", "contents": "scon" }
+    ,{ "trigger": " /scid           Set associated context of script to cid        \t/", "contents": "scid" }
+    ,{ "trigger": " /scon           Set associated context of script to Nth window \t/", "contents": "scon" }
     ,{ "trigger": " /server         Connect to a server                            \t/", "contents": "server" }
     ,{ "trigger": " /set            Set a %variable to a value                     \t/", "contents": "set" }
     ,{ "trigger": " /setlayer       Set transparency of a window                   \t/", "contents": "setlayer" }
@@ -252,7 +252,7 @@ SOFTWARE.
     ,{ "trigger": " /sockrename     Rename an existing socket connection           \t/", "contents": "sockrename" }
     ,{ "trigger": " /sockudp        Send UDP data to ip/host:port of a /sockopen   \t/", "contents": "sockudp" }
     ,{ "trigger": " /sockwrite      Send TCP data to ip/host:port of a /sockopen   \t/", "contents": "sockwrite" }
-    ,{ "trigger": " /sound          Send sound command to nick/channel             \t/", "contents": "sound" }
+    ,{ "trigger": " /sound          Send sound to nick/channel                     \t/", "contents": "sound" }
     ,{ "trigger": " /speak          Speak text audibly                             \t/", "contents": "speak" }
     ,{ "trigger": " /splay          Play an audio file                             \t/", "contents": "splay" }
     ,{ "trigger": " /sreq           Modify mIRC DCC send options                   \t/", "contents": "sreq" }
