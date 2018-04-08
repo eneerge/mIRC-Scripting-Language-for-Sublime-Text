@@ -55,19 +55,19 @@ SOFTWARE.
     ,{ "trigger": " /btrunc         Truncate file to specified bytesize            \tcommand /", "contents": "btrunc ${1:<ˇRequired: \"filename\">} ${2:<ˇRequired: int_bytes>}" }
     ,{ "trigger": " /bunset         Unset binary global variable                   \tcommand /", "contents": "bunset ${1:<ˇRequired: &binvar>} ${2:[ˇOptional: &binvar &binvar ...]}" }
     ,{ "trigger": " /bwrite         Write binary data to file                      \tcommand /", "contents": "bwrite ${1:[ˇOptional: -act]} ${2:<ˇRequired: \"filename\">} ${3:<ˇRequired: int_start_pos>} ${4:ˇRequired: int_length>} ${5:<ˇRequired: text|%var|&binvar>}" }
-    ,{ "trigger": " /channel        Open channel central                           \tcommand /", "contents": "channel" }
-    ,{ "trigger": " /clear          Clear buffer of window                         \tcommand /", "contents": "clear" }
-    ,{ "trigger": " /clearall       Clear buffer of all windows                    \tcommand /", "contents": "clearall" }
-    ,{ "trigger": " /clearial       Clear IAL                                      \tcommand /", "contents": "clearial" }
-    ,{ "trigger": " /cline          Set color of line in nicklist or @window       \tcommand /", "contents": "cline" }
-    ,{ "trigger": " /clipboard      Copy text to clipboard                         \tcommand /", "contents": "clipboard" }
-    ,{ "trigger": " /close          Close windows of specified type                \tcommand /", "contents": "close" }
+    ,{ "trigger": " /channel        Open channel central                           \tcommand /", "contents": "channel ${1:[ˇOptional: #channel]}" }
+    ,{ "trigger": " /clear          Clear buffer of window                         \tcommand /", "contents": "clear ${1:[ˇOptional: -sghlcn]} ${2:[ˇOptional: @window]}" }
+    ,{ "trigger": " /clearall       Clear buffer of all windows                    \tcommand /", "contents": "clearall ${1:[ˇOptional: -asnqmtgu]}" }
+    ,{ "trigger": " /clearial       Clear IAL                                      \tcommand /", "contents": "clearial ${1:[ˇOptional: str_nick]}" }
+    ,{ "trigger": " /cline          Set color of line in nicklist or @window       \tcommand /", "contents": "cline ${1:[ˇOptional: -hrmlt]} ${2:[ˇOptional: int_color_code]} ${3:<ˇRequired: @window/#channel>} ${4:<ˇRequired: line_number>}" }
+    ,{ "trigger": " /clipboard      Copy text to clipboard                         \tcommand /", "contents": "clipboard ${1:[ˇOptional: -an]} ${2:<ˇRequired: str_text>}" }
+    ,{ "trigger": " /close          Close windows of specified type                \tcommand /", "contents": "close ${1:<ˇRequired: -ticfgms@[id]axdnu | -cNfNsNgN>} ${2:[ˇOptional: name1 name2 ...]}" }
     ,{ "trigger": " /closechats     Close all inactive DCC Chat windows            \tcommand /", "contents": "closechats" }
     ,{ "trigger": " /closedccs      Close all inactive DCC Send/Get windows        \tcommand /", "contents": "closedccs" }
     ,{ "trigger": " /closefserves   Close all inactive Fserve windows              \tcommand /", "contents": "closefserves" }
-    ,{ "trigger": " /closemsg       Close all or specified query window            \tcommand /", "contents": "closemsg" }
-    ,{ "trigger": " /cnick          Set color options for nick in addressbook      \tcommand /", "contents": "cnick" }
-    ,{ "trigger": " /color          Set color setting (same as /colour)            \tcommand /", "contents": "color" }
+    ,{ "trigger": " /closemsg       Close all or specified query window            \tcommand /", "contents": "closemsg ${1:[ˇOptional: str_nick]}" }
+    ,{ "trigger": " /cnick          Set color options for nick in addressbook      \tcommand /", "contents": "cnick ${1:[ˇOptional: -rfaniovpylNmNsN]} ${2:[ˇOptional: str_nick_or_host]} ${3:[ˇOptional: int_color_code]} ${4:[ˇOptional: modes_~&@%+]} ${5:[ˇOptional: str_int_levels]}" }
+    ,{ "trigger": " /color          Set color setting (same as /colour)            \tcommand /", "contents": "color ${1:<ˇRequired: Name>} ${2:<ˇRequired: int_Nth_color>} ${3:ˇORˇ <ˇRequired: int_Nth_color>} ${4:<ˇRequired: \\$RGB(n,n,n)>}" }
     ,{ "trigger": " /colour         Set color setting (same as /color)             \tcommand /", "contents": "colour" }
     ,{ "trigger": " /comclose       Close an existing COM connection               \tcommand /", "contents": "comclose" }
     ,{ "trigger": " /comlist        Get list of all open COM object connections    \tcommand /", "contents": "comlist" }
