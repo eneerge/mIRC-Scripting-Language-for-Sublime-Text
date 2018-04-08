@@ -29,266 +29,271 @@ SOFTWARE.
     // ###########################################################################################################################
     // mIRC Commands
     // ###########################################################################################################################
-    { "trigger": " /abook           Display Address Book                           \tcommand /", "contents": "abook ${1:[ˇOptional: -chnw]}" }
-    ,{ "trigger": " /action         Perform action in channel                      \tcommand /", "contents": "action ${1:<ˇRequired: message>}" }
-    ,{ "trigger": " /ajinvite       Toggle auto-join on invite features            \tcommand /", "contents": "ajinvite ${1:<ˇRequired: on|off>}" }
-    ,{ "trigger": " /alias          Add/Replace/Remove aliases.                    \tcommand /", "contents": "alias ${1:[ˇOptional: filename_of_loaded_alias]} ${2:<ˇRequired: alias_name>} ${3:[ˇOptional: command_or_blank_to_remove_alias)]}" }
-    ,{ "trigger": " /aline          Add line of text to @window                    \tcommand /", "contents": "aline ${1:[ˇOptional: -sahpinl]} ${3:[ˇOptional: color_code]} @${4:<ˇRequired: name_of_window>} ${5:<ˇRequired: text>}" }
-    ,{ "trigger": " /ame            Send action to all channels                    \tcommand /", "contents": "ame ${1:<ˇRequired: message>}" }
-    ,{ "trigger": " /amsg           Send message to all channels                   \tcommand /", "contents": "amsg ${1:<ˇRequired: message>}" }
-    ,{ "trigger": " /anick          Set alternate nickname                         \tcommand /", "contents": "anick ${1:<ˇRequired: nickname>}" }
-    ,{ "trigger": " /aop            Turn on/off OR add to aop list                 \tcommand /", "contents": "aop ${1:<ˇRequired: on|off>} ${2:ˇORˇ [ˇOptional: -rw]} ${3:<ˇRequired: nick_or_address>} ${4:[ˇOptional: #channel1,#channel2...]} ${5:[ˇOptional: int_address_type]} ${6:[ˇOptional: string_network]}" }
-    ,{ "trigger": " /auser          Add or edit user                               \tcommand /", "contents": "auser ${1:[ˇOptional -a match_existing_entry]} ${2:<ˇRequired: levels>} ${3:<ˇRequired: nick_or_address>} ${4:[ˇOptional: special_info_about_entry]}" }
-    ,{ "trigger": " /aop            Turn on/off OR add to aop list                 \tcommand /", "contents": "auto ${1:<ˇRequired: on|off>} ${2:ˇORˇ [ˇOptional: -rw]} ${3:<ˇRequired: nick_or_address>} ${4:[ˇOptional: #channel1,#channel2...]} ${5:[ˇOptional: int_address_type]} ${6:[ˇOptional: string_network]}" }
-    ,{ "trigger": " /autojoin       Autojoin used with \"on connect\" event        \tcommand /", "contents": "autojoin ${1:[ˇOptional: -nsdN]}" }
-    ,{ "trigger": " /avoice         Turn on/off OR add to avoice list              \tcommand /", "contents": "avoice ${1:<ˇRequired: on|off>} ${2:ˇORˇ [ˇOptional: -rw]} ${3:<ˇRequired: nick_or_address>} ${4:[ˇOptional: #channel1,#channel2...]} ${5:[ˇOptional: int_address_type]} ${6:[ˇOptional: string_network]}" }
-    ,{ "trigger": " /away           Set/Unset Away                                 \tcommand /", "contents": "away ${1:[ˇOptional: message_or_blank_to_unset]}" }
-    ,{ "trigger": " /background     Set background                                 \tcommand /", "contents": "background ${1:<ˇRequired: -abemsgdluhcfnrtpx>} ${2:[ˇOptional: window]} ${3:[ˇOptional: \"filename\"]}" }
-    ,{ "trigger": " /ban            Ban a user                                     \tcommand /", "contents": "ban ${1:[ˇOptional: -kruN]} ${2:[ˇOptional: #channel]} ${4:<ˇRequired: nickname_or_address>} ${5:[ˇOptional: int_address_type]} ${6:[ˇOptional: kick_message]}" }
-    ,{ "trigger": " /bcopy          Copy bytes from &var to &var                   \tcommand /", "contents": "bcopy ${1:[ˇOptional: -zc]} ${2:<ˇRequired: &dest_binvar>} ${3:<ˇRequired: int_destination_pos>} ${4:<ˇRequired: &src_binvar>} ${5:<ˇRequired: int_source_pos>} ${6:<ˇRequired: int_numBytes>}" }
-    ,{ "trigger": " /beep           Generate speaker beep                          \tcommand /", "contents": "beep ${1:[ˇOptional: int_number_times]} ${2:[ˇOptional: int_delay_in_seconds]}" }
-    ,{ "trigger": " /bindip         Set IP binding on/off                          \tcommand /", "contents": "bindip ${1:on <ˇRequired: IP_or_Adapter>} ${2:ˇORˇ ˇOptional: on|off]}" }
-    ,{ "trigger": " /bread          Read bytes from file into &var                 \tcommand /", "contents": "bread ${1:[ˇOptional]: -t]} ${2:<ˇRequired: \"filename\">} ${3:<ˇRequired: int_byte_start_pos>} ${4:<ˇRequired: int_num_bytes_to_read>} ${5:<ˇRequired: variable_to_store_in>}" }
-    ,{ "trigger": " /break          Terminate execution of nearest loop            \tcommand /", "contents": "break" }
-    ,{ "trigger": " /breplace       Replace ascii var with binary var              \tcommand /", "contents": "breplace ${1:<ˇRequired: &binvar>} ${2:<ˇRequired: old_value>} ${3:<ˇRequired: new_value>} ${4:[ˇOptional: old_value new_value ...]}" }
-    ,{ "trigger": " /bset           Set binary global variable                     \tcommand /", "contents": "bset ${1:[ˇOptional: -tac]} ${2:<ˇRequired: &binvar>} ${3:<ˇRequired: int_pos>} ${4:<ˇRequired: ascii/string>} ${5:[ˇOptional: asci/string asci/string ...]}" }
-    ,{ "trigger": " /btrunc         Truncate file to specified bytesize            \tcommand /", "contents": "btrunc ${1:<ˇRequired: \"filename\">} ${2:<ˇRequired: int_bytes>}" }
-    ,{ "trigger": " /bunset         Unset binary global variable                   \tcommand /", "contents": "bunset ${1:<ˇRequired: &binvar>} ${2:[ˇOptional: &binvar &binvar ...]}" }
-    ,{ "trigger": " /bwrite         Write binary data to file                      \tcommand /", "contents": "bwrite ${1:[ˇOptional: -act]} ${2:<ˇRequired: \"filename\">} ${3:<ˇRequired: int_start_pos>} ${4:ˇRequired: int_length>} ${5:<ˇRequired: text|%var|&binvar>}" }
-    ,{ "trigger": " /channel        Open channel central                           \tcommand /", "contents": "channel ${1:[ˇOptional: #channel]}" }
-    ,{ "trigger": " /clear          Clear buffer of window                         \tcommand /", "contents": "clear ${1:[ˇOptional: -sghlcn]} ${2:[ˇOptional: @window]}" }
-    ,{ "trigger": " /clearall       Clear buffer of all windows                    \tcommand /", "contents": "clearall ${1:[ˇOptional: -asnqmtgu]}" }
-    ,{ "trigger": " /clearial       Clear IAL                                      \tcommand /", "contents": "clearial ${1:[ˇOptional: str_nick]}" }
-    ,{ "trigger": " /cline          Set color of line in nicklist or @window       \tcommand /", "contents": "cline ${1:[ˇOptional: -hrmlt]} ${2:[ˇOptional: int_color_code]} ${3:<ˇRequired: @window/#channel>} ${4:<ˇRequired: line_number>}" }
-    ,{ "trigger": " /clipboard      Copy text to clipboard                         \tcommand /", "contents": "clipboard ${1:[ˇOptional: -an]} ${2:<ˇRequired: str_text>}" }
-    ,{ "trigger": " /close          Close windows of specified type                \tcommand /", "contents": "close ${1:<ˇRequired: -ticfgms@[id]axdnu | -cNfNsNgN>} ${2:[ˇOptional: name1 name2 ...]}" }
-    ,{ "trigger": " /closechats     Close all inactive DCC Chat windows            \tcommand /", "contents": "closechats" }
-    ,{ "trigger": " /closedccs      Close all inactive DCC Send/Get windows        \tcommand /", "contents": "closedccs" }
-    ,{ "trigger": " /closefserves   Close all inactive Fserve windows              \tcommand /", "contents": "closefserves" }
-    ,{ "trigger": " /closemsg       Close all or specified query window            \tcommand /", "contents": "closemsg ${1:[ˇOptional: str_nick]}" }
-    ,{ "trigger": " /cnick          Set color options for nick in addressbook      \tcommand /", "contents": "cnick ${1:[ˇOptional: -rfaniovpylNmNsN]} ${2:[ˇOptional: str_nick_or_host]} ${3:[ˇOptional: int_color_code]} ${4:[ˇOptional: modes_~&@%+]} ${5:[ˇOptional: str_int_levels]}" }
-    ,{ "trigger": " /color          Set color setting (same as /colour)            \tcommand /", "contents": "color ${1:<ˇRequired: Name>} ${2:<ˇRequired: int_Nth_color>} ${3:ˇORˇ <ˇRequired: int_Nth_color>} ${4:<ˇRequired: \\$RGB(n,n,n)>}" }
-    ,{ "trigger": " /colour         Set color setting (same as /color)             \tcommand /", "contents": "colour" }
-    ,{ "trigger": " /comclose       Close an existing COM connection               \tcommand /", "contents": "comclose" }
-    ,{ "trigger": " /comlist        Get list of all open COM object connections    \tcommand /", "contents": "comlist" }
-    // DEPRECATED/REMOVED: ,{ "trigger": " /commands                               \tcommand /", "contents": "commands" }
-    ,{ "trigger": " /comopen        Open a com connection                          \tcommand /", "contents": "comopen" }
-    ,{ "trigger": " /comreg         Register/Unregister a COM with windows         \tcommand /", "contents": "comreg" }
-    ,{ "trigger": " /continue       Jump to beginning of a loop                    \tcommand /", "contents": "continue" }
-    ,{ "trigger": " /copy           Copy source dir/file to destination            \tcommand /", "contents": "copy" }
-    ,{ "trigger": " /creq           Modify DCC Chat options                        \tcommand /", "contents": "creq" }
-    ,{ "trigger": " /ctcp           Send a CTCP request                            \tcommand /", "contents": "ctcp" }
-    ,{ "trigger": " /ctcpreply      Send a CTCP reply                              \tcommand /", "contents": "ctcpreply" }
-    ,{ "trigger": " /ctcps          Set or display status of CTCP event processing \tcommand /", "contents": "ctcps" }
-    ,{ "trigger": " /dcc            Send DCC request                               \tcommand /", "contents": "dcc" }
-    ,{ "trigger": " /dccserver      Turn DCC server on/off                         \tcommand /", "contents": "dccserver" }
-    ,{ "trigger": " /dde            Create DDE connection                          \tcommand /", "contents": "dde" }
-    ,{ "trigger": " /ddeserver      Turn DDE server on/off                         \tcommand /", "contents": "ddeserver" }
-    ,{ "trigger": " /debug          Output raw server messages to file/window      \tcommand /", "contents": "debug" }
-    ,{ "trigger": " /dec            Decrease variable by N amount                  \tcommand /", "contents": "dec" }
-    ,{ "trigger": " /describe       Send action to channel/person (also see /me)   \tcommand /", "contents": "describe" }
-    ,{ "trigger": " /dialog         Create a dialog window                         \tcommand /", "contents": "dialog" }
-    ,{ "trigger": " /did            Modify dialog controls                         \tcommand /", "contents": "did" }
-    ,{ "trigger": " /didtok         Add list of values to a dialog control         \tcommand /", "contents": "didtok" }
-    ,{ "trigger": " /disable        Disable a #group in all scripts                \tcommand /", "contents": "disable" }
-    ,{ "trigger": " /disconnect     Disconnect from current server                 \tcommand /", "contents": "disconnect" }
-    ,{ "trigger": " /dlevel         Set default userlevel for everyone             \tcommand /", "contents": "dlevel" }
-    ,{ "trigger": " /dline          Delete line from a @window                     \tcommand /", "contents": "dline" }
-    ,{ "trigger": " /dll            Call a function from a .DLL file               \tcommand /", "contents": "dll" }
-    ,{ "trigger": " /dns            Perform DNS lookup on a user/address           \tcommand /", "contents": "dns" }
-    ,{ "trigger": " /dqwindow       Enable/Disable/Show/Hide Dedicated query window\tcommand /", "contents": "dqwindow" }
-    ,{ "trigger": " /drawcopy       Copy part of picture to different position in @window\tcommand /", "contents": "drawcopy" }
-    ,{ "trigger": " /drawdot        Draw dot in @window                            \tcommand /", "contents": "drawdot" }
-    ,{ "trigger": " /drawfill       Draw and fill an area in @window               \tcommand /", "contents": "drawfill" }
-    ,{ "trigger": " /drawline       Draw line in @window                           \tcommand /", "contents": "drawline" }
-    ,{ "trigger": " /drawpic        Draw picture in @window                        \tcommand /", "contents": "drawpic" }
-    ,{ "trigger": " /drawrect       Draw rectangle in @window                      \tcommand /", "contents": "drawrect" }
-    ,{ "trigger": " /drawreplace    Replace color1 with color2 in @window          \tcommand /", "contents": "drawreplace" }
-    ,{ "trigger": " /drawrot        Rotate area of bitmap in @window               \tcommand /", "contents": "drawrot" }
-    ,{ "trigger": " /drawsave       Save picture in @window to a file              \tcommand /", "contents": "drawsave" }
-    ,{ "trigger": " /drawscroll     Scroll region in @window                       \tcommand /", "contents": "drawscroll" }
-    ,{ "trigger": " /drawsize       Extend bitmap size of @window                  \tcommand /", "contents": "drawsize" }
-    ,{ "trigger": " /drawtext       Draw text inside @window                       \tcommand /", "contents": "drawtext" }
-    ,{ "trigger": " /ebeeps         Enable/Disable 'event beeps' sound             \tcommand /", "contents": "ebeeps" }
-    ,{ "trigger": " /echo           Print text to a channel or @window             \tcommand /", "contents": "echo" }
-    ,{ "trigger": " /editbox        Set text inside of editbox to a value          \tcommand /", "contents": "editbox" }
-    ,{ "trigger": " /else           Logical construct used in IF statements        \tcommand /", "contents": "else" }
-    ,{ "trigger": " /elseif         Logical construct used in IF statements        \tcommand /", "contents": "elseif" }
-    ,{ "trigger": " /emailaddr      Modify email address shown in connect dialog   \tcommand /", "contents": "emailaddr" }
-    ,{ "trigger": " /enable         Enable a #group in all scripts                 \tcommand /", "contents": "enable" }
-    ,{ "trigger": " /events         Enable/Disable remote events processing        \tcommand /", "contents": "events" }
-    ,{ "trigger": " /exit           Exit mIRC                                      \tcommand /", "contents": "exit" }
-    ,{ "trigger": " /fclose         Close file open window triggered from /fopen   \tcommand /", "contents": "fclose" }
-    ,{ "trigger": " /filter         Scan src for *matchtext* and output it to dst  \tcommand /", "contents": "filter" }
-    ,{ "trigger": " /findtext       Search active window for text                  \tcommand /", "contents": "findtext" }
-    ,{ "trigger": " /finger         Send finger request to nick                    \tcommand /", "contents": "finger" }
-    ,{ "trigger": " /firewall       Set mIRC firewall settings                     \tcommand /", "contents": "firewall" }
-    ,{ "trigger": " /flash          Flash mIRC titlebar/tray                       \tcommand /", "contents": "flash" }
-    ,{ "trigger": " /flist          List all or matching files that are /fopen     \tcommand /", "contents": "flist" }
-    ,{ "trigger": " /flood          Set mIRC flood settings                        \tcommand /", "contents": "flood" }
-    ,{ "trigger": " /flush          Clear user list of invalid nicknames           \tcommand /", "contents": "flush" }
-    ,{ "trigger": " /flushini       Flush INI file to hard disk                    \tcommand /", "contents": "flushini" }
-    ,{ "trigger": " /fnord          Easter Egg: Echos \"Nothing to see here\"      \tcommand /", "contents": "fnord" }
-    ,{ "trigger": " /font           Set font of current window                     \tcommand /", "contents": "font" }
-    ,{ "trigger": " /fopen          Open a filename with a handle                  \tcommand /", "contents": "fopen" }
-    ,{ "trigger": " /fseek          Set pointer in fopen handle to a position      \tcommand /", "contents": "fseek" }
-    ,{ "trigger": " /fsend          Display or set dcc send on/off                 \tcommand /", "contents": "fsend" }
-    ,{ "trigger": " /fserve         Initiate DCC fileserver with user              \tcommand /", "contents": "fserve" }
-    ,{ "trigger": " /fullname       Change fullname shown in connect dialog        \tcommand /", "contents": "fullname" }
-    ,{ "trigger": " /fupdate        Set delay for window/channel text refresh      \tcommand /", "contents": "fupdate" }
-    ,{ "trigger": " /fwrite         Write text or binvar to a file fopen handle    \tcommand /", "contents": "fwrite" }
-    ,{ "trigger": " /ghide          Hides a previously loaded agent                \tcommand /", "contents": "ghide" }
-    ,{ "trigger": " /gload          Load an agent                                  \tcommand /", "contents": "gload" }
-    ,{ "trigger": " /gmove          Moves an agent                                 \tcommand /", "contents": "gmove" }
-    ,{ "trigger": " /gopts          Set options of a loaded agent                  \tcommand /", "contents": "gopts" }
-    ,{ "trigger": " /goto           Jump to a section in code or loop              \tcommand /", "contents": "goto" }
-    ,{ "trigger": " /gplay          Make agent play an animation                   \tcommand /", "contents": "gplay" }
-    ,{ "trigger": " /gpoint         Make agent point to position                   \tcommand /", "contents": "gpoint" }
-    ,{ "trigger": " /gqreq          Enable/Disable agent command queueing          \tcommand /", "contents": "gqreq" }
-    ,{ "trigger": " /groups         Display a list of #groups                      \tcommand /", "contents": "groups" }
-    ,{ "trigger": " /gshow          Display an agent                               \tcommand /", "contents": "gshow" }
-    ,{ "trigger": " /gsize          Resize an agent                                \tcommand /", "contents": "gsize" }
-    ,{ "trigger": " /gstop          Stop and remove all command queue from agent   \tcommand /", "contents": "gstop" }
-    ,{ "trigger": " /gtalk          Make agent speak text                          \tcommand /", "contents": "gtalk" }
-    ,{ "trigger": " /gunload        Unload an agent                                \tcommand /", "contents": "gunload" }
-    ,{ "trigger": " /guser          Look up address of nick and add to userlist    \tcommand /", "contents": "guser" }
-    ,{ "trigger": " /hadd           Insert key/value pair to hash table            \tcommand /", "contents": "hadd" }
-    ,{ "trigger": " /halt           Immediately stop further processing script     \tcommand /", "contents": "halt" }
-    ,{ "trigger": " /haltdef        Stop default processing of an event            \tcommand /", "contents": "haltdef" }
-    ,{ "trigger": " /hdec           Decrement value in a hash table                \tcommand /", "contents": "hdec" }
-    ,{ "trigger": " /hdel           Delete key/value pair in hash table            \tcommand /", "contents": "hdel" }
-    ,{ "trigger": " /help           Display mIRC helpfile                          \tcommand /", "contents": "help" }
-    ,{ "trigger": " /hfree          Free/Destroy a hash table                      \tcommand /", "contents": "hfree" }
-    ,{ "trigger": " /hinc           Increment value in a hash table                \tcommand /", "contents": "hinc" }
-    ,{ "trigger": " /hload          Load text file into already created hash table \tcommand /", "contents": "hload" }
-    ,{ "trigger": " /hmake          Create a hash table                            \tcommand /", "contents": "hmake" }
-    ,{ "trigger": " /hop            Part and join channel in single command        \tcommand /", "contents": "hop" }
-    ,{ "trigger": " /hotlink        Override popups menu on right clicking word    \tcommand /", "contents": "hotlink" }
-    ,{ "trigger": " /hsave          Save a hash table to a file                    \tcommand /", "contents": "hsave" }
-    ,{ "trigger": " /ial            Set Internal-Address-List on/off               \tcommand /", "contents": "ial" }
-    ,{ "trigger": " /ialclear       Clear Interal-Address-List data                \tcommand /", "contents": "ialclear" }
-    ,{ "trigger": " /ialmark        Mark an IAL entry with a value                 \tcommand /", "contents": "ialmark" }
-    ,{ "trigger": " /identd         Enable/disable built-in identd server          \tcommand /", "contents": "identd" }
-    ,{ "trigger": " /if             Logical condition operation used in scripts    \tcommand /", "contents": "if" }
-    ,{ "trigger": " /ignore         Ignore a user/address                          \tcommand /", "contents": "ignore" }
-    ,{ "trigger": " /iline          Insert line into @window                       \tcommand /", "contents": "iline" }
-    ,{ "trigger": " /inc            Increment variable by N amount                 \tcommand /", "contents": "inc" }
-    ,{ "trigger": " /iuser          Set or remove info line in userlist            \tcommand /", "contents": "iuser" }
-    ,{ "trigger": " /leave          Leave/part a channel (same as /part)           \tcommand /", "contents": "leave" }
-    ,{ "trigger": " /linesep        Print line separator at a specified target     \tcommand /", "contents": "linesep" }
-    ,{ "trigger": " /links          Display servers that are linked to current server\tcommand /", "contents": "links" }
-    ,{ "trigger": " /list           Display channel list                           \tcommand /", "contents": "list" }
-    ,{ "trigger": " /load           Load a script file                             \tcommand /", "contents": "load" }
-    ,{ "trigger": " /loadbuf        Load buffer from filename to channel/@window   \tcommand /", "contents": "loadbuf" }
-    ,{ "trigger": " /localinfo      Looks up and sets local settings               \tcommand /", "contents": "localinfo" }
-    ,{ "trigger": " /log            Turn on/off logging to a file                  \tcommand /", "contents": "log" }
-    ,{ "trigger": " /logview        Display text file in mIRC                      \tcommand /", "contents": "logview" }
-    ,{ "trigger": " /maxdepth       Set max recursion limit for alias              \tcommand /", "contents": "maxdepth" }
-    ,{ "trigger": " /mdi            Arrange MDI windows in tile or cascade         \tcommand /", "contents": "mdi" }
-    ,{ "trigger": " /me             Send action to channel/person                  \tcommand /", "contents": "me" }
-    ,{ "trigger": " /menubar        Turn on/off or display menubar status          \tcommand /", "contents": "menubar" }
-    ,{ "trigger": " /mkdir          Creates a new directory                        \tcommand /", "contents": "mkdir" }
-    ,{ "trigger": " /mnick          Change main nickname                           \tcommand /", "contents": "mnick" }
-    ,{ "trigger": " /mode           Change mode for nick/channel                   \tcommand /", "contents": "mode" }
-    ,{ "trigger": " /msg            Send message to channel/person                 \tcommand /", "contents": "msg" }
-    ,{ "trigger": " /noop           Discard/no operation                           \tcommand /", "contents": "noop" }
-    ,{ "trigger": " /notify         Manage the notify feature                      \tcommand /", "contents": "notify" }
-    ,{ "trigger": " /omsg           Broadcast message to OPs on chans you are an OP\tcommand /", "contents": "omsg" }
-    ,{ "trigger": " /onotice        Broadcast notice to OPs on chans you are an OP \tcommand /", "contents": "onotice" }
-    ,{ "trigger": " /parseline      Inject text as if they are being sent/received \tcommand /", "contents": "parseline" }
-    ,{ "trigger": " /part           Leave/part a channel                           \tcommand /", "contents": "part" }
-    ,{ "trigger": " /partall        Leave/part all channels                        \tcommand /", "contents": "partall" }
-    ,{ "trigger": " /pdcc           Send DCC packets without waiting for acks      \tcommand /", "contents": "pdcc" }
-    ,{ "trigger": " /perform        Enable/disable perform section in options      \tcommand /", "contents": "perform" }
-    ,{ "trigger": " /play           Output contents of a file to channel/user      \tcommand /", "contents": "play" }
-    ,{ "trigger": " /playctrl       Open Play Central window                       \tcommand /", "contents": "playctrl" }
-    ,{ "trigger": " /pop            Perform delayed op on a user                   \tcommand /", "contents": "pop" }
-    ,{ "trigger": " /protect        Manage the built-in protect list               \tcommand /", "contents": "protect" }
-    ,{ "trigger": " /proxy          Change firewall settings                       \tcommand /", "contents": "proxy" }
-    ,{ "trigger": " /pvoice         Perform delayed voice on a user                \tcommand /", "contents": "pvoice" }
-    ,{ "trigger": " /qme            Send action to all query windows               \tcommand /", "contents": "qme" }
-    ,{ "trigger": " /qmsg           Send message to all query windows              \tcommand /", "contents": "qmsg" }
-    ,{ "trigger": " /query          Open query window for online/offline user      \tcommand /", "contents": "query" }
-    ,{ "trigger": " /queryrn        Change nickname of open query window           \tcommand /", "contents": "queryrn" }
-    ,{ "trigger": " /quit           Disconnect from IRC                            \tcommand /", "contents": "quit" }
-    ,{ "trigger": " /quote          Send raw message to server (use /raw instead)  \tcommand /", "contents": "quote" }
-    ,{ "trigger": " /raw            Send a raw message to server                   \tcommand /", "contents": "raw" }
-    ,{ "trigger": " /registration   Open the mIRC registration (enter serial #)    \tcommand /", "contents": "registration" }
-    ,{ "trigger": " /reload         Reload a script file without triggering load event\tcommand /", "contents": "reload" }
-    ,{ "trigger": " /remini         Delete section or item from INI file           \tcommand /", "contents": "remini" }
-    ,{ "trigger": " /remote         Toggle remote, CTCPS, and raw events processing\tcommand /", "contents": "remote" }
-    ,{ "trigger": " /remove         Delete a file                                  \tcommand /", "contents": "remove" }
-    ,{ "trigger": " /rename         Rename a file                                  \tcommand /", "contents": "rename" }
-    ,{ "trigger": " /renwin         Rename a @window                               \tcommand /", "contents": "renwin" }
-    ,{ "trigger": " /reseterror     Reset error catches with :error label          \tcommand /", "contents": "reseterror" }
-    ,{ "trigger": " /resetidle      Reset $idle to 0                               \tcommand /", "contents": "resetidle" }
-    ,{ "trigger": " /return         Return a value and exit subroutine             \tcommand /", "contents": "return" }
-    ,{ "trigger": " /returnex       Return a value (if exist) and exit subroutine  \tcommand /", "contents": "returnex" }
-    ,{ "trigger": " /rlevel         Remove users with specified level from userlist\tcommand /", "contents": "rlevel" }
-    ,{ "trigger": " /rline          Replace line in @window                        \tcommand /", "contents": "rline" }
-    ,{ "trigger": " /rmdir          Delete empty directory (error if nonempty)     \tcommand /", "contents": "rmdir" }
-    ,{ "trigger": " /run            Execute a file with default application        \tcommand /", "contents": "run" }
-    ,{ "trigger": " /ruser          Remove a user or level from a user             \tcommand /", "contents": "ruser" }
-    ,{ "trigger": " /save           Save popups/users/variables to file            \tcommand /", "contents": "save" }
-    ,{ "trigger": " /savebuf        Save buffer to a file                          \tcommand /", "contents": "savebuf" }
-    ,{ "trigger": " /saveini        Save or overwrite ini file to disk             \tcommand /", "contents": "saveini" }
-    ,{ "trigger": " /say            Send message to current channel/window         \tcommand /", "contents": "say" }
-    ,{ "trigger": " /scid           Set associated context of script/command to cid\tcommand /", "contents": "scid" }
-    ,{ "trigger": " /scon           Set associated context of script/command to Nth window\tcommand /", "contents": "scon" }
-    ,{ "trigger": " /server         Connect to a server                            \tcommand /", "contents": "server" }
-    ,{ "trigger": " /set            Set a %variable to a value                     \tcommand /", "contents": "set" }
-    ,{ "trigger": " /setlayer       Set transparency of a window                   \tcommand /", "contents": "setlayer" }
-    ,{ "trigger": " /showmirc       Manipulate main mIRC window                    \tcommand /", "contents": "showmirc" }
-    ,{ "trigger": " /signal         Send signal to all loaded scripts              \tcommand /", "contents": "signal" }
-    ,{ "trigger": " /sline          Select line(s) in @window                      \tcommand /", "contents": "sline" }
-    ,{ "trigger": " /sockaccept     Accept a connection to a /socklisten port      \tcommand /", "contents": "sockaccept" }
-    ,{ "trigger": " /sockclose      Close a connection of /socklisten              \tcommand /", "contents": "sockclose" }
-    ,{ "trigger": " /socklist       Display list all open sockets                  \tcommand /", "contents": "socklist" }
-    ,{ "trigger": " /socklisten     Listen on a port for connections               \tcommand /", "contents": "socklisten" }
-    ,{ "trigger": " /sockmark       Assign data to a socket for later reference    \tcommand /", "contents": "sockmark" }
-    ,{ "trigger": " /sockopen       Open a connection to ip/host:port              \tcommand /", "contents": "sockopen" }
-    ,{ "trigger": " /sockpause      Pause or restarted socket when reading data    \tcommand /", "contents": "sockpause" }
-    ,{ "trigger": " /sockread       Read bytes from socket into variable           \tcommand /", "contents": "sockread" }
-    ,{ "trigger": " /sockrename     Rename an existing socket connection           \tcommand /", "contents": "sockrename" }
-    ,{ "trigger": " /sockudp        Send UDP data to ip/host:port of a /sockopen   \tcommand /", "contents": "sockudp" }
-    ,{ "trigger": " /sockwrite      Send TCP data to ip/host:port of a /sockopen   \tcommand /", "contents": "sockwrite" }
-    ,{ "trigger": " /sound          Send sound command to nick/channel             \tcommand /", "contents": "sound" }
-    ,{ "trigger": " /speak          Speak text audibly                             \tcommand /", "contents": "speak" }
-    ,{ "trigger": " /splay          Play an audio file                             \tcommand /", "contents": "splay" }
-    ,{ "trigger": " /sreq           Modify mIRC DCC send options                   \tcommand /", "contents": "sreq" }
-    ,{ "trigger": " /strip          Strip control-codes from text                  \tcommand /", "contents": "strip" }
-    ,{ "trigger": " /switchbar      Set switchbar on/off or display current status \tcommand /", "contents": "switchbar" }
-    ,{ "trigger": " /timer          Create a timer to execute code                 \tcommand /", "contents": "timer" }
-    ,{ "trigger": " /timestamp      Enable/Disable timestamps or set format        \tcommand /", "contents": "timestamp" }
-    ,{ "trigger": " /tip            Change text of active balloon tip or close     \tcommand /", "contents": "tip" }
-    ,{ "trigger": " /tips           Enable/disable tips options                    \tcommand /", "contents": "tips" }
-    ,{ "trigger": " /titlebar       Change titlebar of mIRC window or @window      \tcommand /", "contents": "titlebar" }
-    ,{ "trigger": " /tnick          Change IRC nick without changing main/alt nick \tcommand /", "contents": "tnick" }
-    ,{ "trigger": " /tokenize       Create tokenize values for $1, $2, etc.        \tcommand /", "contents": "tokenize" }
-    ,{ "trigger": " /toolbar        Modify toolbar                                 \tcommand /", "contents": "toolbar" }
-    ,{ "trigger": " /tray           Modify tray settings                           \tcommand /", "contents": "tray" }
-    ,{ "trigger": " /treebar        Enable/Disable treebar                         \tcommand /", "contents": "treebar" }
-    ,{ "trigger": " /ulist          Display list levels of users based on criteria \tcommand /", "contents": "ulist" }
-    ,{ "trigger": " /unload         Unload a script                                \tcommand /", "contents": "unload" }
-    ,{ "trigger": " /unset          Unset/delete a %variable                       \tcommand /", "contents": "unset" }
-    ,{ "trigger": " /unsetall       Unset/delete all %variables                    \tcommand /", "contents": "unsetall" }
-    ,{ "trigger": " /updatenl       Force update of IAL                            \tcommand /", "contents": "updatenl" }
-    ,{ "trigger": " /url            Enable/disable URL catcher or open URL         \tcommand /", "contents": "url" }
-    ,{ "trigger": " /username       Modify current username or display current     \tcommand /", "contents": "username" }
-    ,{ "trigger": " /uwho           Lookup and display userinfo in address book    \tcommand /", "contents": "uwho" }
-    ,{ "trigger": " /var            Create/replace local scope variables           \tcommand /", "contents": "var" }
-    ,{ "trigger": " /vcadd          Add voice command for Speech Software          \tcommand /", "contents": "vcadd" }
-    ,{ "trigger": " /vcmd           Enable voice commands for Speech Software      \tcommand /", "contents": "vcmd" }
-    ,{ "trigger": " /vcrem          Remove voice comand from voice command list    \tcommand /", "contents": "vcrem" }
-    ,{ "trigger": " /vol            Set volume on system                           \tcommand /", "contents": "vol" }
-    ,{ "trigger": " /wallchops      Send notice to all ops on a channel            \tcommand /", "contents": "wallchops" }
-    // DEPRECATED: replace by /splay ,{ "trigger": " /wavplay                                                                \tcommand /", "contents": "wavplay" }
-    ,{ "trigger": " /while          Loop block of code until condition             \tcommand /", "contents": "while" }
-    ,{ "trigger": " /window         Create or manipulate custom @window            \tcommand /", "contents": "window" }
-    ,{ "trigger": " /winhelp        Open Microsoft online help files (.chm/.hlp)   \tcommand /", "contents": "winhelp" }
-    ,{ "trigger": " /write          Write to a file                                \tcommand /", "contents": "write" }
-    ,{ "trigger": " /writeini       Write to a section in an ini file              \tcommand /", "contents": "writeini" }
-    ,{ "trigger": " /xyzzy          Easter Egg: Prints \"Nothing happens\"         \tcommand /", "contents": "xyzzy" }
+    { "trigger": " /abook           Display Address Book                           \t/", "contents": "abook ${1:[ˇOptional: -chnw]}" }
+    ,{ "trigger": " /action         Perform action in channel                      \t/", "contents": "action ${1:<ˇRequired: message>}" }
+    ,{ "trigger": " /ajinvite       Toggle auto-join on invite features            \t/", "contents": "ajinvite ${1:<ˇRequired: on|off>}" }
+    ,{ "trigger": " /alias          Add/Replace/Remove aliases.                    \t/", "contents": "alias ${1:[ˇOptional: filename_of_loaded_alias]} ${2:<ˇRequired: alias_name>} ${3:[ˇOptional: command_or_blank_to_remove_alias)]}" }
+    ,{ "trigger": " /aline          Add line of text to @window                    \t/", "contents": "aline ${1:[ˇOptional: -sahpinl]} ${3:[ˇOptional: color_code]} @${4:<ˇRequired: name_of_window>} ${5:<ˇRequired: text>}" }
+    ,{ "trigger": " /ame            Send action to all channels                    \t/", "contents": "ame ${1:<ˇRequired: message>}" }
+    ,{ "trigger": " /amsg           Send message to all channels                   \t/", "contents": "amsg ${1:<ˇRequired: message>}" }
+    ,{ "trigger": " /anick          Set alternate nickname                         \t/", "contents": "anick ${1:<ˇRequired: nickname>}" }
+    ,{ "trigger": " /aop            Turn on/off OR add to aop list                 \t/", "contents": "aop ${1:<ˇRequired: on|off>} ${2:ˇORˇ [ˇOptional: -rw]} ${3:<ˇRequired: nick_or_address>} ${4:[ˇOptional: #channel1,#channel2...]} ${5:[ˇOptional: int_address_type]} ${6:[ˇOptional: string_network]}" }
+    ,{ "trigger": " /auser          Add or edit user                               \t/", "contents": "auser ${1:[ˇOptional -a match_existing_entry]} ${2:<ˇRequired: levels>} ${3:<ˇRequired: nick_or_address>} ${4:[ˇOptional: special_info_about_entry]}" }
+    ,{ "trigger": " /aop            Turn on/off OR add to aop list                 \t/", "contents": "auto ${1:<ˇRequired: on|off>} ${2:ˇORˇ [ˇOptional: -rw]} ${3:<ˇRequired: nick_or_address>} ${4:[ˇOptional: #channel1,#channel2...]} ${5:[ˇOptional: int_address_type]} ${6:[ˇOptional: string_network]}" }
+    ,{ "trigger": " /autojoin       Autojoin used with \"on connect\" event        \t/", "contents": "autojoin ${1:[ˇOptional: -nsdN]}" }
+    ,{ "trigger": " /avoice         Turn on/off OR add to avoice list              \t/", "contents": "avoice ${1:<ˇRequired: on|off>} ${2:ˇORˇ [ˇOptional: -rw]} ${3:<ˇRequired: nick_or_address>} ${4:[ˇOptional: #channel1,#channel2...]} ${5:[ˇOptional: int_address_type]} ${6:[ˇOptional: string_network]}" }
+    ,{ "trigger": " /away           Set/Unset Away                                 \t/", "contents": "away ${1:[ˇOptional: message_or_blank_to_unset]}" }
+    ,{ "trigger": " /background     Set background                                 \t/", "contents": "background ${1:<ˇRequired: -abemsgdluhcfnrtpx>} ${2:[ˇOptional: window]} ${3:[ˇOptional: \"filename\"]}" }
+    ,{ "trigger": " /ban            Ban a user                                     \t/", "contents": "ban ${1:[ˇOptional: -kruN]} ${2:[ˇOptional: #channel]} ${4:<ˇRequired: nickname_or_address>} ${5:[ˇOptional: int_address_type]} ${6:[ˇOptional: kick_message]}" }
+    ,{ "trigger": " /bcopy          Copy bytes from &var to &var                   \t/", "contents": "bcopy ${1:[ˇOptional: -zc]} ${2:<ˇRequired: &dest_binvar>} ${3:<ˇRequired: int_destination_pos>} ${4:<ˇRequired: &src_binvar>} ${5:<ˇRequired: int_source_pos>} ${6:<ˇRequired: int_numBytes>}" }
+    ,{ "trigger": " /beep           Generate speaker beep                          \t/", "contents": "beep ${1:[ˇOptional: int_number_times]} ${2:[ˇOptional: int_delay_in_seconds]}" }
+    ,{ "trigger": " /bindip         Set IP binding on/off                          \t/", "contents": "bindip ${1:on <ˇRequired: IP_or_Adapter>} ${2:ˇORˇ ˇOptional: on|off]}" }
+    ,{ "trigger": " /bread          Read bytes from file into &var                 \t/", "contents": "bread ${1:[ˇOptional]: -t]} ${2:<ˇRequired: \"filename\">} ${3:<ˇRequired: int_byte_start_pos>} ${4:<ˇRequired: int_num_bytes_to_read>} ${5:<ˇRequired: variable_to_store_in>}" }
+    ,{ "trigger": " /break          Terminate execution of nearest loop            \t/", "contents": "break" }
+    ,{ "trigger": " /breplace       Replace ascii var with binary var              \t/", "contents": "breplace ${1:<ˇRequired: &binvar>} ${2:<ˇRequired: old_value>} ${3:<ˇRequired: new_value>} ${4:[ˇOptional: old_value new_value ...]}" }
+    ,{ "trigger": " /bset           Set binary global variable                     \t/", "contents": "bset ${1:[ˇOptional: -tac]} ${2:<ˇRequired: &binvar>} ${3:<ˇRequired: int_pos>} ${4:<ˇRequired: ascii/string>} ${5:[ˇOptional: asci/string asci/string ...]}" }
+    ,{ "trigger": " /btrunc         Truncate file to specified bytesize            \t/", "contents": "btrunc ${1:<ˇRequired: \"filename\">} ${2:<ˇRequired: int_bytes>}" }
+    ,{ "trigger": " /bunset         Unset binary global variable                   \t/", "contents": "bunset ${1:<ˇRequired: &binvar>} ${2:[ˇOptional: &binvar &binvar ...]}" }
+    ,{ "trigger": " /bwrite         Write binary data to file                      \t/", "contents": "bwrite ${1:[ˇOptional: -act]} ${2:<ˇRequired: \"filename\">} ${3:<ˇRequired: int_start_pos>} ${4:ˇRequired: int_length>} ${5:<ˇRequired: text|%var|&binvar>}" }
+    ,{ "trigger": " /channel        Open channel central                           \t/", "contents": "channel ${1:[ˇOptional: #channel]}" }
+    ,{ "trigger": " /clear          Clear buffer of window                         \t/", "contents": "clear ${1:[ˇOptional: -sghlcn]} ${2:[ˇOptional: @window]}" }
+    ,{ "trigger": " /clearall       Clear buffer of all windows                    \t/", "contents": "clearall ${1:[ˇOptional: -asnqmtgu]}" }
+    ,{ "trigger": " /clearial       Clear IAL                                      \t/", "contents": "clearial ${1:[ˇOptional: str_nick]}" }
+    ,{ "trigger": " /cline          Set color of line in nicklist or @window       \t/", "contents": "cline ${1:[ˇOptional: -hrmlt]} ${2:[ˇOptional: int_color_code]} ${3:<ˇRequired: @window/#channel>} ${4:<ˇRequired: line_number>}" }
+    ,{ "trigger": " /clipboard      Copy text to clipboard                         \t/", "contents": "clipboard ${1:[ˇOptional: -an]} ${2:<ˇRequired: str_text>}" }
+    ,{ "trigger": " /close          Close windows of specified type                \t/", "contents": "close ${1:<ˇRequired: -ticfgms@[id]axdnu | -cNfNsNgN>} ${2:[ˇOptional: name1 name2 ...]}" }
+    ,{ "trigger": " /closechats     Close all inactive DCC Chat windows            \t/", "contents": "closechats" }
+    ,{ "trigger": " /closedccs      Close all inactive DCC Send/Get windows        \t/", "contents": "closedccs" }
+    ,{ "trigger": " /closefserves   Close all inactive Fserve windows              \t/", "contents": "closefserves" }
+    ,{ "trigger": " /closemsg       Close all or specified query window            \t/", "contents": "closemsg ${1:[ˇOptional: str_nick]}" }
+    ,{ "trigger": " /cnick          Set color options for nick in addressbook      \t/", "contents": "cnick ${1:[ˇOptional: -rfaniovpylNmNsN]} ${2:[ˇOptional: str_nick_or_host]} ${3:[ˇOptional: int_color_code]} ${4:[ˇOptional: modes_~&@%+]} ${5:[ˇOptional: str_int_levels]}" }
+    ,{ "trigger": " /color          Set color setting (same as /colour)            \t/", "contents": "color ${1:<ˇRequired: Name>} ${2:<ˇRequired: int_Nth_color>} ${3:ˇORˇ <ˇRequired: int_Nth_color>} ${4:<ˇRequired: \\$RGB(n,n,n)>}" }
+    ,{ "trigger": " /colour         Set color setting (same as /color)             \t/", "contents": "colour" }
+    ,{ "trigger": " /comclose       Close an existing COM connection               \t/", "contents": "comclose" }
+    ,{ "trigger": " /comlist        Get list of all open COM object connections    \t/", "contents": "comlist" }
+    // DEPRECATED/REMOVED: ,{ "trigger": " /commands                               \t/", "contents": "commands" }
+    ,{ "trigger": " /comopen        Open a com connection                          \t/", "contents": "comopen" }
+    ,{ "trigger": " /comreg         Register/Unregister a COM with windows         \t/", "contents": "comreg" }
+    ,{ "trigger": " /continue       Jump to beginning of a loop                    \t/", "contents": "continue" }
+    ,{ "trigger": " /copy           Copy source dir/file to destination            \t/", "contents": "copy" }
+    ,{ "trigger": " /creq           Modify DCC Chat options                        \t/", "contents": "creq" }
+    ,{ "trigger": " /ctcp           Send a CTCP request                            \t/", "contents": "ctcp" }
+    ,{ "trigger": " /ctcpreply      Send a CTCP reply                              \t/", "contents": "ctcpreply" }
+    ,{ "trigger": " /ctcps          Set or display status of CTCP event processing \t/", "contents": "ctcps" }
+    ,{ "trigger": " /dcc            Send DCC request                               \t/", "contents": "dcc" }
+    ,{ "trigger": " /dccserver      Turn DCC server on/off                         \t/", "contents": "dccserver" }
+    ,{ "trigger": " /dde            Create DDE connection                          \t/", "contents": "dde" }
+    ,{ "trigger": " /ddeserver      Turn DDE server on/off                         \t/", "contents": "ddeserver" }
+    ,{ "trigger": " /debug          Output raw server messages to file/window      \t/", "contents": "debug" }
+    ,{ "trigger": " /dec            Decrease variable by N amount                  \t/", "contents": "dec" }
+    ,{ "trigger": " /describe       Send action to channel/person (also see /me)   \t/", "contents": "describe" }
+    ,{ "trigger": " /dialog         Create a dialog window                         \t/", "contents": "dialog" }
+    ,{ "trigger": " /did            Modify dialog controls                         \t/", "contents": "did" }
+    ,{ "trigger": " /didtok         Add list of values to a dialog control         \t/", "contents": "didtok" }
+    ,{ "trigger": " /disable        Disable a #group in all scripts                \t/", "contents": "disable" }
+    ,{ "trigger": " /disconnect     Disconnect from current server                 \t/", "contents": "disconnect" }
+    ,{ "trigger": " /dlevel         Set default userlevel for everyone             \t/", "contents": "dlevel" }
+    ,{ "trigger": " /dline          Delete line from a @window                     \t/", "contents": "dline" }
+    ,{ "trigger": " /dll            Call a function from a .DLL file               \t/", "contents": "dll" }
+    ,{ "trigger": " /dns            Perform DNS lookup on a user/address           \t/", "contents": "dns" }
+    ,{ "trigger": " /dqwindow       Enable/Disable/Show/Hide Dedicated query window\t/", "contents": "dqwindow" }
+    ,{ "trigger": " /drawcopy       Copy part of picture to different position in @window\t/", "contents": "drawcopy" }
+    ,{ "trigger": " /drawdot        Draw dot in @window                            \t/", "contents": "drawdot" }
+    ,{ "trigger": " /drawfill       Draw and fill an area in @window               \t/", "contents": "drawfill" }
+    ,{ "trigger": " /drawline       Draw line in @window                           \t/", "contents": "drawline" }
+    ,{ "trigger": " /drawpic        Draw picture in @window                        \t/", "contents": "drawpic" }
+    ,{ "trigger": " /drawrect       Draw rectangle in @window                      \t/", "contents": "drawrect" }
+    ,{ "trigger": " /drawreplace    Replace color1 with color2 in @window          \t/", "contents": "drawreplace" }
+    ,{ "trigger": " /drawrot        Rotate area of bitmap in @window               \t/", "contents": "drawrot" }
+    ,{ "trigger": " /drawsave       Save picture in @window to a file              \t/", "contents": "drawsave" }
+    ,{ "trigger": " /drawscroll     Scroll region in @window                       \t/", "contents": "drawscroll" }
+    ,{ "trigger": " /drawsize       Extend bitmap size of @window                  \t/", "contents": "drawsize" }
+    ,{ "trigger": " /drawtext       Draw text inside @window                       \t/", "contents": "drawtext" }
+    ,{ "trigger": " /ebeeps         Enable/Disable 'event beeps' sound             \t/", "contents": "ebeeps" }
+    ,{ "trigger": " /echo           Print text to a channel or @window             \t/", "contents": "echo" }
+    ,{ "trigger": " /editbox        Set text inside of editbox to a value          \t/", "contents": "editbox" }
+    ,{ "trigger": " /else           Logical construct used in IF statements        \t/", "contents": "else" }
+    ,{ "trigger": " /elseif         Logical construct used in IF statements        \t/", "contents": "elseif" }
+    ,{ "trigger": " /emailaddr      Modify email address shown in connect dialog   \t/", "contents": "emailaddr" }
+    ,{ "trigger": " /enable         Enable a #group in all scripts                 \t/", "contents": "enable" }
+    ,{ "trigger": " /events         Enable/Disable remote events processing        \t/", "contents": "events" }
+    ,{ "trigger": " /exit           Exit mIRC                                      \t/", "contents": "exit" }
+    ,{ "trigger": " /fclose         Close file open window triggered from /fopen   \t/", "contents": "fclose" }
+    ,{ "trigger": " /filter         Scan src for *matchtext* and output it to dst  \t/", "contents": "filter" }
+    ,{ "trigger": " /findtext       Search active window for text                  \t/", "contents": "findtext" }
+    ,{ "trigger": " /finger         Send finger request to nick                    \t/", "contents": "finger" }
+    ,{ "trigger": " /firewall       Set mIRC firewall settings                     \t/", "contents": "firewall" }
+    ,{ "trigger": " /flash          Flash mIRC titlebar/tray                       \t/", "contents": "flash" }
+    ,{ "trigger": " /flist          List all or matching files that are /fopen     \t/", "contents": "flist" }
+    ,{ "trigger": " /flood          Set mIRC flood settings                        \t/", "contents": "flood" }
+    ,{ "trigger": " /flush          Clear user list of invalid nicknames           \t/", "contents": "flush" }
+    ,{ "trigger": " /flushini       Flush INI file to hard disk                    \t/", "contents": "flushini" }
+    ,{ "trigger": " /fnord          Easter Egg: Echos \"Nothing to see here\"      \t/", "contents": "fnord" }
+    ,{ "trigger": " /font           Set font of current window                     \t/", "contents": "font" }
+    ,{ "trigger": " /fopen          Open a filename with a handle                  \t/", "contents": "fopen" }
+    ,{ "trigger": " /fseek          Set pointer in fopen handle to a position      \t/", "contents": "fseek" }
+    ,{ "trigger": " /fsend          Display or set dcc send on/off                 \t/", "contents": "fsend" }
+    ,{ "trigger": " /fserve         Initiate DCC fileserver with user              \t/", "contents": "fserve" }
+    ,{ "trigger": " /fullname       Change fullname shown in connect dialog        \t/", "contents": "fullname" }
+    ,{ "trigger": " /fupdate        Set delay for window/channel text refresh      \t/", "contents": "fupdate" }
+    ,{ "trigger": " /fwrite         Write text or binvar to a file fopen handle    \t/", "contents": "fwrite" }
+    ,{ "trigger": " /ghide          Hides a previously loaded agent                \t/", "contents": "ghide" }
+    ,{ "trigger": " /gload          Load an agent                                  \t/", "contents": "gload" }
+    ,{ "trigger": " /gmove          Moves an agent                                 \t/", "contents": "gmove" }
+    ,{ "trigger": " /gopts          Set options of a loaded agent                  \t/", "contents": "gopts" }
+    ,{ "trigger": " /goto           Jump to a section in code or loop              \t/", "contents": "goto" }
+    ,{ "trigger": " /gplay          Make agent play an animation                   \t/", "contents": "gplay" }
+    ,{ "trigger": " /gpoint         Make agent point to position                   \t/", "contents": "gpoint" }
+    ,{ "trigger": " /gqreq          Enable/Disable agent command queueing          \t/", "contents": "gqreq" }
+    ,{ "trigger": " /groups         Display a list of #groups                      \t/", "contents": "groups" }
+    ,{ "trigger": " /gshow          Display an agent                               \t/", "contents": "gshow" }
+    ,{ "trigger": " /gsize          Resize an agent                                \t/", "contents": "gsize" }
+    ,{ "trigger": " /gstop          Stop and remove all command queue from agent   \t/", "contents": "gstop" }
+    ,{ "trigger": " /gtalk          Make agent speak text                          \t/", "contents": "gtalk" }
+    ,{ "trigger": " /gunload        Unload an agent                                \t/", "contents": "gunload" }
+    ,{ "trigger": " /guser          Look up address of nick and add to userlist    \t/", "contents": "guser" }
+    ,{ "trigger": " /hadd           Insert key/value pair to hash table            \t/", "contents": "hadd" }
+    ,{ "trigger": " /halt           Immediately stop further processing script     \t/", "contents": "halt" }
+    ,{ "trigger": " /haltdef        Stop default processing of an event            \t/", "contents": "haltdef" }
+    ,{ "trigger": " /hdec           Decrement value in a hash table                \t/", "contents": "hdec" }
+    ,{ "trigger": " /hdel           Delete key/value pair in hash table            \t/", "contents": "hdel" }
+    ,{ "trigger": " /help           Display mIRC helpfile                          \t/", "contents": "help" }
+    ,{ "trigger": " /hfree          Free/Destroy a hash table                      \t/", "contents": "hfree" }
+    ,{ "trigger": " /hinc           Increment value in a hash table                \t/", "contents": "hinc" }
+    ,{ "trigger": " /hload          Load text file into already created hash table \t/", "contents": "hload" }
+    ,{ "trigger": " /hmake          Create a hash table                            \t/", "contents": "hmake" }
+    ,{ "trigger": " /hop            Part and join channel in single command        \t/", "contents": "hop" }
+    ,{ "trigger": " /hotlink        Override popups menu on right clicking word    \t/", "contents": "hotlink" }
+    ,{ "trigger": " /hsave          Save a hash table to a file                    \t/", "contents": "hsave" }
+    ,{ "trigger": " /ial            Set Internal-Address-List on/off               \t/", "contents": "ial" }
+    ,{ "trigger": " /ialclear       Clear Interal-Address-List data                \t/", "contents": "ialclear" }
+    ,{ "trigger": " /ialmark        Mark an IAL entry with a value                 \t/", "contents": "ialmark" }
+    ,{ "trigger": " /identd         Enable/disable built-in identd server          \t/", "contents": "identd" }
+    ,{ "trigger": " /if             Logical condition operation used in scripts    \t/", "contents": "if" }
+    ,{ "trigger": " /ignore         Ignore a user/address                          \t/", "contents": "ignore" }
+    ,{ "trigger": " /iline          Insert line into @window                       \t/", "contents": "iline" }
+    ,{ "trigger": " /inc            Increment variable by N amount                 \t/", "contents": "inc" }
+    ,{ "trigger": " /iuser          Set or remove info line in userlist            \t/", "contents": "iuser" }
+    ,{ "trigger": " /leave          Leave/part a channel (same as /part)           \t/", "contents": "leave" }
+    ,{ "trigger": " /linesep        Print line separator at a specified target     \t/", "contents": "linesep" }
+    ,{ "trigger": " /links          Display servers that are linked to current server\t/", "contents": "links" }
+    ,{ "trigger": " /list           Display channel list                           \t/", "contents": "list" }
+    ,{ "trigger": " /load           Load a script file                             \t/", "contents": "load" }
+    ,{ "trigger": " /loadbuf        Load buffer from filename to channel/@window   \t/", "contents": "loadbuf" }
+    ,{ "trigger": " /localinfo      Looks up and sets local settings               \t/", "contents": "localinfo" }
+    ,{ "trigger": " /log            Turn on/off logging to a file                  \t/", "contents": "log" }
+    ,{ "trigger": " /logview        Display text file in mIRC                      \t/", "contents": "logview" }
+    ,{ "trigger": " /maxdepth       Set max recursion limit for alias              \t/", "contents": "maxdepth" }
+    ,{ "trigger": " /mdi            Arrange MDI windows in tile or cascade         \t/", "contents": "mdi" }
+    ,{ "trigger": " /me             Send action to channel/person                  \t/", "contents": "me" }
+    ,{ "trigger": " /menubar        Turn on/off or display menubar status          \t/", "contents": "menubar" }
+    ,{ "trigger": " /mkdir          Creates a new directory                        \t/", "contents": "mkdir" }
+    ,{ "trigger": " /mnick          Change main nickname                           \t/", "contents": "mnick" }
+    ,{ "trigger": " /mode           Change mode for nick/channel                   \t/", "contents": "mode" }
+    ,{ "trigger": " /msg            Send message to channel/person                 \t/", "contents": "msg" }
+    ,{ "trigger": " /noop           Discard/no operation                           \t/", "contents": "noop" }
+    ,{ "trigger": " /notify         Manage the notify feature                      \t/", "contents": "notify" }
+    ,{ "trigger": " /omsg           Broadcast message to OPs on chans you are an OP\t/", "contents": "omsg" }
+    ,{ "trigger": " /onotice        Broadcast notice to OPs on chans you are an OP \t/", "contents": "onotice" }
+    ,{ "trigger": " /parseline      Inject text as if they are being sent/received \t/", "contents": "parseline" }
+    ,{ "trigger": " /part           Leave/part a channel                           \t/", "contents": "part" }
+    ,{ "trigger": " /partall        Leave/part all channels                        \t/", "contents": "partall" }
+    ,{ "trigger": " /pdcc           Send DCC packets without waiting for acks      \t/", "contents": "pdcc" }
+    ,{ "trigger": " /perform        Enable/disable perform section in options      \t/", "contents": "perform" }
+    ,{ "trigger": " /play           Output contents of a file to channel/user      \t/", "contents": "play" }
+    ,{ "trigger": " /playctrl       Open Play Central window                       \t/", "contents": "playctrl" }
+    ,{ "trigger": " /pop            Perform delayed op on a user                   \t/", "contents": "pop" }
+    ,{ "trigger": " /protect        Manage the built-in protect list               \t/", "contents": "protect" }
+    ,{ "trigger": " /proxy          Change firewall settings                       \t/", "contents": "proxy" }
+    ,{ "trigger": " /pvoice         Perform delayed voice on a user                \t/", "contents": "pvoice" }
+    ,{ "trigger": " /qme            Send action to all query windows               \t/", "contents": "qme" }
+    ,{ "trigger": " /qmsg           Send message to all query windows              \t/", "contents": "qmsg" }
+    ,{ "trigger": " /query          Open query window for online/offline user      \t/", "contents": "query" }
+    ,{ "trigger": " /queryrn        Change nickname of open query window           \t/", "contents": "queryrn" }
+    ,{ "trigger": " /quit           Disconnect from IRC                            \t/", "contents": "quit" }
+    ,{ "trigger": " /quote          Send raw message to server (use /raw instead)  \t/", "contents": "quote" }
+    ,{ "trigger": " /raw            Send a raw message to server                   \t/", "contents": "raw" }
+    ,{ "trigger": " /registration   Open the mIRC registration (enter serial #)    \t/", "contents": "registration" }
+    ,{ "trigger": " /reload         Reload a script file without triggering load event\t/", "contents": "reload" }
+    ,{ "trigger": " /remini         Delete section or item from INI file           \t/", "contents": "remini" }
+    ,{ "trigger": " /remote         Toggle remote, CTCPS, and raw events processing\t/", "contents": "remote" }
+    ,{ "trigger": " /remove         Delete a file                                  \t/", "contents": "remove" }
+    ,{ "trigger": " /rename         Rename a file                                  \t/", "contents": "rename" }
+    ,{ "trigger": " /renwin         Rename a @window                               \t/", "contents": "renwin" }
+    ,{ "trigger": " /reseterror     Reset error catches with :error label          \t/", "contents": "reseterror" }
+    ,{ "trigger": " /resetidle      Reset $idle to 0                               \t/", "contents": "resetidle" }
+    ,{ "trigger": " /return         Return a value and exit subroutine             \t/", "contents": "return" }
+    ,{ "trigger": " /returnex       Return a value (if exist) and exit subroutine  \t/", "contents": "returnex" }
+    ,{ "trigger": " /rlevel         Remove users with specified level from userlist\t/", "contents": "rlevel" }
+    ,{ "trigger": " /rline          Replace line in @window                        \t/", "contents": "rline" }
+    ,{ "trigger": " /rmdir          Delete empty directory (error if nonempty)     \t/", "contents": "rmdir" }
+    ,{ "trigger": " /run            Execute a file with default application        \t/", "contents": "run" }
+    ,{ "trigger": " /ruser          Remove a user or level from a user             \t/", "contents": "ruser" }
+    ,{ "trigger": " /save           Save popups/users/variables to file            \t/", "contents": "save" }
+    ,{ "trigger": " /savebuf        Save buffer to a file                          \t/", "contents": "savebuf" }
+    ,{ "trigger": " /saveini        Save or overwrite ini file to disk             \t/", "contents": "saveini" }
+    ,{ "trigger": " /say            Send message to current channel/window         \t/", "contents": "say" }
+    ,{ "trigger": " /scid           Set associated context of script/command to cid\t/", "contents": "scid" }
+    ,{ "trigger": " /scon           Set associated context of script/command to Nth window\t/", "contents": "scon" }
+    ,{ "trigger": " /server         Connect to a server                            \t/", "contents": "server" }
+    ,{ "trigger": " /set            Set a %variable to a value                     \t/", "contents": "set" }
+    ,{ "trigger": " /setlayer       Set transparency of a window                   \t/", "contents": "setlayer" }
+    ,{ "trigger": " /showmirc       Manipulate main mIRC window                    \t/", "contents": "showmirc" }
+    ,{ "trigger": " /signal         Send signal to all loaded scripts              \t/", "contents": "signal" }
+    ,{ "trigger": " /sline          Select line(s) in @window                      \t/", "contents": "sline" }
+    ,{ "trigger": " /sockaccept     Accept a connection to a /socklisten port      \t/", "contents": "sockaccept" }
+    ,{ "trigger": " /sockclose      Close a connection of /socklisten              \t/", "contents": "sockclose" }
+    ,{ "trigger": " /socklist       Display list all open sockets                  \t/", "contents": "socklist" }
+    ,{ "trigger": " /socklisten     Listen on a port for connections               \t/", "contents": "socklisten" }
+    ,{ "trigger": " /sockmark       Assign data to a socket for later reference    \t/", "contents": "sockmark" }
+    ,{ "trigger": " /sockopen       Open a connection to ip/host:port              \t/", "contents": "sockopen" }
+    ,{ "trigger": " /sockpause      Pause or restarted socket when reading data    \t/", "contents": "sockpause" }
+    ,{ "trigger": " /sockread       Read bytes from socket into variable           \t/", "contents": "sockread" }
+    ,{ "trigger": " /sockrename     Rename an existing socket connection           \t/", "contents": "sockrename" }
+    ,{ "trigger": " /sockudp        Send UDP data to ip/host:port of a /sockopen   \t/", "contents": "sockudp" }
+    ,{ "trigger": " /sockwrite      Send TCP data to ip/host:port of a /sockopen   \t/", "contents": "sockwrite" }
+    ,{ "trigger": " /sound          Send sound command to nick/channel             \t/", "contents": "sound" }
+    ,{ "trigger": " /speak          Speak text audibly                             \t/", "contents": "speak" }
+    ,{ "trigger": " /splay          Play an audio file                             \t/", "contents": "splay" }
+    ,{ "trigger": " /sreq           Modify mIRC DCC send options                   \t/", "contents": "sreq" }
+    ,{ "trigger": " /strip          Strip control-codes from text                  \t/", "contents": "strip" }
+    ,{ "trigger": " /switchbar      Set switchbar on/off or display current status \t/", "contents": "switchbar" }
+    ,{ "trigger": " /timer          Create a timer to execute code                 \t/", "contents": "timer" }
+    ,{ "trigger": " /timestamp      Enable/Disable timestamps or set format        \t/", "contents": "timestamp" }
+    ,{ "trigger": " /tip            Change text of active balloon tip or close     \t/", "contents": "tip" }
+    ,{ "trigger": " /tips           Enable/disable tips options                    \t/", "contents": "tips" }
+    ,{ "trigger": " /titlebar       Change titlebar of mIRC window or @window      \t/", "contents": "titlebar" }
+    ,{ "trigger": " /tnick          Change IRC nick without changing main/alt nick \t/", "contents": "tnick" }
+    ,{ "trigger": " /tokenize       Create tokenize values for $1, $2, etc.        \t/", "contents": "tokenize" }
+    ,{ "trigger": " /toolbar        Modify toolbar                                 \t/", "contents": "toolbar" }
+    ,{ "trigger": " /tray           Modify tray settings                           \t/", "contents": "tray" }
+    ,{ "trigger": " /treebar        Enable/Disable treebar                         \t/", "contents": "treebar" }
+    ,{ "trigger": " /ulist          Display list levels of users based on criteria \t/", "contents": "ulist" }
+    ,{ "trigger": " /unload         Unload a script                                \t/", "contents": "unload" }
+    ,{ "trigger": " /unset          Unset/delete a %variable                       \t/", "contents": "unset" }
+    ,{ "trigger": " /unsetall       Unset/delete all %variables                    \t/", "contents": "unsetall" }
+    ,{ "trigger": " /updatenl       Force update of IAL                            \t/", "contents": "updatenl" }
+    ,{ "trigger": " /url            Enable/disable URL catcher or open URL         \t/", "contents": "url" }
+    ,{ "trigger": " /username       Modify current username or display current     \t/", "contents": "username" }
+    ,{ "trigger": " /uwho           Lookup and display userinfo in address book    \t/", "contents": "uwho" }
+    ,{ "trigger": " /var            Create/replace local scope variables           \t/", "contents": "var" }
+    ,{ "trigger": " /vcadd          Add voice command for Speech Software          \t/", "contents": "vcadd" }
+    ,{ "trigger": " /vcmd           Enable voice commands for Speech Software      \t/", "contents": "vcmd" }
+    ,{ "trigger": " /vcrem          Remove voice comand from voice command list    \t/", "contents": "vcrem" }
+    ,{ "trigger": " /vol            Set volume on system                           \t/", "contents": "vol" }
+    ,{ "trigger": " /wallchops      Send notice to all ops on a channel            \t/", "contents": "wallchops" }
+    // DEPRECATED: replace by /splay ,{ "trigger": " /wavplay                                                                \t/", "contents": "wavplay" }
+    ,{ "trigger": " /while          Loop block of code until condition             \t/", "contents": "while" }
+    ,{ "trigger": " /window         Create or manipulate custom @window            \t/", "contents": "window" }
+    ,{ "trigger": " /winhelp        Open Microsoft online help files (.chm/.hlp)   \t/", "contents": "winhelp" }
+    ,{ "trigger": " /write          Write to a file                                \t/", "contents": "write" }
+    ,{ "trigger": " /writeini       Write to a section in an ini file              \t/", "contents": "writeini" }
+    ,{ "trigger": " /xyzzy          Easter Egg: Prints \"Nothing happens\"         \t/", "contents": "xyzzy" }
+
+
+    // ###########################################################################################################################
+    // mIRC Identifiers
+    // ###########################################################################################################################
     ,{ "trigger": " $abook                         \t$", "contents": "abook" }
     ,{ "trigger": " $abs                           \t$", "contents": "abs" }
     ,{ "trigger": " $acos                          \t$", "contents": "acos" }
