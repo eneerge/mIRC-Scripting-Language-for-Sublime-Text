@@ -24,7 +24,7 @@ Highlighting currently supports all commands and identifiers in mIRC.  In additi
 
 Auto Completion
 ---------------
-Autocomplete will work for all /commands and $identifiers.  When completing, the full syntax will be printed so that you can tab through each portion of the command/identifier.
+Autocomplete will work for all /commands and $identifiers.  They will display in the autocomplete popup.  Additionally,  I have added support for tabbing through the full syntax of /commands through /color (alphabetical).  I am adding support for more and hope to support displaying the full syntax of all remaining commands and identifiers in the future.
 
 Installation
 ------------
