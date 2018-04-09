@@ -168,7 +168,7 @@ SOFTWARE.
     ,{ "trigger": " /ial            Set Internal-Address-List on/off               \t/", "contents": "ial" }
     ,{ "trigger": " /ialclear       Clear Interal-Address-List data                \t/", "contents": "ialclear" }
     ,{ "trigger": " /ialmark        Mark an IAL entry with a value                 \t/", "contents": "ialmark" }
-    ,{ "trigger": " /identd         Enable/disable built-in identd server          \t/", "contents": "identd" }
+    ,{ "trigger": " /identd         Enable/Disable built-in identd server          \t/", "contents": "identd" }
     ,{ "trigger": " /if             Logical condition operation used in scripts    \t/", "contents": "if" }
     ,{ "trigger": " /ignore         Ignore a user/address                          \t/", "contents": "ignore" }
     ,{ "trigger": " /iline          Insert line into @window                       \t/", "contents": "iline" }
@@ -199,7 +199,7 @@ SOFTWARE.
     ,{ "trigger": " /part           Leave/part a channel                           \t/", "contents": "part" }
     ,{ "trigger": " /partall        Leave/part all channels                        \t/", "contents": "partall" }
     ,{ "trigger": " /pdcc           Send DCC packets without waiting for acks      \t/", "contents": "pdcc" }
-    ,{ "trigger": " /perform        Enable/disable perform section in options      \t/", "contents": "perform" }
+    ,{ "trigger": " /perform        Enable/Disable perform section in options      \t/", "contents": "perform" }
     ,{ "trigger": " /play           Output contents of a file to channel/user      \t/", "contents": "play" }
     ,{ "trigger": " /playctrl       Open Play Central window                       \t/", "contents": "playctrl" }
     ,{ "trigger": " /pop            Perform delayed op on a user                   \t/", "contents": "pop" }
@@ -261,7 +261,7 @@ SOFTWARE.
     ,{ "trigger": " /timer          Create a timer to execute code                 \t/", "contents": "timer" }
     ,{ "trigger": " /timestamp      Enable/Disable timestamps or set format        \t/", "contents": "timestamp" }
     ,{ "trigger": " /tip            Change text of active balloon tip or close     \t/", "contents": "tip" }
-    ,{ "trigger": " /tips           Enable/disable tips options                    \t/", "contents": "tips" }
+    ,{ "trigger": " /tips           Enable/Disable tips options                    \t/", "contents": "tips" }
     ,{ "trigger": " /titlebar       Change titlebar of mIRC window or @window      \t/", "contents": "titlebar" }
     ,{ "trigger": " /tnick          Change IRC nick without changing main/alt nick \t/", "contents": "tnick" }
     ,{ "trigger": " /tokenize       Create tokenize values for $1, $2, etc.        \t/", "contents": "tokenize" }
@@ -273,7 +273,7 @@ SOFTWARE.
     ,{ "trigger": " /unset          Unset/delete a %variable                       \t/", "contents": "unset" }
     ,{ "trigger": " /unsetall       Unset/delete all %variables                    \t/", "contents": "unsetall" }
     ,{ "trigger": " /updatenl       Force update of IAL                            \t/", "contents": "updatenl" }
-    ,{ "trigger": " /url            Enable/disable URL catcher or open URL         \t/", "contents": "url" }
+    ,{ "trigger": " /url            Enable/Disable URL catcher or open URL         \t/", "contents": "url" }
     ,{ "trigger": " /username       Modify current username or display current     \t/", "contents": "username" }
     ,{ "trigger": " /uwho           Lookup and display userinfo in address book    \t/", "contents": "uwho" }
     ,{ "trigger": " /var            Create/replace local scope variables           \t/", "contents": "var" }
@@ -294,72 +294,72 @@ SOFTWARE.
     // ###########################################################################################################################
     // mIRC Identifiers
     // ###########################################################################################################################
-    ,{ "trigger": " $abook                         \t$", "contents": "abook" }
-    ,{ "trigger": " $abs                           \t$", "contents": "abs" }
-    ,{ "trigger": " $acos                          \t$", "contents": "acos" }
-    ,{ "trigger": " $active                        \t$", "contents": "active" }
-    ,{ "trigger": " $activecid                     \t$", "contents": "activecid" }
-    ,{ "trigger": " $activewid                     \t$", "contents": "activewid" }
-    ,{ "trigger": " $adate                         \t$", "contents": "adate" }
-    ,{ "trigger": " $address                       \t$", "contents": "address" }
-    ,{ "trigger": " $addtok                        \t$", "contents": "addtok" }
-    ,{ "trigger": " $addtokcs                      \t$", "contents": "addtokcs" }
-    ,{ "trigger": " $agent                         \t$", "contents": "agent" }
-    ,{ "trigger": " $agentname                     \t$", "contents": "agentname" }
-    ,{ "trigger": " $agentstat                     \t$", "contents": "agentstat" }
-    ,{ "trigger": " $agentver                      \t$", "contents": "agentver" }
-    ,{ "trigger": " $alias                         \t$", "contents": "alias" }
-    ,{ "trigger": " $and                           \t$", "contents": "and" }
-    ,{ "trigger": " $anick                         \t$", "contents": "anick" }
-    ,{ "trigger": " $ansi2mirc                     \t$", "contents": "ansi2mirc" }
-    ,{ "trigger": " $aop                           \t$", "contents": "aop" }
-    ,{ "trigger": " $appactive                     \t$", "contents": "appactive" }
-    ,{ "trigger": " $appstate                      \t$", "contents": "appstate" }
-    ,{ "trigger": " $asc                           \t$", "contents": "asc" }
-    ,{ "trigger": " $asctime                       \t$", "contents": "asctime" }
-    ,{ "trigger": " $asin                          \t$", "contents": "asin" }
-    ,{ "trigger": " $atan                          \t$", "contents": "atan" }
-    ,{ "trigger": " $atan2                         \t$", "contents": "atan2" }
-    ,{ "trigger": " $auto                          \t$", "contents": "auto" }
-    ,{ "trigger": " $avoice                        \t$", "contents": "avoice" }
-    ,{ "trigger": " $away                          \t$", "contents": "away" }
-    ,{ "trigger": " $awaymsg                       \t$", "contents": "awaymsg" }
-    ,{ "trigger": " $awaytime                      \t$", "contents": "awaytime" }
-    ,{ "trigger": " $banlist                       \t$", "contents": "banlist" }
-    ,{ "trigger": " $banmask                       \t$", "contents": "banmask" }
-    ,{ "trigger": " $base                          \t$", "contents": "base" }
-    ,{ "trigger": " $beta                          \t$", "contents": "beta" }
-    ,{ "trigger": " $bfind                         \t$", "contents": "bfind" }
-    ,{ "trigger": " $bindip                        \t$", "contents": "bindip" }
-    ,{ "trigger": " $bitoff                        \t$", "contents": "bitoff" }
-    ,{ "trigger": " $biton                         \t$", "contents": "biton" }
-    ,{ "trigger": " $bits                          \t$", "contents": "bits" }
-    ,{ "trigger": " $bnick                         \t$", "contents": "bnick" }
-    ,{ "trigger": " $bvar                          \t$", "contents": "bvar" }
-    ,{ "trigger": " $bytes                         \t$", "contents": "bytes" }
-    ,{ "trigger": " $calc                          \t$", "contents": "calc" }
-    ,{ "trigger": " $caller                        \t$", "contents": "caller" }
-    ,{ "trigger": " $cancel                        \t$", "contents": "cancel" }
-    ,{ "trigger": " $cb                            \t$", "contents": "cb" }
-    ,{ "trigger": " $cd                            \t$", "contents": "cd" }
-    ,{ "trigger": " $ceil                          \t$", "contents": "ceil" }
-    ,{ "trigger": " $chan                          \t$", "contents": "chan" }
-    ,{ "trigger": " $chanmodes                     \t$", "contents": "chanmodes" }
-    ,{ "trigger": " $channel                       \t$", "contents": "channel" }
-    ,{ "trigger": " $chantypes                     \t$", "contents": "chantypes" }
-    ,{ "trigger": " $chat                          \t$", "contents": "chat" }
-    ,{ "trigger": " $chr                           \t$", "contents": "chr" }
-    ,{ "trigger": " $cid                           \t$", "contents": "cid" }
-    ,{ "trigger": " $clevel                        \t$", "contents": "clevel" }
-    ,{ "trigger": " $click                         \t$", "contents": "click" }
-    ,{ "trigger": " $cmdbox                        \t$", "contents": "cmdbox" }
-    ,{ "trigger": " $cmdline                       \t$", "contents": "cmdline" }
-    ,{ "trigger": " $cnick                         \t$", "contents": "cnick" }
-    ,{ "trigger": " $color                         \t$", "contents": "color" }
-    ,{ "trigger": " $colour                        \t$", "contents": "colour" }
-    ,{ "trigger": " $com                           \t$", "contents": "com" }
-    ,{ "trigger": " $comcall                       \t$", "contents": "comcall" }
-    ,{ "trigger": " $comchan                       \t$", "contents": "comchan" }
+    ,{ "trigger": " $abook          Get info about users in nick list              \t$", "contents": "abook" }
+    ,{ "trigger": " $abs            Get absolute value of number                   \t$", "contents": "abs" }
+    ,{ "trigger": " $acos           Get arccosine of number                        \t$", "contents": "acos" }
+    ,{ "trigger": " $active         Get full name of current active window         \t$", "contents": "active" }
+    ,{ "trigger": " $activecid      Get connection id of current active window     \t$", "contents": "activecid" }
+    ,{ "trigger": " $activewid      Get window id of current active window         \t$", "contents": "activewid" }
+    ,{ "trigger": " $adate          Get current date in month/day/year format      \t$", "contents": "adate" }
+    ,{ "trigger": " $address        Get user@host of user                          \t$", "contents": "address" }
+    ,{ "trigger": " $addtok         Add token to a list of tokens if doesnt exist  \t$", "contents": "addtok" }
+    ,{ "trigger": " $addtokcs       Add token to a list of tokens (case sensitive) \t$", "contents": "addtokcs" }
+    ,{ "trigger": " $agent          Get filename of Nth available agent            \t$", "contents": "agent" }
+    ,{ "trigger": " $agentname      Get name of agent                              \t$", "contents": "agentname" }
+    ,{ "trigger": " $agentstat      Get status of user agent                       \t$", "contents": "agentstat" }
+    ,{ "trigger": " $agentver       Get version of installed Microsoft Agent       \t$", "contents": "agentver" }
+    ,{ "trigger": " $alias          Get filename of Nth loaded alias file          \t$", "contents": "alias" }
+    ,{ "trigger": " $and            Get AND operation of two numbers               \t$", "contents": "and" }
+    ,{ "trigger": " $anick          Get value of alternative nickname              \t$", "contents": "anick" }
+    ,{ "trigger": " $ansi2mirc      Convert ANSI color codes to mIRC code          \t$", "contents": "ansi2mirc" }
+    ,{ "trigger": " $aop            Get data from Auto-Op list                     \t$", "contents": "aop" }
+    ,{ "trigger": " $appactive      Get boolean $true/$false if mIRC is active     \t$", "contents": "appactive" }
+    ,{ "trigger": " $appstate       Get current state of mIRC (full, hidden, maximized, minimized, tray)\t$", "contents": "appstate" }
+    ,{ "trigger": " $asc            Get unicode number of character                \t$", "contents": "asc" }
+    ,{ "trigger": " $asctime        Get time and date in a format                  \t$", "contents": "asctime" }
+    ,{ "trigger": " $asin           Get arcsine of N                               \t$", "contents": "asin" }
+    ,{ "trigger": " $atan           Get arctangent of N                            \t$", "contents": "atan" }
+    ,{ "trigger": " $atan2          Get arctangent of 2 short sides of right triangle\t$", "contents": "atan2" }
+    ,{ "trigger": " $auto           Replaced by $aop. $true if auto-op is enabled  \t$", "contents": "auto" }
+    ,{ "trigger": " $avoice         Get data from Auto-Voice list                  \t$", "contents": "avoice" }
+    ,{ "trigger": " $away           Get boolean $true/false of own away status     \t$", "contents": "away" }
+    ,{ "trigger": " $awaymsg        Get current away message                       \t$", "contents": "awaymsg" }
+    ,{ "trigger": " $awaytime       Get amount of time away has been set           \t$", "contents": "awaytime" }
+    ,{ "trigger": " $banlist        Replaced by $ibl. Return Nth ban in ban list   \t$", "contents": "banlist" }
+    ,{ "trigger": " $banmask        Get usr@addr of banned user in \"on\" events   \t$", "contents": "banmask" }
+    ,{ "trigger": " $base           Get base-N of a number                         \t$", "contents": "base" }
+    ,{ "trigger": " $beta           Get mIRC beta version or $null for non-beta    \t$", "contents": "beta" }
+    ,{ "trigger": " $bfind          Searchs &binvar for a matching value           \t$", "contents": "bfind" }
+    ,{ "trigger": " $bindip         Get info regarding available network adapter   \t$", "contents": "bindip" }
+    ,{ "trigger": " $bitoff         Get N with the Bth bit set to 0                \t$", "contents": "bitoff" }
+    ,{ "trigger": " $biton          Get N with the Bth bit set to 1                \t$", "contents": "biton" }
+    ,{ "trigger": " $bits           Get 32/16 bit version of mIRC application      \t$", "contents": "bits" }
+    ,{ "trigger": " $bnick          Get banned nick in \"on\" events               \t$", "contents": "bnick" }
+    ,{ "trigger": " $bvar           Get contents of &binvar                        \t$", "contents": "bvar" }
+    ,{ "trigger": " $bytes          Format number into various byte forms          \t$", "contents": "bytes" }
+    ,{ "trigger": " $calc           Perform math calculation                       \t$", "contents": "calc" }
+    ,{ "trigger": " $caller         Get type of the caller (activex, dll, etc)     \t$", "contents": "caller" }
+    ,{ "trigger": " $cancel         Returned when input box is cancelled           \t$", "contents": "cancel" }
+    ,{ "trigger": " $cb             Get contents of Windows clipboard              \t$", "contents": "cb" }
+    ,{ "trigger": " $cd             Get curent directory in fserve session         \t$", "contents": "cd" }
+    ,{ "trigger": " $ceil           Get numerical value rounded to highest integer \t$", "contents": "ceil" }
+    ,{ "trigger": " $chan           Get current channel in \"on\" events           \t$", "contents": "chan" }
+    ,{ "trigger": " $chanmodes      Get supported channel modes on a network       \t$", "contents": "chanmodes" }
+    //REMOVED,{ "trigger": " $channel        Replaced by $chan. Get current channel         \t$", "contents": "channel" }
+    ,{ "trigger": " $chantypes      Get supported channel prefixes on a network    \t$", "contents": "chantypes" }
+    ,{ "trigger": " $chat           Get info on an open DCC Chat window            \t$", "contents": "chat" }
+    ,{ "trigger": " $chr            Get char of the specified unicode point number \t$", "contents": "chr" }
+    ,{ "trigger": " $cid            Get current connection id of script request    \t$", "contents": "cid" }
+    ,{ "trigger": " $clevel         Get matching event level in \"on\" events      \t$", "contents": "clevel" }
+    ,{ "trigger": " $click          Get click info when picture @window is clicked \t$", "contents": "click" }
+    ,{ "trigger": " $cmdbox         Get boolean $true/$false if initiated from command editbox\t$", "contents": "cmdbox" }
+    ,{ "trigger": " $cmdline        Get parameters passed to mIRC on launch        \t$", "contents": "cmdline" }
+    ,{ "trigger": " $cnick          Get nick/address field in nick color list      \t$", "contents": "cnick" }
+    ,{ "trigger": " $color          Get RGB value of color code or color code of event\t$", "contents": "color" }
+    ,{ "trigger": " $colour         Get RGB value of color code or color code of event\t$", "contents": "colour" }
+    ,{ "trigger": " $com            Get COM info or call a method in COM connection\t$", "contents": "com" }
+    ,{ "trigger": " $comcall        Multithreaded version of $com that calls alias on finish\t$", "contents": "comcall" }
+    ,{ "trigger": " $comchan        Get common channels between users              \t$", "contents": "comchan" }
     ,{ "trigger": " $comchar                       \t$", "contents": "comchar" }
     ,{ "trigger": " $comerr                        \t$", "contents": "comerr" }
     ,{ "trigger": " $compact                       \t$", "contents": "compact" }
