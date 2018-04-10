@@ -360,95 +360,95 @@ SOFTWARE.
     ,{ "trigger": " $com            Get COM info or call a method in COM connection\t$", "contents": "com" }
     ,{ "trigger": " $comcall        Multithreaded version of $com that calls alias on finish\t$", "contents": "comcall" }
     ,{ "trigger": " $comchan        Get common channels between users              \t$", "contents": "comchan" }
-    ,{ "trigger": " $comchar                       \t$", "contents": "comchar" }
-    ,{ "trigger": " $comerr                        \t$", "contents": "comerr" }
-    ,{ "trigger": " $compact                       \t$", "contents": "compact" }
-    ,{ "trigger": " $compress                      \t$", "contents": "compress" }
-    ,{ "trigger": " $comval                        \t$", "contents": "comval" }
-    ,{ "trigger": " $cos                           \t$", "contents": "cos" }
-    ,{ "trigger": " $cosh                          \t$", "contents": "cosh" }
-    ,{ "trigger": " $count                         \t$", "contents": "count" }
-    ,{ "trigger": " $cr                            \t$", "contents": "cr" }
-    ,{ "trigger": " $crc                           \t$", "contents": "crc" }
-    ,{ "trigger": " $creq                          \t$", "contents": "creq" }
-    ,{ "trigger": " $crlf                          \t$", "contents": "crlf" }
-    ,{ "trigger": " $ctime                         \t$", "contents": "ctime" }
-    ,{ "trigger": " $ctimer                        \t$", "contents": "ctimer" }
-    ,{ "trigger": " $ctrlenter                     \t$", "contents": "ctrlenter" }
-    ,{ "trigger": " $date                          \t$", "contents": "date" }
-    ,{ "trigger": " $day                           \t$", "contents": "day" }
-    ,{ "trigger": " $daylight                      \t$", "contents": "daylight" }
-    ,{ "trigger": " $dbuh                          \t$", "contents": "dbuh" }
-    ,{ "trigger": " $dbuw                          \t$", "contents": "dbuw" }
-    ,{ "trigger": " $dccignore                     \t$", "contents": "dccignore" }
-    ,{ "trigger": " $dccport                       \t$", "contents": "dccport" }
-    ,{ "trigger": " $dde                           \t$", "contents": "dde" }
-    ,{ "trigger": " $ddename                       \t$", "contents": "ddename" }
-    ,{ "trigger": " $debug                         \t$", "contents": "debug" }
-    ,{ "trigger": " $decode                        \t$", "contents": "decode" }
-    ,{ "trigger": " $decompress                    \t$", "contents": "decompress" }
-    ,{ "trigger": " $deltok                        \t$", "contents": "deltok" }
-    ,{ "trigger": " $devent                        \t$", "contents": "devent" }
-    ,{ "trigger": " $dialog                        \t$", "contents": "dialog" }
-    ,{ "trigger": " $did                           \t$", "contents": "did" }
-    ,{ "trigger": " $didreg                        \t$", "contents": "didreg" }
-    ,{ "trigger": " $didtok                        \t$", "contents": "didtok" }
-    ,{ "trigger": " $didwm                         \t$", "contents": "didwm" }
-    ,{ "trigger": " $dir                           \t$", "contents": "dir" }
-    ,{ "trigger": " $disk                          \t$", "contents": "disk" }
-    ,{ "trigger": " $dlevel                        \t$", "contents": "dlevel" }
-    ,{ "trigger": " $dll                           \t$", "contents": "dll" }
-    ,{ "trigger": " $dllcall                       \t$", "contents": "dllcall" }
-    ,{ "trigger": " $dname                         \t$", "contents": "dname" }
-    ,{ "trigger": " $dns                           \t$", "contents": "dns" }
-    ,{ "trigger": " $dqwindow                      \t$", "contents": "dqwindow" }
-    ,{ "trigger": " $duration                      \t$", "contents": "duration" }
-    ,{ "trigger": " $ebeeps                        \t$", "contents": "ebeeps" }
-    ,{ "trigger": " $editbox                       \t$", "contents": "editbox" }
-    ,{ "trigger": " $email                         \t$", "contents": "email" }
-    ,{ "trigger": " $emailaddr                     \t$", "contents": "emailaddr" }
-    ,{ "trigger": " $encode                        \t$", "contents": "encode" }
-    ,{ "trigger": " $envvar                        \t$", "contents": "envvar" }
-    ,{ "trigger": " $error                         \t$", "contents": "error" }
-    ,{ "trigger": " $eval                          \t$", "contents": "eval" }
-    ,{ "trigger": " $evalnext                      \t$", "contents": "evalnext" }
-    ,{ "trigger": " $event                         \t$", "contents": "event" }
-    ,{ "trigger": " $eventid                       \t$", "contents": "eventid" }
-    ,{ "trigger": " $exists                        \t$", "contents": "exists" }
-    ,{ "trigger": " $exiting                       \t$", "contents": "exiting" }
-    ,{ "trigger": " $false                         \t$", "contents": "false" }
-    ,{ "trigger": " $feof                          \t$", "contents": "feof" }
-    ,{ "trigger": " $ferr                          \t$", "contents": "ferr" }
-    ,{ "trigger": " $fgetc                         \t$", "contents": "fgetc" }
-    ,{ "trigger": " $file                          \t$", "contents": "file" }
-    ,{ "trigger": " $filename                      \t$", "contents": "filename" }
-    ,{ "trigger": " $filtered                      \t$", "contents": "filtered" }
-    ,{ "trigger": " $finddir                       \t$", "contents": "finddir" }
-    ,{ "trigger": " $finddirn                      \t$", "contents": "finddirn" }
-    ,{ "trigger": " $findfile                      \t$", "contents": "findfile" }
-    ,{ "trigger": " $findfilen                     \t$", "contents": "findfilen" }
-    ,{ "trigger": " $findtok                       \t$", "contents": "findtok" }
-    ,{ "trigger": " $findtokcs                     \t$", "contents": "findtokcs" }
-    ,{ "trigger": " $fline                         \t$", "contents": "fline" }
-    ,{ "trigger": " $floor                         \t$", "contents": "floor" }
-    ,{ "trigger": " $font                          \t$", "contents": "font" }
-    ,{ "trigger": " $fopen                         \t$", "contents": "fopen" }
-    ,{ "trigger": " $fread                         \t$", "contents": "fread" }
-    ,{ "trigger": " $fromeditbox                   \t$", "contents": "fromeditbox" }
-    ,{ "trigger": " $fserv                         \t$", "contents": "fserv" }
-    ,{ "trigger": " $fserve                        \t$", "contents": "fserve" }
-    ,{ "trigger": " $fulladdress                   \t$", "contents": "fulladdress" }
-    ,{ "trigger": " $fulldate                      \t$", "contents": "fulldate" }
-    ,{ "trigger": " $fullname                      \t$", "contents": "fullname" }
-    ,{ "trigger": " $fullscreen                    \t$", "contents": "fullscreen" }
-    ,{ "trigger": " $get                           \t$", "contents": "get" }
-    ,{ "trigger": " $getdir                        \t$", "contents": "getdir" }
-    ,{ "trigger": " $getdot                        \t$", "contents": "getdot" }
-    ,{ "trigger": " $gettok                        \t$", "contents": "gettok" }
-    ,{ "trigger": " $gmt                           \t$", "contents": "gmt" }
-    ,{ "trigger": " $group                         \t$", "contents": "group" }
-    ,{ "trigger": " $halted                        \t$", "contents": "halted" }
-    ,{ "trigger": " $hash                          \t$", "contents": "hash" }
+    ,{ "trigger": " $comchar        Get command prefix character                   \t$", "contents": "comchar" }
+    ,{ "trigger": " $comerr         Return 1 if error occured with COM object      \t$", "contents": "comerr" }
+    ,{ "trigger": " $compact        Return 1 if mIRC is in compact state           \t$", "contents": "compact" }
+    ,{ "trigger": " $compress       Compress a file or binvar                      \t$", "contents": "compress" }
+    ,{ "trigger": " $comval         Get value of Nth COM object in collection      \t$", "contents": "comval" }
+    ,{ "trigger": " $cos            Get cosine of an angle of N radians            \t$", "contents": "cos" }
+    ,{ "trigger": " $cosh           Get hyperbolic cosine of an angle of N radians \t$", "contents": "cosh" }
+    ,{ "trigger": " $count          Count matching strings/substrings in another string\t$", "contents": "count" }
+    ,{ "trigger": " $cr             Get carriage return                            \t$", "contents": "cr" }
+    ,{ "trigger": " $crc            Get 32-bit checksum of text, binvar, or file   \t$", "contents": "crc" }
+    ,{ "trigger": " $creq           Get current parameters settings for DCC Chat   \t$", "contents": "creq" }
+    ,{ "trigger": " $crlf           Get carriage return line feed                  \t$", "contents": "crlf" }
+    ,{ "trigger": " $ctime          Get number seconds elapsed since Jan 1, 1970   \t$", "contents": "ctime" }
+    ,{ "trigger": " $ctimer         Get name of timer, if any, that triggered event\t$", "contents": "ctimer" }
+    ,{ "trigger": " $ctrlenter      Get boolean $true/$false depending on if CTRL+ENTER was pressed\t$", "contents": "ctrlenter" }
+    ,{ "trigger": " $date           Get current date in day/month/year format      \t$", "contents": "date" }
+    ,{ "trigger": " $day            Get full name of current day of week           \t$", "contents": "day" }
+    ,{ "trigger": " $daylight       Get seconds offset for daylight savings        \t$", "contents": "daylight" }
+    ,{ "trigger": " $dbuh           Get DBU per pixel height value for display     \t$", "contents": "dbuh" }
+    ,{ "trigger": " $dbuw           Get DBU per pixel width value for display      \t$", "contents": "dbuw" }
+    ,{ "trigger": " $dccignore      Get $true/$false depending on DCC ignore option\t$", "contents": "dccignore" }
+    ,{ "trigger": " $dccport        Get the current port used by DCCServer         \t$", "contents": "dccport" }
+    ,{ "trigger": " $dde            Get return value of service, topic, and item via XTYP_REQUEST\t$", "contents": "dde" }
+    ,{ "trigger": " $ddename        Get name of current DDE service                \t$", "contents": "ddename" }
+    ,{ "trigger": " $debug          Get window name or filename of current connection's debug output target\t$", "contents": "debug" }
+    ,{ "trigger": " $decode         Decode literal text in vars or binvars         \t$", "contents": "decode" }
+    ,{ "trigger": " $decompress     Decompress a file or binvar                    \t$", "contents": "decompress" }
+    ,{ "trigger": " $deltok         Delete Nth token from text                     \t$", "contents": "deltok" }
+    ,{ "trigger": " $devent         Get name of dialog inside \"on dialog\" event  \t$", "contents": "devent" }
+    ,{ "trigger": " $dialog         Create modal dialog or get properties of dialog\t$", "contents": "dialog" }
+    ,{ "trigger": " $did            Get settings of controls in a dialog           \t$", "contents": "did" }
+    ,{ "trigger": " $didreg         Get line that matched regex in dialog control  \t$", "contents": "didreg" }
+    ,{ "trigger": " $didtok         Get tokenized list of items of dialog control  \t$", "contents": "didtok" }
+    ,{ "trigger": " $didwm          Get line that matched wildcard in dialog control\t$", "contents": "didwm" }
+    ,{ "trigger": " $dir            Replaced by $sdir. Display select folder dialog\t$", "contents": "dir" }
+    ,{ "trigger": " $disk           Get info about hard disks                      \t$", "contents": "disk" }
+    ,{ "trigger": " $dlevel         Get default user level                         \t$", "contents": "dlevel" }
+    ,{ "trigger": " $dll            Call a function of a dll and get return value  \t$", "contents": "dll" }
+    ,{ "trigger": " $dllcall        Multithreaded $dll that calls alias on return  \t$", "contents": "dllcall" }
+    ,{ "trigger": " $dname          Get name of dialog that triggered \"ON dialog\" event\t$", "contents": "dname" }
+    ,{ "trigger": " $dns            Get various properties of DNS in \"ON DNS\" event\t$", "contents": "dns" }
+    ,{ "trigger": " $dqwindow       Get state of message window                    \t$", "contents": "dqwindow" }
+    ,{ "trigger": " $duration       Return timespan based on input seconds         \t$", "contents": "duration" }
+    ,{ "trigger": " $ebeeps         Get $true/$false depending if sound is enabled/disabled\t$", "contents": "ebeeps" }
+    ,{ "trigger": " $editbox        Get contents of editbox in any mIRC window     \t$", "contents": "editbox" }
+    ,{ "trigger": " $email          Get email address in mIRC connect dialog       \t$", "contents": "email" }
+    ,{ "trigger": " $emailaddr      Get email address in mIRC connect dialog       \t$", "contents": "emailaddr" }
+    ,{ "trigger": " $encode         Get encoded value of text, var, or binvar      \t$", "contents": "encode" }
+    ,{ "trigger": " $envvar         Get Windows environment variable values        \t$", "contents": "envvar" }
+    ,{ "trigger": " $error          Catch errors in script execution               \t$", "contents": "error" }
+    ,{ "trigger": " $eval           Evaluate code N times                          \t$", "contents": "eval" }
+    ,{ "trigger": " $evalnext       Evaluatee code N times (same as $eval)         \t$", "contents": "evalnext" }
+    ,{ "trigger": " $event          Get event name of any tigerred \"on\" events.  \t$", "contents": "event" }
+    ,{ "trigger": " $eventid        Random unique value set inside mIRC events     \t$", "contents": "eventid" }
+    ,{ "trigger": " $exists         Get $true/$false depending if file or dir exists\t$", "contents": "exists" }
+    ,{ "trigger": " $exiting        Get value determining if mIRC is exiting       \t$", "contents": "exiting" }
+    ,{ "trigger": " $false          Value returned for boolean returns in scripts  \t$", "contents": "false" }
+    ,{ "trigger": " $feof           Returns 1 if end of file was reached from last file access attempt\t$", "contents": "feof" }
+    ,{ "trigger": " $ferr           Returns 1 if file error occurred from last file access attempt\t$", "contents": "ferr" }
+    ,{ "trigger": " $fgetc          Get next character from open file              \t$", "contents": "fgetc" }
+    ,{ "trigger": " $file           Get properties of a file                       \t$", "contents": "file" }
+    ,{ "trigger": " $filename       Get file accessed from various events          \t$", "contents": "filename" }
+    ,{ "trigger": " $filtered       Get number of matching lines found by latest filter\t$", "contents": "filtered" }
+    ,{ "trigger": " $finddir        Search for directory with word or wildcard     \t$", "contents": "finddir" }
+    ,{ "trigger": " $finddirn       Returns Nth position of found dir inside $finddir\t$", "contents": "finddirn" }
+    ,{ "trigger": " $findfile       Search for a file with word or wildcard        \t$", "contents": "findfile" }
+    ,{ "trigger": " $findfilen      Returns Nth position of found file inside $findfile\t$", "contents": "findfilen" }
+    ,{ "trigger": " $findtok        Returns position of Nth matching token in text \t$", "contents": "findtok" }
+    ,{ "trigger": " $findtokcs      Returns position of Nth matching token (case sensitive)\t$", "contents": "findtokcs" }
+    ,{ "trigger": " $fline          Returns the number of the Nth line matching expression in window\t$", "contents": "fline" }
+    ,{ "trigger": " $floor          Get numerical value rounded to lowest integer  \t$", "contents": "floor" }
+    ,{ "trigger": " $font           Get Nth font available on the system           \t$", "contents": "font" }
+    ,{ "trigger": " $fopen          Get info about an open file                    \t$", "contents": "fopen" }
+    ,{ "trigger": " $fread          Returns next $crlf delmited line in open file  \t$", "contents": "fread" }
+    ,{ "trigger": " $fromeditbox    Returns $true/$false depending if alias was called from editbox\t$", "contents": "fromeditbox" }
+    ,{ "trigger": " $fserv          Get info on open Fserve windows                \t$", "contents": "fserv" }
+    ,{ "trigger": " $fserve         Get info on open Fserve windows                \t$", "contents": "fserve" }
+    ,{ "trigger": " $fulladdress    Get nick!user@host of user triggering an event \t$", "contents": "fulladdress" }
+    ,{ "trigger": " $fulldate       Get full date in format: Day Month Date hh:mm:ss Year\t$", "contents": "fulldate" }
+    ,{ "trigger": " $fullname       Get full name set in mIRC connect dialog       \t$", "contents": "fullname" }
+    ,{ "trigger": " $fullscreen     Returns 1 if running in full screen, 0 if not  \t$", "contents": "fullscreen" }
+    ,{ "trigger": " $get            Get info on open DCC Get window                \t$", "contents": "get" }
+    ,{ "trigger": " $getdir         Get default or specified filespec DCC get directory\t$", "contents": "getdir" }
+    ,{ "trigger": " $getdot         Get RGB color value of specific pixel from picwin\t$", "contents": "getdot" }
+    ,{ "trigger": " $gettok         Get Nth token based on a delimited $asc token  \t$", "contents": "gettok" }
+    ,{ "trigger": " $gmt            Get GMT time in $ctime format                  \t$", "contents": "gmt" }
+    ,{ "trigger": " $group          Get name or status of a #group in a script     \t$", "contents": "group" }
+    ,{ "trigger": " $halted         Returns $true if previous event used halt or haltdef, else $false\t$", "contents": "halted" }
+    ,{ "trigger": " $hash           Get a hash of supplied text                    \t$", "contents": "hash" }
     ,{ "trigger": " $height                        \t$", "contents": "height" }
     ,{ "trigger": " $hfile                         \t$", "contents": "hfile" }
     ,{ "trigger": " $hfind                         \t$", "contents": "hfind" }
