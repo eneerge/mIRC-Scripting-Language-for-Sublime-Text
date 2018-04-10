@@ -21,6 +21,22 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
+
+/* How to build your own autocompletes:
+   -----------------------------------
+   trigger:
+     - is the triggering word. Sublime does fuzzy matching, so it will match any word in the trigger including description (if provided)
+     - \t will right align text and italicize
+
+   content:
+     - the text entered when accepting the auto complete
+     - Can create "tab" stops using ${N:<Text to highlight>}.  N starts at 1.
+     - EG: myCommand(${1:I am an autocomplete}) - this will create "myCommand(I am an autocomplete)" with the "I am an autocomplete" highlighted so it can easily be typed over
+
+   Special highlighting rules exist for the following syntaxes:
+     - ˇOptional [parameter] - highlights "Optional" as a function and [parameter] as a parameter
+     - ˇRequired <parameter> - highlights "Required" as a function and <parameter> as a parameter
+*/
 {
   "scope": "source.msl - *",
 
