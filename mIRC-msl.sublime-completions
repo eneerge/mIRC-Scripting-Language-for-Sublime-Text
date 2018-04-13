@@ -757,6 +757,6 @@ SOFTWARE.
     ,{ "trigger": " $window         Get info about window for the current connection                                    \t$", "contents": "window" }
     ,{ "trigger": " $wrap           Returns the Nth line in text wrapped to the specified width in the specifie font    \t$", "contents": "wrap" }
     ,{ "trigger": " $xor            Returns the binary XOR of 2 numbers                                                 \t$", "contents": "xor" }
-    ,{ "trigger": " $yes            Returned when YES ahas been clicked in an $input prompt                             \t$", "contents": "yes" }
+    ,{ "trigger": " $yes            Returned when YES has been clicked in an $input prompt                             \t$", "contents": "yes" }
   ]
 }
