@@ -26,7 +26,7 @@ SOFTWARE.
    -----------------------------------
    trigger:
      - is the triggering word. Sublime does fuzzy matching, so it will match any word in the trigger including description (if provided)
-     -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        \t will right align text and italicize
+     -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            \t will right align text and italicize
 
    content:
      - the text entered when accepting the auto complete
@@ -45,7 +45,7 @@ SOFTWARE.
     // ###########################################################################################################################
     // mIRC Commands
     // ###########################################################################################################################
-    { "trigger": " /abook           Display Address Book                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        \t/", "contents": "abook ${1:[ˇOptional: -chnw]}" }
+    { "trigger": " /abook           Display Address Book                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            \t/", "contents": "abook ${1:[ˇOptional: -chnw]}" }
     ,{ "trigger": " /action         Perform action in channel                                                           \t/", "contents": "action ${1:<ˇRequired: message>}" }
     ,{ "trigger": " /ajinvite       Toggle auto-join on invite features                                                 \t/", "contents": "ajinvite ${1:<ˇRequired: on|off>}" }
     ,{ "trigger": " /alias          Add/Replace/Remove aliases.                                                         \t/", "contents": "alias ${1:[ˇOptional: filename_of_loaded_alias]} ${2:<ˇRequired: alias_name>} ${3:[ˇOptional: code_or_blank_to_remove_alias)]}" }
@@ -87,7 +87,7 @@ SOFTWARE.
     ,{ "trigger": " /colour         Set color setting (same as /color)                                                  \t/", "contents": "colour" }
     ,{ "trigger": " /comclose       Close an existing COM connection                                                    \t/", "contents": "comclose" }
     ,{ "trigger": " /comlist        Get list of all open COM object connections                                         \t/", "contents": "comlist" }
-    // DEPRECATED/REMOVED: ,{ "trigger": " /commands                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        \t/", "contents": "commands" }
+    // DEPRECATED/REMOVED: ,{ "trigger": " /commands                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            \t/", "contents": "commands" }
     ,{ "trigger": " /comopen        Open a com connection                                                               \t/", "contents": "comopen" }
     ,{ "trigger": " /comreg         Register/Unregister a COM with windows                                              \t/", "contents": "comreg" }
     ,{ "trigger": " /continue       Jump to beginning of a loop                                                         \t/", "contents": "continue" }
@@ -298,7 +298,7 @@ SOFTWARE.
     ,{ "trigger": " /vcrem          Remove voice comand from voice command list                                         \t/", "contents": "vcrem" }
     ,{ "trigger": " /vol            Set volume on system                                                                \t/", "contents": "vol" }
     ,{ "trigger": " /wallchops      Send notice to all ops on a channel                                                 \t/", "contents": "wallchops" }
-    // DEPRECATED: replace by /splay ,{ "trigger": " /wavplay                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        \t/", "contents": "wavplay" }
+    // DEPRECATED: replace by /splay ,{ "trigger": " /wavplay                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            \t/", "contents": "wavplay" }
     ,{ "trigger": " /while          Loop block of code until condition                                                  \t/", "contents": "while" }
     ,{ "trigger": " /window         Create or manipulate custom @window                                                 \t/", "contents": "window" }
     ,{ "trigger": " /winhelp        Open Microsoft online help files (.chm/.hlp)                                        \t/", "contents": "winhelp" }
@@ -361,7 +361,7 @@ SOFTWARE.
     ,{ "trigger": " $ceil           Get numerical value rounded to highest integer                                      \t$", "contents": "ceil" }
     ,{ "trigger": " $chan           Get current channel in \"on\" events                                                \t$", "contents": "chan" }
     ,{ "trigger": " $chanmodes      Get supported channel modes on a network                                            \t$", "contents": "chanmodes" }
-    //REMOVED,{ "trigger": " $channel        Replaced by $chan. Get current channel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        \t$", "contents": "channel" }
+    //REMOVED,{ "trigger": " $channel        Replaced by $chan. Get current channel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            \t$", "contents": "channel" }
     ,{ "trigger": " $chantypes      Get supported channel prefixes on a network                                         \t$", "contents": "chantypes" }
     ,{ "trigger": " $chat           Get info on an open DCC Chat window                                                 \t$", "contents": "chat" }
     ,{ "trigger": " $chr            Get char of the specified unicode point number                                      \t$", "contents": "chr" }
@@ -562,7 +562,7 @@ SOFTWARE.
     ,{ "trigger": " $menucontext    Get the context in which popups is created                                          \t$", "contents": "menucontext" }
     ,{ "trigger": " $menutype       Return the name/type of menu in use (same as $menu)                                 \t$", "contents": "menutype" }
     ,{ "trigger": " $mid            Get substring of a string                                                           \t$", "contents": "mid" }
-    ,{ "trigger": " $mididir        Replaced by $sound(midi). Returns directory specified in Sound Requests mIRC Options\t$", "contents": "mididir" }
+    ,{ "trigger": " $mididir        Replaced by $sound(midi). Return directory specified in Sound Requests mIRC Options \t$", "contents": "mididir" }
     ,{ "trigger": " $mircdir        Get folder where mIRC stores main settings                                          \t$", "contents": "mircdir" }
     ,{ "trigger": " $mircexe        Get complete filepath to the executable currently used by mIRC                      \t$", "contents": "mircexe" }
     ,{ "trigger": " $mircini        Get complete filepath to the mirc.ini file                                          \t$", "contents": "mircini" }
@@ -581,183 +581,182 @@ SOFTWARE.
     ,{ "trigger": " $msgstamp       Available if server-time or znc.in/server-time support was detected on connect      \t$", "contents": "msgstamp" }
     ,{ "trigger": " $msgtags        Returns @ prefixed tags which are removed from incoming messages                    \t$", "contents": "msgtags" }
     ,{ "trigger": " $naddress       Replaced by $dns. Get the address being resolved in an ON DNS event                 \t$", "contents": "naddress" }
-    ,{ "trigger": " $network                                                                                            \t$", "contents": "network" }
-    ,{ "trigger": " $newnick                                                                                            \t$", "contents": "newnick" }
-    ,{ "trigger": " $nhnick                                                                                             \t$", "contents": "nhnick" }
-    ,{ "trigger": " $nick                                                                                               \t$", "contents": "nick" }
-    ,{ "trigger": " $nickmode                                                                                           \t$", "contents": "nickmode" }
-    ,{ "trigger": " $no                                                                                                 \t$", "contents": "no" }
-    ,{ "trigger": " $nofile                                                                                             \t$", "contents": "nofile" }
-    ,{ "trigger": " $nopath                                                                                             \t$", "contents": "nopath" }
-    ,{ "trigger": " $nopnick                                                                                            \t$", "contents": "nopnick" }
-    ,{ "trigger": " $noqt                                                                                               \t$", "contents": "noqt" }
-    ,{ "trigger": " $not                                                                                                \t$", "contents": "not" }
-    ,{ "trigger": " $notags                                                                                             \t$", "contents": "notags" }
-    ,{ "trigger": " $notify                                                                                             \t$", "contents": "notify" }
-    ,{ "trigger": " $null                                                                                               \t$", "contents": "null" }
-    ,{ "trigger": " $numeric                                                                                            \t$", "contents": "numeric" }
-    ,{ "trigger": " $numtok                                                                                             \t$", "contents": "numtok" }
-    ,{ "trigger": " $nvnick                                                                                             \t$", "contents": "nvnick" }
-    ,{ "trigger": " $ok                                                                                                 \t$", "contents": "ok" }
-    ,{ "trigger": " $online                                                                                             \t$", "contents": "online" }
-    ,{ "trigger": " $onlineserver                                                                                       \t$", "contents": "onlineserver" }
-    ,{ "trigger": " $onlinetotal                                                                                        \t$", "contents": "onlinetotal" }
-    ,{ "trigger": " $onpoly                                                                                             \t$", "contents": "onpoly" }
-    ,{ "trigger": " $opnick                                                                                             \t$", "contents": "opnick" }
-    ,{ "trigger": " $or                                                                                                 \t$", "contents": "or" }
-    ,{ "trigger": " $ord                                                                                                \t$", "contents": "ord" }
-    ,{ "trigger": " $os                                                                                                 \t$", "contents": "os" }
-    ,{ "trigger": " $parms                                                                                              \t$", "contents": "parms" }
-    ,{ "trigger": " $parseline                                                                                          \t$", "contents": "parseline" }
-    ,{ "trigger": " $parsetype                                                                                          \t$", "contents": "parsetype" }
-    ,{ "trigger": " $parseutf                                                                                           \t$", "contents": "parseutf" }
-    ,{ "trigger": " $passivedcc                                                                                         \t$", "contents": "passivedcc" }
-    ,{ "trigger": " $pi                                                                                                 \t$", "contents": "pi" }
-    ,{ "trigger": " $pic                                                                                                \t$", "contents": "pic" }
-    ,{ "trigger": " $play                                                                                               \t$", "contents": "play" }
-    ,{ "trigger": " $pnick                                                                                              \t$", "contents": "pnick" }
-    ,{ "trigger": " $portable                                                                                           \t$", "contents": "portable" }
-    ,{ "trigger": " $portfree                                                                                           \t$", "contents": "portfree" }
-    ,{ "trigger": " $pos                                                                                                \t$", "contents": "pos" }
-    ,{ "trigger": " $poscs                                                                                              \t$", "contents": "poscs" }
-    ,{ "trigger": " $prefix                                                                                             \t$", "contents": "prefix" }
-    ,{ "trigger": " $prop                                                                                               \t$", "contents": "prop" }
-    ,{ "trigger": " $protect                                                                                            \t$", "contents": "protect" }
-    ,{ "trigger": " $puttok                                                                                             \t$", "contents": "puttok" }
-    ,{ "trigger": " $qt                                                                                                 \t$", "contents": "qt" }
-    ,{ "trigger": " $query                                                                                              \t$", "contents": "query" }
-    ,{ "trigger": " $r                                                                                                  \t$", "contents": "r" }
-    ,{ "trigger": " $raddress                                                                                           \t$", "contents": "raddress" }
-    ,{ "trigger": " $rand                                                                                               \t$", "contents": "rand" }
-    ,{ "trigger": " $rawbytes                                                                                           \t$", "contents": "rawbytes" }
-    ,{ "trigger": " $rawmsg                                                                                             \t$", "contents": "rawmsg" }
-    ,{ "trigger": " $read                                                                                               \t$", "contents": "read" }
-    ,{ "trigger": " $readini                                                                                            \t$", "contents": "readini" }
-    ,{ "trigger": " $readn                                                                                              \t$", "contents": "readn" }
-    ,{ "trigger": " $regbr                                                                                              \t$", "contents": "regbr" }
-    ,{ "trigger": " $regerrstr                                                                                          \t$", "contents": "regerrstr" }
-    ,{ "trigger": " $regex                                                                                              \t$", "contents": "regex" }
-    ,{ "trigger": " $regml                                                                                              \t$", "contents": "regml" }
-    ,{ "trigger": " $regmlex                                                                                            \t$", "contents": "regmlex" }
-    ,{ "trigger": " $regsub                                                                                             \t$", "contents": "regsub" }
-    ,{ "trigger": " $regsubex                                                                                           \t$", "contents": "regsubex" }
-    ,{ "trigger": " $remote                                                                                             \t$", "contents": "remote" }
-    ,{ "trigger": " $remove                                                                                             \t$", "contents": "remove" }
-    ,{ "trigger": " $removecs                                                                                           \t$", "contents": "removecs" }
-    ,{ "trigger": " $remtok                                                                                             \t$", "contents": "remtok" }
-    ,{ "trigger": " $remtokcs                                                                                           \t$", "contents": "remtokcs" }
-    ,{ "trigger": " $replace                                                                                            \t$", "contents": "replace" }
-    ,{ "trigger": " $replacecs                                                                                          \t$", "contents": "replacecs" }
-    ,{ "trigger": " $replacex                                                                                           \t$", "contents": "replacex" }
-    ,{ "trigger": " $replacexcs                                                                                         \t$", "contents": "replacexcs" }
-    ,{ "trigger": " $reptok                                                                                             \t$", "contents": "reptok" }
-    ,{ "trigger": " $reptokcs                                                                                           \t$", "contents": "reptokcs" }
-    ,{ "trigger": " $result                                                                                             \t$", "contents": "result" }
-    ,{ "trigger": " $rgb                                                                                                \t$", "contents": "rgb" }
-    ,{ "trigger": " $right                                                                                              \t$", "contents": "right" }
-    ,{ "trigger": " $rnick                                                                                              \t$", "contents": "rnick" }
-    ,{ "trigger": " $round                                                                                              \t$", "contents": "round" }
-    ,{ "trigger": " $samepath                                                                                           \t$", "contents": "samepath" }
-    ,{ "trigger": " $scid                                                                                               \t$", "contents": "scid" }
-    ,{ "trigger": " $scon                                                                                               \t$", "contents": "scon" }
-    ,{ "trigger": " $script                                                                                             \t$", "contents": "script" }
-    ,{ "trigger": " $scriptdir                                                                                          \t$", "contents": "scriptdir" }
-    ,{ "trigger": " $scriptline                                                                                         \t$", "contents": "scriptline" }
-    ,{ "trigger": " $sdir                                                                                               \t$", "contents": "sdir" }
-    ,{ "trigger": " $send                                                                                               \t$", "contents": "send" }
-    ,{ "trigger": " $server                                                                                             \t$", "contents": "server" }
-    ,{ "trigger": " $serverip                                                                                           \t$", "contents": "serverip" }
-    ,{ "trigger": " $servertarget                                                                                       \t$", "contents": "servertarget" }
-    ,{ "trigger": " $sfile                                                                                              \t$", "contents": "sfile" }
-    ,{ "trigger": " $sha1                                                                                               \t$", "contents": "sha1" }
-    ,{ "trigger": " $sha256                                                                                             \t$", "contents": "sha256" }
-    ,{ "trigger": " $sha384                                                                                             \t$", "contents": "sha384" }
-    ,{ "trigger": " $sha512                                                                                             \t$", "contents": "sha512" }
-    ,{ "trigger": " $shortfn                                                                                            \t$", "contents": "shortfn" }
-    ,{ "trigger": " $show                                                                                               \t$", "contents": "show" }
-    ,{ "trigger": " $signal                                                                                             \t$", "contents": "signal" }
-    ,{ "trigger": " $sin                                                                                                \t$", "contents": "sin" }
-    ,{ "trigger": " $sinh                                                                                               \t$", "contents": "sinh" }
-    ,{ "trigger": " $site                                                                                               \t$", "contents": "site" }
-    ,{ "trigger": " $sline                                                                                              \t$", "contents": "sline" }
-    ,{ "trigger": " $snick                                                                                              \t$", "contents": "snick" }
-    ,{ "trigger": " $snicks                                                                                             \t$", "contents": "snicks" }
-    ,{ "trigger": " $snotify                                                                                            \t$", "contents": "snotify" }
-    ,{ "trigger": " $sock                                                                                               \t$", "contents": "sock" }
-    ,{ "trigger": " $sockbr                                                                                             \t$", "contents": "sockbr" }
-    ,{ "trigger": " $sockerr                                                                                            \t$", "contents": "sockerr" }
-    ,{ "trigger": " $sockname                                                                                           \t$", "contents": "sockname" }
-    ,{ "trigger": " $sorttok                                                                                            \t$", "contents": "sorttok" }
-    ,{ "trigger": " $sorttokcs                                                                                          \t$", "contents": "sorttokcs" }
-    ,{ "trigger": " $sound                                                                                              \t$", "contents": "sound" }
-    ,{ "trigger": " $speak                                                                                              \t$", "contents": "speak" }
-    ,{ "trigger": " $sqrt                                                                                               \t$", "contents": "sqrt" }
-    ,{ "trigger": " $sreq                                                                                               \t$", "contents": "sreq" }
-    ,{ "trigger": " $ssl                                                                                                \t$", "contents": "ssl" }
-    ,{ "trigger": " $sslcertsha1                                                                                        \t$", "contents": "sslcertsha1" }
-    ,{ "trigger": " $sslcertsha256                                                                                      \t$", "contents": "sslcertsha256" }
-    ,{ "trigger": " $ssldll                                                                                             \t$", "contents": "ssldll" }
-    ,{ "trigger": " $ssllibdll                                                                                          \t$", "contents": "ssllibdll" }
-    ,{ "trigger": " $sslready                                                                                           \t$", "contents": "sslready" }
-    ,{ "trigger": " $sslversion                                                                                         \t$", "contents": "sslversion" }
-    ,{ "trigger": " $starting                                                                                           \t$", "contents": "starting" }
-    ,{ "trigger": " $status                                                                                             \t$", "contents": "status" }
-    ,{ "trigger": " $str                                                                                                \t$", "contents": "str" }
-    ,{ "trigger": " $strip                                                                                              \t$", "contents": "strip" }
-    ,{ "trigger": " $stripped                                                                                           \t$", "contents": "stripped" }
-    ,{ "trigger": " $style                                                                                              \t$", "contents": "style" }
-    ,{ "trigger": " $submenu                                                                                            \t$", "contents": "submenu" }
-    ,{ "trigger": " $switchbar                                                                                          \t$", "contents": "switchbar" }
-    ,{ "trigger": " $sysdir                                                                                             \t$", "contents": "sysdir" }
-    ,{ "trigger": " $tan                                                                                                \t$", "contents": "tan" }
-    ,{ "trigger": " $tanh                                                                                               \t$", "contents": "tanh" }
-    ,{ "trigger": " $target                                                                                             \t$", "contents": "target" }
-    ,{ "trigger": " $tempfn                                                                                             \t$", "contents": "tempfn" }
-    ,{ "trigger": " $ticks                                                                                              \t$", "contents": "ticks" }
-    ,{ "trigger": " $time                                                                                               \t$", "contents": "time" }
-    ,{ "trigger": " $timeout                                                                                            \t$", "contents": "timeout" }
-    ,{ "trigger": " $timer                                                                                              \t$", "contents": "timer" }
-    ,{ "trigger": " $timestamp                                                                                          \t$", "contents": "timestamp" }
-    ,{ "trigger": " $timestampfmt                                                                                       \t$", "contents": "timestampfmt" }
-    ,{ "trigger": " $timezone                                                                                           \t$", "contents": "timezone" }
-    ,{ "trigger": " $tip                                                                                                \t$", "contents": "tip" }
-    ,{ "trigger": " $tips                                                                                               \t$", "contents": "tips" }
-    ,{ "trigger": " $titlebar                                                                                           \t$", "contents": "titlebar" }
-    ,{ "trigger": " $token                                                                                              \t$", "contents": "token" }
-    ,{ "trigger": " $toolbar                                                                                            \t$", "contents": "toolbar" }
-    ,{ "trigger": " $topic                                                                                              \t$", "contents": "topic" }
-    ,{ "trigger": " $totp                                                                                               \t$", "contents": "totp" }
-    ,{ "trigger": " $treebar                                                                                            \t$", "contents": "treebar" }
-    ,{ "trigger": " $true                                                                                               \t$", "contents": "true" }
-    ,{ "trigger": " $trust                                                                                              \t$", "contents": "trust" }
-    ,{ "trigger": " $ulevel                                                                                             \t$", "contents": "ulevel" }
-    ,{ "trigger": " $ulist                                                                                              \t$", "contents": "ulist" }
-    ,{ "trigger": " $unsafe                                                                                             \t$", "contents": "unsafe" }
-    ,{ "trigger": " $upper                                                                                              \t$", "contents": "upper" }
-    ,{ "trigger": " $uptime                                                                                             \t$", "contents": "uptime" }
-    ,{ "trigger": " $url                                                                                                \t$", "contents": "url" }
-    ,{ "trigger": " $usermode                                                                                           \t$", "contents": "usermode" }
-    ,{ "trigger": " $utfdecode                                                                                          \t$", "contents": "utfdecode" }
-    ,{ "trigger": " $utfencode                                                                                          \t$", "contents": "utfencode" }
-    ,{ "trigger": " $v1                                                                                                 \t$", "contents": "v1" }
-    ,{ "trigger": " $v2                                                                                                 \t$", "contents": "v2" }
-    ,{ "trigger": " $var                                                                                                \t$", "contents": "var" }
-    ,{ "trigger": " $vc                                                                                                 \t$", "contents": "vc" }
-    ,{ "trigger": " $vcmd                                                                                               \t$", "contents": "vcmd" }
-    ,{ "trigger": " $vcmdstat                                                                                           \t$", "contents": "vcmdstat" }
-    ,{ "trigger": " $vcmdver                                                                                            \t$", "contents": "vcmdver" }
-    ,{ "trigger": " $version                                                                                            \t$", "contents": "version" }
-    ,{ "trigger": " $vnick                                                                                              \t$", "contents": "vnick" }
-    ,{ "trigger": " $vol                                                                                                \t$", "contents": "vol" }
-    ,{ "trigger": " $wavedir                                                                                            \t$", "contents": "wavedir" }
-    ,{ "trigger": " $wid                                                                                                \t$", "contents": "wid" }
-    ,{ "trigger": " $width                                                                                              \t$", "contents": "width" }
-    ,{ "trigger": " $wildsite                                                                                           \t$", "contents": "wildsite" }
-    ,{ "trigger": " $wildtok                                                                                            \t$", "contents": "wildtok" }
-    ,{ "trigger": " $wildtokcs                                                                                          \t$", "contents": "wildtokcs" }
-    ,{ "trigger": " $window                                                                                             \t$", "contents": "window" }
-    ,{ "trigger": " $wrap                                                                                               \t$", "contents": "wrap" }
-    ,{ "trigger": " $xor                                                                                                \t$", "contents": "xor" }
-    ,{ "trigger": " $yes                                                                                                \t$", "contents": "yes" }
+    ,{ "trigger": " $network        Get current network mIRC is connected to                                            \t$", "contents": "network" }
+    ,{ "trigger": " $newnick        Get new nick in ON NICK event                                                       \t$", "contents": "newnick" }
+    ,{ "trigger": " $nhnick         Get Nth nick that is not a halfop/helper on channel                                 \t$", "contents": "nhnick" }
+    ,{ "trigger": " $nick           Get nick of associated event or retrieve Nth nick in a channel                      \t$", "contents": "nick" }
+    ,{ "trigger": " $nickmode       Get list of nick modes supported on a server                                        \t$", "contents": "nickmode" }
+    ,{ "trigger": " $no             Returned from an $input box when No button was clicked                              \t$", "contents": "no" }
+    ,{ "trigger": " $nofile         Get directory portion from of full path                                             \t$", "contents": "nofile" }
+    ,{ "trigger": " $nopath         Get filename portion from a full path                                               \t$", "contents": "nopath" }
+    ,{ "trigger": " $nopnick        Replaced by $nick. Get Nth non-op nick on a channel                                 \t$", "contents": "nopnick" }
+    ,{ "trigger": " $noqt           Get text string with double quotes removed                                          \t$", "contents": "noqt" }
+    ,{ "trigger": " $not            Get binary NOT of a number                                                          \t$", "contents": "not" }
+    ,{ "trigger": " $notags         Returns text stripped from all possible tags for spoken text in /gtalk              \t$", "contents": "notags" }
+    ,{ "trigger": " $notify         Get info about a nick in notify list                                                \t$", "contents": "notify" }
+    ,{ "trigger": " $null           Null                                                                                \t$", "contents": "null" }
+    ,{ "trigger": " $numeric        Returns numeric value for a raw event                                               \t$", "contents": "numeric" }
+    ,{ "trigger": " $numtok         Returns the number of tokens in a list                                              \t$", "contents": "numtok" }
+    ,{ "trigger": " $nvnick         Replaced by $nick. Returns Nth nickname that is not a voice in a channel            \t$", "contents": "nvnick" }
+    ,{ "trigger": " $ok             Returned from an $input box when Ok button was clicked                              \t$", "contents": "ok" }
+    ,{ "trigger": " $online         Get number of seconds elapsed in the Timer dialog                                   \t$", "contents": "online" }
+    ,{ "trigger": " $onlineserver   Get the current server online time. Same as $online                                 \t$", "contents": "onlineserver" }
+    ,{ "trigger": " $onlinetotal    Returns total online time                                                           \t$", "contents": "onlinetotal" }
+    ,{ "trigger": " $onpoly         Returns $true if two polygons overlap                                               \t$", "contents": "onpoly" }
+    ,{ "trigger": " $opnick         Returns nick of person who was opped/deoped during ON OP event                      \t$", "contents": "opnick" }
+    ,{ "trigger": " $or             Returns binary OR of 2 numbers                                                      \t$", "contents": "or" }
+    ,{ "trigger": " $ord            Gets st, nd, rd, or th for a number. EG: 1st, 2nd, 3rd, etc                         \t$", "contents": "ord" }
+    ,{ "trigger": " $os             Get name of operating system running                                                \t$", "contents": "os" }
+    ,{ "trigger": " $parms          Non tokenize version of $1-, effectively preserving spaces                          \t$", "contents": "parms" }
+    ,{ "trigger": " $parseline      Return the line involved in the ON PARSELINE event                                  \t$", "contents": "parseline" }
+    ,{ "trigger": " $parsetype      Return either IN or OUT in the ON PARSELINE event                                   \t$", "contents": "parsetype" }
+    ,{ "trigger": " $parseutf       Returns $true if mIRC is going to utf encode/decode during the ON PARSELINE event   \t$", "contents": "parseutf" }
+    ,{ "trigger": " $passivedcc     Returns $true if passive DCC option is enabled                                      \t$", "contents": "passivedcc" }
+    ,{ "trigger": " $pi             Returns the value of pi to 20 decimal places                                        \t$", "contents": "pi" }
+    ,{ "trigger": " $pic            Get picture size of .bmp, .jpg, or .png                                             \t$", "contents": "pic" }
+    ,{ "trigger": " $play           Returns info about queued /play request                                             \t$", "contents": "play" }
+    ,{ "trigger": " $pnick          Return channel or nick you are /playing to                                          \t$", "contents": "pnick" }
+    ,{ "trigger": " $portable       Returns $true if mIRC is running in portable mode                                   \t$", "contents": "portable" }
+    ,{ "trigger": " $portfree       Returns $true if the specified network port is free                                 \t$", "contents": "portfree" }
+    ,{ "trigger": " $pos            Returns case-insensitive position of the Nth substring with a string                \t$", "contents": "pos" }
+    ,{ "trigger": " $poscs          Returns case-sensitive position of the Nth substring with a string                  \t$", "contents": "poscs" }
+    ,{ "trigger": " $prefix         Get list of channel nick prefixes supported on active network                       \t$", "contents": "prefix" }
+    ,{ "trigger": " $prop           Returns name of the property passed to alias                                        \t$", "contents": "prop" }
+    ,{ "trigger": " $protect        Return $true if the protect feature is enabled                                      \t$", "contents": "protect" }
+    ,{ "trigger": " $puttok         Replaced the Nth delimited token in a list                                          \t$", "contents": "puttok" }
+    ,{ "trigger": " $qt             Returns the text string enclosed with double-quotes                                 \t$", "contents": "qt" }
+    ,{ "trigger": " $query          Returns the name of the Nth query window opened                                     \t$", "contents": "query" }
+    ,{ "trigger": " $r              Shortcut for $rand. Get random number between two numbers                           \t$", "contents": "r" }
+    ,{ "trigger": " $raddress       Replaced by $dns().addr. Get resolved address of /dns request                       \t$", "contents": "raddress" }
+    ,{ "trigger": " $rand           Get random integer between two numbers                                              \t$", "contents": "rand" }
+    ,{ "trigger": " $rawbytes       Return raw line for IRC server event prior to parsing/decoding                      \t$", "contents": "rawbytes" }
+    ,{ "trigger": " $rawmsg         Return raw server line inside an event                                              \t$", "contents": "rawmsg" }
+    ,{ "trigger": " $read           Return a line from a disk file                                                      \t$", "contents": "read" }
+    ,{ "trigger": " $readini        Read a topic from an ini file                                                       \t$", "contents": "readini" }
+    ,{ "trigger": " $readn          Return the number of the line matched by last $read                                 \t$", "contents": "readn" }
+    ,{ "trigger": " $regbr          Replaced by $regml. Return the Nth backreference from a regex match                 \t$", "contents": "regbr" }
+    ,{ "trigger": " $regerrstr      Returns the PCRE error string for the last regex call                               \t$", "contents": "regerrstr" }
+    ,{ "trigger": " $regex          Returns the number of strings which matched the regex                               \t$", "contents": "regex" }
+    ,{ "trigger": " $regml          Returns the Nth backreference from a regex match                                    \t$", "contents": "regml" }
+    ,{ "trigger": " $regmlex        Returns the Mth backreference of the Nth match from a regex match                   \t$", "contents": "regmlex" }
+    ,{ "trigger": " $regsub         Regex substitute/replace                                                            \t$", "contents": "regsub" }
+    ,{ "trigger": " $regsubex       Regex substitute/replaace while allowing markers in teh replaacement                \t$", "contents": "regsubex" }
+    ,{ "trigger": " $remote         Returns bitwise integer indicating if CTCPS/EVENT/RAWS are enabled                  \t$", "contents": "remote" }
+    ,{ "trigger": " $remove         Remove string from another string                                                   \t$", "contents": "remove" }
+    ,{ "trigger": " $removecs       Remove string from another string (case-sensitive)                                  \t$", "contents": "removecs" }
+    ,{ "trigger": " $remtok         Removes the Nth matching token in text                                              \t$", "contents": "remtok" }
+    ,{ "trigger": " $remtokcs       Remotes the Nth matching token in text (case-sensitive)                             \t$", "contents": "remtokcs" }
+    ,{ "trigger": " $replace        Replace text in string                                                              \t$", "contents": "replace" }
+    ,{ "trigger": " $replacecs      Replace text in string (case-sensitive)                                             \t$", "contents": "replacecs" }
+    ,{ "trigger": " $replacex       Replace text in string skipping what's already been replaced                        \t$", "contents": "replacex" }
+    ,{ "trigger": " $replacexcs     Replace text in string skipping what's already been replaced (case-sensitive)       \t$", "contents": "replacexcs" }
+    ,{ "trigger": " $reptok         Replace the Nth matching token in text                                              \t$", "contents": "reptok" }
+    ,{ "trigger": " $reptokcs       Replace the Nth matching token in text (case-sensitive)                             \t$", "contents": "reptokcs" }
+    ,{ "trigger": " $result         Returns value passed to last /return or /returnx command in an alias                \t$", "contents": "result" }
+    ,{ "trigger": " $rgb            Convert between R,G,B vs color number, or return system colors                      \t$", "contents": "rgb" }
+    ,{ "trigger": " $right          Return characters from the right side of a string                                   \t$", "contents": "right" }
+    ,{ "trigger": " $rnick          Replaced by $nick. Returns regular nick on a channel                                \t$", "contents": "rnick" }
+    ,{ "trigger": " $round          Returns floating point number rounded to a number of decimal                        \t$", "contents": "round" }
+    ,{ "trigger": " $samepath       Evaluate whether two file paths resolve to the same                                 \t$", "contents": "samepath" }
+    ,{ "trigger": " $scid           Get server id for a connection, or details about a connection id                    \t$", "contents": "scid" }
+    ,{ "trigger": " $scon           Get server id for a connection, or details. Works on the Nth connection             \t$", "contents": "scon" }
+    ,{ "trigger": " $script         Get filename of the Nth loaded script                                               \t$", "contents": "script" }
+    ,{ "trigger": " $scriptdir      Get directory of the Nth loaded script                                              \t$", "contents": "scriptdir" }
+    ,{ "trigger": " $scriptline     Returns the number of the line in the current script                                \t$", "contents": "scriptline" }
+    ,{ "trigger": " $sdir           Display select folder dialog and returns selected folder                            \t$", "contents": "sdir" }
+    ,{ "trigger": " $send           Get info on open DCC Send windows                                                   \t$", "contents": "send" }
+    ,{ "trigger": " $server         Get current server connection related to current window                             \t$", "contents": "server" }
+    ,{ "trigger": " $serverip       Get current server ip address                                                       \t$", "contents": "serverip" }
+    ,{ "trigger": " $servertarget   Returns original address used to connect to the server                              \t$", "contents": "servertarget" }
+    ,{ "trigger": " $sfile          Display select file dialog and returns selected file                                \t$", "contents": "sfile" }
+    ,{ "trigger": " $sha1           Get SHA1 hash of text, binvar, or file                                              \t$", "contents": "sha1" }
+    ,{ "trigger": " $sha256         Get SHA256 hash of text, binvar, or file                                            \t$", "contents": "sha256" }
+    ,{ "trigger": " $sha384         Get SHA384 hash of text, binvar, or file                                            \t$", "contents": "sha384" }
+    ,{ "trigger": " $sha512         Get SHA512 hash of text, binvar, or file                                            \t$", "contents": "sha512" }
+    ,{ "trigger": " $shortfn        Get short version of a file filename                                                \t$", "contents": "shortfn" }
+    ,{ "trigger": " $show           Returns $true if the alias is called silently with a dot                            \t$", "contents": "show" }
+    ,{ "trigger": " $signal         Returns name of signal that triggered SIGNAL event                                  \t$", "contents": "signal" }
+    ,{ "trigger": " $sin            Returns sine of an angle of N radians                                               \t$", "contents": "sin" }
+    ,{ "trigger": " $sinh           Returns hyperbolic sine of an angle of N radians                                    \t$", "contents": "sinh" }
+    ,{ "trigger": " $site           Returns portion of $address after @                                                 \t$", "contents": "site" }
+    ,{ "trigger": " $sline          Returns the Nth selected line in a listbox                                          \t$", "contents": "sline" }
+    ,{ "trigger": " $snick          Returns the Nth selected nick in a channel                                          \t$", "contents": "snick" }
+    ,{ "trigger": " $snicks         Returns CSV string of all selected nicks in channel list box                        \t$", "contents": "snicks" }
+    ,{ "trigger": " $snotify        Returns the currently selected nick in notify list box                              \t$", "contents": "snotify" }
+    ,{ "trigger": " $sock           Returns info about currently opened sockets                                         \t$", "contents": "sock" }
+    ,{ "trigger": " $sockbr         Returns number of bytes read from the last /sockread command                        \t$", "contents": "sockbr" }
+    ,{ "trigger": " $sockerr        Returns the sock error number if an error occurred                                  \t$", "contents": "sockerr" }
+    ,{ "trigger": " $sockname       Returns name of the socket in the current socket event                              \t$", "contents": "sockname" }
+    ,{ "trigger": " $sorttok        Sorts tokens in text                                                                \t$", "contents": "sorttok" }
+    ,{ "trigger": " $sorttokcs      Sorts tokens in text (case-sensitive)                                               \t$", "contents": "sorttokcs" }
+    ,{ "trigger": " $sound          Get info about sound files                                                          \t$", "contents": "sound" }
+    ,{ "trigger": " $speak          Returns Nth line currently queue via /speak command                                 \t$", "contents": "speak" }
+    ,{ "trigger": " $sqrt           Returns square root                                                                 \t$", "contents": "sqrt" }
+    ,{ "trigger": " $sreq           Returns current parameter settings for DCC Sends                                    \t$", "contents": "sreq" }
+    ,{ "trigger": " $ssl            Returns $true if connected via SSL                                                  \t$", "contents": "ssl" }
+    ,{ "trigger": " $sslcertsha1    Returns the SHA1 fingerprint of the client cert                                     \t$", "contents": "sslcertsha1" }
+    ,{ "trigger": " $sslcertsha256  Returns the SHA256 fingerprint of the client cert                                   \t$", "contents": "sslcertsha256" }
+    ,{ "trigger": " $ssldll         Return filename to SSL dll used by mIRC                                             \t$", "contents": "ssldll" }
+    ,{ "trigger": " $ssllibdll      Returns filename to lib used for SSL                                                \t$", "contents": "ssllibdll" }
+    ,{ "trigger": " $sslready       Returns $true if capable of using SSL                                               \t$", "contents": "sslready" }
+    ,{ "trigger": " $sslversion     Returns version of the SSL lib in use                                               \t$", "contents": "sslversion" }
+    ,{ "trigger": " $starting       Return 1 in the ON START event if mIRC is starting                                  \t$", "contents": "starting" }
+    ,{ "trigger": " $status         Returns server connection status                                                    \t$", "contents": "status" }
+    ,{ "trigger": " $str            Duplicate specified string N times                                                  \t$", "contents": "str" }
+    ,{ "trigger": " $strip          Strip colors and other control codes from text                                      \t$", "contents": "strip" }
+    ,{ "trigger": " $stripped       Returns number of control codes stripped from a message                             \t$", "contents": "stripped" }
+    ,{ "trigger": " $style          Used inside menu definition to created checked or disabled menu item                \t$", "contents": "style" }
+    ,{ "trigger": " $submenu        Can be used in popups definition to dynamically create a popup                      \t$", "contents": "submenu" }
+    ,{ "trigger": " $switchbar      Returns $true if switchbar is enabled                                               \t$", "contents": "switchbar" }
+    ,{ "trigger": " $sysdir         Returns system folders for the current user                                         \t$", "contents": "sysdir" }
+    ,{ "trigger": " $tan            Returns the tangent of an angle of N radians                                        \t$", "contents": "tan" }
+    ,{ "trigger": " $tanh           Returns the hyperbolic tangent of an angle of N radians                             \t$", "contents": "tanh" }
+    ,{ "trigger": " $target         Returns target of an event                                                          \t$", "contents": "target" }
+    ,{ "trigger": " $tempfn         Return temporary filename in $mircdir using filename masked used by /write          \t$", "contents": "tempfn" }
+    ,{ "trigger": " $ticks          Get number of milliseconds since system was started                                 \t$", "contents": "ticks" }
+    ,{ "trigger": " $time           Return current time in hour:minute:second format                                    \t$", "contents": "time" }
+    ,{ "trigger": " $timeout        Can be returned by $input                                                           \t$", "contents": "timeout" }
+    ,{ "trigger": " $timer          Return info about specified timer                                                   \t$", "contents": "timer" }
+    ,{ "trigger": " $timestamp      Return the current time based on event timestamp format                             \t$", "contents": "timestamp" }
+    ,{ "trigger": " $timestampfmt   Returns current timestamp format defined in mIRC options                            \t$", "contents": "timestampfmt" }
+    ,{ "trigger": " $timezone       Return current timezone setting in seconds                                          \t$", "contents": "timezone" }
+    ,{ "trigger": " $tip            Allow you to create scripted tips independent of normal tip events                  \t$", "contents": "tip" }
+    ,{ "trigger": " $tips           Return $true if tips are on                                                         \t$", "contents": "tips" }
+    ,{ "trigger": " $titlebar       Return current mIRC titlebar                                                        \t$", "contents": "titlebar" }
+    ,{ "trigger": " $token          Replaced by $gettok. Get Nth token in delimited list                                \t$", "contents": "token" }
+    ,{ "trigger": " $toolbar        Returns $true if toolbar is enabled                                                 \t$", "contents": "toolbar" }
+    ,{ "trigger": " $totp           Get TOTP based on specified parameters                                              \t$", "contents": "totp" }
+    ,{ "trigger": " $treebar        Gives current state of treebar                                                      \t$", "contents": "treebar" }
+    ,{ "trigger": " $true           Result of successful comparison between values                                      \t$", "contents": "true" }
+    ,{ "trigger": " $trust          Returns items in the DCC trust list                                                 \t$", "contents": "trust" }
+    ,{ "trigger": " $ulevel         Return matching user level for triggered events                                     \t$", "contents": "ulevel" }
+    ,{ "trigger": " $ulist          Return the Nth address in Users list that matches address or level                  \t$", "contents": "ulist" }
+    ,{ "trigger": " $unsafe         Delay evaluation of text (ex: in timers)                                            \t$", "contents": "unsafe" }
+    ,{ "trigger": " $upper          Return text in upper case                                                           \t$", "contents": "upper" }
+    ,{ "trigger": " $uptime         Return the number of milliseconds since indicated event                             \t$", "contents": "uptime" }
+    ,{ "trigger": " $url            Returns current URL in main browser, or get info about URL in URL list window       \t$", "contents": "url" }
+    ,{ "trigger": " $usermode       Returns current usermode on IRC server                                              \t$", "contents": "usermode" }
+    ,{ "trigger": " $utfdecode      Returns text decoded to UTF8                                                        \t$", "contents": "utfdecode" }
+    ,{ "trigger": " $utfencode      Returns text encoded to UTF8                                                        \t$", "contents": "utfencode" }
+    ,{ "trigger": " $v1             Return the left-hand parameter used in conditional statement (ex: $v1 == $v2)       \t$", "contents": "v1" }
+    ,{ "trigger": " $v2             Return the right-hand parameter used in conditional statement (ex: $v1 == $v2)      \t$", "contents": "v2" }
+    ,{ "trigger": " $var            Get info about the Nth matching variable                                            \t$", "contents": "var" }
+    ,{ "trigger": " $vc             Get commands in voice command list, same as $vcmd                                   \t$", "contents": "vc" }
+    ,{ "trigger": " $vcmd           Get commands in voice command list                                                  \t$", "contents": "vcmd" }
+    ,{ "trigger": " $vcmdstat       Get current status of voice command listener                                        \t$", "contents": "vcmdstat" }
+    ,{ "trigger": " $vcmdver        Retrive version of installed Speech Recognition software                            \t$", "contents": "vcmdver" }
+    ,{ "trigger": " $version        Get current version of mIRC                                                         \t$", "contents": "version" }
+    ,{ "trigger": " $vnick          Return nick who was voice/devoiced in ON VOICE or ON DEVOICE event                  \t$", "contents": "vnick" }
+    ,{ "trigger": " $vol            Get current volume                                                                  \t$", "contents": "vol" }
+    ,{ "trigger": " $wavedir        Replaced by $sound. Get directory specified in Sound Request dialog for wav file    \t$", "contents": "wavedir" }
+    ,{ "trigger": " $wid            Return the window id for the current script                                         \t$", "contents": "wid" }
+    ,{ "trigger": " $width          Get width of text in pixel in the specified font                                    \t$", "contents": "width" }
+    ,{ "trigger": " $wildsite       Return address of user who triggered an event in format *!*@host                    \t$", "contents": "wildsite" }
+    ,{ "trigger": " $wildtok        Return the Nth token that matches in wildcard string                                \t$", "contents": "wildtok" }
+    ,{ "trigger": " $wildtokcs      Return the Nth token that matches wildcard string (case-sensitive)                  \t$", "contents": "wildtokcs" }
+    ,{ "trigger": " $window         Get info about window for the current connection                                    \t$", "contents": "window" }
+    ,{ "trigger": " $wrap           Returns the Nth line in text wrapped to the specified width in the specifie font    \t$", "contents": "wrap" }
+    ,{ "trigger": " $xor            Returns the binary XOR of 2 numbers                                                 \t$", "contents": "xor" }
+    ,{ "trigger": " $yes            Returned when YES ahas been clicked in an $input prompt                             \t$", "contents": "yes" }
   ]
 }
