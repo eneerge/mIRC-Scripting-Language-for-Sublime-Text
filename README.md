@@ -28,7 +28,13 @@ Autocomplete will work for all /commands and $identifiers.  They will display in
 
 Installation
 ------------
+# Option 1 (Package Control)
+This package is now available in Package Control.  If you have Package Control install:
+1. Ctrl+Shift+P
+2. Install Package
+3. mIRC Scripting Language (Highlight and Autocomplete)
 
+# Option 2 (Manual)
 1. Copy mIRC-msl.sublime-syntax to Sublime\Data\Packages\User folder.
 2. Copy mIRC-msl.sublime-completions to Sublime\Data\Packages\User folder.
 
