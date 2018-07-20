@@ -29,7 +29,7 @@ Autocomplete will work for all /commands and $identifiers.  They will display in
 Installation
 ------------
 # Option 1 (Package Control)
-This package is now available in Package Control.  If you have Package Control install:
+This package is now available in Package Control.  If you have Package Control installed:
 1. Ctrl+Shift+P
 2. Install Package
 3. mIRC Scripting Language (Highlight and Autocomplete)
