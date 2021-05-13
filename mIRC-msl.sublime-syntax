@@ -222,7 +222,7 @@ contexts:
 
   keywords2:
     # based on https://en.wikichip.org/wiki/mirc/operators
-    - match: '(?i)(\||===|==|!=|>=|<=|<|>|\&|\$\+|\$iif)'
+    - match: '(?i)(\||===|==|!==|!=|>=|<=|<|>|\&|\$\+|\$iif)'
       scope: keyword.operator.msl
 
   identifiers:
