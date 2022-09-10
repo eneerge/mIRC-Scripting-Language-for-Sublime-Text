@@ -1,7 +1,7 @@
 /*
 MIT License
 
-Copyright (c) 2018 Evan Greene
+Copyright (c) 2022 Evan Greene
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -112,6 +112,7 @@ SOFTWARE.
     ,{ "trigger": " /dline          Delete line from a @window                                                          \t/", "contents": "dline" }
     ,{ "trigger": " /dll            Call a function from a .DLL file                                                    \t/", "contents": "dll" }
     ,{ "trigger": " /dns            Perform DNS lookup on a user/address                                                \t/", "contents": "dns" }
+    ,{ "trigger": " /donotdisturb   Allows to temporarily disable all visible notifications (sounds, tips, tray, etc)   \t/", "contents": "donotdisturb" }
     ,{ "trigger": " /dqwindow       Enable/Disable/Show/Hide Dedicated query window                                     \t/", "contents": "dqwindow" }
     ,{ "trigger": " /drawcopy       Copy part of picture to different position in @window                               \t/", "contents": "drawcopy" }
     ,{ "trigger": " /drawdot        Draw dot in @window                                                                 \t/", "contents": "drawdot" }
@@ -183,6 +184,7 @@ SOFTWARE.
     ,{ "trigger": " /hsave          Save a hash table to a file                                                         \t/", "contents": "hsave" }
     ,{ "trigger": " /ial            Set Internal-Address-List on/off                                                    \t/", "contents": "ial" }
     ,{ "trigger": " /ialclear       Clear Interal-Address-List data                                                     \t/", "contents": "ialclear" }
+    ,{ "trigger": " /ialfill        Fills IAL by sending /WHO #chan to the server and processing the WHO reply          \t/", "contents": "ialfill" }
     ,{ "trigger": " /ialmark        Mark an IAL entry with a value                                                      \t/", "contents": "ialmark" }
     ,{ "trigger": " /identd         Enable/Disable built-in identd server                                               \t/", "contents": "identd" }
     ,{ "trigger": " /if             Logical condition operation used in scripts                                         \t/", "contents": "if" }
@@ -190,6 +192,7 @@ SOFTWARE.
     ,{ "trigger": " /iline          Insert line into @window                                                            \t/", "contents": "iline" }
     ,{ "trigger": " /inc            Increment variable by N amount                                                      \t/", "contents": "inc" }
     ,{ "trigger": " /iuser          Set or remove info line in userlist                                                 \t/", "contents": "iuser" }
+    ,{ "trigger": " /join           Join a channel                                                                      \t/", "contents": "join" }
     ,{ "trigger": " /leave          Leave/part a channel (same as /part)                                                \t/", "contents": "leave" }
     ,{ "trigger": " /linesep        Print line separator at a specified target                                          \t/", "contents": "linesep" }
     ,{ "trigger": " /links          Display servers that are linked to current server                                   \t/", "contents": "links" }
@@ -208,6 +211,7 @@ SOFTWARE.
     ,{ "trigger": " /mode           Change mode for nick/channel                                                        \t/", "contents": "mode" }
     ,{ "trigger": " /msg            Send message to channel/person                                                      \t/", "contents": "msg" }
     ,{ "trigger": " /noop           Discard/no operation                                                                \t/", "contents": "noop" }
+    ,{ "trigger": " /notice         Send private message to nickname without opening a query window for either party    \t/", "contents": "notice" }
     ,{ "trigger": " /notify         Manage the notify feature                                                           \t/", "contents": "notify" }
     ,{ "trigger": " /omsg           Broadcast message to OPs on chans you are an OP                                     \t/", "contents": "omsg" }
     ,{ "trigger": " /onotice        Broadcast notice to OPs on chans you are an OP                                      \t/", "contents": "onotice" }
@@ -219,6 +223,7 @@ SOFTWARE.
     ,{ "trigger": " /play           Output contents of a file to channel/user                                           \t/", "contents": "play" }
     ,{ "trigger": " /playctrl       Open Play Central window                                                            \t/", "contents": "playctrl" }
     ,{ "trigger": " /pop            Perform delayed op on a user                                                        \t/", "contents": "pop" }
+    ,{ "trigger": " /privmsg        Send private message to server with no restriction                                  \t/", "contents": "privmsg" }
     ,{ "trigger": " /protect        Manage the built-in protect list                                                    \t/", "contents": "protect" }
     ,{ "trigger": " /proxy          Change firewall settings                                                            \t/", "contents": "proxy" }
     ,{ "trigger": " /pvoice         Perform delayed voice on a user                                                     \t/", "contents": "pvoice" }
@@ -275,6 +280,7 @@ SOFTWARE.
     ,{ "trigger": " /strip          Strip control-codes from text                                                       \t/", "contents": "strip" }
     ,{ "trigger": " /switchbar      Set switchbar on/off or display current status                                      \t/", "contents": "switchbar" }
     ,{ "trigger": " /timer          Create a timer to execute code                                                      \t/", "contents": "timer" }
+    ,{ "trigger": " /timers         Show current timers                                                                 \t/", "contents": "timers" }
     ,{ "trigger": " /timestamp      Enable/Disable timestamps or set format                                             \t/", "contents": "timestamp" }
     ,{ "trigger": " /tip            Change text of active balloon tip or close                                          \t/", "contents": "tip" }
     ,{ "trigger": " /tips           Enable/Disable tips options                                                         \t/", "contents": "tips" }
@@ -282,6 +288,7 @@ SOFTWARE.
     ,{ "trigger": " /tnick          Change IRC nick without changing main/alt nick                                      \t/", "contents": "tnick" }
     ,{ "trigger": " /tokenize       Create tokenize values for $1, $2, etc.                                             \t/", "contents": "tokenize" }
     ,{ "trigger": " /toolbar        Modify toolbar                                                                      \t/", "contents": "toolbar" }
+    ,{ "trigger": " /topic          Change or display the current topic for a #channel                                  \t/", "contents": "topic" }
     ,{ "trigger": " /tray           Modify tray settings                                                                \t/", "contents": "tray" }
     ,{ "trigger": " /treebar        Enable/Disable treebar                                                              \t/", "contents": "treebar" }
     ,{ "trigger": " /ulist          Display list levels of users based on criteria                                      \t/", "contents": "ulist" }
@@ -296,8 +303,11 @@ SOFTWARE.
     ,{ "trigger": " /vcadd          Add voice command for Speech Software                                               \t/", "contents": "vcadd" }
     ,{ "trigger": " /vcmd           Enable voice commands for Speech Software                                           \t/", "contents": "vcmd" }
     ,{ "trigger": " /vcrem          Remove voice comand from voice command list                                         \t/", "contents": "vcrem" }
+    ,{ "trigger": " /vmsg           Send a message to all voiced users on a channel                                     \t/", "contents": "vmsg" }
+    ,{ "trigger": " /vnotice        Send a notice to all voiced users on a channel                                      \t/", "contents": "vnotice" }
     ,{ "trigger": " /vol            Set volume on system                                                                \t/", "contents": "vol" }
     ,{ "trigger": " /wallchops      Send notice to all ops on a channel                                                 \t/", "contents": "wallchops" }
+    ,{ "trigger": " /wallvoices     Send notice to all voices on a channel                                              \t/", "contents": "wallvoices" }
     // DEPRECATED: replace by /splay ,{ "trigger": " /wavplay                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            \t/", "contents": "wavplay" }
     ,{ "trigger": " /while          Loop block of code until condition                                                  \t/", "contents": "while" }
     ,{ "trigger": " /window         Create or manipulate custom @window                                                 \t/", "contents": "window" }
@@ -371,10 +381,11 @@ SOFTWARE.
     ,{ "trigger": " $cmdbox         Get boolean $true/$false if initiated from command editbox                          \t$", "contents": "cmdbox" }
     ,{ "trigger": " $cmdline        Get parameters passed to mIRC on launch                                             \t$", "contents": "cmdline" }
     ,{ "trigger": " $cnick          Get nick/address field in nick color list                                           \t$", "contents": "cnick" }
+    ,{ "trigger": " $codepage       List all available codepages and/or get information about a given codepage          \t$", "contents": "codepage" }
     ,{ "trigger": " $color          Get RGB value of color code or color code of event                                  \t$", "contents": "color" }
     ,{ "trigger": " $colour         Get RGB value of color code or color code of event                                  \t$", "contents": "colour" }
     ,{ "trigger": " $com            Get COM info or call a method in COM connection                                     \t$", "contents": "com" }
-    ,{ "trigger": " $comcall        Multithreaded version of $com that calls alias on finish                            \t$", "contents": "comcall" }
+    ,{ "trigger": " $comcall        Multi-threaded version of $com that calls alias on finish                           \t$", "contents": "comcall" }
     ,{ "trigger": " $comchan        Get common channels between users                                                   \t$", "contents": "comchan" }
     ,{ "trigger": " $comchar        Get command prefix character                                                        \t$", "contents": "comchar" }
     ,{ "trigger": " $comerr         Return 1 if error occured with COM object                                           \t$", "contents": "comerr" }
@@ -386,6 +397,7 @@ SOFTWARE.
     ,{ "trigger": " $count          Count matching strings/substrings in another string                                 \t$", "contents": "count" }
     ,{ "trigger": " $cr             Get carriage return                                                                 \t$", "contents": "cr" }
     ,{ "trigger": " $crc            Get 32-bit checksum of text, binvar, or file                                        \t$", "contents": "crc" }
+    ,{ "trigger": " $crc64          Get 64-bit checksum of text, binvar, or file                                        \t$", "contents": "crc64" }
     ,{ "trigger": " $creq           Get current parameters settings for DCC Chat                                        \t$", "contents": "creq" }
     ,{ "trigger": " $crlf           Get carriage return line feed                                                       \t$", "contents": "crlf" }
     ,{ "trigger": " $ctime          Get number seconds elapsed since Jan 1, 1970                                        \t$", "contents": "ctime" }
@@ -417,6 +429,7 @@ SOFTWARE.
     ,{ "trigger": " $dllcall        Multithreaded $dll that calls alias on return                                       \t$", "contents": "dllcall" }
     ,{ "trigger": " $dname          Get name of dialog that triggered \"ON dialog\" event                               \t$", "contents": "dname" }
     ,{ "trigger": " $dns            Get various properties of DNS in \"ON DNS\" event                                   \t$", "contents": "dns" }
+    ,{ "trigger": " $donotdisturb   Get boolean $true/$false if mIRC is in donotdisturb                                 \t$", "contents": "donotdisturb" }
     ,{ "trigger": " $dqwindow       Get state of message window                                                         \t$", "contents": "dqwindow" }
     ,{ "trigger": " $duration       Return timespan based on input seconds                                              \t$", "contents": "duration" }
     ,{ "trigger": " $ebeeps         Get $true/$false depending if sound is enabled/disabled                             \t$", "contents": "ebeeps" }
@@ -430,6 +443,7 @@ SOFTWARE.
     ,{ "trigger": " $evalnext       Evaluatee code N times (same as $eval)                                              \t$", "contents": "evalnext" }
     ,{ "trigger": " $event          Get event name of any tigerred \"on\" events.                                       \t$", "contents": "event" }
     ,{ "trigger": " $eventid        Random unique value set inside mIRC events                                          \t$", "contents": "eventid" }
+    ,{ "trigger": " $eventparms     Get event-specific parameters passed by script parser to executed command.          \t$", "contents": "eventparms" }
     ,{ "trigger": " $exists         Get $true/$false depending if file or dir exists                                    \t$", "contents": "exists" }
     ,{ "trigger": " $exiting        Get value determining if mIRC is exiting                                            \t$", "contents": "exiting" }
     ,{ "trigger": " $false          Value returned for boolean returns in scripts                                       \t$", "contents": "false" }
@@ -446,10 +460,12 @@ SOFTWARE.
     ,{ "trigger": " $findtok        Returns position of Nth matching token in text                                      \t$", "contents": "findtok" }
     ,{ "trigger": " $findtokcs      Returns position of Nth matching token (case sensitive)                             \t$", "contents": "findtokcs" }
     ,{ "trigger": " $fline          Returns the number of the Nth line matching expression in window                    \t$", "contents": "fline" }
+    ,{ "trigger": " $flinen         Returns the number of the matching line when using $fline.text property             \t$", "contents": "flinen" }
     ,{ "trigger": " $floor          Get numerical value rounded to lowest integer                                       \t$", "contents": "floor" }
     ,{ "trigger": " $font           Get Nth font available on the system                                                \t$", "contents": "font" }
     ,{ "trigger": " $fopen          Get info about an open file                                                         \t$", "contents": "fopen" }
     ,{ "trigger": " $fread          Returns next $crlf delmited line in open file                                       \t$", "contents": "fread" }
+    ,{ "trigger": " $freadex        Returns the total content of a file from the pointer                                \t$", "contents": "freadex" }
     ,{ "trigger": " $fromeditbox    Returns $true/$false depending if alias was called from editbox                     \t$", "contents": "fromeditbox" }
     ,{ "trigger": " $fserv          Get info on open Fserve windows                                                     \t$", "contents": "fserv" }
     ,{ "trigger": " $fserve         Get info on open Fserve windows                                                     \t$", "contents": "fserve" }
@@ -457,6 +473,7 @@ SOFTWARE.
     ,{ "trigger": " $fulldate       Get full date in format: Day Month Date hh:mm:ss Year                               \t$", "contents": "fulldate" }
     ,{ "trigger": " $fullname       Get full name set in mIRC connect dialog                                            \t$", "contents": "fullname" }
     ,{ "trigger": " $fullscreen     Returns 1 if running in full screen, 0 if not                                       \t$", "contents": "fullscreen" }
+    ,{ "trigger": " $fullscreen     Returns current integer 0-100 setting for /fupdate command                          \t$", "contents": "fupdate" }
     ,{ "trigger": " $get            Get info on open DCC Get window                                                     \t$", "contents": "get" }
     ,{ "trigger": " $getdir         Get default or specified filespec DCC get directory                                 \t$", "contents": "getdir" }
     ,{ "trigger": " $getdot         Get RGB color value of specific pixel from picwin                                   \t$", "contents": "getdot" }
@@ -511,6 +528,7 @@ SOFTWARE.
     ,{ "trigger": " $ip             Get own ip address                                                                  \t$", "contents": "ip" }
     ,{ "trigger": " $iptype         Get IP version                                                                      \t$", "contents": "iptype" }
     ,{ "trigger": " $iql            Get Nth address in the internal quiet list                                          \t$", "contents": "iql" }
+    ,{ "trigger": " $isadmin        Returns boolean $true or $false depending if mIRC is running as elevated admin      \t$", "contents": "isadmin" }
     ,{ "trigger": " $isalias        Get info about alias                                                                \t$", "contents": "isalias" }
     ,{ "trigger": " $isbit          Returns 1 if Nth bit is turned on                                                   \t$", "contents": "isbit" }
     ,{ "trigger": " $isdde          Returns $true if the specified dde name is in use                                   \t$", "contents": "isdde" }
@@ -518,10 +536,13 @@ SOFTWARE.
     ,{ "trigger": " $isfile         Returns $true if specified file exists                                              \t$", "contents": "isfile" }
     ,{ "trigger": " $isid           Returns $true if custom alias is called as an identifier                            \t$", "contents": "isid" }
     ,{ "trigger": " $islower        Returns $true if text is all lower case                                             \t$", "contents": "islower" }
+    ,{ "trigger": " $isnum          Returns $true if text is a number (same as isnumber)                                \t$", "contents": "isnum" }
+    ,{ "trigger": " $isnumber       Returns $true if text is a number (same as isnum)                                   \t$", "contents": "isnumber" }
     ,{ "trigger": " $istok          Returns $true if a matching token exists                                            \t$", "contents": "istok" }
     ,{ "trigger": " $isupper        Returns $true if text is all upper case                                             \t$", "contents": "isupper" }
     ,{ "trigger": " $isutf          Get integer value determining if text is invalid utf8, plain text, or valid utf8    \t$", "contents": "isutf" }
     ,{ "trigger": " $keychar        Fired during ON KEYDOWN or KEYUP event in @window                                   \t$", "contents": "keychar" }
+    ,{ "trigger": " $keylparam      Filled during ON KEYDOWN,KEYUP, or CHAR event in @window                            \t$", "contents": "keylparam" }
     ,{ "trigger": " $keyrpt         Fired during ON KEYDOWN or KEYUP event, returns $true if key is held down           \t$", "contents": "keyrpt" }
     ,{ "trigger": " $keyval         Returns key code of key being pressed inside ON KEYDOWN or KEYUP even               \t$", "contents": "keyval" }
     ,{ "trigger": " $knick          Get nick of user who has been kicked from a channel in an event                     \t$", "contents": "knick" }
@@ -555,6 +576,10 @@ SOFTWARE.
     ,{ "trigger": " $matchkey       Get matchtext used in an event                                                      \t$", "contents": "matchkey" }
     ,{ "trigger": " $matchtok       Get tokens that contain the specified string                                        \t$", "contents": "matchtok" }
     ,{ "trigger": " $matchtokcs     Get tokens that contact the specified string (case sensitive)                       \t$", "contents": "matchtokcs" }
+    ,{ "trigger": " $max            Get maximum from a list of tokens/short-cut to getting first token                  \t$", "contents": "max" }
+    ,{ "trigger": " $maxlenl        Get maximum number of chars that can safely be used in a statement in a script      \t$", "contents": "maxlenl" }
+    ,{ "trigger": " $maxlenm        Get maximum number of chars that can safely be used for medium string in a script   \t$", "contents": "maxlenm" }
+    ,{ "trigger": " $maxlens        Get maximum number of chars that can safely be used for small string in a script    \t$", "contents": "maxlens" }
     ,{ "trigger": " $md5            Get MD5 hash value for specified data                                               \t$", "contents": "md5" }
     ,{ "trigger": " $me             Get your current nickname                                                           \t$", "contents": "me" }
     ,{ "trigger": " $menu           Return the name of menu in use                                                      \t$", "contents": "menu" }
@@ -563,9 +588,11 @@ SOFTWARE.
     ,{ "trigger": " $menutype       Return the name/type of menu in use (same as $menu)                                 \t$", "contents": "menutype" }
     ,{ "trigger": " $mid            Get substring of a string                                                           \t$", "contents": "mid" }
     ,{ "trigger": " $mididir        Replaced by $sound(midi). Return directory specified in Sound Requests mIRC Options \t$", "contents": "mididir" }
+    ,{ "trigger": " $min            Get minimum list of tokens/short-cut to returning last token                        \t$", "contents": "min" }
     ,{ "trigger": " $mircdir        Get folder where mIRC stores main settings                                          \t$", "contents": "mircdir" }
     ,{ "trigger": " $mircexe        Get complete filepath to the executable currently used by mIRC                      \t$", "contents": "mircexe" }
     ,{ "trigger": " $mircini        Get complete filepath to the mirc.ini file                                          \t$", "contents": "mircini" }
+    ,{ "trigger": " $mircpid        Get process ID of current mIRC executable                                           \t$", "contents": "mircpid" }
     ,{ "trigger": " $mkfn           Make sure text string is a valid filename by replacing invalid characters           \t$", "contents": "mkfn" }
     ,{ "trigger": " $mklogfn        Returns filename that would be used for such a nick as a log file                   \t$", "contents": "mklogfn" }
     ,{ "trigger": " $mknickfn       Create a valid filename from a nickname by removing invalid characters              \t$", "contents": "mknickfn" }
@@ -585,9 +612,11 @@ SOFTWARE.
     ,{ "trigger": " $newnick        Get new nick in ON NICK event                                                       \t$", "contents": "newnick" }
     ,{ "trigger": " $nhnick         Get Nth nick that is not a halfop/helper on channel                                 \t$", "contents": "nhnick" }
     ,{ "trigger": " $nick           Get nick of associated event or retrieve Nth nick in a channel                      \t$", "contents": "nick" }
+    ,{ "trigger": " =$nick          Special identifier to send message to dcc chat or fserve window (equals prefix)     \t$", "contents": "=nick" }
     ,{ "trigger": " $nickmode       Get list of nick modes supported on a server                                        \t$", "contents": "nickmode" }
     ,{ "trigger": " $no             Returned from an $input box when No button was clicked                              \t$", "contents": "no" }
     ,{ "trigger": " $nofile         Get directory portion from of full path                                             \t$", "contents": "nofile" }
+    ,{ "trigger": " $nonstdmsg      Gets set to $true when \"on OPEN/TEXT/ACTION/NOTICE/SNOTICE/CTCP\" event is fired       \t$", "contents": "nonstdmsg" }
     ,{ "trigger": " $nopath         Get filename portion from a full path                                               \t$", "contents": "nopath" }
     ,{ "trigger": " $nopnick        Replaced by $nick. Get Nth non-op nick on a channel                                 \t$", "contents": "nopnick" }
     ,{ "trigger": " $noqt           Get text string with double quotes removed                                          \t$", "contents": "noqt" }
@@ -608,6 +637,7 @@ SOFTWARE.
     ,{ "trigger": " $ord            Gets st, nd, rd, or th for a number. EG: 1st, 2nd, 3rd, etc                         \t$", "contents": "ord" }
     ,{ "trigger": " $os             Get name of operating system running                                                \t$", "contents": "os" }
     ,{ "trigger": " $parms          Non tokenize version of $1-, effectively preserving spaces                          \t$", "contents": "parms" }
+    ,{ "trigger": " $parseem        Filled during \"on PARSELINE\" and returns $true if message is an echo message      \t$", "contents": "parseem" }
     ,{ "trigger": " $parseline      Return the line involved in the ON PARSELINE event                                  \t$", "contents": "parseline" }
     ,{ "trigger": " $parsetype      Return either IN or OUT in the ON PARSELINE event                                   \t$", "contents": "parsetype" }
     ,{ "trigger": " $parseutf       Returns $true if mIRC is going to utf encode/decode during the ON PARSELINE event   \t$", "contents": "parseutf" }
@@ -616,6 +646,7 @@ SOFTWARE.
     ,{ "trigger": " $pic            Get picture size of .bmp, .jpg, or .png                                             \t$", "contents": "pic" }
     ,{ "trigger": " $play           Returns info about queued /play request                                             \t$", "contents": "play" }
     ,{ "trigger": " $pnick          Return channel or nick you are /playing to                                          \t$", "contents": "pnick" }
+    ,{ "trigger": " $port           Get port number of the currently connected server                                   \t$", "contents": "port" }
     ,{ "trigger": " $portable       Returns $true if mIRC is running in portable mode                                   \t$", "contents": "portable" }
     ,{ "trigger": " $portfree       Returns $true if the specified network port is free                                 \t$", "contents": "portfree" }
     ,{ "trigger": " $pos            Returns case-insensitive position of the Nth substring with a string                \t$", "contents": "pos" }
@@ -629,6 +660,7 @@ SOFTWARE.
     ,{ "trigger": " $r              Shortcut for $rand. Get random number between two numbers                           \t$", "contents": "r" }
     ,{ "trigger": " $raddress       Replaced by $dns().addr. Get resolved address of /dns request                       \t$", "contents": "raddress" }
     ,{ "trigger": " $rand           Get random integer between two numbers                                              \t$", "contents": "rand" }
+    ,{ "trigger": " $rands          Get cryptographically secure random integer from specific range                     \t$", "contents": "rands" }
     ,{ "trigger": " $rawbytes       Return raw line for IRC server event prior to parsing/decoding                      \t$", "contents": "rawbytes" }
     ,{ "trigger": " $rawmsg         Return raw server line inside an event                                              \t$", "contents": "rawmsg" }
     ,{ "trigger": " $read           Return a line from a disk file                                                      \t$", "contents": "read" }
@@ -666,7 +698,7 @@ SOFTWARE.
     ,{ "trigger": " $sdir           Display select folder dialog and returns selected folder                            \t$", "contents": "sdir" }
     ,{ "trigger": " $send           Get info on open DCC Send windows                                                   \t$", "contents": "send" }
     ,{ "trigger": " $server         Get current server connection related to current window                             \t$", "contents": "server" }
-    ,{ "trigger": " $serverip       Get current server ip address                                                       \t$", "contents": "serverip" }
+    ,{ "trigger": " $serverip       Get current server IP address                                                       \t$", "contents": "serverip" }
     ,{ "trigger": " $servertarget   Returns original address used to connect to the server                              \t$", "contents": "servertarget" }
     ,{ "trigger": " $sfile          Display select file dialog and returns selected file                                \t$", "contents": "sfile" }
     ,{ "trigger": " $sha1           Get SHA1 hash of text, binvar, or file                                              \t$", "contents": "sha1" }
@@ -696,7 +728,9 @@ SOFTWARE.
     ,{ "trigger": " $ssl            Returns $true if connected via SSL                                                  \t$", "contents": "ssl" }
     ,{ "trigger": " $sslcertsha1    Returns the SHA1 fingerprint of the client cert                                     \t$", "contents": "sslcertsha1" }
     ,{ "trigger": " $sslcertsha256  Returns the SHA256 fingerprint of the client cert                                   \t$", "contents": "sslcertsha256" }
+    ,{ "trigger": " $sslcertvalid   Returns $true if the IRC network's SSL certificate is valid                         \t$", "contents": "sslcertvalid" }
     ,{ "trigger": " $ssldll         Return filename to SSL dll used by mIRC                                             \t$", "contents": "ssldll" }
+    ,{ "trigger": " $sslhash        Returns SSL certificates for the active connection or $null if none                 \t$", "contents": "sslhash" }
     ,{ "trigger": " $ssllibdll      Returns filename to lib used for SSL                                                \t$", "contents": "ssllibdll" }
     ,{ "trigger": " $sslready       Returns $true if capable of using SSL                                               \t$", "contents": "sslready" }
     ,{ "trigger": " $sslversion     Returns version of the SSL lib in use                                               \t$", "contents": "sslversion" }
@@ -714,6 +748,7 @@ SOFTWARE.
     ,{ "trigger": " $target         Returns target of an event                                                          \t$", "contents": "target" }
     ,{ "trigger": " $tempfn         Return temporary filename in $mircdir using filename masked used by /write          \t$", "contents": "tempfn" }
     ,{ "trigger": " $ticks          Get number of milliseconds since system was started                                 \t$", "contents": "ticks" }
+    ,{ "trigger": " $ticksqpc       Get high-resolution passage of time in milliseconds since machine was started       \t$", "contents": "ticksqpc" }
     ,{ "trigger": " $time           Return current time in hour:minute:second format                                    \t$", "contents": "time" }
     ,{ "trigger": " $timeout        Can be returned by $input                                                           \t$", "contents": "timeout" }
     ,{ "trigger": " $timer          Return info about specified timer                                                   \t$", "contents": "timer" }
@@ -735,6 +770,7 @@ SOFTWARE.
     ,{ "trigger": " $upper          Return text in upper case                                                           \t$", "contents": "upper" }
     ,{ "trigger": " $uptime         Return the number of milliseconds since indicated event                             \t$", "contents": "uptime" }
     ,{ "trigger": " $url            Returns current URL in main browser, or get info about URL in URL list window       \t$", "contents": "url" }
+    ,{ "trigger": " $urlget         Sends HEAD/GET/POST/PUT/PATCH/DELETE to an http server and returns an ID            \t$", "contents": "urlget" }
     ,{ "trigger": " $usermode       Returns current usermode on IRC server                                              \t$", "contents": "usermode" }
     ,{ "trigger": " $utfdecode      Returns text decoded to UTF8                                                        \t$", "contents": "utfdecode" }
     ,{ "trigger": " $utfencode      Returns text encoded to UTF8                                                        \t$", "contents": "utfencode" }
@@ -744,7 +780,7 @@ SOFTWARE.
     ,{ "trigger": " $vc             Get commands in voice command list, same as $vcmd                                   \t$", "contents": "vc" }
     ,{ "trigger": " $vcmd           Get commands in voice command list                                                  \t$", "contents": "vcmd" }
     ,{ "trigger": " $vcmdstat       Get current status of voice command listener                                        \t$", "contents": "vcmdstat" }
-    ,{ "trigger": " $vcmdver        Retrive version of installed Speech Recognition software                            \t$", "contents": "vcmdver" }
+    ,{ "trigger": " $vcmdver        Retrieve version of installed Speech Recognition software                            \t$", "contents": "vcmdver" }
     ,{ "trigger": " $version        Get current version of mIRC                                                         \t$", "contents": "version" }
     ,{ "trigger": " $vnick          Return nick who was voice/devoiced in ON VOICE or ON DEVOICE event                  \t$", "contents": "vnick" }
     ,{ "trigger": " $vol            Get current volume                                                                  \t$", "contents": "vol" }
@@ -755,8 +791,9 @@ SOFTWARE.
     ,{ "trigger": " $wildtok        Return the Nth token that matches in wildcard string                                \t$", "contents": "wildtok" }
     ,{ "trigger": " $wildtokcs      Return the Nth token that matches wildcard string (case-sensitive)                  \t$", "contents": "wildtokcs" }
     ,{ "trigger": " $window         Get info about window for the current connection                                    \t$", "contents": "window" }
-    ,{ "trigger": " $wrap           Returns the Nth line in text wrapped to the specified width in the specifie font    \t$", "contents": "wrap" }
+    ,{ "trigger": " $wrap           Returns the Nth line in text wrapped to the specified width in the specific font    \t$", "contents": "wrap" }
     ,{ "trigger": " $xor            Returns the binary XOR of 2 numbers                                                 \t$", "contents": "xor" }
-    ,{ "trigger": " $yes            Returned when YES has been clicked in an $input prompt                             \t$", "contents": "yes" }
+    ,{ "trigger": " $yes            Returned when YES has been clicked in an $input prompt                              \t$", "contents": "yes" }
+    ,{ "trigger": " $zip            Creates/tests/extracts/lists zip using optional AES-256 encryption                  \t$", "contents": "zip" }
   ]
 }
