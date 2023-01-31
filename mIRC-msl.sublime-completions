@@ -78,9 +78,6 @@ SOFTWARE.
     ,{ "trigger": " /cline          Set color of line in nicklist or @window                                            \t/", "contents": "cline ${1:[ˇOptional: -hrmlt]} ${2:[ˇOptional: int_color_code]} ${3:<ˇRequired: @window/#channel>} ${4:<ˇRequired: line_number>}" }
     ,{ "trigger": " /clipboard      Copy text to clipboard                                                              \t/", "contents": "clipboard ${1:[ˇOptional: -an]} ${2:<ˇRequired: str_text>}" }
     ,{ "trigger": " /close          Close windows of specified type                                                     \t/", "contents": "close ${1:<ˇRequired: -ticfgms@[id]axdnu | -cNfNsNgN>} ${2:[ˇOptional: name1 name2 ...]}" }
-    ,{ "trigger": " /closechats     Close all inactive DCC Chat windows                                                 \t/", "contents": "closechats" }
-    ,{ "trigger": " /closedccs      Close all inactive DCC Send/Get windows                                             \t/", "contents": "closedccs" }
-    ,{ "trigger": " /closefserves   Close all inactive Fserve windows                                                   \t/", "contents": "closefserves" }
     ,{ "trigger": " /closemsg       Close all or specified query window                                                 \t/", "contents": "closemsg ${1:[ˇOptional: str_nick]}" }
     ,{ "trigger": " /cnick          Set color options for nick in addressbook                                           \t/", "contents": "cnick ${1:[ˇOptional: -rfaniovpylNmNsN]} ${2:[ˇOptional: str_nick_or_host]} ${3:[ˇOptional: int_color_code]} ${4:[ˇOptional: modes_~&@%+]} ${5:[ˇOptional: str_int_levels]}" }
     ,{ "trigger": " /color          Set color setting (same as /colour)                                                 \t/", "contents": "color ${1:<ˇRequired: Name>} ${2:<ˇRequired: int_Nth_color>} ${3:ˇORˇ <ˇRequired: int_Nth_color>} ${4:<ˇRequired: \\$RGB(n,n,n)>}" }
@@ -202,7 +199,6 @@ SOFTWARE.
     ,{ "trigger": " /localinfo      Looks up and sets local settings                                                    \t/", "contents": "localinfo" }
     ,{ "trigger": " /log            Turn on/off logging to a file                                                       \t/", "contents": "log" }
     ,{ "trigger": " /logview        Display text file in mIRC                                                           \t/", "contents": "logview" }
-    ,{ "trigger": " /maxdepth       Set max recursion limit for alias                                                   \t/", "contents": "maxdepth" }
     ,{ "trigger": " /mdi            Arrange MDI windows in tile or cascade                                              \t/", "contents": "mdi" }
     ,{ "trigger": " /me             Send action to channel/person                                                       \t/", "contents": "me" }
     ,{ "trigger": " /menubar        Turn on/off or display menubar status                                               \t/", "contents": "menubar" }
@@ -308,7 +304,6 @@ SOFTWARE.
     ,{ "trigger": " /vol            Set volume on system                                                                \t/", "contents": "vol" }
     ,{ "trigger": " /wallchops      Send notice to all ops on a channel                                                 \t/", "contents": "wallchops" }
     ,{ "trigger": " /wallvoices     Send notice to all voices on a channel                                              \t/", "contents": "wallvoices" }
-    // DEPRECATED: replace by /splay ,{ "trigger": " /wavplay                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            \t/", "contents": "wavplay" }
     ,{ "trigger": " /while          Loop block of code until condition                                                  \t/", "contents": "while" }
     ,{ "trigger": " /window         Create or manipulate custom @window                                                 \t/", "contents": "window" }
     ,{ "trigger": " /winhelp        Open Microsoft online help files (.chm/.hlp)                                        \t/", "contents": "winhelp" }
@@ -366,8 +361,8 @@ SOFTWARE.
     ,{ "trigger": " $calc           Perform math calculation                                                            \t$", "contents": "calc" }
     ,{ "trigger": " $caller         Get type of the caller (activex, dll, etc)                                          \t$", "contents": "caller" }
     ,{ "trigger": " $cancel         Returned when input box is cancelled                                                \t$", "contents": "cancel" }
-    ,{ "trigger": " $cb             Get contents of Windows clipboard                                                   \t$", "contents": "cb" }
-    ,{ "trigger": " $cd             Get curent directory in fserve session                                              \t$", "contents": "cd" }
+    ,{ "trigger": " $cbrt           Get cube root of N                                                                  \t$", "contents": "cbrt" }
+    ,{ "trigger": " $cd             Get current directory in fserve session                                             \t$", "contents": "cd" }
     ,{ "trigger": " $ceil           Get numerical value rounded to highest integer                                      \t$", "contents": "ceil" }
     ,{ "trigger": " $chan           Get current channel in \"on\" events                                                \t$", "contents": "chan" }
     ,{ "trigger": " $chanmodes      Get supported channel modes on a network                                            \t$", "contents": "chanmodes" }
@@ -446,10 +441,12 @@ SOFTWARE.
     ,{ "trigger": " $eventparms     Get event-specific parameters passed by script parser to executed command.          \t$", "contents": "eventparms" }
     ,{ "trigger": " $exists         Get $true/$false depending if file or dir exists                                    \t$", "contents": "exists" }
     ,{ "trigger": " $exiting        Get value determining if mIRC is exiting                                            \t$", "contents": "exiting" }
+    ,{ "trigger": " $factorial      Get the factorial of integer N                                                      \t$", "contents": "factorial" }
     ,{ "trigger": " $false          Value returned for boolean returns in scripts                                       \t$", "contents": "false" }
     ,{ "trigger": " $feof           Returns 1 if end of file was reached from last file access attempt                  \t$", "contents": "feof" }
     ,{ "trigger": " $ferr           Returns 1 if file error occurred from last file access attempt                      \t$", "contents": "ferr" }
     ,{ "trigger": " $fgetc          Get next character from open file                                                   \t$", "contents": "fgetc" }
+    ,{ "trigger": " $fibonacci      Get the Nth term in the Fibonacci Sequence                                          \t$", "contents": "fibonacci" }
     ,{ "trigger": " $file           Get properties of a file                                                            \t$", "contents": "file" }
     ,{ "trigger": " $filename       Get file accessed from various events                                               \t$", "contents": "filename" }
     ,{ "trigger": " $filtered       Get number of matching lines found by latest filter                                 \t$", "contents": "filtered" }
@@ -473,7 +470,8 @@ SOFTWARE.
     ,{ "trigger": " $fulldate       Get full date in format: Day Month Date hh:mm:ss Year                               \t$", "contents": "fulldate" }
     ,{ "trigger": " $fullname       Get full name set in mIRC connect dialog                                            \t$", "contents": "fullname" }
     ,{ "trigger": " $fullscreen     Returns 1 if running in full screen, 0 if not                                       \t$", "contents": "fullscreen" }
-    ,{ "trigger": " $fullscreen     Returns current integer 0-100 setting for /fupdate command                          \t$", "contents": "fupdate" }
+    ,{ "trigger": " $fupdate        Returns current integer 0-100 setting for /fupdate command                          \t$", "contents": "fupdate" }
+    ,{ "trigger": " $gcd            Returns the Greatest Common Denominator for 2 or more integers                      \t$", "contents": "gcd" }
     ,{ "trigger": " $get            Get info on open DCC Get window                                                     \t$", "contents": "get" }
     ,{ "trigger": " $getdir         Get default or specified filespec DCC get directory                                 \t$", "contents": "getdir" }
     ,{ "trigger": " $getdot         Get RGB color value of specific pixel from picwin                                   \t$", "contents": "getdot" }
@@ -549,6 +547,7 @@ SOFTWARE.
     ,{ "trigger": " $lactive        Get full name of last window that was active                                        \t$", "contents": "lactive" }
     ,{ "trigger": " $lactivecid     Get connected id related to last active window                                      \t$", "contents": "lactivecid" }
     ,{ "trigger": " $lactivewid     Get window id of last window that was active                                        \t$", "contents": "lactivewid" }
+    ,{ "trigger": " $lcm            Returns the Least Common Multiple for 2 or more integers                            \t$", "contents": "lcm" }
     ,{ "trigger": " $left           Substring characters from the left                                                  \t$", "contents": "left" }
     ,{ "trigger": " $leftwin        Get name of the last @window the mouse left                                         \t$", "contents": "leftwin" }
     ,{ "trigger": " $leftwincid     Get connection id of the last @window the mouse left                                \t$", "contents": "leftwincid" }
@@ -563,6 +562,7 @@ SOFTWARE.
     ,{ "trigger": " $locked         Returns $true if mIRC is locked                                                     \t$", "contents": "locked" }
     ,{ "trigger": " $lof            Get bytes size info about specified file. Same as $file().size                      \t$", "contents": "lof" }
     ,{ "trigger": " $log            Get natural logarithm (base e) of a number                                          \t$", "contents": "log" }
+    ,{ "trigger": " $log2           Returns the common logarithm (base 2) of a number                                   \t$", "contents": "log2" }
     ,{ "trigger": " $log10          Get common logarithm (base10) of a number                                           \t$", "contents": "log10" }
     ,{ "trigger": " $logdir         Get directory of log files                                                          \t$", "contents": "logdir" }
     ,{ "trigger": " $logstamp       Get current time based on the logging timestamp format defined in mIRC Options      \t$", "contents": "logstamp" }
@@ -601,6 +601,7 @@ SOFTWARE.
     ,{ "trigger": " $modefirst      Returns $true if the channel event is the first to trigger                          \t$", "contents": "modefirst" }
     ,{ "trigger": " $modelast       Returns $true if the channel event is the last to trigger                           \t$", "contents": "modelast" }
     ,{ "trigger": " $modespl        Returns the max number of channel modes you can set at once                         \t$", "contents": "modespl" }
+    ,{ "trigger": " $modinv         Returns the Multiplicative Modular Inverse for an integer                           \t$", "contents": "modinv" }
     ,{ "trigger": " $mouse          Get information about mouse and its buttons                                         \t$", "contents": "mouse" }
     ,{ "trigger": " $mp3            Replaced by $sound. Get various info about an mp3 file                              \t$", "contents": "mp3" }
     ,{ "trigger": " $mp3dir         Replaced by $sound(mp3). Get directory specified in Sound Requests mIRC Options.    \t$", "contents": "mp3dir" }
@@ -624,6 +625,7 @@ SOFTWARE.
     ,{ "trigger": " $notags         Returns text stripped from all possible tags for spoken text in /gtalk              \t$", "contents": "notags" }
     ,{ "trigger": " $notify         Get info about a nick in notify list                                                \t$", "contents": "notify" }
     ,{ "trigger": " $null           Null                                                                                \t$", "contents": "null" }
+    ,{ "trigger": " $numbits        Returns the bit length of N, the number of bits in the base-2 representation of N   \t$", "contents": "numbits" }
     ,{ "trigger": " $numeric        Returns numeric value for a raw event                                               \t$", "contents": "numeric" }
     ,{ "trigger": " $numtok         Returns the number of tokens in a list                                              \t$", "contents": "numtok" }
     ,{ "trigger": " $nvnick         Replaced by $nick. Returns Nth nickname that is not a voice in a channel            \t$", "contents": "nvnick" }
@@ -651,6 +653,7 @@ SOFTWARE.
     ,{ "trigger": " $portfree       Returns $true if the specified network port is free                                 \t$", "contents": "portfree" }
     ,{ "trigger": " $pos            Returns case-insensitive position of the Nth substring with a string                \t$", "contents": "pos" }
     ,{ "trigger": " $poscs          Returns case-sensitive position of the Nth substring with a string                  \t$", "contents": "poscs" }
+    ,{ "trigger": " $powmod         Performs integer exponentiation over a modulus                                      \t$", "contents": "powmod" }
     ,{ "trigger": " $prefix         Get list of channel nick prefixes supported on active network                       \t$", "contents": "prefix" }
     ,{ "trigger": " $prop           Returns name of the property passed to alias                                        \t$", "contents": "prop" }
     ,{ "trigger": " $protect        Return $true if the protect feature is enabled                                      \t$", "contents": "protect" }
