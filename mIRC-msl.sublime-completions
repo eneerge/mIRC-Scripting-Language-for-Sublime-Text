@@ -361,6 +361,7 @@ SOFTWARE.
     ,{ "trigger": " $calc           Perform math calculation                                                            \t$", "contents": "calc" }
     ,{ "trigger": " $caller         Get type of the caller (activex, dll, etc)                                          \t$", "contents": "caller" }
     ,{ "trigger": " $cancel         Returned when input box is cancelled                                                \t$", "contents": "cancel" }
+    ,{ "trigger": " $cb             Return contents of the Windows Clipboard                                            \t$", "contents": "cb" }
     ,{ "trigger": " $cbrt           Get cube root of N                                                                  \t$", "contents": "cbrt" }
     ,{ "trigger": " $cd             Get current directory in fserve session                                             \t$", "contents": "cd" }
     ,{ "trigger": " $ceil           Get numerical value rounded to highest integer                                      \t$", "contents": "ceil" }
