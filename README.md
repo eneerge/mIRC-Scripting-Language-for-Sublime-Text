@@ -45,7 +45,14 @@ You may need to create the Packages\User folder.
 
 Theme Support
 --------
-A slightly modified theme has been provided in the Extras folder that supports all features of the highlighter. Themes should support the following scopes to support all styles of this highlighter:
+A slightly modified theme has been provided in the Extras folder that supports all features of the highlighter. 
+
+To Activate: 
+If you installed from package manager: Go to Tools->Select Color Scheme : Abdal Black Hackers
+
+Otherwise: Copy the .tmTheme from the extras folder to your Sublime Text\Data\Packages\User folder. Then select the color scheme.
+
+Themes should support the following scopes to support all styles of this highlighter:
 1. comment.line.double-slash
 2. constant.numeric
 3. constant.numeric.line-number.find-in-files
