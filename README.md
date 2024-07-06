@@ -1,5 +1,5 @@
 # mIRC-Scripting-Language-for-Sublime-Text
-Updated for mIRC 7.72 (Feb 2023)
+Updated for mIRC 7.77 (Jul 2024)
 
 This project implements syntax highlighting and autocompletion for mIRC msl.  It currently supports:
 - All /Commands
